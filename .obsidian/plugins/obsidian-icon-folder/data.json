@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "migrated": 3,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "SiAssemblyscript",
+      "RiAddFill",
+      "SiOpenai",
+      "SiArduino",
+      "RiSubtractFill"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true
+  },
+  "Notes": "SiWritedotas",
+  "Files": "SiFiles",
+  "Templates": "RiBracesLine",
+  "UnGrouped": "RiSubtractFill",
+  "Notes/Arduino 101": "SiArduino",
+  "Notes/Machine Learning 101": "SiOpenai",
+  "Notes/Statistics and Probability": "RiAddFill",
+  "Notes/x86_64 Assembly": "SiAssemblyscript"
+}

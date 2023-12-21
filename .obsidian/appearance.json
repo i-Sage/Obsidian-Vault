@@ -1,0 +1,11 @@
+{
+  "accentColor": "",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font Propo",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "baseFontSize": 14,
+  "enabledCssSnippets": [
+    "style"
+  ],
+  "cssTheme": "",
+  "theme": "obsidian"
+}

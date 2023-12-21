@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "78fb797ce002d157",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a947c9e050225a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "907542c64c618ebc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e8229af2c351c46b",
+    "type": "split",
+    "children": [
+      {
+        "id": "965f26b4534fb123",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ea109d216306a9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c5cd817cc8f16705",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3147f3ba3d934d03",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 351.5124969482422
+  },
+  "right": {
+    "id": "6b008f9d1c0ed5ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "bef82a6e4d78576a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "99d818a301ba3478",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "caea6ca14c9b3cd1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c0690fad01d7f05f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4910f326b074d403",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "39bf6b8c9e8315d3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "b1edf728ba6596a9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 371.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "workspaces:Manage workspace layouts": false,
+      "zk-prefixer:Create new unique note": false,
+      "random-note:Open random note": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "907542c64c618ebc",
+  "lastOpenFiles": [
+    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
+    "UnGrouped/Untitled.md",
+    "UnGrouped/Untitled 1.md",
+    "UnGrouped/Essentials.md",
+    "UnGrouped/01 Basic Vocabulary.md",
+    "Notes/Machine Learning 101/01 Intro.md",
+    "Notes/Statistics and Probability",
+    "Notes/Machine Learning 101/Machine Learning.md",
+    "Templates/core.md",
+    "UnGrouped/Crafting Interpreters.md",
+    "Notes/Bash_101/Bash.md",
+    "Notes/Bash_101/__look_up__.md",
+    "Notes/modern_cxx/C++ Attributes.md",
+    "Notes/modern_cxx/__look_up__.md",
+    "UnGrouped/CMake.md",
+    "Notes/modern_cxx/Uncovered Topics.md",
+    "Notes/modern_cxx/Testing_in_cpp_with_catch2/LOGGING_MACROS.md",
+    "Notes/Machine Learning 101",
+    "Notes/Arduino 101",
+    "X86_64 Assemble Commands.md",
+    "Notes/x86_64 Assembly/X86_64 Registers.md",
+    "Notes/x86_64 Assembly/X86_64 Assembly Notes.md",
+    "Notes/x86_64 Assembly/X86_64 Assembly Instructions.md",
+    "Notes/x86_64 Assembly/X86_64 Assemble Commands.md",
+    "X86_64 Assembly Instructions.md",
+    "X86_64 Assembly Notes.md",
+    "Notes/x86_64 Assembly",
+    "Bit Wise Operators.md",
+    "Competitive Programming.md",
+    "README.md",
+    "UnGrouped",
+    "Files/Pasted image 20230901105545.png",
+    "Files/Pasted image 20230901105100.png",
+    "Files/Speed-Measurement-using-back-EMF-Technique.png",
+    "Files/X86_64 Registers.png",
+    "Notes/compiler_design",
+    "Notes/Forex",
+    "Notes/unsorted",
+    "Notes/Bash_101",
+    "Notes/modern_cxx",
+    "Files/Pasted image 20230901132700.png",
+    "Files/Pasted image 20230901111756.png",
+    "Files/Pasted image 20230901111034.png",
+    "Files/Pasted image 20230901111021.png",
+    "Untitled.canvas"
+  ]
+}
