@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "SiAssemblyscript",
-      "RiAddFill",
-      "SiOpenai",
-      "SiArduino",
-      "RiSubtractFill"
+      "RiCalculatorFill",
+      "RiCalculatorLine",
+      "SiCapacitor",
+      "SiE",
+      "SiAssemblyscript"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -33,5 +33,9 @@
   "Notes/Arduino 101": "SiArduino",
   "Notes/Machine Learning 101": "SiOpenai",
   "Notes/Statistics and Probability": "RiAddFill",
-  "Notes/x86_64 Assembly": "SiAssemblyscript"
+  "Notes/x86_64 Assembly": "SiAssemblyscript",
+  "Excalidraw": "SiE",
+  "Notes/Electronics 101": "SiCapacitor",
+  "Notes/Electronics 101/01 Foundations": "RiCalculatorLine",
+  "Notes/Engineering Mathematics 101": "RiCalculatorFill"
 }

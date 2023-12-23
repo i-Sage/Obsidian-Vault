@@ -6,7 +6,6 @@
 ## What is Statistics ?
 >Statistics is a branch of mathematics and a field of study that involves collecting, organizing, analyzing, interpreting, and presenting numerical data. It deals with the study of data and the methods used to extract meaningful information and insights from that data.
 
-
 ### Common Vocabulary
 1. **Target Population**: This is a particular group of interest
 2. **Sampled Population**: This is a group from which the sample is taken.

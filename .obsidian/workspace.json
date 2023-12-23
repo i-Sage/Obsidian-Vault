@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "2a947c9e050225a4",
+        "id": "fa3d89e4871c5528",
         "type": "tabs",
         "children": [
           {
-            "id": "907542c64c618ebc",
+            "id": "90c3fa6378f7ac6b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "UnGrouped/Tips for using ChatGPT.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Differentiation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.5124969482422
+    "width": 304.5110321044922
   },
   "right": {
     "id": "6b008f9d1c0ed5ab",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "UnGrouped/Tips for using ChatGPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "UnGrouped/Tips for using ChatGPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "UnGrouped/Tips for using ChatGPT.md"
+              }
             }
           },
           {
@@ -162,52 +170,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "907542c64c618ebc",
+  "active": "90c3fa6378f7ac6b",
   "lastOpenFiles": [
-    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
-    "UnGrouped/Untitled.md",
-    "UnGrouped/Untitled 1.md",
+    "UnGrouped/Tips for using ChatGPT.md",
     "UnGrouped/Essentials.md",
+    "UnGrouped/Untitled 1.md",
+    "UnGrouped/Crafting Interpreters.md",
+    "UnGrouped/COMPILER_DESIGN.md",
+    "UnGrouped/CMake.md",
     "UnGrouped/01 Basic Vocabulary.md",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
+    "Notes/Machine Learning 101/Untitled",
+    "Excalidraw/Introduction to the derivative.md",
+    "Notes/Engineering Mathematics 101/Calculus/PreCalc",
+    "Notes/Engineering Mathematics 101/Calculus/Welcome To Calculus.md",
+    "Notes/Engineering Mathematics 101/Calculus/PreCalc/Functions.md",
+    "Files/Pasted Image 20231223151730_963.png",
+    "Notes/Electronics 101/01 Foundations/01 Algebraic Approximations.md",
+    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.svg",
+    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
+    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.svg",
+    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.md",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Integrals.md",
+    "Notes/Electronics 101/01 Foundations/05 system of equations.md",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus",
+    "Notes/Engineering Mathematics 101/Calculus",
+    "Notes/Engineering Mathematics 101",
+    "Notes/Electronics 101/01 Foundations",
+    "Notes/Electronics 101",
+    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
+    "Excalidraw/Drawing 2023-12-21 23.48.26.excalidraw.md",
+    "Excalidraw",
     "Notes/Machine Learning 101/01 Intro.md",
-    "Notes/Statistics and Probability",
     "Notes/Machine Learning 101/Machine Learning.md",
     "Templates/core.md",
-    "UnGrouped/Crafting Interpreters.md",
     "Notes/Bash_101/Bash.md",
     "Notes/Bash_101/__look_up__.md",
     "Notes/modern_cxx/C++ Attributes.md",
     "Notes/modern_cxx/__look_up__.md",
-    "UnGrouped/CMake.md",
     "Notes/modern_cxx/Uncovered Topics.md",
-    "Notes/modern_cxx/Testing_in_cpp_with_catch2/LOGGING_MACROS.md",
-    "Notes/Machine Learning 101",
-    "Notes/Arduino 101",
-    "X86_64 Assemble Commands.md",
-    "Notes/x86_64 Assembly/X86_64 Registers.md",
-    "Notes/x86_64 Assembly/X86_64 Assembly Notes.md",
-    "Notes/x86_64 Assembly/X86_64 Assembly Instructions.md",
-    "Notes/x86_64 Assembly/X86_64 Assemble Commands.md",
-    "X86_64 Assembly Instructions.md",
-    "X86_64 Assembly Notes.md",
-    "Notes/x86_64 Assembly",
-    "Bit Wise Operators.md",
-    "Competitive Programming.md",
-    "README.md",
-    "UnGrouped",
     "Files/Pasted image 20230901105545.png",
     "Files/Pasted image 20230901105100.png",
     "Files/Speed-Measurement-using-back-EMF-Technique.png",
     "Files/X86_64 Registers.png",
-    "Notes/compiler_design",
-    "Notes/Forex",
-    "Notes/unsorted",
-    "Notes/Bash_101",
-    "Notes/modern_cxx",
     "Files/Pasted image 20230901132700.png",
     "Files/Pasted image 20230901111756.png",
     "Files/Pasted image 20230901111034.png",
-    "Files/Pasted image 20230901111021.png",
     "Untitled.canvas"
   ]
 }
