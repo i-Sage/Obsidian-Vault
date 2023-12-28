@@ -3,17 +3,15 @@ Type : Reference
 Tags : #PWM
 
 ---
-## Summary of Formulas
-1. Effective Voltage at a pwm pin
- $$PWM_{\text{out}}\text{ level} = \frac{255}{5} \cdot V_{eff}$$
-
-___
 # What is PWM ?
 ---
 Pulse width modulation or PWM is a technique for supplying electrical power to a load that has a relatively slow response. The supply consists of a train of voltage pulses such that the individual pulses controls the effective voltage level to the load.
 
+
 ![[Speed-Measurement-using-back-EMF-Technique.png]]
+
 The effective voltage is given by:
+
 
 $$V_{eff} = V_s \cdot \frac{\tau_o}{\tau_c}$$
 

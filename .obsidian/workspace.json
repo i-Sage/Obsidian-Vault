@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d89e4871c5528",
+        "id": "b0547986ea518bee",
         "type": "tabs",
         "children": [
           {
-            "id": "90c3fa6378f7ac6b",
+            "id": "b40174452135ffea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UnGrouped/Tips for using ChatGPT.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Differentiation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UnGrouped/Tips for using ChatGPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UnGrouped/Tips for using ChatGPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "UnGrouped/Tips for using ChatGPT.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +127,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -170,54 +164,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "90c3fa6378f7ac6b",
+  "active": "b40174452135ffea",
   "lastOpenFiles": [
+    "Excalidraw/Machine Learning.md",
+    "UnGrouped/Differential Equations.md",
+    "Excalidraw/Linear Regression graphical.md",
+    "Notes/Statistics and Probability/Regression/01 Simple Linear Regression.md",
+    "Excalidraw/Introduction to the derivative.md",
+    "Excalidraw/Drawing 2023-12-25 21.05.21.excalidraw.md",
+    "Notes/Statistics and Probability/01 Intro To Statistics And Probability.md",
+    "Notes/Statistics and Probability/02 Descriptive Statistics.md",
+    "Notes/Statistics and Probability/Regression",
+    "Files/X86_64 Registers.png",
+    "Files/Speed-Measurement-using-back-EMF-Technique.png",
+    "Files/Pasted image 20231225155440.png",
+    "Files/Screenshot_20231225-092944.jpg",
+    "Files/Pasted image 20231225151702.png",
+    "Files/Pasted image 20231225090120.png",
+    "Files/Pasted image 20231225080839.png",
+    "Files/Pasted image 20230901105100.png",
+    "Files/Pasted image 20230901111756.png",
+    "Files/Pasted image 20231224132759.png",
+    "UnGrouped/CMake.md",
+    "UnGrouped/Crafting Interpreters.md",
+    "UnGrouped/COMPILER_DESIGN.md",
+    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
+    "Notes/Engineering Mathematics 101/Calculus/Welcome To Calculus.md",
+    "Notes/Machine Learning 101/01 Intro.md",
+    "Notes/Statistics and Probability/Regression/02 The Least Squares Method.md",
+    "my-obsidian-library.excalidrawlib",
+    "Excalidraw/Drawing 2023-12-24 13.13.46.excalidraw.md",
+    "Notes/Electronics 101/01 Foundations/03 Complex Numbers.md",
+    "Notes/Electronics 101/01 Foundations/01 Algebraic Approximations.md",
+    "Notes/Electronics 101/01 Foundations/05 system of equations.md",
+    "Excalidraw/Drawing 2023-12-23 22.38.57.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
     "UnGrouped/Tips for using ChatGPT.md",
     "UnGrouped/Essentials.md",
     "UnGrouped/Untitled 1.md",
-    "UnGrouped/Crafting Interpreters.md",
-    "UnGrouped/COMPILER_DESIGN.md",
-    "UnGrouped/CMake.md",
-    "UnGrouped/01 Basic Vocabulary.md",
-    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
     "Notes/Machine Learning 101/Untitled",
-    "Excalidraw/Introduction to the derivative.md",
     "Notes/Engineering Mathematics 101/Calculus/PreCalc",
-    "Notes/Engineering Mathematics 101/Calculus/Welcome To Calculus.md",
     "Notes/Engineering Mathematics 101/Calculus/PreCalc/Functions.md",
-    "Files/Pasted Image 20231223151730_963.png",
-    "Notes/Electronics 101/01 Foundations/01 Algebraic Approximations.md",
-    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.svg",
-    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
-    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.svg",
-    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.md",
     "Excalidraw/Scripts/Downloaded",
     "Excalidraw/Scripts",
-    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Integrals.md",
-    "Notes/Electronics 101/01 Foundations/05 system of equations.md",
     "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus",
     "Notes/Engineering Mathematics 101/Calculus",
     "Notes/Engineering Mathematics 101",
     "Notes/Electronics 101/01 Foundations",
-    "Notes/Electronics 101",
-    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
-    "Excalidraw/Drawing 2023-12-21 23.48.26.excalidraw.md",
-    "Excalidraw",
-    "Notes/Machine Learning 101/01 Intro.md",
-    "Notes/Machine Learning 101/Machine Learning.md",
-    "Templates/core.md",
-    "Notes/Bash_101/Bash.md",
-    "Notes/Bash_101/__look_up__.md",
-    "Notes/modern_cxx/C++ Attributes.md",
-    "Notes/modern_cxx/__look_up__.md",
-    "Notes/modern_cxx/Uncovered Topics.md",
-    "Files/Pasted image 20230901105545.png",
-    "Files/Pasted image 20230901105100.png",
-    "Files/Speed-Measurement-using-back-EMF-Technique.png",
-    "Files/X86_64 Registers.png",
-    "Files/Pasted image 20230901132700.png",
-    "Files/Pasted image 20230901111756.png",
-    "Files/Pasted image 20230901111034.png",
     "Untitled.canvas"
   ]
 }

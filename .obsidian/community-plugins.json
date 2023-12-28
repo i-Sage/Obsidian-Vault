@@ -1,7 +1,5 @@
 [
-  "obsidian-admonition",
   "obsidian-icon-folder",
   "table-editor-obsidian",
-  "obsidian-excalidraw-plugin",
-  "obsidian-git"
+  "obsidian-excalidraw-plugin"
 ]
