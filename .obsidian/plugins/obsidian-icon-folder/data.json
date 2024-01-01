@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiMaterialdesign",
+      "SiMaterialdesignicons",
       "RiCalculatorFill",
       "RiCalculatorLine",
-      "SiCapacitor",
-      "SiE",
-      "SiAssemblyscript"
+      "SiCapacitor"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -35,7 +35,8 @@
   "Notes/Statistics and Probability": "RiAddFill",
   "Notes/x86_64 Assembly": "SiAssemblyscript",
   "Excalidraw": "SiE",
-  "Notes/Electronics 101": "SiCapacitor",
-  "Notes/Electronics 101/01 Foundations": "RiCalculatorLine",
-  "Notes/Engineering Mathematics 101": "RiCalculatorFill"
+  "Notes/Engineering Mathematics 101": "RiCalculatorFill",
+  "Notes/Electrical Eng 101": "SiCapacitor",
+  "Notes/Electrical Eng 101/01 Foundations": "RiCalculatorLine",
+  "Notes/Electrical Eng 101/Electrical Eng Materials": "SiMaterialdesign"
 }

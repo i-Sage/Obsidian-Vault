@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b0547986ea518bee",
+        "id": "35ff506d6b41b306",
         "type": "tabs",
         "children": [
           {
-            "id": "b40174452135ffea",
+            "id": "432c5bc266be4cd6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Linear Regression graphical.md"
+              }
             }
           }
         ]
@@ -65,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5110321044922
+    "width": 304.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "6b008f9d1c0ed5ab",
@@ -81,6 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Excalidraw/Linear Regression graphical.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Excalidraw/Linear Regression graphical.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +123,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Excalidraw/Linear Regression graphical.md"
+              }
             }
           },
           {
@@ -164,15 +171,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b40174452135ffea",
+  "active": "432c5bc266be4cd6",
   "lastOpenFiles": [
-    "Excalidraw/Machine Learning.md",
-    "UnGrouped/Differential Equations.md",
+    "Notes/Statistics and Probability/Regression/02 The Least Squares Method.md",
     "Excalidraw/Linear Regression graphical.md",
     "Notes/Statistics and Probability/Regression/01 Simple Linear Regression.md",
-    "Excalidraw/Introduction to the derivative.md",
-    "Excalidraw/Drawing 2023-12-25 21.05.21.excalidraw.md",
     "Notes/Statistics and Probability/01 Intro To Statistics And Probability.md",
+    "Notes/Statistics and Probability/Regression and Model Building.md",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
+    "Notes/Electrical Eng 101/Electrical Eng Materials/Introduction.md",
+    "Notes/Electrical Eng 101/Electrical Eng Materials",
+    "Excalidraw/Machine Learning.md",
+    "Excalidraw/Signals and Systems.md",
+    "Excalidraw/Introduction to the derivative.md",
+    "UnGrouped/Differential Equations.md",
+    "Excalidraw/Drawing 2023-12-25 21.05.21.excalidraw.md",
     "Notes/Statistics and Probability/02 Descriptive Statistics.md",
     "Notes/Statistics and Probability/Regression",
     "Files/X86_64 Registers.png",
@@ -189,29 +202,23 @@
     "UnGrouped/Crafting Interpreters.md",
     "UnGrouped/COMPILER_DESIGN.md",
     "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
-    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
     "Notes/Engineering Mathematics 101/Calculus/Welcome To Calculus.md",
     "Notes/Machine Learning 101/01 Intro.md",
-    "Notes/Statistics and Probability/Regression/02 The Least Squares Method.md",
     "my-obsidian-library.excalidrawlib",
     "Excalidraw/Drawing 2023-12-24 13.13.46.excalidraw.md",
-    "Notes/Electronics 101/01 Foundations/03 Complex Numbers.md",
-    "Notes/Electronics 101/01 Foundations/01 Algebraic Approximations.md",
-    "Notes/Electronics 101/01 Foundations/05 system of equations.md",
+    "Notes/Electrical Eng 101/01 Foundations/03 Complex Numbers.md",
+    "Notes/Electrical Eng 101/01 Foundations/01 Algebraic Approximations.md",
+    "Notes/Electrical Eng 101/01 Foundations/05 system of equations.md",
     "Excalidraw/Drawing 2023-12-23 22.38.57.excalidraw.md",
     "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
     "UnGrouped/Tips for using ChatGPT.md",
-    "UnGrouped/Essentials.md",
-    "UnGrouped/Untitled 1.md",
     "Notes/Machine Learning 101/Untitled",
     "Notes/Engineering Mathematics 101/Calculus/PreCalc",
-    "Notes/Engineering Mathematics 101/Calculus/PreCalc/Functions.md",
     "Excalidraw/Scripts/Downloaded",
     "Excalidraw/Scripts",
     "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus",
     "Notes/Engineering Mathematics 101/Calculus",
     "Notes/Engineering Mathematics 101",
-    "Notes/Electronics 101/01 Foundations",
     "Untitled.canvas"
   ]
 }
