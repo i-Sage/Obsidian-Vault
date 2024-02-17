@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "35ff506d6b41b306",
+        "id": "13a325eddea48189",
         "type": "tabs",
         "children": [
           {
-            "id": "432c5bc266be4cd6",
+            "id": "f6e658bafa5f1318",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -16,8 +16,17 @@
                 "file": "Excalidraw/Linear Regression graphical.md"
               }
             }
+          },
+          {
+            "id": "be6dff833a3af585",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,9 +156,19 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "e462efe6ce8adf75",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Excalidraw/Linear Regression graphical.md"
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -171,47 +190,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "432c5bc266be4cd6",
+  "active": "be6dff833a3af585",
   "lastOpenFiles": [
-    "Notes/Statistics and Probability/Regression/02 The Least Squares Method.md",
     "Excalidraw/Linear Regression graphical.md",
-    "Notes/Statistics and Probability/Regression/01 Simple Linear Regression.md",
-    "Notes/Statistics and Probability/01 Intro To Statistics And Probability.md",
-    "Notes/Statistics and Probability/Regression and Model Building.md",
-    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Derivatives.md",
-    "Notes/Electrical Eng 101/Electrical Eng Materials/Introduction.md",
-    "Notes/Electrical Eng 101/Electrical Eng Materials",
     "Excalidraw/Machine Learning.md",
+    "Excalidraw/Drawing 2024-02-11 12.16.35.excalidraw.md",
+    "Excalidraw/The transistor.md",
     "Excalidraw/Signals and Systems.md",
-    "Excalidraw/Introduction to the derivative.md",
+    "Excalidraw/Storage elements and Orders of Circuits.md",
+    "UnGrouped/Applications of Differential Equations.md",
+    "Excalidraw/Drawing 2024-01-17 17.07.38.excalidraw.md",
     "UnGrouped/Differential Equations.md",
-    "Excalidraw/Drawing 2023-12-25 21.05.21.excalidraw.md",
-    "Notes/Statistics and Probability/02 Descriptive Statistics.md",
+    "Files/Pasted Image 20240212013225_999.png",
+    "Files/Pasted Image 20240212013202_326.png",
+    "Files/Pasted Image 20240212013140_935.png",
+    "Excalidraw/Drawing 2024-01-01 18.27.50.excalidraw.md",
+    "Excalidraw/Drawing 2024-01-13 01.07.46.excalidraw.md",
+    "UnGrouped/Untitled.md",
+    "UnGrouped/Trading the Asian Session Till I Become a Millionaire.md",
+    "Files/Pasted image 20240201010854.png",
+    "Files/Pasted image 20240201010749.png",
+    "Excalidraw/Introduction to the derivative.md",
+    "Notes/Electrical Eng 101/01 Foundations/01 Algebraic Approximations.md",
+    "UnGrouped/show off.md",
+    "Notes/x86_64 Assembly/X86_64 Registers.md",
+    "Notes/x86_64 Assembly/X86_64 Assemble Commands.md",
+    "Notes/x86_64 Assembly/X86_64 Assembly Instructions.md",
+    "Notes/Electrical Eng 101/01 Foundations/03 Complex Numbers.md",
+    "Notes/Electrical Eng 101/Electrical Eng Materials/Introduction.md",
+    "Excalidraw/Drawing 2024-01-01 14.32.44.excalidraw.md",
+    "UnGrouped/Numerical Methods for Solving ODE's.md",
+    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Integrals.md",
+    "UnGrouped/Endianness.md",
+    "Notes/Electrical Eng 101/Electrical Eng Materials",
     "Notes/Statistics and Probability/Regression",
     "Files/X86_64 Registers.png",
     "Files/Speed-Measurement-using-back-EMF-Technique.png",
     "Files/Pasted image 20231225155440.png",
     "Files/Screenshot_20231225-092944.jpg",
     "Files/Pasted image 20231225151702.png",
-    "Files/Pasted image 20231225090120.png",
-    "Files/Pasted image 20231225080839.png",
-    "Files/Pasted image 20230901105100.png",
-    "Files/Pasted image 20230901111756.png",
-    "Files/Pasted image 20231224132759.png",
-    "UnGrouped/CMake.md",
-    "UnGrouped/Crafting Interpreters.md",
-    "UnGrouped/COMPILER_DESIGN.md",
-    "Notes/Arduino 101/Pulse Width Modulation with the Arduino.md",
-    "Notes/Engineering Mathematics 101/Calculus/Welcome To Calculus.md",
-    "Notes/Machine Learning 101/01 Intro.md",
     "my-obsidian-library.excalidrawlib",
-    "Excalidraw/Drawing 2023-12-24 13.13.46.excalidraw.md",
-    "Notes/Electrical Eng 101/01 Foundations/03 Complex Numbers.md",
-    "Notes/Electrical Eng 101/01 Foundations/01 Algebraic Approximations.md",
-    "Notes/Electrical Eng 101/01 Foundations/05 system of equations.md",
-    "Excalidraw/Drawing 2023-12-23 22.38.57.excalidraw.md",
-    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
-    "UnGrouped/Tips for using ChatGPT.md",
     "Notes/Machine Learning 101/Untitled",
     "Notes/Engineering Mathematics 101/Calculus/PreCalc",
     "Excalidraw/Scripts/Downloaded",

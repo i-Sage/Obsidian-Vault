@@ -916,7 +916,7 @@ image of the signal for t > 0. Examples are cos, t, t^2, and t^4. ^XAuk5Gav
 
 By definition a signal is odd if ^sODkHIyR
 
-x(t) = -x(-t) ^W2uCA9QH
+x(-t) = -x(t) ^W2uCA9QH
 
 The plot of an odd function is antisymmetrical about the vertical axis. Exaples of odd functions are t, t^3,
 and sin t ^wtb09GSU
@@ -1132,18 +1132,294 @@ dt ^WYysiwdj
 
 The same applies for discrete time parabolic signals ^FzDSaYBI
 
+INTRODUCTION ^SEJTeMBa
+
+A system is a mathematical model of a physical process that relates the input 
+(or excitation) signal to the output (or response) signal
+    Let x and y be the input and output signals, respectively, of a system. then the
+system is viewed as a transformation (or mapping) of x into y. The transformation by the
+mathematical notation is: 
+                                         y = Tx
+Where T is the operator representing some well defined rule by which x is transformed into
+y. ^Hf7zIetZ
+
+system T ^6WJkdegU
+
+x ^jbCqolY9
+
+y ^96INNA79
+
+.
+.
+. ^UY5rCPwr
+
+.
+.
+. ^sbCCxWZe
+
+x1 ^6ajyRaTn
+
+xn ^b0RHF1gU
+
+y1 ^VKE0220g
+
+yn ^E2DLdqHm
+
+system ^BVapNawx
+
+single input system ^V50M8d4V
+
+multi-input system ^MBrnqgam
+
+DETERMINISTIC AND  STOCHASTIC SYSTEMS: ^C54uWVbu
+
+If the input and output signals x and y are deterministic signals (defined for every 
+instant of t), then the system is called a deterministic system.
+
+If the input and output signals x and y are random signals, then the system is called
+a stochastic system ^T3jr4bei
+
+CLASSIFICATION OF SYSTEMS ^h7LFhakG
+
+CONTINUOUS-TIME AND DISCRETE-TIME SYSTEMS: ^dWYITJqz
+
+If the input and output signals are continuous-time signals, then the system is called
+a continuous-time system. If the input and output are discrete-time signals or sequences
+then the system is called a discrete-time system. ^2p4t1S99
+
+SYSTEMS WITH AND WITHOUT MEMORY ^veqGAO4h
+
+A system is said to be memory-less if the output at any time depends on only the input
+at that same time. Otherwise, the system is said to have memory. An example of a 
+memoryless system is a Resistor R with the input x(t) taken as the current and the
+voltage taken as the output y(t). The input-output relationship (Ohm's law) of a 
+resistor is 
+                                y(t) = Rx(t)
+An example of a system with memory is a capacitor C with the current as the input x(t)
+and the voltage as the output y(t); then:
+                            
+                                ^FY8pCEi0
+
+CAUSAL AND NONCAUSAL SYSTEMS: ^U6tObEAI
+
+A system is called casual if its output at the present time depends on only the present
+and // or past values of the input. Thus, in a casual system, it is not possible to obtain
+an output before an input is applied to the system. 
+A system is called noncausal (or anticipative) if its output at the present time depends
+on future values of the input. Examples of noncasual systems are:
+                            y(t) = x(t + 1)
+                            y[n] = x[-n]
+NOTE: all memoryless systems are casual, but not vice versa. ^8YDFKcSJ
+
+LINEAR SYSTEMS AND NON-LINEAR SYSTEMS ^5nCEV44N
+
+If the operator T satisfies the following two conditions, then T is called a linear operator and
+the system represented by a linear operator T is called a LINEAR SYSTEM: ^jvZjcnvg
+
+1. Additivity:
+Given that Tx1 = y1 and Tx2 = y2, then
+                                T{x1 + x2} = y1 + y2
+for any signals x1 and x2
+
+2. Homogeneity (or scalling):
+                                T{ax} = ay
+for any signals x and any scalar a.
+    Any system that does not satisfy the above two conditions are classified as nonlinear 
+systems. The above two conditions can be combined into a single condition as:
+                            T{a1x1 + a2x2} = a1y1 + a2y2
+Where a1 and a2 are arbitrary scalars. This above equation is known as the SUPERPOSITION
+PROPERTY. 
+
+NOTE: A consequence of the homogeneity property of linear systems is that a zero input yeilds
+a zero output. ^Kfr0L8rZ
+
+TIME-INVARIANT AND TIME-VARYING SYSTEMS: ^nZjoBjrR
+
+A system is called time-invariant if a time shift (delay or advance) in the input signal causes
+the same time shift in the output. Thus for a continuous-time system, the system is invariant
+if:
+                                   T{x(t - T)} = y(t - T)
+A system which does not satisfy the above equation is called a time-varying system. ^nsZdgYN4
+
+STABLE SYSTEMS:
+ ^a6VhHlMj
+
+A system is bounded-input / bounded-output (BIBO) stable if for any bounded input x defined by
+                                        |x| <= k1
+The corresponding output y is also bounded defined by
+                                        |y| <= k2
+where k1 and k2 are finite real constants. An unstable system is one in which not all bounded
+inputs lead to bounded outputs. ^N8Tj0y70
+
+FEEDBACK SYSTEMS: ^v9hYw58t
+
+A special case of systems of great importance consists of systems having feedback. In a 
+feedback system, the output signal is fed back and added to the input to the system as 
+shown below: ^EHMUeUKK
+
+system ^k9Ddpbf0
+
+y(t) ^KdIPl8PZ
+
+x(t) ^UoxAFrB1
+
+CONVOLUTION ^9ChQaQoJ
+
+INTRODUCTION ^i3M1oXaX
+
+As we have seen before, a system may be regarded as a process that transforms an input signal into an output signal.
+The system must be capable of accepting input signals, operating on them, and producing output signals. The behavior of
+the system can be described mathematically either in the time domain, or in the frequency domain. 
+Here we will seek to understand a technique called convolution, which is a tool for time-domain analysis of systems. We 
+will learn how to apply it in finding the response of LTI (linear, time-invariant) systems to input signals ^5SQZBxsv
+
+IMPULSE RESPONSE ^SpJO6BGL
+
+We recall that if x(t) is the input signal and y(t) is the output signal or response of a system, they are related
+through the transformation:   y(t) =  x(t)
+where   is an operator transforming x(t) into y(t). The impulse response h(t) is the response of the system when the
+input is the unit impulse function  (t), that is:
+                                                    h(t) =    (t)
+The impulse response to an LTI system is the output of the system to a unit impulse function.
+                The input x(t) can be expressed as:
+                                                    x(t) =    x(T)  (t - T) dT
+
+Where T is a dummy variable. The above equation is the shifting property of the unit impulse.
+The response y(t) to the input x(t) is obtained by combining equtions i and iii ^WxewNlZZ
+
+-------------- i ^LDY2Kn19
+
+-------------- iii ^zS5k1U4v
+
+-------------- ii ^zY08mBy6
+
+y(t) = x(t) =       x(T)  (t-T) dT ^rHbjFPe1
+
+-------------- iv ^LAhwgY2Q
+
+=   x(T)     (t - T) dT ^4A7yfSdc
+
+in which the interchange of operations is allowed by virtue of the system's linearity.
+Since we are assuming that the system is time-invariant, equation ii implies that: ^7SqEJQik
+
+h(t - T) =    (t - T) ^4jPsBSHh
+
+-------------- v ^zWbeIVo6
+
+From equations iv and v, we get ^78fPZMyV
+
+y(t) =    x(T)h(t - T) dT ^ueRTKBNR
+
+-------------- vi ^eoVmtcNo
+
+CONVOLUTION INTEGRAL ^flmi1uF2
+
+This shows that an LTI system is characterized by its impulse response ^yt2l5JwU
+
+Equation vi is known as the convolution integral or superposition integral. The convolution integral occurs frequently in 
+science, mathematics, and engineering. The convolution of two signals x(t) and h(x) is usually written in terms of the 
+operator * as ^PNBIUiM6
+
+y(t) = x(t) * h(x) =     x(T)h(t-T) dT    --------------vii ^1NCfp03o
+
+That is, y(t) equals x(t) convolved with h(t). The asterisk denotes convolution here and should not be confused with
+the complex conjugate. We can split the integral in eqn vi into two parts: ^zETypgq7
+
+y(t) = x(t) * h(t) =     x(T)h(t-T) dT +    s(T)h(t-T) dT == y  (t) +  y  (t)   ------------viii ^wZSaEVDN
+
+zir ^BIvtaKBr
+
+zsr ^F4TdTxSM
+
+to ^mqznBnso
+
+to ^YCzias38
+
+y  ^tsmvhmgi
+
+y ^ReUP1SKZ
+
+zir ^y15vGZPI
+
+zsr ^wsLx5nhf
+
+Where
+    y   (t) is the zero-input response (or the natural response) of the system
+    y   (t) is the zero-state response (or the forced response) of the system
+    to   is the initial time ^XKl1IUMd
+
+zir ^ID9IvraR
+
+zsr ^dHVcfnIa
+
+Thus, the complete response of a physical system is divided into the zero-input response and the zero-state response.
+The convolution integral in eqn vii is a general one. It applies to any LTI system, however, the convolution integral can
+be simpliified if we assume that a system has two properties. First, if x(t) = 0 for t < 0, then ^ZYTcY8B6
+
+y(t) =    x(T)h(t-T) dT =    x(T)h(t-T) dT  --------ix ^XlYUDL6T
+
+0 ^iW59Sq39
+
+Second, if we assume that the system is causal, h(t) = 0 for t < 0, then
+h(t-T) = 0 for t-T < 0 or T > t, so that eqn ix becomes: ^NdSDD6g9
+
+y(t) = x(t) * h(t) =   x(T)h(t-T) dT   -----------x ^ox2NJfmb
+
+0 ^o74Z5oLX
+
+t ^cwtTGhuN
+
+Some important properties of the convolution integral are shown below. Property #1 states that the order in which two
+functions are convoluted is unimportant. Another property of the convolution integral is the width property. If the 
+durations of x(t) and h(t) are T1 and T2, respectively, then the duration of y(t) = x(t) * h(t) is T1 + T2. If the areas
+x(t) and h(t) are A1 and A2 respectively, then the area under y(t) = x(t) * h(t) is A1A2. That is: ^uwCYNt9i
+
+Area under y(t) = Area under x(t) . Area under h(t) -----------xi ^KCas7DGR
+
+Convolution is a mathematical method used to combine two signals to form a third one. convolution is very important as
+it relates the input signal and impulse response to produce the output signal of the system. In other words, it 
+expresses the input and output relationship of an LTI system. ^V2OXyjyy
+
+in simpler terms, convolution operation involves integrating the 
+product of the two signals shifted with respect to each other.
+This operation is used to find the output of a linear time invariant 
+(LTI) system when the input is known ^72Ya4KiU
+
+For discrete time signals, the convolution operation is slightly different.
+If we have two discrete-time signals, x[n] and h[n], their convolution,
+denoted by (x*h)[n], is given by
+ ^rFWLMlPK
+
+The convolution operation is critical in analyzing and understanding the
+behavior of linear-time invariant systems, as it allows us to find the 
+system's response to any input signal.  ^556uhEE9
+
+k = - ^CVwjNgjp
+
+x[k]  h[n - k] ^l0oSTlXP
+
+. ^AEBPIK17
+
+( x * h)[n] = ^oqDCW8od
+
+PROPERTIES OF THE CONVOLUTION INTEGRAL ^iF4xpo94
+
+
+# Embedded files
+cc617bc9e528cf4830db3a8c006618e9b9498ef1: $$y(t) = \frac{1}{c} \int_{-\infty}^{t}x(\tau)d\tau$$
+
 %%
 # Drawing
 ```json
 {
 	"type": "excalidraw",
 	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.13",
+	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.20",
 	"elements": [
 		{
 			"type": "text",
-			"version": 253,
-			"versionNonce": 925104880,
+			"version": 266,
+			"versionNonce": 1010388000,
 			"isDeleted": false,
 			"id": "Mt3iORSe",
 			"fillStyle": "solid",
@@ -1163,7 +1439,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097074,
+			"updated": 1705925336287,
 			"link": null,
 			"locked": false,
 			"fontSize": 41.45319824218749,
@@ -1175,12 +1451,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SIGNALS AND SYSTEMS",
 			"lineHeight": 1.25,
-			"baseline": 35
+			"baseline": 36
 		},
 		{
 			"type": "text",
-			"version": 123,
-			"versionNonce": 962685968,
+			"version": 136,
+			"versionNonce": 1152310644,
 			"isDeleted": false,
 			"id": "XUg0OY1d",
 			"fillStyle": "solid",
@@ -1200,7 +1476,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348053,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1212,12 +1488,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 181,
-			"versionNonce": 415702256,
+			"version": 283,
+			"versionNonce": 1213129676,
 			"isDeleted": false,
 			"id": "4XLU6e3e",
 			"fillStyle": "solid",
@@ -1226,8 +1502,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 332.2478771302542,
-			"y": -830.1631872854828,
+			"x": 604.8735582144766,
+			"y": -811.6515687261722,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 91.67991638183594,
@@ -1237,7 +1513,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348054,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1249,12 +1525,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SYSTEMS",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 187,
-			"versionNonce": 276392464,
+			"version": 194,
+			"versionNonce": 260183160,
 			"isDeleted": false,
 			"id": "KcMVt1diolcb-rVzRO3yl",
 			"fillStyle": "solid",
@@ -1281,14 +1557,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 139,
-			"versionNonce": 1572208368,
+			"version": 211,
+			"versionNonce": 816942856,
 			"isDeleted": false,
 			"id": "6JCLdN0cZsoAberlyzhal",
 			"fillStyle": "solid",
@@ -1297,8 +1573,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 303.96241570447296,
-			"y": -840.0470068655609,
+			"x": 573.2224128047592,
+			"y": -823.2182659629846,
 			"strokeColor": "#1971c2",
 			"backgroundColor": "transparent",
 			"width": 151.43438720703125,
@@ -1315,14 +1591,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 86,
-			"versionNonce": 2145495056,
+			"version": 93,
+			"versionNonce": 406373752,
 			"isDeleted": false,
 			"id": "YsoFR7sEu73GUNO6GS-L1",
 			"fillStyle": "solid",
@@ -1353,14 +1629,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 59,
-			"versionNonce": 645439728,
+			"version": 244,
+			"versionNonce": 951741960,
 			"isDeleted": false,
 			"id": "B7CP8qdlRFiuxA6VYjH29",
 			"fillStyle": "solid",
@@ -1369,12 +1645,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 77.59962273572296,
+			"x": 120.81874859200389,
 			"y": -938.6101324759125,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 287.88299560546875,
-			"height": 92.28028869628906,
+			"width": 490.3868439420778,
+			"height": 109.10902959886539,
 			"seed": 929756033,
 			"groupIds": [],
 			"frameId": null,
@@ -1382,7 +1658,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1404,15 +1680,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					0
 				],
 				[
-					287.88299560546875,
-					92.28028869628906
+					490.3868439420778,
+					109.10902959886539
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 270,
-			"versionNonce": 328345104,
+			"version": 277,
+			"versionNonce": 418469496,
 			"isDeleted": false,
 			"id": "0kEcwzinIpSxonfqsjuxT",
 			"fillStyle": "solid",
@@ -1434,7 +1710,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1463,8 +1739,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 333,
-			"versionNonce": 1117192944,
+			"version": 343,
+			"versionNonce": 692119584,
 			"isDeleted": false,
 			"id": "BBBvqQAe",
 			"fillStyle": "solid",
@@ -1484,7 +1760,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1705925322047,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.257914458992367,
@@ -1500,8 +1776,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 548,
-			"versionNonce": 411231248,
+			"version": 562,
+			"versionNonce": 1398476532,
 			"isDeleted": false,
 			"id": "DCawoYhH",
 			"fillStyle": "solid",
@@ -1521,7 +1797,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348057,
 			"link": null,
 			"locked": false,
 			"fontSize": 22.92894950973239,
@@ -1533,12 +1809,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A signal can be defined as a single-valued function of one or more\nindependent variables which contain some information. A signal may also\nbe defined as any physical quantity that varies with time, space or\nany other independent variable. A signal may be represented in time \ndomain or frequency domain.",
 			"lineHeight": 1.25,
-			"baseline": 135
+			"baseline": 134
 		},
 		{
 			"type": "text",
-			"version": 812,
-			"versionNonce": 1352213744,
+			"version": 825,
+			"versionNonce": 1859684940,
 			"isDeleted": false,
 			"id": "nDp9dE86",
 			"fillStyle": "solid",
@@ -1558,7 +1834,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348058,
 			"link": null,
 			"locked": false,
 			"fontSize": 23.162263326259346,
@@ -1574,8 +1850,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 558,
-			"versionNonce": 2091639312,
+			"version": 565,
+			"versionNonce": 1559763064,
 			"isDeleted": false,
 			"id": "m_9ZTAhWuxGc4zIqckasC",
 			"fillStyle": "solid",
@@ -1597,14 +1873,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726020,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 165,
-			"versionNonce": 1577518832,
+			"version": 176,
+			"versionNonce": 749638004,
 			"isDeleted": false,
 			"id": "2GPgj5Nu",
 			"fillStyle": "solid",
@@ -1624,7 +1900,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388344097,
 			"link": null,
 			"locked": false,
 			"fontSize": 25.960876884036267,
@@ -1636,12 +1912,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "REPRESENTATIONS OF DISCRETE-TIME SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 23
 		},
 		{
 			"type": "text",
-			"version": 99,
-			"versionNonce": 788865040,
+			"version": 112,
+			"versionNonce": 1887768692,
 			"isDeleted": false,
 			"id": "AS7iAguG",
 			"fillStyle": "solid",
@@ -1661,7 +1937,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348060,
 			"link": null,
 			"locked": false,
 			"fontSize": 27.071158628127616,
@@ -1677,8 +1953,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 993,
-			"versionNonce": 124299504,
+			"version": 1007,
+			"versionNonce": 308895948,
 			"isDeleted": false,
 			"id": "M3e1lYQJ",
 			"fillStyle": "solid",
@@ -1707,7 +1983,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097075,
+			"updated": 1706388348062,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1719,12 +1995,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "In General signals may be CONTINUOUS-TIME SIGNALS or DISCRETE-TIME SIGNALS.\nContinuous-time signals are defined for all instants of time, whereas  discrete-time\nsignals are defined only at discrete instants of time. Continuous time signals are \nrepresented by x(t) and discrete-time signals are represented by x[n] where t and n are\nindependent variables in time domain. Continuous-time signals are represented by a \nfunction or a graph.\n\n    There are four ways of representing discrete-time signals. They are:\n    1.  Graphical Representation                      2. Functional Representation\n    3. Tabular representation                        4. Sequence Representation.\n\n",
 			"lineHeight": 1.25,
-			"baseline": 290
+			"baseline": 292
 		},
 		{
 			"type": "line",
-			"version": 115,
-			"versionNonce": 2139528720,
+			"version": 122,
+			"versionNonce": 1001806456,
 			"isDeleted": false,
 			"id": "x_VRkByhSiF3Qj0GnnO1S",
 			"fillStyle": "solid",
@@ -1746,7 +2022,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1767,8 +2043,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 42,
-			"versionNonce": 407243504,
+			"version": 49,
+			"versionNonce": 1162651912,
 			"isDeleted": false,
 			"id": "LebYcxtTnAU4Vt7zsj7Kx",
 			"fillStyle": "solid",
@@ -1790,7 +2066,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1811,8 +2087,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 212,
-			"versionNonce": 2133351440,
+			"version": 225,
+			"versionNonce": 737337844,
 			"isDeleted": false,
 			"id": "J8azZA9D",
 			"fillStyle": "solid",
@@ -1832,7 +2108,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1706388348063,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1844,12 +2120,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "GRAPHICAL REPRESENTATION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 500,
-			"versionNonce": 723987696,
+			"version": 507,
+			"versionNonce": 2128758792,
 			"isDeleted": false,
 			"id": "nEGb27pyS3EmZkzuJd-zd",
 			"fillStyle": "solid",
@@ -1871,7 +2147,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097075,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1896,8 +2172,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 280,
-			"versionNonce": 1608669712,
+			"version": 293,
+			"versionNonce": 1788569420,
 			"isDeleted": false,
 			"id": "s4cSsZiP",
 			"fillStyle": "solid",
@@ -1917,7 +2193,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348064,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1929,12 +2205,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "consider a signal x[n] with values\nx[-2] = -3, x[-1] = 2, x[0] = 0, x[1] = 3, x[2] = 1 and x[3] = 2",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 149,
-			"versionNonce": 1234439920,
+			"version": 162,
+			"versionNonce": 749372276,
 			"isDeleted": false,
 			"id": "HALzwb2B",
 			"fillStyle": "solid",
@@ -1954,7 +2230,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348065,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1966,12 +2242,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The discrete-time signal can be represented graphically as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 122,
-			"versionNonce": 1420597264,
+			"version": 129,
+			"versionNonce": 1602342264,
 			"isDeleted": false,
 			"id": "ugKb4fuMq5go8j2dyEcyU",
 			"fillStyle": "solid",
@@ -1993,7 +2269,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2014,8 +2290,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "ellipse",
-			"version": 147,
-			"versionNonce": 202682608,
+			"version": 154,
+			"versionNonce": 744875528,
 			"isDeleted": false,
 			"id": "eHgaZOZQvuMWe_M1B6S1n",
 			"fillStyle": "solid",
@@ -2037,14 +2313,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 164,
-			"versionNonce": 1904154128,
+			"version": 171,
+			"versionNonce": 567893624,
 			"isDeleted": false,
 			"id": "yiPvHurXa2gNbCsG2LcsS",
 			"fillStyle": "solid",
@@ -2066,14 +2342,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 129,
-			"versionNonce": 976294640,
+			"version": 136,
+			"versionNonce": 164357384,
 			"isDeleted": false,
 			"id": "0r5MatAFAIUZa3LCipaeb",
 			"fillStyle": "solid",
@@ -2095,14 +2371,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 145,
-			"versionNonce": 189912080,
+			"version": 152,
+			"versionNonce": 890687352,
 			"isDeleted": false,
 			"id": "d4lMQsngNz_75jrycyJjN",
 			"fillStyle": "solid",
@@ -2124,14 +2400,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 145,
-			"versionNonce": 1785804016,
+			"version": 152,
+			"versionNonce": 1746535432,
 			"isDeleted": false,
 			"id": "FMi9CFJeNW1P2GM9yet8b",
 			"fillStyle": "solid",
@@ -2153,14 +2429,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 143,
-			"versionNonce": 404541968,
+			"version": 150,
+			"versionNonce": 1098784888,
 			"isDeleted": false,
 			"id": "Nu2enqSCyR697JsEajHWs",
 			"fillStyle": "solid",
@@ -2182,14 +2458,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726021,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "line",
-			"version": 135,
-			"versionNonce": 576526064,
+			"version": 142,
+			"versionNonce": 894190344,
 			"isDeleted": false,
 			"id": "Spy-wWRRUPg8HzZUqIBd0",
 			"fillStyle": "solid",
@@ -2211,7 +2487,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2232,8 +2508,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 169,
-			"versionNonce": 249040912,
+			"version": 176,
+			"versionNonce": 1188254072,
 			"isDeleted": false,
 			"id": "UdkFd7VNo6xSIrLY37zSC",
 			"fillStyle": "solid",
@@ -2255,7 +2531,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2276,8 +2552,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 157,
-			"versionNonce": 1987885296,
+			"version": 164,
+			"versionNonce": 1071555080,
 			"isDeleted": false,
 			"id": "5CMXYeY5nQU5tkbasyIQ9",
 			"fillStyle": "solid",
@@ -2299,7 +2575,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2320,8 +2596,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 192,
-			"versionNonce": 1199279632,
+			"version": 199,
+			"versionNonce": 744120952,
 			"isDeleted": false,
 			"id": "uN7ovN5fz_4DJWYoe7qBG",
 			"fillStyle": "solid",
@@ -2343,7 +2619,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2364,8 +2640,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 151,
-			"versionNonce": 710417136,
+			"version": 158,
+			"versionNonce": 650977544,
 			"isDeleted": false,
 			"id": "g354Ymf1eElkOm8gTcz__",
 			"fillStyle": "solid",
@@ -2387,7 +2663,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2408,8 +2684,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 102,
-			"versionNonce": 1526680592,
+			"version": 115,
+			"versionNonce": 734567884,
 			"isDeleted": false,
 			"id": "2LHNxZxV",
 			"fillStyle": "solid",
@@ -2429,7 +2705,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348066,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2441,12 +2717,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 95,
-			"versionNonce": 1349991664,
+			"version": 108,
+			"versionNonce": 1223816436,
 			"isDeleted": false,
 			"id": "zX0OO6XJ",
 			"fillStyle": "solid",
@@ -2466,7 +2742,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348066,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2478,12 +2754,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 56314384,
+			"version": 106,
+			"versionNonce": 1862992972,
 			"isDeleted": false,
 			"id": "miY9pMz0",
 			"fillStyle": "solid",
@@ -2503,7 +2779,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348067,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2515,12 +2791,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 95,
-			"versionNonce": 1784815344,
+			"version": 108,
+			"versionNonce": 508507764,
 			"isDeleted": false,
 			"id": "RDMLnVUL",
 			"fillStyle": "solid",
@@ -2540,7 +2816,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348068,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2552,12 +2828,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 2072479760,
+			"version": 113,
+			"versionNonce": 440179404,
 			"isDeleted": false,
 			"id": "B0nzOHzg",
 			"fillStyle": "solid",
@@ -2577,7 +2853,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348069,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2589,12 +2865,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 103,
-			"versionNonce": 144752880,
+			"version": 116,
+			"versionNonce": 696797172,
 			"isDeleted": false,
 			"id": "LZo5HEy6",
 			"fillStyle": "solid",
@@ -2614,7 +2890,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348070,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2626,12 +2902,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 1601963536,
+			"version": 113,
+			"versionNonce": 1207394636,
 			"isDeleted": false,
 			"id": "6ckbJvxn",
 			"fillStyle": "solid",
@@ -2651,7 +2927,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097076,
+			"updated": 1706388348071,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2663,12 +2939,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 135,
-			"versionNonce": 1790649072,
+			"version": 148,
+			"versionNonce": 1587751284,
 			"isDeleted": false,
 			"id": "s3Gb97ud",
 			"fillStyle": "solid",
@@ -2688,7 +2964,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348072,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2700,12 +2976,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "TABULAR REPRESENTATION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 82,
-			"versionNonce": 204522512,
+			"version": 89,
+			"versionNonce": 372627320,
 			"isDeleted": false,
 			"id": "PFXzwi8TscwuGgF7R8S-H",
 			"fillStyle": "solid",
@@ -2727,14 +3003,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726022,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 308,
-			"versionNonce": 523846896,
+			"version": 321,
+			"versionNonce": 798316492,
 			"isDeleted": false,
 			"id": "wkqVoL8J",
 			"fillStyle": "solid",
@@ -2754,7 +3030,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348073,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2766,12 +3042,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "In this, the sampling instant n and the magnitude of the signal at the sampling\ninstant are represented in tabular form. The signal given in the graphical \nrepresentation can be represented in tabular form as:",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "rectangle",
-			"version": 118,
-			"versionNonce": 2141045264,
+			"version": 125,
+			"versionNonce": 964438136,
 			"isDeleted": false,
 			"id": "fU1AVShIvn6oCa6Hcpedm",
 			"fillStyle": "solid",
@@ -2798,14 +3074,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 227,
-			"versionNonce": 597894896,
+			"version": 234,
+			"versionNonce": 1242741512,
 			"isDeleted": false,
 			"id": "T3Np1dXP18TzCR58R3m-X",
 			"fillStyle": "solid",
@@ -2827,7 +3103,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -2856,8 +3132,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 85,
-			"versionNonce": 951779344,
+			"version": 98,
+			"versionNonce": 1088805620,
 			"isDeleted": false,
 			"id": "HNrzgz4O",
 			"fillStyle": "solid",
@@ -2877,7 +3153,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348075,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2889,12 +3165,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n   -2   -1   0   1   2  3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 75548912,
+			"version": 44,
+			"versionNonce": 221281868,
 			"isDeleted": false,
 			"id": "lIRN2XpA",
 			"fillStyle": "solid",
@@ -2914,7 +3190,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348076,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2926,12 +3202,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 68,
-			"versionNonce": 394296848,
+			"version": 81,
+			"versionNonce": 2060868724,
 			"isDeleted": false,
 			"id": "4PyJDg2o",
 			"fillStyle": "solid",
@@ -2951,7 +3227,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348076,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2963,12 +3239,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-3   2   0   3   1   2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 79,
-			"versionNonce": 2103061232,
+			"version": 86,
+			"versionNonce": 643143944,
 			"isDeleted": false,
 			"id": "gYUABEBJJKI7P3GePta8J",
 			"fillStyle": "solid",
@@ -2990,7 +3266,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3011,8 +3287,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 95,
-			"versionNonce": 1021721616,
+			"version": 102,
+			"versionNonce": 1177705336,
 			"isDeleted": false,
 			"id": "psUDODvLs243jDv24x_q_",
 			"fillStyle": "solid",
@@ -3034,7 +3310,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3055,8 +3331,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 96,
-			"versionNonce": 414665968,
+			"version": 103,
+			"versionNonce": 827144200,
 			"isDeleted": false,
 			"id": "uZTQfcPX2rHY7I3Wkf5ph",
 			"fillStyle": "solid",
@@ -3078,7 +3354,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3099,8 +3375,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 56,
-			"versionNonce": 1793341968,
+			"version": 63,
+			"versionNonce": 1061694584,
 			"isDeleted": false,
 			"id": "yzg1dmtFrNVGaQYo2Vsuv",
 			"fillStyle": "solid",
@@ -3122,7 +3398,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3143,8 +3419,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 1344286448,
+			"version": 71,
+			"versionNonce": 1509488392,
 			"isDeleted": false,
 			"id": "eLNLEkxGmvH-OtX8w3F_I",
 			"fillStyle": "solid",
@@ -3166,139 +3442,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-1.57745361328125,
-					-110.42083740234364
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 60,
-			"versionNonce": 1685223440,
-			"isDeleted": false,
-			"id": "V8ymUWP7GHFrPlL-jTUfp",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -655.0580285973476,
-			"y": 612.2741648266119,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 1.57745361328125,
-			"height": 110.42083740234364,
-			"seed": 1876105071,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097077,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-1.57745361328125,
-					-110.42083740234364
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 50,
-			"versionNonce": 740086000,
-			"isDeleted": false,
-			"id": "NYLJxMS4rajaOhezUN5S-",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -617.325698275082,
-			"y": 613.3162180492682,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 1.57745361328125,
-			"height": 110.42083740234364,
-			"seed": 581144257,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097077,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-1.57745361328125,
-					-110.42083740234364
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 55,
-			"versionNonce": 1300821520,
-			"isDeleted": false,
-			"id": "gTO3dodDak7htiflD6VJF",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -571.9031518883633,
-			"y": 613.5838572094244,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 1.57745361328125,
-			"height": 110.42083740234364,
-			"seed": 1395364367,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3320,7 +3464,139 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		{
 			"type": "line",
 			"version": 67,
-			"versionNonce": 1681208048,
+			"versionNonce": 393993592,
+			"isDeleted": false,
+			"id": "V8ymUWP7GHFrPlL-jTUfp",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -655.0580285973476,
+			"y": 612.2741648266119,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1.57745361328125,
+			"height": 110.42083740234364,
+			"seed": 1876105071,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726023,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.57745361328125,
+					-110.42083740234364
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 57,
+			"versionNonce": 349492744,
+			"isDeleted": false,
+			"id": "NYLJxMS4rajaOhezUN5S-",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -617.325698275082,
+			"y": 613.3162180492682,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1.57745361328125,
+			"height": 110.42083740234364,
+			"seed": 581144257,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726023,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.57745361328125,
+					-110.42083740234364
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 62,
+			"versionNonce": 1880190584,
+			"isDeleted": false,
+			"id": "gTO3dodDak7htiflD6VJF",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -571.9031518883633,
+			"y": 613.5838572094244,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1.57745361328125,
+			"height": 110.42083740234364,
+			"seed": 1395364367,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726023,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-1.57745361328125,
+					-110.42083740234364
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 74,
+			"versionNonce": 1725748488,
 			"isDeleted": false,
 			"id": "bBPb-zBBibN7TTzuPv-n0",
 			"fillStyle": "solid",
@@ -3342,7 +3618,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3363,8 +3639,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 50,
-			"versionNonce": 186627088,
+			"version": 57,
+			"versionNonce": 567074680,
 			"isDeleted": false,
 			"id": "BD--sNF-TP2BG0IRZLqjV",
 			"fillStyle": "solid",
@@ -3386,7 +3662,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726023,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3407,8 +3683,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 50,
-			"versionNonce": 2129745136,
+			"version": 57,
+			"versionNonce": 1435300872,
 			"isDeleted": false,
 			"id": "gFo4L7rrQSSI_lke076MS",
 			"fillStyle": "solid",
@@ -3430,7 +3706,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1704314726024,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3451,8 +3727,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 120,
-			"versionNonce": 590262800,
+			"version": 133,
+			"versionNonce": 161666252,
 			"isDeleted": false,
 			"id": "O9ovJZgI",
 			"fillStyle": "solid",
@@ -3472,7 +3748,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348077,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3484,12 +3760,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "FUNCTIONAL REPRESENTATION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 198,
-			"versionNonce": 1910060784,
+			"version": 211,
+			"versionNonce": 1983557108,
 			"isDeleted": false,
 			"id": "ctn0A12D",
 			"fillStyle": "solid",
@@ -3509,7 +3785,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097077,
+			"updated": 1706388348078,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3521,12 +3797,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "In this, the amplitude of the signal is written against the value of n.\nThe signal in the graphical and tabular form can be represented in \nfunctional form as:",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 113,
-			"versionNonce": 481161232,
+			"version": 126,
+			"versionNonce": 579230540,
 			"isDeleted": false,
 			"id": "7VyQHDWb",
 			"fillStyle": "solid",
@@ -3546,7 +3822,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348080,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3558,12 +3834,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-3   for n = -2\n2    for n = -1\n0    for n = 0\n3    for n = 1\n1     for n = 2\n2    for n = 3",
 			"lineHeight": 1.25,
-			"baseline": 141
+			"baseline": 142
 		},
 		{
 			"type": "rectangle",
-			"version": 59,
-			"versionNonce": 1098176752,
+			"version": 66,
+			"versionNonce": 1096126984,
 			"isDeleted": false,
 			"id": "4wSVwYAqCnaToWy8buKUe",
 			"fillStyle": "solid",
@@ -3585,14 +3861,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726024,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 63,
-			"versionNonce": 1603628560,
+			"version": 76,
+			"versionNonce": 1947783028,
 			"isDeleted": false,
 			"id": "LYhk8aC2",
 			"fillStyle": "solid",
@@ -3612,7 +3888,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348080,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3624,12 +3900,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 66,
-			"versionNonce": 558643952,
+			"version": 79,
+			"versionNonce": 305467852,
 			"isDeleted": false,
 			"id": "EspxTUrJ",
 			"fillStyle": "solid",
@@ -3649,7 +3925,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348081,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3661,12 +3937,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Another example is:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 62,
-			"versionNonce": 350039056,
+			"version": 75,
+			"versionNonce": 615956724,
 			"isDeleted": false,
 			"id": "5Y93IgUw",
 			"fillStyle": "solid",
@@ -3686,7 +3962,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348083,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3698,12 +3974,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2+4n   for n >= 0\n0       for n < 0",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 85,
-			"versionNonce": 333929712,
+			"version": 98,
+			"versionNonce": 935917644,
 			"isDeleted": false,
 			"id": "gpbBNqs7",
 			"fillStyle": "solid",
@@ -3723,7 +3999,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348083,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3735,12 +4011,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 69,
-			"versionNonce": 108866064,
+			"version": 76,
+			"versionNonce": 58340472,
 			"isDeleted": false,
 			"id": "mKUKIa1Agf89sA_-_d5mZ",
 			"fillStyle": "solid",
@@ -3762,14 +4038,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726024,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 82,
-			"versionNonce": 181288688,
+			"version": 89,
+			"versionNonce": 801861384,
 			"isDeleted": false,
 			"id": "_6JyrP45yxSBUMCGH24Gv",
 			"fillStyle": "solid",
@@ -3791,14 +4067,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726024,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 177,
-			"versionNonce": 2137876496,
+			"version": 184,
+			"versionNonce": 405595512,
 			"isDeleted": false,
 			"id": "XUfhWtqTfSR4i-9JW_S2k",
 			"fillStyle": "solid",
@@ -3820,7 +4096,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726024,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -3861,8 +4137,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 65,
-			"versionNonce": 109633776,
+			"version": 78,
+			"versionNonce": 1067090548,
 			"isDeleted": false,
 			"id": "drQd2fRL",
 			"fillStyle": "solid",
@@ -3882,7 +4158,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348084,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3894,12 +4170,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SEQUENCE REPRESENTATION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 122,
-			"versionNonce": 732292624,
+			"version": 135,
+			"versionNonce": 2132545228,
 			"isDeleted": false,
 			"id": "tXuc5zHx",
 			"fillStyle": "solid",
@@ -3919,7 +4195,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348085,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3931,12 +4207,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A finite duration sequence of the signal can be represented as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 59,
-			"versionNonce": 916407024,
+			"version": 72,
+			"versionNonce": 462033908,
 			"isDeleted": false,
 			"id": "4W0vlvyH",
 			"fillStyle": "solid",
@@ -3956,7 +4232,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348085,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3968,12 +4244,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n] = {-3, 2, 0, 3, 1, 2}",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 60,
-			"versionNonce": 2015274000,
+			"version": 73,
+			"versionNonce": 1221088588,
 			"isDeleted": false,
 			"id": "ILVq7f5h",
 			"fillStyle": "solid",
@@ -3993,7 +4269,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348086,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4005,12 +4281,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Another example is",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 77,
-			"versionNonce": 429483248,
+			"version": 90,
+			"versionNonce": 1183544692,
 			"isDeleted": false,
 			"id": "rTSufl0D",
 			"fillStyle": "solid",
@@ -4030,7 +4306,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348087,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4042,12 +4318,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n] = {..., 2, 3, 0, 1, -2,...}",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 34,
-			"versionNonce": 1926210064,
+			"version": 41,
+			"versionNonce": 65026168,
 			"isDeleted": false,
 			"id": "z3RTosvuvAHYeFcAlRAi1",
 			"fillStyle": "solid",
@@ -4069,7 +4345,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726025,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4090,8 +4366,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 34,
-			"versionNonce": 486491888,
+			"version": 41,
+			"versionNonce": 1404545800,
 			"isDeleted": false,
 			"id": "n0XeAjTXdefCz8jUkn-79",
 			"fillStyle": "solid",
@@ -4113,7 +4389,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726025,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4134,8 +4410,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 149,
-			"versionNonce": 716234768,
+			"version": 162,
+			"versionNonce": 1378339788,
 			"isDeleted": false,
 			"id": "CrPsvSpW",
 			"fillStyle": "solid",
@@ -4155,7 +4431,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348088,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4167,12 +4443,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The arrow mark denotes the n = 0 term. When no arrow is indicated\nthe first term corresponds to n = 0",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "rectangle",
-			"version": 76,
-			"versionNonce": 1029236976,
+			"version": 83,
+			"versionNonce": 1285360136,
 			"isDeleted": false,
 			"id": "sP4r80g4dhOfI3e3Hfyrw",
 			"fillStyle": "solid",
@@ -4199,14 +4475,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097078,
+			"updated": 1704314726025,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 120,
-			"versionNonce": 263872016,
+			"version": 127,
+			"versionNonce": 521566840,
 			"isDeleted": false,
 			"id": "mKCEWYh-kMltPqrsGNSX8",
 			"fillStyle": "solid",
@@ -4228,7 +4504,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1704314726025,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4265,8 +4541,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 167,
-			"versionNonce": 640568048,
+			"version": 180,
+			"versionNonce": 501524212,
 			"isDeleted": false,
 			"id": "iKE4Pbso",
 			"fillStyle": "solid",
@@ -4286,7 +4562,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097078,
+			"updated": 1706388348089,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4298,12 +4574,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SUM AND PRODUCT OF DISCRETE-TIME SEQUENCES",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 228,
-			"versionNonce": 1390681104,
+			"version": 241,
+			"versionNonce": 492073548,
 			"isDeleted": false,
 			"id": "3W58LqmA",
 			"fillStyle": "solid",
@@ -4323,7 +4599,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348091,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4335,12 +4611,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The sum of two discrete-time sequences is obtained by adding the corresponding\nelements of the sequence.\n\n        {Cn} = {An} + {Bn}     Cn = An + Bn",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 69,
-			"versionNonce": 1376218352,
+			"version": 76,
+			"versionNonce": 936912904,
 			"isDeleted": false,
 			"id": "-EMtbf5qYP0ym6QHFEwBO",
 			"fillStyle": "solid",
@@ -4362,7 +4638,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726025,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4383,8 +4659,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 215,
-			"versionNonce": 1176902160,
+			"version": 228,
+			"versionNonce": 1713088628,
 			"isDeleted": false,
 			"id": "XOXsBDPj",
 			"fillStyle": "solid",
@@ -4404,7 +4680,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348092,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4416,12 +4692,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The product of two discrete-time sequences is obtained by multiplying the \ncorresponding elements of the sequence.\n\n        {Cn} = {An} * {Bn}     Cn = AnBn",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 88,
-			"versionNonce": 711741168,
+			"version": 95,
+			"versionNonce": 832956168,
 			"isDeleted": false,
 			"id": "tdjR-GmEHApBo4RHvScMp",
 			"fillStyle": "solid",
@@ -4443,7 +4719,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4464,8 +4740,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 231,
-			"versionNonce": 1014519824,
+			"version": 244,
+			"versionNonce": 1495812300,
 			"isDeleted": false,
 			"id": "uIUbUbgt",
 			"fillStyle": "solid",
@@ -4485,7 +4761,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348093,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4497,12 +4773,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The multiplication of a sequence by a constant K is obtained by multiplying each\nelement of the sequence by that constant.\n        \n        {Cn} = K{An}      Cn = KAn",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 100,
-			"versionNonce": 669315312,
+			"version": 107,
+			"versionNonce": 1231275528,
 			"isDeleted": false,
 			"id": "N0DGqHfAJ_Vf4YrlVMAT1",
 			"fillStyle": "solid",
@@ -4524,7 +4800,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4545,8 +4821,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 123,
-			"versionNonce": 1775425040,
+			"version": 130,
+			"versionNonce": 1143570040,
 			"isDeleted": false,
 			"id": "U0JdJMAM-3DqmTHmT2dq-",
 			"fillStyle": "solid",
@@ -4577,14 +4853,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 182,
-			"versionNonce": 1912165104,
+			"version": 189,
+			"versionNonce": 202229000,
 			"isDeleted": false,
 			"id": "LZqw4tTnv_rc1u0dDHAnB",
 			"fillStyle": "solid",
@@ -4606,7 +4882,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4643,8 +4919,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 284,
-			"versionNonce": 1127060496,
+			"version": 297,
+			"versionNonce": 1660320244,
 			"isDeleted": false,
 			"id": "8wr318yy",
 			"fillStyle": "solid",
@@ -4664,7 +4940,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348094,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4676,12 +4952,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "ELEMENTARY SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 1036,
-			"versionNonce": 2133947632,
+			"version": 1050,
+			"versionNonce": 1228754764,
 			"isDeleted": false,
 			"id": "hbcT5xX9",
 			"fillStyle": "solid",
@@ -4701,7 +4977,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348095,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4713,12 +4989,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "There are several elementary signals which play vital role in the study of signals\nand systems. These elementary signals serve as basic building blocks for the construction\nof more complex signals. Infact, these elementary signals may be used to model a large\nnumber of physical signals which occur in nature. These elementary signals are also called\nSTANDARD SIGNALS.\n    The standard signals are:\n\n1. Unit step function                2. Unit ramp function\n3. Unit parabolic function           4. Unit impulse function\n5 Sinusoidal function                6. Real exponential function\n7. Complex exponential function, e.t.c",
 			"lineHeight": 1.25,
-			"baseline": 265
+			"baseline": 267
 		},
 		{
 			"type": "rectangle",
-			"version": 261,
-			"versionNonce": 1530068208,
+			"version": 268,
+			"versionNonce": 1715880056,
 			"isDeleted": false,
 			"id": "DOfM1hI5A0MC6AWsUQ4Zb",
 			"fillStyle": "solid",
@@ -4769,14 +5045,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932062023,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 105,
-			"versionNonce": 890590960,
+			"version": 112,
+			"versionNonce": 949363464,
 			"isDeleted": false,
 			"id": "BDeA9yD-yELx_oHgi_2zS",
 			"fillStyle": "solid",
@@ -4798,7 +5074,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -4827,8 +5103,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 145,
-			"versionNonce": 1388564496,
+			"version": 154,
+			"versionNonce": 569333216,
 			"isDeleted": false,
 			"id": "u6eWS3zS",
 			"fillStyle": "solid",
@@ -4848,7 +5124,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1705925336336,
 			"link": null,
 			"locked": false,
 			"fontSize": 36.82704726114728,
@@ -4864,8 +5140,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 954,
-			"versionNonce": 137165040,
+			"version": 1004,
+			"versionNonce": 1870338932,
 			"isDeleted": false,
 			"id": "iH84Z19X",
 			"fillStyle": "solid",
@@ -4874,8 +5150,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -3155.1898737574516,
-			"y": -772.6498738414657,
+			"x": -3145.174411517868,
+			"y": -753.1227277291144,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 850.8192138671875,
@@ -4885,7 +5161,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348098,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4897,12 +5173,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The unit step function exists only for positive time and is zero for negative time.\nIt is equivalent to applying a signal whose amplitude suddenly changes and remains\nconstant forever after application.\n\nIf a step function has unity magnitude, then it is called a unit step function.\nThe usefulness of the unit-step function lies in the fact that if we want a signal\nto start at t = 0, so that it may have a value of zero for t < 0, we only need to\nmultiply the given signal with the unit step function u(t). A unit step function is \nuseful as a test signal because the response of the system for a unit step reveals\na great deal about how quickly the system responds to a sudden change in the input\nsignal.\n\nThe continuous-time unit step function u(t) is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 315
+			"baseline": 317
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 401559056,
+			"version": 41,
+			"versionNonce": 770541004,
 			"isDeleted": false,
 			"id": "gvapIfMt",
 			"fillStyle": "solid",
@@ -4931,7 +5207,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097079,
+			"updated": 1706388348099,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4943,12 +5219,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 469785328,
+			"version": 77,
+			"versionNonce": 368020724,
 			"isDeleted": false,
 			"id": "XzXaeFdf",
 			"fillStyle": "solid",
@@ -4977,7 +5253,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097079,
+			"updated": 1706388348100,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4989,12 +5265,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for t >= 0\n\n\n0  for t < 0",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 45,
-			"versionNonce": 1727728656,
+			"version": 52,
+			"versionNonce": 1561555832,
 			"isDeleted": false,
 			"id": "PBUK1OOk9_AvOijlWNxP5",
 			"fillStyle": "solid",
@@ -5016,7 +5292,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -5045,8 +5321,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 49,
-			"versionNonce": 1662483696,
+			"version": 56,
+			"versionNonce": 1185521672,
 			"isDeleted": false,
 			"id": "UZhTh-Xw9GFA1GqueRrQy",
 			"fillStyle": "solid",
@@ -5068,7 +5344,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1704314726026,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -5097,8 +5373,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 434047504,
+			"version": 92,
+			"versionNonce": 743631948,
 			"isDeleted": false,
 			"id": "jP7wnNQI",
 			"fillStyle": "solid",
@@ -5118,7 +5394,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348101,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5130,12 +5406,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The shifted unit step function u(t - a) is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 30,
-			"versionNonce": 1056595696,
+			"version": 43,
+			"versionNonce": 668585588,
 			"isDeleted": false,
 			"id": "FpBWxSh3",
 			"fillStyle": "solid",
@@ -5155,7 +5431,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097079,
+			"updated": 1706388348102,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5167,12 +5443,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t - a) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 60,
-			"versionNonce": 194201616,
+			"version": 73,
+			"versionNonce": 910656204,
 			"isDeleted": false,
 			"id": "d0wncx0V",
 			"fillStyle": "solid",
@@ -5201,7 +5477,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097079,
+			"updated": 1706388348103,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5213,12 +5489,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for t >= a\n\n\n0   for t < a",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 39,
-			"versionNonce": 540082416,
+			"version": 46,
+			"versionNonce": 2083995144,
 			"isDeleted": false,
 			"id": "t-gooOjnjcvq-F1QPWEzj",
 			"fillStyle": "solid",
@@ -5240,7 +5516,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -5265,8 +5541,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 35,
-			"versionNonce": 2014299664,
+			"version": 42,
+			"versionNonce": 1953072760,
 			"isDeleted": false,
 			"id": "4T5utkmgzRWRvM4dZx-4i",
 			"fillStyle": "solid",
@@ -5288,7 +5564,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -5313,8 +5589,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 219,
-			"versionNonce": 641950448,
+			"version": 232,
+			"versionNonce": 1442832372,
 			"isDeleted": false,
 			"id": "4JZBI8uw",
 			"fillStyle": "solid",
@@ -5334,7 +5610,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348104,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5346,12 +5622,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "It is zero if the argument (t - a) < 0 and equals to 1 if the argument (t - a) >= 0.\nThe graphical representation of u(t) and u(t - a) are shown below:",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "arrow",
-			"version": 138,
-			"versionNonce": 1548518416,
+			"version": 145,
+			"versionNonce": 325187448,
 			"isDeleted": false,
 			"id": "TyLSopxh3Yo4oa6OviWEz",
 			"fillStyle": "solid",
@@ -5373,7 +5649,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5398,8 +5674,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 221,
-			"versionNonce": 1069122800,
+			"version": 228,
+			"versionNonce": 1165319176,
 			"isDeleted": false,
 			"id": "kAXOgJjxVW1EEYq7a449o",
 			"fillStyle": "solid",
@@ -5421,7 +5697,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5446,8 +5722,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 134,
-			"versionNonce": 1447133712,
+			"version": 141,
+			"versionNonce": 2082752632,
 			"isDeleted": false,
 			"id": "rjj18XRBiikFa4fP_PHcf",
 			"fillStyle": "solid",
@@ -5469,7 +5745,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5490,8 +5766,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 174,
-			"versionNonce": 1243309808,
+			"version": 181,
+			"versionNonce": 2105318152,
 			"isDeleted": false,
 			"id": "xa7S3bhyN59lo6dyw6O-i",
 			"fillStyle": "solid",
@@ -5513,7 +5789,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5534,8 +5810,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 206,
-			"versionNonce": 82231312,
+			"version": 213,
+			"versionNonce": 443840888,
 			"isDeleted": false,
 			"id": "ftiA4K0ZiBuXsEAcYH-pV",
 			"fillStyle": "solid",
@@ -5557,7 +5833,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5582,8 +5858,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 211,
-			"versionNonce": 837880048,
+			"version": 218,
+			"versionNonce": 1346632200,
 			"isDeleted": false,
 			"id": "p7Z_sBkD07Wuy13Zz49ez",
 			"fillStyle": "solid",
@@ -5605,7 +5881,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5626,8 +5902,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 82,
-			"versionNonce": 1748254224,
+			"version": 89,
+			"versionNonce": 1100384888,
 			"isDeleted": false,
 			"id": "1wp-RfYnf_7RZ9soSVazy",
 			"fillStyle": "solid",
@@ -5649,7 +5925,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1704314726027,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -5670,8 +5946,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 314731248,
+			"version": 58,
+			"versionNonce": 1919240524,
 			"isDeleted": false,
 			"id": "iV8VaLRr",
 			"fillStyle": "solid",
@@ -5691,7 +5967,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348105,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5703,12 +5979,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 74,
-			"versionNonce": 1092746256,
+			"version": 87,
+			"versionNonce": 1214759284,
 			"isDeleted": false,
 			"id": "CIsbPdVo",
 			"fillStyle": "solid",
@@ -5728,7 +6004,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348105,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5740,12 +6016,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 89,
-			"versionNonce": 1461161200,
+			"version": 102,
+			"versionNonce": 604389324,
 			"isDeleted": false,
 			"id": "J2wvphY7",
 			"fillStyle": "solid",
@@ -5770,7 +6046,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097080,
+			"updated": 1706388348106,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5782,12 +6058,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 49,
-			"versionNonce": 1906833936,
+			"version": 62,
+			"versionNonce": 911700724,
 			"isDeleted": false,
 			"id": "m22jDC3K",
 			"fillStyle": "solid",
@@ -5812,7 +6088,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097080,
+			"updated": 1706388348106,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5824,12 +6100,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 76,
-			"versionNonce": 1484287728,
+			"version": 89,
+			"versionNonce": 323249740,
 			"isDeleted": false,
 			"id": "JJZthLdp",
 			"fillStyle": "solid",
@@ -5854,7 +6130,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097080,
+			"updated": 1706388348107,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5866,12 +6142,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 49,
-			"versionNonce": 1555970064,
+			"version": 62,
+			"versionNonce": 2119496820,
 			"isDeleted": false,
 			"id": "4QvPOnHG",
 			"fillStyle": "solid",
@@ -5891,7 +6167,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348108,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5903,12 +6179,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 48,
-			"versionNonce": 2137854192,
+			"version": 61,
+			"versionNonce": 1962523852,
 			"isDeleted": false,
 			"id": "y6V77l5d",
 			"fillStyle": "solid",
@@ -5928,7 +6204,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348109,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5940,12 +6216,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "unit step function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 51,
-			"versionNonce": 1180481040,
+			"version": 64,
+			"versionNonce": 1042695668,
 			"isDeleted": false,
 			"id": "qcp7lsD2",
 			"fillStyle": "solid",
@@ -5965,7 +6241,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097080,
+			"updated": 1706388348109,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5977,12 +6253,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Delayed unit step function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 271,
-			"versionNonce": 1669165808,
+			"version": 282,
+			"versionNonce": 949759614,
 			"isDeleted": false,
 			"id": "GR0ouguJ0H8RzGgqmxOCR",
 			"fillStyle": "solid",
@@ -5997,7 +6273,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"backgroundColor": "transparent",
 			"width": 1172.1600224421572,
 			"height": 2200.044668344351,
-			"seed": 1355379791,
+			"seed": 1110664354,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
@@ -6009,14 +6285,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097081,
+			"updated": 1707774463649,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "line",
-			"version": 67,
-			"versionNonce": 863728656,
+			"version": 74,
+			"versionNonce": 416874360,
 			"isDeleted": false,
 			"id": "5jbT7yPFWTvoCw12DhrQh",
 			"fillStyle": "solid",
@@ -6038,7 +6314,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726028,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6059,8 +6335,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 59,
-			"versionNonce": 1798411504,
+			"version": 66,
+			"versionNonce": 1020449800,
 			"isDeleted": false,
 			"id": "U0IkJuu7glJYmIjQo975N",
 			"fillStyle": "solid",
@@ -6082,7 +6358,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726028,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6103,8 +6379,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 59,
-			"versionNonce": 1242722832,
+			"version": 66,
+			"versionNonce": 1299861624,
 			"isDeleted": false,
 			"id": "DCeVVRi3ZukUBT0DolLOj",
 			"fillStyle": "solid",
@@ -6126,7 +6402,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726028,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6147,8 +6423,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 56,
-			"versionNonce": 1813083888,
+			"version": 63,
+			"versionNonce": 443224840,
 			"isDeleted": false,
 			"id": "ZcDZ6cNocD8Kr84Atbbhr",
 			"fillStyle": "solid",
@@ -6170,7 +6446,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726028,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6191,8 +6467,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 57,
-			"versionNonce": 823767056,
+			"version": 64,
+			"versionNonce": 1674150264,
 			"isDeleted": false,
 			"id": "L57xbodlG-9gCBVM-b4-E",
 			"fillStyle": "solid",
@@ -6214,7 +6490,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726028,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6235,8 +6511,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 57,
-			"versionNonce": 1252333808,
+			"version": 64,
+			"versionNonce": 950235656,
 			"isDeleted": false,
 			"id": "2Preg_gifwXN4Pu1tiPhc",
 			"fillStyle": "solid",
@@ -6258,7 +6534,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726029,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6279,8 +6555,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 50,
-			"versionNonce": 1888038416,
+			"version": 57,
+			"versionNonce": 722113144,
 			"isDeleted": false,
 			"id": "HyelPkQx-Pqg1vvsUrxME",
 			"fillStyle": "solid",
@@ -6302,7 +6578,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726029,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6323,8 +6599,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 124,
-			"versionNonce": 443841264,
+			"version": 137,
+			"versionNonce": 1388331852,
 			"isDeleted": false,
 			"id": "P2hQUn6d",
 			"fillStyle": "solid",
@@ -6344,7 +6620,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1706388348110,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6356,12 +6632,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The discrete-time unit step sequence u[n] is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 75,
-			"versionNonce": 1364782096,
+			"version": 88,
+			"versionNonce": 1792108404,
 			"isDeleted": false,
 			"id": "SPB1Pjs4",
 			"fillStyle": "solid",
@@ -6381,7 +6657,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1706388348111,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6393,12 +6669,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 96,
-			"versionNonce": 1040686320,
+			"version": 109,
+			"versionNonce": 1928460748,
 			"isDeleted": false,
 			"id": "uPZgvehY",
 			"fillStyle": "solid",
@@ -6427,7 +6703,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097081,
+			"updated": 1706388348112,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6439,12 +6715,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for n >= 0\n\n0  for n < 0",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 166,
-			"versionNonce": 1031858704,
+			"version": 173,
+			"versionNonce": 1861375096,
 			"isDeleted": false,
 			"id": "J5i_Wm0A7Lov7DfgAI8Az",
 			"fillStyle": "solid",
@@ -6466,7 +6742,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726029,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6491,8 +6767,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 147,
-			"versionNonce": 115769072,
+			"version": 154,
+			"versionNonce": 1868910344,
 			"isDeleted": false,
 			"id": "Wslo9qQ153AhGN6pH9IF2",
 			"fillStyle": "solid",
@@ -6514,7 +6790,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726029,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6539,8 +6815,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 164,
-			"versionNonce": 536422416,
+			"version": 177,
+			"versionNonce": 1755076852,
 			"isDeleted": false,
 			"id": "T7SWZYOh",
 			"fillStyle": "solid",
@@ -6560,7 +6836,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1706388348113,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6572,12 +6848,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The shifted version for the discrete-time unit step function u[n - k] is defined as: ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 97,
-			"versionNonce": 1436098800,
+			"version": 110,
+			"versionNonce": 1084809292,
 			"isDeleted": false,
 			"id": "qJd8bJXX",
 			"fillStyle": "solid",
@@ -6602,7 +6878,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097081,
+			"updated": 1706388348115,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6614,12 +6890,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u[n - k] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 103,
-			"versionNonce": 1153017360,
+			"version": 116,
+			"versionNonce": 588061300,
 			"isDeleted": false,
 			"id": "aiAI1mUm",
 			"fillStyle": "solid",
@@ -6648,7 +6924,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097081,
+			"updated": 1706388348116,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6660,12 +6936,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for n >= k\n\n0  for n < k",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 178,
-			"versionNonce": 967279344,
+			"version": 185,
+			"versionNonce": 521350408,
 			"isDeleted": false,
 			"id": "1yFvleZSmn2NQGxPQPfK_",
 			"fillStyle": "solid",
@@ -6687,7 +6963,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097081,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6712,8 +6988,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 165,
-			"versionNonce": 951739408,
+			"version": 172,
+			"versionNonce": 1892157304,
 			"isDeleted": false,
 			"id": "vHrN-3HasDz_p3Mocdtxk",
 			"fillStyle": "solid",
@@ -6735,7 +7011,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6764,8 +7040,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 152,
-			"versionNonce": 295281904,
+			"version": 159,
+			"versionNonce": 1698188296,
 			"isDeleted": false,
 			"id": "R2DfRWz-E_SHoxcSzhTpz",
 			"fillStyle": "solid",
@@ -6787,7 +7063,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -6808,8 +7084,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 162,
-			"versionNonce": 703816208,
+			"version": 169,
+			"versionNonce": 1648908408,
 			"isDeleted": false,
 			"id": "1cCyFMVOoEwQesx5NpFfu",
 			"fillStyle": "solid",
@@ -6831,7 +7107,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6860,8 +7136,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 81,
-			"versionNonce": 720865008,
+			"version": 88,
+			"versionNonce": 123833096,
 			"isDeleted": false,
 			"id": "7LhvOVHrHNHaHVcDTT12j",
 			"fillStyle": "solid",
@@ -6883,7 +7159,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -6908,8 +7184,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "ellipse",
-			"version": 62,
-			"versionNonce": 1197252624,
+			"version": 69,
+			"versionNonce": 1100384632,
 			"isDeleted": false,
 			"id": "tZ-EoPTtBSotoPif65FJQ",
 			"fillStyle": "solid",
@@ -6931,14 +7207,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 68,
-			"versionNonce": 1648961776,
+			"version": 75,
+			"versionNonce": 806021640,
 			"isDeleted": false,
 			"id": "pAEroceYj4SG1Oo1VIgma",
 			"fillStyle": "solid",
@@ -6960,14 +7236,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 87,
-			"versionNonce": 552476176,
+			"version": 94,
+			"versionNonce": 1509333624,
 			"isDeleted": false,
 			"id": "iKii42V6nr38t7wkPRdCo",
 			"fillStyle": "solid",
@@ -6989,14 +7265,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 79,
-			"versionNonce": 1125550832,
+			"version": 86,
+			"versionNonce": 1513122056,
 			"isDeleted": false,
 			"id": "G0upXzcv_B7J4kvu7-V0i",
 			"fillStyle": "solid",
@@ -7018,14 +7294,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 66,
-			"versionNonce": 127917072,
+			"version": 73,
+			"versionNonce": 1848413048,
 			"isDeleted": false,
 			"id": "zoq_ZM1olzDVGepwINtQn",
 			"fillStyle": "solid",
@@ -7047,14 +7323,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 96,
-			"versionNonce": 669494512,
+			"version": 103,
+			"versionNonce": 1095632904,
 			"isDeleted": false,
 			"id": "3AZRSA2PFxmnYIZn6w2J3",
 			"fillStyle": "solid",
@@ -7076,14 +7352,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 91,
-			"versionNonce": 1835653648,
+			"version": 98,
+			"versionNonce": 1216109688,
 			"isDeleted": false,
 			"id": "FamfoJsA7nb1sySEFHtug",
 			"fillStyle": "solid",
@@ -7105,14 +7381,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 21,
-			"versionNonce": 1514442480,
+			"version": 34,
+			"versionNonce": 868153036,
 			"isDeleted": false,
 			"id": "Dd03hIlw",
 			"fillStyle": "solid",
@@ -7132,7 +7408,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348117,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7144,12 +7420,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 44,
-			"versionNonce": 1162090512,
+			"version": 51,
+			"versionNonce": 1252658552,
 			"isDeleted": false,
 			"id": "nalINdSt9xI4fo9XWwb_I",
 			"fillStyle": "solid",
@@ -7171,51 +7447,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0,
-					64.67504882812489
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 46,
-			"versionNonce": 850735344,
-			"isDeleted": false,
-			"id": "XjYSb6VJyozZIcnI-x-8I",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -3028.2640220124636,
-			"y": 1016.2825344602237,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "#ffc9c9",
-			"width": 0,
-			"height": 64.67504882812489,
-			"seed": 718721775,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -7237,7 +7469,51 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		{
 			"type": "line",
 			"version": 53,
-			"versionNonce": 1663473168,
+			"versionNonce": 383886856,
+			"isDeleted": false,
+			"id": "XjYSb6VJyozZIcnI-x-8I",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -3028.2640220124636,
+			"y": 1016.2825344602237,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#ffc9c9",
+			"width": 0,
+			"height": 64.67504882812489,
+			"seed": 718721775,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726030,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					64.67504882812489
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 60,
+			"versionNonce": 2113511032,
 			"isDeleted": false,
 			"id": "_1mllvzBAMQ5XQnxykQD_",
 			"fillStyle": "solid",
@@ -7259,7 +7535,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726030,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -7280,8 +7556,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 65,
-			"versionNonce": 952210160,
+			"version": 72,
+			"versionNonce": 785360136,
 			"isDeleted": false,
 			"id": "o2rljzXhx9-JeUgc7hqFY",
 			"fillStyle": "solid",
@@ -7303,7 +7579,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1704314726031,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -7324,8 +7600,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1544115216,
+			"version": 33,
+			"versionNonce": 619293684,
 			"isDeleted": false,
 			"id": "3Fj6HO2F",
 			"fillStyle": "solid",
@@ -7345,7 +7621,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348117,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7357,12 +7633,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 1123136752,
+			"version": 36,
+			"versionNonce": 953040204,
 			"isDeleted": false,
 			"id": "fVF8gAg7",
 			"fillStyle": "solid",
@@ -7382,7 +7658,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7394,12 +7670,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u[n]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 1709462032,
+			"version": 44,
+			"versionNonce": 808979828,
 			"isDeleted": false,
 			"id": "RPydHwim",
 			"fillStyle": "solid",
@@ -7419,7 +7695,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7431,12 +7707,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 22,
-			"versionNonce": 382572272,
+			"version": 35,
+			"versionNonce": 422622156,
 			"isDeleted": false,
 			"id": "E2z3I17l",
 			"fillStyle": "solid",
@@ -7456,7 +7732,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7468,12 +7744,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 934252560,
+			"version": 41,
+			"versionNonce": 1446919924,
 			"isDeleted": false,
 			"id": "OhLKPYbL",
 			"fillStyle": "solid",
@@ -7493,7 +7769,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097082,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7505,12 +7781,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 148715760,
+			"version": 41,
+			"versionNonce": 1660967500,
 			"isDeleted": false,
 			"id": "tLJMNvsW",
 			"fillStyle": "solid",
@@ -7530,7 +7806,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7542,12 +7818,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 34,
-			"versionNonce": 1768099344,
+			"version": 47,
+			"versionNonce": 260194420,
 			"isDeleted": false,
 			"id": "QNQdov2X",
 			"fillStyle": "solid",
@@ -7567,7 +7843,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7579,12 +7855,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 30,
-			"versionNonce": 480811760,
+			"version": 43,
+			"versionNonce": 1360474316,
 			"isDeleted": false,
 			"id": "fDWGeMbb",
 			"fillStyle": "solid",
@@ -7604,7 +7880,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7616,12 +7892,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 38,
-			"versionNonce": 1408683024,
+			"version": 51,
+			"versionNonce": 1405751796,
 			"isDeleted": false,
 			"id": "3k7NY22x",
 			"fillStyle": "solid",
@@ -7641,7 +7917,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348118,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7653,12 +7929,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 27,
-			"versionNonce": 616021232,
+			"version": 40,
+			"versionNonce": 856635212,
 			"isDeleted": false,
 			"id": "4VpA6ABI",
 			"fillStyle": "solid",
@@ -7678,7 +7954,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348119,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7690,12 +7966,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u[n - k]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 1902299664,
+			"version": 44,
+			"versionNonce": 840676212,
 			"isDeleted": false,
 			"id": "jdSZpUS5",
 			"fillStyle": "solid",
@@ -7720,7 +7996,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097083,
+			"updated": 1706388348119,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7732,12 +8008,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 30,
-			"versionNonce": 1653776112,
+			"version": 43,
+			"versionNonce": 1430416844,
 			"isDeleted": false,
 			"id": "2lXewbsC",
 			"fillStyle": "solid",
@@ -7766,7 +8042,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097083,
+			"updated": 1706388348119,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7778,12 +8054,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
-			"version": 49,
-			"versionNonce": 1017055248,
+			"version": 56,
+			"versionNonce": 371922296,
 			"isDeleted": false,
 			"id": "MUryEiZAxh8q_us511SdB",
 			"fillStyle": "solid",
@@ -7805,14 +8081,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726031,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 52,
-			"versionNonce": 650199280,
+			"version": 59,
+			"versionNonce": 97852936,
 			"isDeleted": false,
 			"id": "J3NPNrU3uBetfbMZCDoge",
 			"fillStyle": "solid",
@@ -7834,14 +8110,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 51,
-			"versionNonce": 295929360,
+			"version": 58,
+			"versionNonce": 1142531704,
 			"isDeleted": false,
 			"id": "QXxFC1dcN-v7LQBQ-YRUj",
 			"fillStyle": "solid",
@@ -7863,14 +8139,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 73,
-			"versionNonce": 1892393712,
+			"version": 80,
+			"versionNonce": 1620319496,
 			"isDeleted": false,
 			"id": "JuGp9fJ8RVvvv4E449MKW",
 			"fillStyle": "solid",
@@ -7892,14 +8168,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 69,
-			"versionNonce": 224936976,
+			"version": 76,
+			"versionNonce": 940447608,
 			"isDeleted": false,
 			"id": "VFIjuItuDk0LbmtJdgk4k",
 			"fillStyle": "solid",
@@ -7921,14 +8197,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 67,
-			"versionNonce": 255444208,
+			"version": 74,
+			"versionNonce": 689650696,
 			"isDeleted": false,
 			"id": "tzrnDuweI2Bed0q2Xkcel",
 			"fillStyle": "solid",
@@ -7950,14 +8226,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 66,
-			"versionNonce": 1843741200,
+			"version": 73,
+			"versionNonce": 1984718968,
 			"isDeleted": false,
 			"id": "upFbjH6shF7IwQ5-scz67",
 			"fillStyle": "solid",
@@ -7979,14 +8255,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 73,
-			"versionNonce": 1066641136,
+			"version": 80,
+			"versionNonce": 828799752,
 			"isDeleted": false,
 			"id": "CStaRiWQ0AHl5DpdbK3UR",
 			"fillStyle": "solid",
@@ -8008,14 +8284,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 86,
-			"versionNonce": 1913815056,
+			"version": 93,
+			"versionNonce": 1519950200,
 			"isDeleted": false,
 			"id": "ixIO_FMvl6S8NIsBjY3u2",
 			"fillStyle": "solid",
@@ -8037,14 +8313,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 97,
-			"versionNonce": 1314998512,
+			"version": 104,
+			"versionNonce": 737270280,
 			"isDeleted": false,
 			"id": "m23hkA0fpICCtwAUfZBBG",
 			"fillStyle": "solid",
@@ -8066,14 +8342,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 971505168,
+			"version": 38,
+			"versionNonce": 1757226228,
 			"isDeleted": false,
 			"id": "32CVoy43",
 			"fillStyle": "solid",
@@ -8093,7 +8369,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1706388348119,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8105,12 +8381,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 83,
-			"versionNonce": 925543152,
+			"version": 90,
+			"versionNonce": 465131784,
 			"isDeleted": false,
 			"id": "Fwe2eRg4N9EguZR3Avnr5",
 			"fillStyle": "solid",
@@ -8132,7 +8408,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -8153,8 +8429,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 69,
-			"versionNonce": 643677200,
+			"version": 76,
+			"versionNonce": 434805624,
 			"isDeleted": false,
 			"id": "6Mtjw1WzOLf5AS8rHJaof",
 			"fillStyle": "solid",
@@ -8176,7 +8452,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -8197,8 +8473,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 67,
-			"versionNonce": 1148701936,
+			"version": 74,
+			"versionNonce": 1144584200,
 			"isDeleted": false,
 			"id": "VaYYSRjuZ9byZ5RL-bOvC",
 			"fillStyle": "solid",
@@ -8220,7 +8496,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097083,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -8241,8 +8517,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 79,
-			"versionNonce": 963361296,
+			"version": 86,
+			"versionNonce": 1912106104,
 			"isDeleted": false,
 			"id": "SYVB8D3-o1hUEheB_iZIr",
 			"fillStyle": "solid",
@@ -8264,7 +8540,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726032,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -8285,8 +8561,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 802205424,
+			"version": 49,
+			"versionNonce": 1758123084,
 			"isDeleted": false,
 			"id": "XEze4K9R",
 			"fillStyle": "solid",
@@ -8306,7 +8582,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348120,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8318,12 +8594,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "k",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 41,
-			"versionNonce": 1980364816,
+			"version": 54,
+			"versionNonce": 2100586100,
 			"isDeleted": false,
 			"id": "xYZL0sep",
 			"fillStyle": "solid",
@@ -8343,7 +8619,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348122,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8355,12 +8631,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "k+1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 1102926064,
+			"version": 55,
+			"versionNonce": 1803709132,
 			"isDeleted": false,
 			"id": "6W8fKXpI",
 			"fillStyle": "solid",
@@ -8380,7 +8656,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348123,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8392,12 +8668,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "k+2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 57,
-			"versionNonce": 1076917776,
+			"version": 70,
+			"versionNonce": 1413969908,
 			"isDeleted": false,
 			"id": "ocInMthw",
 			"fillStyle": "solid",
@@ -8417,7 +8693,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348123,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8429,12 +8705,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "k+3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 59,
-			"versionNonce": 1908781808,
+			"version": 72,
+			"versionNonce": 268644684,
 			"isDeleted": false,
 			"id": "t1Wzy83t",
 			"fillStyle": "solid",
@@ -8454,7 +8730,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348124,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8466,12 +8742,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Discrete-time unit step function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 1020736528,
+			"version": 92,
+			"versionNonce": 1241274740,
 			"isDeleted": false,
 			"id": "FOVrWccv",
 			"fillStyle": "solid",
@@ -8491,7 +8767,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348125,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8503,12 +8779,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Discrete-time shifted unit step function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 208,
-			"versionNonce": 108123376,
+			"version": 219,
+			"versionNonce": 717089248,
 			"isDeleted": false,
 			"id": "dN1IPN4s",
 			"fillStyle": "solid",
@@ -8528,7 +8804,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1705925336354,
 			"link": null,
 			"locked": false,
 			"fontSize": 34.510527565976815,
@@ -8544,8 +8820,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 217,
-			"versionNonce": 838218256,
+			"version": 224,
+			"versionNonce": 92434552,
 			"isDeleted": false,
 			"id": "3w4TiGZyQSpPwD1g1n6m9",
 			"fillStyle": "solid",
@@ -8567,7 +8843,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726033,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -8588,8 +8864,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 254,
-			"versionNonce": 894023408,
+			"version": 267,
+			"versionNonce": 631711692,
 			"isDeleted": false,
 			"id": "lehXIxT9",
 			"fillStyle": "solid",
@@ -8609,7 +8885,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348127,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8621,12 +8897,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The continuous-time unit ramp function r(t) is a function which starts at t = 0 and\nincreases linearly with time and is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 148,
-			"versionNonce": 1720021008,
+			"version": 161,
+			"versionNonce": 1234766580,
 			"isDeleted": false,
 			"id": "7ApIGltu",
 			"fillStyle": "solid",
@@ -8651,7 +8927,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097084,
+			"updated": 1706388348130,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8663,12 +8939,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 192,
-			"versionNonce": 1121278192,
+			"version": 205,
+			"versionNonce": 8932940,
 			"isDeleted": false,
 			"id": "F0nUyzq1",
 			"fillStyle": "solid",
@@ -8697,7 +8973,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097084,
+			"updated": 1706388348131,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8709,12 +8985,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t   for t >= 0\n\n0   for t < 0",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 488,
-			"versionNonce": 41741840,
+			"version": 495,
+			"versionNonce": 1468707448,
 			"isDeleted": false,
 			"id": "iNmUNfKep8Pd4-x3mGAKn",
 			"fillStyle": "solid",
@@ -8736,7 +9012,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726033,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -8765,8 +9041,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 321,
-			"versionNonce": 580696816,
+			"version": 328,
+			"versionNonce": 1099550984,
 			"isDeleted": false,
 			"id": "Gtz0EY-iUr1tyL6PQwP9p",
 			"fillStyle": "solid",
@@ -8788,7 +9064,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726033,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -8813,8 +9089,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 384,
-			"versionNonce": 1859431440,
+			"version": 397,
+			"versionNonce": 1705217140,
 			"isDeleted": false,
 			"id": "whq8eA9l",
 			"fillStyle": "solid",
@@ -8834,7 +9110,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348132,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8846,12 +9122,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "OR\n\nThe unit ramp function has unit slop. It is a signal whose amplitude varies linearly.\nIt can be obtained by INTEGRATING THE UNIT STEP FUNCTION. That means, a\nunit step signal can be obtained by DIFFERENTIATING THE UNIT RAMP SIGNAL.",
 			"lineHeight": 1.25,
-			"baseline": 116
+			"baseline": 117
 		},
 		{
 			"type": "text",
-			"version": 142,
-			"versionNonce": 388488432,
+			"version": 155,
+			"versionNonce": 1635820748,
 			"isDeleted": false,
 			"id": "DpOYDh0F",
 			"fillStyle": "solid",
@@ -8871,7 +9147,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348133,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8883,12 +9159,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "ie.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 158,
-			"versionNonce": 897886736,
+			"version": 171,
+			"versionNonce": 1877073396,
 			"isDeleted": false,
 			"id": "JzJHIz7K",
 			"fillStyle": "solid",
@@ -8908,7 +9184,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1706388348134,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8920,12 +9196,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t) =    u(t)dt =   dt  = t     for t >= 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 4684,
-			"versionNonce": 1375649520,
+			"version": 4691,
+			"versionNonce": 1870606088,
 			"isDeleted": false,
 			"id": "Fm8rMkbj2i-vzdM4BzMRY",
 			"fillStyle": "solid",
@@ -8947,7 +9223,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9032,8 +9308,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4678,
-			"versionNonce": 1636100112,
+			"version": 4685,
+			"versionNonce": 781526392,
 			"isDeleted": false,
 			"id": "VVrw_MKDXTdmaLVMI-uNV",
 			"fillStyle": "solid",
@@ -9055,7 +9331,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097084,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9140,8 +9416,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 225,
-			"versionNonce": 329867504,
+			"version": 238,
+			"versionNonce": 1579821900,
 			"isDeleted": false,
 			"id": "lALheTSQ",
 			"fillStyle": "solid",
@@ -9161,7 +9437,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348137,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9173,12 +9449,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t) =  d",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 221,
-			"versionNonce": 1590519312,
+			"version": 234,
+			"versionNonce": 291110772,
 			"isDeleted": false,
 			"id": "bAXjQ0v6",
 			"fillStyle": "solid",
@@ -9198,7 +9474,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348138,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9210,12 +9486,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 227,
-			"versionNonce": 1269809904,
+			"version": 240,
+			"versionNonce": 1222566348,
 			"isDeleted": false,
 			"id": "qnvAdlOs",
 			"fillStyle": "solid",
@@ -9235,7 +9511,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348139,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9247,12 +9523,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 122,
-			"versionNonce": 1515594768,
+			"version": 129,
+			"versionNonce": 691283832,
 			"isDeleted": false,
 			"id": "4bQA4wbvtaZxRLBaeFGTx",
 			"fillStyle": "solid",
@@ -9274,7 +9550,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9295,8 +9571,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 185,
-			"versionNonce": 949609712,
+			"version": 198,
+			"versionNonce": 1649537268,
 			"isDeleted": false,
 			"id": "iYe100yM",
 			"fillStyle": "solid",
@@ -9316,7 +9592,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348140,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9328,12 +9604,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The delayed unit ramp signal r(t - a) is given by:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 124,
-			"versionNonce": 571941392,
+			"version": 137,
+			"versionNonce": 414763084,
 			"isDeleted": false,
 			"id": "bcDEwR63",
 			"fillStyle": "solid",
@@ -9353,7 +9629,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348141,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9365,12 +9641,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t - a) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 168,
-			"versionNonce": 133154544,
+			"version": 181,
+			"versionNonce": 38777460,
 			"isDeleted": false,
 			"id": "hTiAcDMo",
 			"fillStyle": "solid",
@@ -9399,7 +9675,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097085,
+			"updated": 1706388348142,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9411,12 +9687,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t - a   for t >= a\n\n0       for t < a",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 240,
-			"versionNonce": 84434960,
+			"version": 247,
+			"versionNonce": 628795768,
 			"isDeleted": false,
 			"id": "Y3rTNnQcORN7z0UTLJ5oz",
 			"fillStyle": "solid",
@@ -9438,7 +9714,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -9463,8 +9739,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 247,
-			"versionNonce": 1983473904,
+			"version": 254,
+			"versionNonce": 66636296,
 			"isDeleted": false,
 			"id": "nASAvVEQ8HAJVb3GwDhLb",
 			"fillStyle": "solid",
@@ -9486,7 +9762,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -9511,8 +9787,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 113,
-			"versionNonce": 857857552,
+			"version": 126,
+			"versionNonce": 1368514252,
 			"isDeleted": false,
 			"id": "WYRNbeVB",
 			"fillStyle": "solid",
@@ -9532,7 +9808,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348145,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9544,12 +9820,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "OR",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 1862191856,
+			"version": 150,
+			"versionNonce": 806962164,
 			"isDeleted": false,
 			"id": "elp1j5Mk",
 			"fillStyle": "solid",
@@ -9569,7 +9845,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348146,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9581,12 +9857,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t - a) = (t - a)u(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 122,
-			"versionNonce": 492542992,
+			"version": 135,
+			"versionNonce": 1812211020,
 			"isDeleted": false,
 			"id": "WEh6ADMv",
 			"fillStyle": "solid",
@@ -9606,7 +9882,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9618,12 +9894,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The graphical representations of r(t) and r(t - a) are shown below:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 52,
-			"versionNonce": 751299824,
+			"version": 59,
+			"versionNonce": 457435144,
 			"isDeleted": false,
 			"id": "qhqlxKo6cHyJfiCoJi9Da",
 			"fillStyle": "solid",
@@ -9645,7 +9921,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726034,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -9670,8 +9946,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 63,
-			"versionNonce": 1437440528,
+			"version": 70,
+			"versionNonce": 424967288,
 			"isDeleted": false,
 			"id": "rGW3ip38ubHY9u6VOkkis",
 			"fillStyle": "solid",
@@ -9693,7 +9969,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9714,8 +9990,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 54,
-			"versionNonce": 1495060208,
+			"version": 61,
+			"versionNonce": 832153352,
 			"isDeleted": false,
 			"id": "Rdh_MO8gCDOZnsZqIi2De",
 			"fillStyle": "solid",
@@ -9737,7 +10013,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -9762,8 +10038,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 67,
-			"versionNonce": 1863309328,
+			"version": 74,
+			"versionNonce": 192818552,
 			"isDeleted": false,
 			"id": "AzkbhESrv7WTA65RQIWrv",
 			"fillStyle": "solid",
@@ -9785,7 +10061,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9806,8 +10082,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 110,
-			"versionNonce": 746942704,
+			"version": 117,
+			"versionNonce": 350193160,
 			"isDeleted": false,
 			"id": "kjUKWRm6ZN3XMqiymO1TR",
 			"fillStyle": "solid",
@@ -9829,7 +10105,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9850,8 +10126,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 65,
-			"versionNonce": 1568298512,
+			"version": 72,
+			"versionNonce": 1330232952,
 			"isDeleted": false,
 			"id": "Uj52hc9-6_4q7__6CH042",
 			"fillStyle": "solid",
@@ -9873,7 +10149,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -9894,8 +10170,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 243913456,
+			"version": 36,
+			"versionNonce": 1639228788,
 			"isDeleted": false,
 			"id": "4gJfcZJO",
 			"fillStyle": "solid",
@@ -9915,7 +10191,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097085,
+			"updated": 1706388348147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9927,12 +10203,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1441076240,
+			"version": 33,
+			"versionNonce": 1030331340,
 			"isDeleted": false,
 			"id": "tVnxtG8Q",
 			"fillStyle": "solid",
@@ -9952,7 +10228,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9964,12 +10240,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 900855024,
+			"version": 56,
+			"versionNonce": 1550309108,
 			"isDeleted": false,
 			"id": "YXmOu4l9",
 			"fillStyle": "solid",
@@ -9994,7 +10270,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1706388348147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10006,12 +10282,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 776475152,
+			"version": 42,
+			"versionNonce": 1608270412,
 			"isDeleted": false,
 			"id": "KvdTvjsO",
 			"fillStyle": "solid",
@@ -10036,7 +10312,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1706388348148,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10048,12 +10324,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "slope = 1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 37,
-			"versionNonce": 1199953648,
+			"version": 44,
+			"versionNonce": 1084875528,
 			"isDeleted": false,
 			"id": "O77JoO_-h4G1Tcmv16sKg",
 			"fillStyle": "solid",
@@ -10075,7 +10351,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -10100,8 +10376,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 1033588752,
+			"version": 49,
+			"versionNonce": 1287182452,
 			"isDeleted": false,
 			"id": "UZLTYDzn",
 			"fillStyle": "solid",
@@ -10126,7 +10402,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1706388348148,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10138,12 +10414,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "slope = 1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 59,
-			"versionNonce": 2022537456,
+			"version": 66,
+			"versionNonce": 1317552648,
 			"isDeleted": false,
 			"id": "xjtFTGNbPUcb1eRh-AVvL",
 			"fillStyle": "solid",
@@ -10165,7 +10441,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1704314726035,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -10190,8 +10466,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1003933200,
+			"version": 33,
+			"versionNonce": 439752908,
 			"isDeleted": false,
 			"id": "JSn8Gxgq",
 			"fillStyle": "solid",
@@ -10211,7 +10487,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348148,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10223,12 +10499,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 743496432,
+			"version": 44,
+			"versionNonce": 1584245236,
 			"isDeleted": false,
 			"id": "sy0KJFbK",
 			"fillStyle": "solid",
@@ -10248,7 +10524,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348149,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10260,12 +10536,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "a",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 569543696,
+			"version": 42,
+			"versionNonce": 1209081676,
 			"isDeleted": false,
 			"id": "wFcBp92x",
 			"fillStyle": "solid",
@@ -10290,7 +10566,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1706388348149,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10302,12 +10578,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 358087920,
+			"version": 55,
+			"versionNonce": 1418480500,
 			"isDeleted": false,
 			"id": "EQWrYWcW",
 			"fillStyle": "solid",
@@ -10327,7 +10603,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348152,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10339,12 +10615,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 166103568,
+			"version": 58,
+			"versionNonce": 1103582668,
 			"isDeleted": false,
 			"id": "x7XgxfEe",
 			"fillStyle": "solid",
@@ -10364,7 +10640,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348153,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10376,12 +10652,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "unit ramp signal",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 63,
-			"versionNonce": 1428872944,
+			"version": 76,
+			"versionNonce": 559594740,
 			"isDeleted": false,
 			"id": "JKhh9yTQ",
 			"fillStyle": "solid",
@@ -10401,7 +10677,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348154,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10413,12 +10689,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Delayed unit time signal",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 265,
-			"versionNonce": 246073360,
+			"version": 272,
+			"versionNonce": 685716856,
 			"isDeleted": false,
 			"id": "tFJXLMdXeIN0EypMMFij_",
 			"fillStyle": "solid",
@@ -10445,14 +10721,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1704314726036,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 475103472,
+			"version": 92,
+			"versionNonce": 1148369996,
 			"isDeleted": false,
 			"id": "mtcn2Ocb",
 			"fillStyle": "solid",
@@ -10472,7 +10748,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348156,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10484,12 +10760,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The discrete-time unit ramp sequence r(n) is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 741819920,
+			"version": 58,
+			"versionNonce": 2120154740,
 			"isDeleted": false,
 			"id": "OFQAl7IU",
 			"fillStyle": "solid",
@@ -10509,7 +10785,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348156,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10521,12 +10797,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 56,
-			"versionNonce": 1247011568,
+			"version": 69,
+			"versionNonce": 1508725452,
 			"isDeleted": false,
 			"id": "O95oBwAd",
 			"fillStyle": "solid",
@@ -10555,7 +10831,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097086,
+			"updated": 1706388348158,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10567,12 +10843,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n   for n >= 0\n\n0  for  n < 0",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 35,
-			"versionNonce": 528745488,
+			"version": 42,
+			"versionNonce": 70924152,
 			"isDeleted": false,
 			"id": "mr0_Le7cp1H2gQKbeUxh-",
 			"fillStyle": "solid",
@@ -10594,7 +10870,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1704314726036,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -10619,8 +10895,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 34,
-			"versionNonce": 230294768,
+			"version": 41,
+			"versionNonce": 490806280,
 			"isDeleted": false,
 			"id": "jmcL5FpkyeOPhgA_m7o3B",
 			"fillStyle": "solid",
@@ -10642,7 +10918,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1704314726036,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -10667,8 +10943,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 1183384080,
+			"version": 106,
+			"versionNonce": 73338868,
 			"isDeleted": false,
 			"id": "chs9bSFl",
 			"fillStyle": "solid",
@@ -10688,7 +10964,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348160,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10700,12 +10976,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "                or    r[n] = n*u[n]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 113,
-			"versionNonce": 67888880,
+			"version": 126,
+			"versionNonce": 1087445324,
 			"isDeleted": false,
 			"id": "59nHrgs3",
 			"fillStyle": "solid",
@@ -10725,7 +11001,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097086,
+			"updated": 1706388348161,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10737,12 +11013,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The shifted version of the discrete-time unit ramp sequence r(n - k) is defined as",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 34,
-			"versionNonce": 4079632,
+			"version": 47,
+			"versionNonce": 1130426740,
 			"isDeleted": false,
 			"id": "F8xlfXY0",
 			"fillStyle": "solid",
@@ -10762,7 +11038,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1706388348163,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10774,12 +11050,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r[n - k] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 73,
-			"versionNonce": 1506904304,
+			"version": 86,
+			"versionNonce": 1417154508,
 			"isDeleted": false,
 			"id": "ymn0WSxw",
 			"fillStyle": "solid",
@@ -10799,7 +11075,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1706388348164,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10811,12 +11087,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n - k   for n >= 0\n\n0       for n < k",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 67,
-			"versionNonce": 211533328,
+			"version": 80,
+			"versionNonce": 1521132276,
 			"isDeleted": false,
 			"id": "pL3OGigq",
 			"fillStyle": "solid",
@@ -10836,7 +11112,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1706388348165,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10848,12 +11124,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "        or    r[n - k] = [n -k]*u[n - k]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 90,
-			"versionNonce": 1788013296,
+			"version": 103,
+			"versionNonce": 1962686028,
 			"isDeleted": false,
 			"id": "V5QoENc8",
 			"fillStyle": "solid",
@@ -10873,7 +11149,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1706388348167,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10885,12 +11161,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The graphical representation of r[n] and r[n - 2] are shown below",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 111,
-			"versionNonce": 1821998096,
+			"version": 118,
+			"versionNonce": 1594276728,
 			"isDeleted": false,
 			"id": "-8QbEwp-QJrWNsrXXtyhM",
 			"fillStyle": "solid",
@@ -10912,7 +11188,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -10937,8 +11213,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "ellipse",
-			"version": 77,
-			"versionNonce": 1624771824,
+			"version": 84,
+			"versionNonce": 107927560,
 			"isDeleted": false,
 			"id": "UyNhiwKCI5VSdcaKDFjrx",
 			"fillStyle": "solid",
@@ -10960,14 +11236,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 65,
-			"versionNonce": 1110407696,
+			"version": 72,
+			"versionNonce": 2123402360,
 			"isDeleted": false,
 			"id": "oqqE6LJQGPHGNqorhzxDg",
 			"fillStyle": "solid",
@@ -10989,14 +11265,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 37,
-			"versionNonce": 1445523184,
+			"version": 44,
+			"versionNonce": 1508284168,
 			"isDeleted": false,
 			"id": "F1uVX0nmqQI8ABgUsCffv",
 			"fillStyle": "solid",
@@ -11018,14 +11294,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 47,
-			"versionNonce": 810924048,
+			"version": 54,
+			"versionNonce": 246955384,
 			"isDeleted": false,
 			"id": "zEmxYagUKwOFplVrK6kaT",
 			"fillStyle": "solid",
@@ -11047,14 +11323,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 42,
-			"versionNonce": 1930268912,
+			"version": 49,
+			"versionNonce": 101611016,
 			"isDeleted": false,
 			"id": "S5fYxOmiY2fBEL1dKaE4f",
 			"fillStyle": "solid",
@@ -11076,14 +11352,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 37,
-			"versionNonce": 990131728,
+			"version": 44,
+			"versionNonce": 12701304,
 			"isDeleted": false,
 			"id": "5-NQrdLDFahOe3bVe4us3",
 			"fillStyle": "solid",
@@ -11105,14 +11381,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726037,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 37,
-			"versionNonce": 252572400,
+			"version": 44,
+			"versionNonce": 1071805704,
 			"isDeleted": false,
 			"id": "Y9nRvBO7Qgkl4Vim0oAMd",
 			"fillStyle": "solid",
@@ -11134,14 +11410,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726040,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 42,
-			"versionNonce": 657650704,
+			"version": 49,
+			"versionNonce": 2104573816,
 			"isDeleted": false,
 			"id": "MDybL3Clq8RT-j1EE_aj4",
 			"fillStyle": "solid",
@@ -11168,14 +11444,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097087,
+			"updated": 1704314726040,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 244,
-			"versionNonce": 1353848048,
+			"version": 251,
+			"versionNonce": 1021219848,
 			"isDeleted": false,
 			"id": "OsYykFB7dEqOd_Z2z4xUN",
 			"fillStyle": "solid",
@@ -11197,7 +11473,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726040,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -11222,8 +11498,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "ellipse",
-			"version": 132,
-			"versionNonce": 1524232720,
+			"version": 139,
+			"versionNonce": 1963626616,
 			"isDeleted": false,
 			"id": "e8STXU1Zl7Y0CWm_KL74I",
 			"fillStyle": "solid",
@@ -11245,14 +11521,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 120,
-			"versionNonce": 1300362992,
+			"version": 127,
+			"versionNonce": 587125512,
 			"isDeleted": false,
 			"id": "ReANDC7dZdNJ9N84ZGBkn",
 			"fillStyle": "solid",
@@ -11274,14 +11550,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 92,
-			"versionNonce": 1022439440,
+			"version": 99,
+			"versionNonce": 793887096,
 			"isDeleted": false,
 			"id": "e14lyj5IXOoCKYyrnP6XQ",
 			"fillStyle": "solid",
@@ -11303,14 +11579,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 102,
-			"versionNonce": 705009904,
+			"version": 109,
+			"versionNonce": 2025796104,
 			"isDeleted": false,
 			"id": "4zkEJVdif4QlmqS2zfKL_",
 			"fillStyle": "solid",
@@ -11332,14 +11608,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 97,
-			"versionNonce": 359706128,
+			"version": 104,
+			"versionNonce": 1535824504,
 			"isDeleted": false,
 			"id": "yap9gGOGD46YpBIaUkNh9",
 			"fillStyle": "solid",
@@ -11361,14 +11637,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 92,
-			"versionNonce": 969210608,
+			"version": 99,
+			"versionNonce": 354136328,
 			"isDeleted": false,
 			"id": "2BTE2yAMmaZ-Gm2EIYjK4",
 			"fillStyle": "solid",
@@ -11390,14 +11666,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 92,
-			"versionNonce": 1833987088,
+			"version": 99,
+			"versionNonce": 544850808,
 			"isDeleted": false,
 			"id": "o7wQqledweeb1YFQLsIAR",
 			"fillStyle": "solid",
@@ -11419,14 +11695,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 97,
-			"versionNonce": 524819696,
+			"version": 104,
+			"versionNonce": 261115912,
 			"isDeleted": false,
 			"id": "PkvDbw9Y5KdbOybri4dCn",
 			"fillStyle": "solid",
@@ -11453,14 +11729,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097087,
+			"updated": 1704314726041,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 1854433808,
+			"version": 37,
+			"versionNonce": 281158772,
 			"isDeleted": false,
 			"id": "iEBzLLqF",
 			"fillStyle": "solid",
@@ -11480,7 +11756,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097087,
+			"updated": 1706388348168,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11492,12 +11768,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r[n]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 27,
-			"versionNonce": 1813446384,
+			"version": 40,
+			"versionNonce": 1865911500,
 			"isDeleted": false,
 			"id": "siqxJr7N",
 			"fillStyle": "solid",
@@ -11517,7 +11793,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348169,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11529,12 +11805,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "r[n - 2]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1141942288,
+			"version": 33,
+			"versionNonce": 1802335732,
 			"isDeleted": false,
 			"id": "vozEYIqO",
 			"fillStyle": "solid",
@@ -11554,7 +11830,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348169,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11566,12 +11842,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 27,
-			"versionNonce": 1085907184,
+			"version": 40,
+			"versionNonce": 1690571596,
 			"isDeleted": false,
 			"id": "4ZEDf3Lr",
 			"fillStyle": "solid",
@@ -11591,7 +11867,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348169,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11603,12 +11879,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 2044798480,
+			"version": 56,
+			"versionNonce": 1202886516,
 			"isDeleted": false,
 			"id": "WgyNlM0D",
 			"fillStyle": "solid",
@@ -11628,7 +11904,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348169,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11640,12 +11916,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 1823998704,
+			"version": 58,
+			"versionNonce": 872139212,
 			"isDeleted": false,
 			"id": "Iohw5pbE",
 			"fillStyle": "solid",
@@ -11665,7 +11941,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348169,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11677,12 +11953,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 30,
-			"versionNonce": 1559356432,
+			"version": 43,
+			"versionNonce": 1909950708,
 			"isDeleted": false,
 			"id": "KJI1GBR5",
 			"fillStyle": "solid",
@@ -11702,7 +11978,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11714,12 +11990,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 33,
-			"versionNonce": 244983024,
+			"version": 46,
+			"versionNonce": 1610133580,
 			"isDeleted": false,
 			"id": "rFNzsJ2P",
 			"fillStyle": "solid",
@@ -11739,7 +12015,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11751,12 +12027,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 40,
-			"versionNonce": 1530585616,
+			"version": 53,
+			"versionNonce": 1029851764,
 			"isDeleted": false,
 			"id": "wv5Nvg4I",
 			"fillStyle": "solid",
@@ -11776,7 +12052,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11788,12 +12064,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 870844144,
+			"version": 36,
+			"versionNonce": 2023016140,
 			"isDeleted": false,
 			"id": "Szi7YDT2",
 			"fillStyle": "solid",
@@ -11813,7 +12089,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11825,12 +12101,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 46,
-			"versionNonce": 1672749072,
+			"version": 53,
+			"versionNonce": 1356777848,
 			"isDeleted": false,
 			"id": "mMqDmMBbtg-vh58eRGgKF",
 			"fillStyle": "solid",
@@ -11852,7 +12128,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -11873,8 +12149,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 100,
-			"versionNonce": 2032773360,
+			"version": 107,
+			"versionNonce": 1214687752,
 			"isDeleted": false,
 			"id": "Wz2aSmqdL7VzFS3vFC5ky",
 			"fillStyle": "solid",
@@ -11896,7 +12172,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -11917,8 +12193,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 168,
-			"versionNonce": 1180016144,
+			"version": 175,
+			"versionNonce": 1446435448,
 			"isDeleted": false,
 			"id": "knNVTgIabxa04Iq20rDhk",
 			"fillStyle": "solid",
@@ -11940,7 +12216,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -11961,8 +12237,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 175,
-			"versionNonce": 703007472,
+			"version": 182,
+			"versionNonce": 1897146632,
 			"isDeleted": false,
 			"id": "GcP5CWFa9CxtlktCqcb6L",
 			"fillStyle": "solid",
@@ -11984,7 +12260,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12005,8 +12281,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 52,
-			"versionNonce": 337075216,
+			"version": 59,
+			"versionNonce": 2019871608,
 			"isDeleted": false,
 			"id": "moPbGBy5dHYODvm2pc76J",
 			"fillStyle": "solid",
@@ -12028,7 +12304,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12049,8 +12325,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 180,
-			"versionNonce": 1621634288,
+			"version": 187,
+			"versionNonce": 1169803272,
 			"isDeleted": false,
 			"id": "eOUINaPWmt2V2AJjvQknZ",
 			"fillStyle": "solid",
@@ -12072,7 +12348,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12093,8 +12369,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 179,
-			"versionNonce": 2129746448,
+			"version": 186,
+			"versionNonce": 1638702200,
 			"isDeleted": false,
 			"id": "CmXXMrvPiUtJvOF5eCuYO",
 			"fillStyle": "solid",
@@ -12116,7 +12392,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12137,8 +12413,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 143,
-			"versionNonce": 653594352,
+			"version": 150,
+			"versionNonce": 1381205768,
 			"isDeleted": false,
 			"id": "cB0VyndcwTT0hYL5vnBTJ",
 			"fillStyle": "solid",
@@ -12160,7 +12436,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1704314726043,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12181,8 +12457,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 27,
-			"versionNonce": 970692624,
+			"version": 40,
+			"versionNonce": 488168436,
 			"isDeleted": false,
 			"id": "GWXAg0CF",
 			"fillStyle": "solid",
@@ -12202,7 +12478,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12214,12 +12490,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 54,
-			"versionNonce": 357937392,
+			"version": 67,
+			"versionNonce": 40504652,
 			"isDeleted": false,
 			"id": "a27ceYv7",
 			"fillStyle": "solid",
@@ -12239,7 +12515,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12251,12 +12527,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 1489901072,
+			"version": 49,
+			"versionNonce": 989937012,
 			"isDeleted": false,
 			"id": "pPUaCe4I",
 			"fillStyle": "solid",
@@ -12276,7 +12552,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097088,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12288,12 +12564,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 1934758640,
+			"version": 42,
+			"versionNonce": 1590854604,
 			"isDeleted": false,
 			"id": "9yFctAgd",
 			"fillStyle": "solid",
@@ -12313,7 +12589,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12325,12 +12601,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 38,
-			"versionNonce": 817943568,
+			"version": 51,
+			"versionNonce": 274820852,
 			"isDeleted": false,
 			"id": "SHJV6YWa",
 			"fillStyle": "solid",
@@ -12350,7 +12626,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348171,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12362,12 +12638,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 32,
-			"versionNonce": 1467102448,
+			"version": 45,
+			"versionNonce": 870853196,
 			"isDeleted": false,
 			"id": "Ptm3v4aM",
 			"fillStyle": "solid",
@@ -12387,7 +12663,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348172,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12399,12 +12675,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "5",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 27,
-			"versionNonce": 934007312,
+			"version": 40,
+			"versionNonce": 2109698164,
 			"isDeleted": false,
 			"id": "5e7HWWdr",
 			"fillStyle": "solid",
@@ -12424,7 +12700,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348175,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12436,12 +12712,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 1195251440,
+			"version": 59,
+			"versionNonce": 1418002636,
 			"isDeleted": false,
 			"id": "htNWltqC",
 			"fillStyle": "solid",
@@ -12461,7 +12737,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348175,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12473,12 +12749,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1686573072,
+			"version": 33,
+			"versionNonce": 1658929652,
 			"isDeleted": false,
 			"id": "NGw8ZGGX",
 			"fillStyle": "solid",
@@ -12498,7 +12774,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348175,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12510,12 +12786,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 1463662832,
+			"version": 33,
+			"versionNonce": 675481420,
 			"isDeleted": false,
 			"id": "ULVcWp69",
 			"fillStyle": "solid",
@@ -12535,7 +12811,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348175,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12547,12 +12823,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 320,
-			"versionNonce": 256544272,
+			"version": 333,
+			"versionNonce": 919397236,
 			"isDeleted": false,
 			"id": "1dmNPRUN",
 			"fillStyle": "solid",
@@ -12572,7 +12848,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348176,
 			"link": null,
 			"locked": false,
 			"fontSize": 49.854800509369426,
@@ -12588,8 +12864,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 282,
-			"versionNonce": 1257839344,
+			"version": 289,
+			"versionNonce": 1930731784,
 			"isDeleted": false,
 			"id": "HGurlKY2fWES5yDTmKYwa",
 			"fillStyle": "solid",
@@ -12616,14 +12892,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "line",
-			"version": 104,
-			"versionNonce": 1357794320,
+			"version": 111,
+			"versionNonce": 1858589560,
 			"isDeleted": false,
 			"id": "c35gLVT5faZEncA2sHV9N",
 			"fillStyle": "solid",
@@ -12645,7 +12921,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12666,8 +12942,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 323,
-			"versionNonce": 888683760,
+			"version": 336,
+			"versionNonce": 326909388,
 			"isDeleted": false,
 			"id": "jivfDg5v",
 			"fillStyle": "solid",
@@ -12687,7 +12963,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348178,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12699,12 +12975,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The unit impulse function is the most widely used elementary function in the analysis of signals and systems. The continuous-\ntime unit impulse function  (t) also called Dirac delta function, plays an important role in signal analysis. It is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "line",
-			"version": 3218,
-			"versionNonce": 1667910160,
+			"version": 3225,
+			"versionNonce": 644785272,
 			"isDeleted": false,
 			"id": "i_g5yKy9_xWwW-Y7TDjlM",
 			"fillStyle": "solid",
@@ -12726,7 +13002,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12827,8 +13103,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3303,
-			"versionNonce": 381886192,
+			"version": 3310,
+			"versionNonce": 949354248,
 			"isDeleted": false,
 			"id": "6NEvkAWhKg4vpjg01p2eN",
 			"fillStyle": "solid",
@@ -12850,7 +13126,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -12959,8 +13235,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3332,
-			"versionNonce": 28739600,
+			"version": 3339,
+			"versionNonce": 1125340536,
 			"isDeleted": false,
 			"id": "SA_o0_y_gxI_rK7pLXA8U",
 			"fillStyle": "solid",
@@ -12982,7 +13258,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13091,8 +13367,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4687,
-			"versionNonce": 14794992,
+			"version": 4694,
+			"versionNonce": 714137096,
 			"isDeleted": false,
 			"id": "ynUkfP46raBxsQ3mxZZrp",
 			"fillStyle": "solid",
@@ -13114,7 +13390,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13199,8 +13475,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 152,
-			"versionNonce": 1204487696,
+			"version": 159,
+			"versionNonce": 704243320,
 			"isDeleted": false,
 			"id": "aeX6EOJoMjOYCk1iVQDQr",
 			"fillStyle": "solid",
@@ -13222,7 +13498,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13243,8 +13519,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3290,
-			"versionNonce": 853287664,
+			"version": 3297,
+			"versionNonce": 2010635528,
 			"isDeleted": false,
 			"id": "MgJnNJj-NWtlaHhL4fglv",
 			"fillStyle": "solid",
@@ -13266,7 +13542,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13367,8 +13643,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 98,
-			"versionNonce": 312460304,
+			"version": 111,
+			"versionNonce": 533222644,
 			"isDeleted": false,
 			"id": "Uyoe2kiI",
 			"fillStyle": "solid",
@@ -13388,7 +13664,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348179,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13400,12 +13676,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t) dt = 1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 993674480,
+			"version": 37,
+			"versionNonce": 1598727244,
 			"isDeleted": false,
 			"id": "io9WM03u",
 			"fillStyle": "solid",
@@ -13425,7 +13701,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1706388348180,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13437,12 +13713,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "and",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3350,
-			"versionNonce": 1613546000,
+			"version": 3357,
+			"versionNonce": 287090808,
 			"isDeleted": false,
 			"id": "4MOkjjk-oskjcOTDQHow1",
 			"fillStyle": "solid",
@@ -13464,7 +13740,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097089,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13565,8 +13841,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3323,
-			"versionNonce": 394536688,
+			"version": 3330,
+			"versionNonce": 448412424,
 			"isDeleted": false,
 			"id": "XIHcU4KYAhK5EvuGxDcmL",
 			"fillStyle": "solid",
@@ -13588,7 +13864,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726044,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -13689,8 +13965,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 795475984,
+			"version": 107,
+			"versionNonce": 190420596,
 			"isDeleted": false,
 			"id": "crKrSj4i",
 			"fillStyle": "solid",
@@ -13710,7 +13986,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1706388348182,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13722,12 +13998,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t) = 0   for t != 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 1413597424,
+			"version": 38,
+			"versionNonce": 562576076,
 			"isDeleted": false,
 			"id": "Jo6sQB2K",
 			"fillStyle": "solid",
@@ -13747,7 +14023,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1706388348183,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13759,12 +14035,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "ie, as",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 1615822352,
+			"version": 59,
+			"versionNonce": 1179035636,
 			"isDeleted": false,
 			"id": "VZetwckk",
 			"fillStyle": "solid",
@@ -13793,7 +14069,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097090,
+			"updated": 1706388348184,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13805,12 +14081,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 53,
-			"versionNonce": 754658032,
+			"version": 66,
+			"versionNonce": 617546060,
 			"isDeleted": false,
 			"id": "hhtlLm8T",
 			"fillStyle": "solid",
@@ -13835,7 +14111,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097090,
+			"updated": 1706388348185,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13847,12 +14123,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1    for t = 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 61,
-			"versionNonce": 332741648,
+			"version": 74,
+			"versionNonce": 345344372,
 			"isDeleted": false,
 			"id": "Gy9zYtCk",
 			"fillStyle": "solid",
@@ -13877,7 +14153,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097090,
+			"updated": 1706388348186,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -13889,12 +14165,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0   for t != 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 35,
-			"versionNonce": 741887216,
+			"version": 42,
+			"versionNonce": 421836808,
 			"isDeleted": false,
 			"id": "GYKnjA9gnGXl-AxsvbqHv",
 			"fillStyle": "solid",
@@ -13916,7 +14192,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -13945,8 +14221,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 48,
-			"versionNonce": 200489488,
+			"version": 55,
+			"versionNonce": 44608632,
 			"isDeleted": false,
 			"id": "jmZWHUPLFCNpoFG933W4w",
 			"fillStyle": "solid",
@@ -13968,7 +14244,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -13997,8 +14273,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 270,
-			"versionNonce": 1266757360,
+			"version": 283,
+			"versionNonce": 1350105036,
 			"isDeleted": false,
 			"id": "OHjyVQSZ",
 			"fillStyle": "solid",
@@ -14018,7 +14294,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1706388348188,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -14030,12 +14306,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "That is, the impulse function has zero amplitude everywhere except at t = 0, At t = 0, the amplitude is infinity so that\nthe area under the curve is unity.  (t) can be represented as a limiting case of a rectangle pulse function.",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "line",
-			"version": 3291,
-			"versionNonce": 195131408,
+			"version": 3298,
+			"versionNonce": 449600888,
 			"isDeleted": false,
 			"id": "x9Xr0S2nqbw8q3Wh-O9cA",
 			"fillStyle": "solid",
@@ -14057,7 +14333,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -14158,8 +14434,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 97,
-			"versionNonce": 324915440,
+			"version": 110,
+			"versionNonce": 1233926900,
 			"isDeleted": false,
 			"id": "Ex9VSF4s",
 			"fillStyle": "solid",
@@ -14179,7 +14455,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1706388348190,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -14191,12 +14467,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A delayed unit impulse function   (t - a) is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3347,
-			"versionNonce": 920122896,
+			"version": 3354,
+			"versionNonce": 894561912,
 			"isDeleted": false,
 			"id": "D25KkZ77T9YIkPJgpGfO3",
 			"fillStyle": "solid",
@@ -14218,7 +14494,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -14319,8 +14595,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3372,
-			"versionNonce": 995504880,
+			"version": 3379,
+			"versionNonce": 1944343816,
 			"isDeleted": false,
 			"id": "6lovKxamWlv8pu_8gWoIj",
 			"fillStyle": "solid",
@@ -14342,7 +14618,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -14443,8 +14719,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 102,
-			"versionNonce": 1921954832,
+			"version": 115,
+			"versionNonce": 278928972,
 			"isDeleted": false,
 			"id": "KVDO6Gp6",
 			"fillStyle": "solid",
@@ -14469,7 +14745,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097090,
+			"updated": 1706388348192,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -14481,12 +14757,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t - a) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 132,
-			"versionNonce": 1240618224,
+			"version": 145,
+			"versionNonce": 1605418100,
 			"isDeleted": false,
 			"id": "nTcrJ9hK",
 			"fillStyle": "solid",
@@ -14515,7 +14791,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097090,
+			"updated": 1706388348193,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -14527,12 +14803,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1    for t = a\n\n0    for t != a",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 47,
-			"versionNonce": 1153282576,
+			"version": 54,
+			"versionNonce": 470986872,
 			"isDeleted": false,
 			"id": "QOagFjdd81aVPQ2VBCMn8",
 			"fillStyle": "solid",
@@ -14554,7 +14830,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -14579,8 +14855,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 34,
-			"versionNonce": 884618992,
+			"version": 41,
+			"versionNonce": 1745400584,
 			"isDeleted": false,
 			"id": "TVv_Bd3tizsbtYJJ6nRNr",
 			"fillStyle": "solid",
@@ -14602,7 +14878,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726045,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -14631,8 +14907,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 878506000,
+			"version": 107,
+			"versionNonce": 1042183372,
 			"isDeleted": false,
 			"id": "c8J9gXDe",
 			"fillStyle": "solid",
@@ -14652,7 +14928,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1706388348194,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -14664,12 +14940,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The graphical representation of   (t)  and   (t - a) are shown below:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3379,
-			"versionNonce": 3528944,
+			"version": 3386,
+			"versionNonce": 1099764232,
 			"isDeleted": false,
 			"id": "3RtBUQyjUwi6-HyLQEDM4",
 			"fillStyle": "solid",
@@ -14691,7 +14967,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097090,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -14792,8 +15068,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3390,
-			"versionNonce": 694447632,
+			"version": 3397,
+			"versionNonce": 923464312,
 			"isDeleted": false,
 			"id": "qZUAg0cfnZRYrngMK9Ln9",
 			"fillStyle": "solid",
@@ -14815,7 +15091,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -14916,8 +15192,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 167,
-			"versionNonce": 1609382640,
+			"version": 174,
+			"versionNonce": 1227723016,
 			"isDeleted": false,
 			"id": "QQy6wFe7VcUr4JCkJVy29",
 			"fillStyle": "solid",
@@ -14939,7 +15215,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -14968,8 +15244,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 199,
-			"versionNonce": 1288449040,
+			"version": 206,
+			"versionNonce": 1458955128,
 			"isDeleted": false,
 			"id": "WiN0emEOab4qAK-OhMYo3",
 			"fillStyle": "solid",
@@ -14991,7 +15267,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -15020,8 +15296,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 66,
-			"versionNonce": 1449680112,
+			"version": 73,
+			"versionNonce": 644231176,
 			"isDeleted": false,
 			"id": "baiAJ80sbjbhDWEuYDtIQ",
 			"fillStyle": "solid",
@@ -15043,7 +15319,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15068,8 +15344,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 69,
-			"versionNonce": 1754016272,
+			"version": 76,
+			"versionNonce": 2119873656,
 			"isDeleted": false,
 			"id": "ehHf0_QZUew31XbGY80b-",
 			"fillStyle": "solid",
@@ -15091,7 +15367,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15112,8 +15388,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 84,
-			"versionNonce": 1429159664,
+			"version": 91,
+			"versionNonce": 825421576,
 			"isDeleted": false,
 			"id": "lleJ4vu0mxjqCMAJw9w8e",
 			"fillStyle": "solid",
@@ -15142,14 +15418,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 1201432592,
+			"version": 56,
+			"versionNonce": 281611764,
 			"isDeleted": false,
 			"id": "F2DYYKPK",
 			"fillStyle": "solid",
@@ -15174,7 +15450,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348194,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15186,12 +15462,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 57,
-			"versionNonce": 1556734192,
+			"version": 70,
+			"versionNonce": 109968204,
 			"isDeleted": false,
 			"id": "D18Ca5uA",
 			"fillStyle": "solid",
@@ -15216,7 +15492,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348195,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15228,12 +15504,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 368371216,
+			"version": 58,
+			"versionNonce": 1843081076,
 			"isDeleted": false,
 			"id": "zJSVhQ8f",
 			"fillStyle": "solid",
@@ -15258,7 +15534,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348195,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15270,12 +15546,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 584,
-			"versionNonce": 482362096,
+			"version": 591,
+			"versionNonce": 1106824456,
 			"isDeleted": false,
 			"id": "oH57xWrbWSWhW8HJD93o9",
 			"fillStyle": "hachure",
@@ -15297,7 +15573,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15326,8 +15602,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 21,
-			"versionNonce": 1083024400,
+			"version": 34,
+			"versionNonce": 1414050252,
 			"isDeleted": false,
 			"id": "MBMrol0m",
 			"fillStyle": "solid",
@@ -15347,7 +15623,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1706388348197,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15359,12 +15635,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1 / ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 589,
-			"versionNonce": 328885488,
+			"version": 596,
+			"versionNonce": 1516891144,
 			"isDeleted": false,
 			"id": "HmxFrt_bDyQHwpP4nYMs6",
 			"fillStyle": "hachure",
@@ -15386,7 +15662,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15415,8 +15691,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 58,
-			"versionNonce": 1432265232,
+			"version": 65,
+			"versionNonce": 1249949816,
 			"isDeleted": false,
 			"id": "fLCtVdj1Dl7XybHTlG3Zt",
 			"fillStyle": "solid",
@@ -15436,7 +15712,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726046,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -15465,8 +15741,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 33,
-			"versionNonce": 786450160,
+			"version": 46,
+			"versionNonce": 1999446260,
 			"isDeleted": false,
 			"id": "Me4FA285",
 			"fillStyle": "solid",
@@ -15491,7 +15767,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348198,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15503,12 +15779,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 1667227664,
+			"version": 37,
+			"versionNonce": 912824396,
 			"isDeleted": false,
 			"id": "Cr6jNGxc",
 			"fillStyle": "solid",
@@ -15533,7 +15809,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348198,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15545,12 +15821,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 1796860144,
+			"version": 38,
+			"versionNonce": 876929652,
 			"isDeleted": false,
 			"id": "FyL7tzU7",
 			"fillStyle": "solid",
@@ -15570,7 +15846,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1706388348198,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15582,12 +15858,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 35,
-			"versionNonce": 1518951952,
+			"version": 48,
+			"versionNonce": 1221045964,
 			"isDeleted": false,
 			"id": "LDOxNojP",
 			"fillStyle": "solid",
@@ -15612,7 +15888,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15624,12 +15900,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3382,
-			"versionNonce": 1942964976,
+			"version": 3389,
+			"versionNonce": 222693640,
 			"isDeleted": false,
 			"id": "eejInkhzkvaCCMA5bg7N4",
 			"fillStyle": "solid",
@@ -15651,7 +15927,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726047,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15752,8 +16028,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 83,
-			"versionNonce": 1808997392,
+			"version": 90,
+			"versionNonce": 1489038200,
 			"isDeleted": false,
 			"id": "LccYcF7bVxUvZnISnVNaF",
 			"fillStyle": "solid",
@@ -15773,7 +16049,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726047,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -15798,8 +16074,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 42,
-			"versionNonce": 1133014256,
+			"version": 49,
+			"versionNonce": 1085253640,
 			"isDeleted": false,
 			"id": "TOE4mDXIiSvocTahWrC0x",
 			"fillStyle": "solid",
@@ -15819,7 +16095,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097091,
+			"updated": 1704314726047,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -15840,8 +16116,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 1765087760,
+			"version": 49,
+			"versionNonce": 1273525236,
 			"isDeleted": false,
 			"id": "X5qWmd2Z",
 			"fillStyle": "solid",
@@ -15866,7 +16142,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097091,
+			"updated": 1706388348199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15878,12 +16154,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "a",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 26,
-			"versionNonce": 1137528560,
+			"version": 39,
+			"versionNonce": 469759308,
 			"isDeleted": false,
 			"id": "hDlEXOfL",
 			"fillStyle": "solid",
@@ -15903,7 +16179,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097092,
+			"updated": 1706388348199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15915,12 +16191,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 18,
-			"versionNonce": 631724048,
+			"version": 31,
+			"versionNonce": 471717236,
 			"isDeleted": false,
 			"id": "lK7XNaJP",
 			"fillStyle": "solid",
@@ -15940,7 +16216,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097092,
+			"updated": 1706388348199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15952,12 +16228,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 18,
-			"versionNonce": 1831203056,
+			"version": 31,
+			"versionNonce": 493579212,
 			"isDeleted": false,
 			"id": "o3dlzsbZ",
 			"fillStyle": "solid",
@@ -15977,7 +16253,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097092,
+			"updated": 1706388348199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -15989,12 +16265,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3387,
-			"versionNonce": 1428280848,
+			"version": 3394,
+			"versionNonce": 946470520,
 			"isDeleted": false,
 			"id": "3_oTcdiCRRvwjN-skMact",
 			"fillStyle": "solid",
@@ -16016,1281 +16292,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 37,
-			"versionNonce": 1729778416,
-			"isDeleted": false,
-			"id": "e1KYbaHN",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -3605.5283169019062,
-			"y": -3439.363260989067,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 67.91990661621094,
-			"height": 25,
-			"seed": 533924080,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t - a)",
-			"rawText": "(t - a)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t - a)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 77,
-			"versionNonce": 1822200848,
-			"isDeleted": false,
-			"id": "AUtI4HIo",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4689.9580020575195,
-			"y": -3219.1458873064003,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 322.9996032714844,
-			"height": 25,
-			"seed": 944413424,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t) As a limiting case of a pulse",
-			"rawText": "(t) As a limiting case of a pulse",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t) As a limiting case of a pulse",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3446,
-			"versionNonce": 674395376,
-			"isDeleted": false,
-			"id": "9KQuVV8TclzGNMXAeOUjK",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4705.502984054621,
-			"y": -3215.8841307799094,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 2096489200,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 48,
-			"versionNonce": 34574864,
-			"isDeleted": false,
-			"id": "9uJ4VFXf",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4216.595628244466,
-			"y": -3259.477160571731,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 114.61985778808594,
-			"height": 25,
-			"seed": 125075696,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "Unit impulse",
-			"rawText": "Unit impulse",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "Unit impulse",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 48,
-			"versionNonce": 368465648,
-			"isDeleted": false,
-			"id": "js7g15UA",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -3736.610399565906,
-			"y": -3247.1401602740525,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 198.53976440429688,
-			"height": 25,
-			"seed": 1440670736,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "Delayed unit impulse",
-			"rawText": "Delayed unit impulse",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "Delayed unit impulse",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 213,
-			"versionNonce": 745721872,
-			"isDeleted": false,
-			"id": "rKYJJPhl",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4709.770194906002,
-			"y": -3142.0571680816297,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 1273.7786865234375,
-			"height": 50,
-			"seed": 993572368,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
-			"rawText": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
-			"lineHeight": 1.25,
-			"baseline": 41
-		},
-		{
-			"type": "text",
-			"version": 328,
-			"versionNonce": 619575536,
-			"isDeleted": false,
-			"id": "ivsu2vEB",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4679.199725191336,
-			"y": -3077.741327775266,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 766.3192138671875,
-			"height": 100,
-			"seed": 1751276560,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
-			"rawText": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
-			"lineHeight": 1.25,
-			"baseline": 91
-		},
-		{
-			"type": "text",
-			"version": 186,
-			"versionNonce": 1673416208,
-			"isDeleted": false,
-			"id": "O1oipscA",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4706.686455872533,
-			"y": -2950.614780697036,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 1215.078857421875,
-			"height": 50,
-			"seed": 1980457488,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
-			"rawText": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
-			"lineHeight": 1.25,
-			"baseline": 41
-		},
-		{
-			"type": "text",
-			"version": 96,
-			"versionNonce": 2023840496,
-			"isDeleted": false,
-			"id": "mBTQRlQF",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4203.790239259375,
-			"y": -2877.4447234878467,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 70.05990600585938,
-			"height": 25,
-			"seed": 2080718864,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "u(t) = ",
-			"rawText": "u(t) = ",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "u(t) = ",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 126,
-			"versionNonce": 1625951248,
-			"isDeleted": false,
-			"id": "kAFAlUUq",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4045.5264651560624,
-			"y": -2785.5746829757704,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 37.71995544433594,
-			"height": 25,
-			"seed": 453122800,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "u(t)",
-			"rawText": "u(t)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "u(t)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3365,
-			"versionNonce": 60325104,
-			"isDeleted": false,
-			"id": "I0ECnQadh657w3mT81zDs",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4090.179943332576,
-			"y": -2896.038977395771,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 117040656,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3394,
-			"versionNonce": 2112752144,
-			"isDeleted": false,
-			"id": "6pjcZAC9L1A2keXnVryYI",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4088.7143367924327,
-			"y": -2835.949534556507,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 1223861264,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 4749,
-			"versionNonce": 660299504,
-			"isDeleted": false,
-			"id": "ehGD6wTWxtEc77jsErtMa",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4112.102860093602,
-			"y": -2890.6910644760615,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 9.845901348774076,
-			"height": 41.589456947420416,
-			"seed": 153330192,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-2.3004523516478184,
-					1.209246316033144
-				],
-				[
-					-4.647215587003986,
-					7.474741786573146
-				],
-				[
-					-2.7824431328169865,
-					23.031382720284135
-				],
-				[
-					-1.929247599468808,
-					36.6778015252594
-				],
-				[
-					-4.76203365582413,
-					40.257893632991994
-				],
-				[
-					-5.815664686982577,
-					38.159200625341974
-				],
-				[
-					-7.110728970427248,
-					39.06231660896368
-				],
-				[
-					-5.698924137345239,
-					41.589456947420416
-				],
-				[
-					-1.9112206088837684,
-					40.06683409875895
-				],
-				[
-					-0.3264495593557388,
-					34.95376775974244
-				],
-				[
-					-0.8542846482743336,
-					22.90701973556727
-				],
-				[
-					-3.097498378143099,
-					6.542350217190476
-				],
-				[
-					-0.3185877841610525,
-					1.5678752667868323
-				],
-				[
-					1.3234560187953854,
-					3.660584469366615
-				],
-				[
-					2.735172378346828,
-					3.145557380114573
-				],
-				[
-					1.9308144075824294,
-					0.7935268837256421
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 214,
-			"versionNonce": 365053968,
-			"isDeleted": false,
-			"id": "b6KFQw1Rc_WeUQCwoGDfR",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4120.798686496299,
-			"y": -2837.558878068718,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 11.724738906051243,
-			"height": 0,
-			"seed": 1451548688,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					11.724738906051243,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3352,
-			"versionNonce": 1416757488,
-			"isDeleted": false,
-			"id": "oEGiU8NfhYmFlE32qLBoL",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4067.0142806255517,
-			"y": -2875.49966225405,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 554589712,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 165,
-			"versionNonce": 1683932688,
-			"isDeleted": false,
-			"id": "6dJIgo4b",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4056.356230616302,
-			"y": -2871.799376679434,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 59.03993225097656,
-			"height": 25,
-			"seed": 431496208,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097092,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t) dt",
-			"rawText": "(t) dt",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t) dt",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 56,
-			"versionNonce": 711222000,
-			"isDeleted": false,
-			"id": "BvUQapzT",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4075.588584353877,
-			"y": -2794.9557268390377,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 11.379989624023438,
-			"height": 25,
-			"seed": 1328978160,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "d",
-			"rawText": "d",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "d",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 62,
-			"versionNonce": 1723565072,
-			"isDeleted": false,
-			"id": "TkAqdEUz",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4074.391569202254,
-			"y": -2766.7251170867685,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 22.679977416992188,
-			"height": 25,
-			"seed": 860422896,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "dt",
-			"rawText": "dt",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "dt",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 65,
-			"versionNonce": 398099696,
-			"isDeleted": false,
-			"id": "pUSboBGhsm-B0QcTtuNv1",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4086.843075328283,
-			"y": -2769.4765347542834,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 38.60725696025338,
-			"height": 0,
-			"seed": 267354640,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					38.60725696025338,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3403,
-			"versionNonce": 986743312,
-			"isDeleted": false,
-			"id": "eH64t8MZL2DVicr6A40To",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4163.820376499541,
-			"y": -2775.6794232057173,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 1374276848,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1704314726047,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -17392,7 +16394,1281 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		{
 			"type": "text",
 			"version": 50,
-			"versionNonce": 2046584560,
+			"versionNonce": 1378551540,
+			"isDeleted": false,
+			"id": "e1KYbaHN",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -3605.5283169019062,
+			"y": -3439.363260989067,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 67.91990661621094,
+			"height": 25,
+			"seed": 533924080,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348200,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t - a)",
+			"rawText": "(t - a)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t - a)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 90,
+			"versionNonce": 2133070412,
+			"isDeleted": false,
+			"id": "AUtI4HIo",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4689.9580020575195,
+			"y": -3219.1458873064003,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 322.9996032714844,
+			"height": 25,
+			"seed": 944413424,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348201,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t) As a limiting case of a pulse",
+			"rawText": "(t) As a limiting case of a pulse",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t) As a limiting case of a pulse",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3453,
+			"versionNonce": 674718728,
+			"isDeleted": false,
+			"id": "9KQuVV8TclzGNMXAeOUjK",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4705.502984054621,
+			"y": -3215.8841307799094,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 2096489200,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726047,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 61,
+			"versionNonce": 43386996,
+			"isDeleted": false,
+			"id": "9uJ4VFXf",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4216.595628244466,
+			"y": -3259.477160571731,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 114.61985778808594,
+			"height": 25,
+			"seed": 125075696,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348202,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Unit impulse",
+			"rawText": "Unit impulse",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Unit impulse",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 61,
+			"versionNonce": 537127116,
+			"isDeleted": false,
+			"id": "js7g15UA",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -3736.610399565906,
+			"y": -3247.1401602740525,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 198.53976440429688,
+			"height": 25,
+			"seed": 1440670736,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348203,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Delayed unit impulse",
+			"rawText": "Delayed unit impulse",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Delayed unit impulse",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 226,
+			"versionNonce": 1092934132,
+			"isDeleted": false,
+			"id": "rKYJJPhl",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4709.770194906002,
+			"y": -3142.0571680816297,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1273.7786865234375,
+			"height": 50,
+			"seed": 993572368,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348205,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
+			"rawText": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "If the unit impulse function is assumed in the form of a pulse, then the following points may be observed about the unit impulse\nfunction:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "text",
+			"version": 341,
+			"versionNonce": 1940189004,
+			"isDeleted": false,
+			"id": "ivsu2vEB",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4679.199725191336,
+			"y": -3077.741327775266,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 766.3192138671875,
+			"height": 100,
+			"seed": 1751276560,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348207,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
+			"rawText": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "1. The width of the pulse is zero. This means the pulse exists only at t = 0\n2. The height of the pulse the to infinity.\n3. The area under the pulse is always unity.\n4. the height of arrow indicates the total area under the impulse.",
+			"lineHeight": 1.25,
+			"baseline": 92
+		},
+		{
+			"type": "text",
+			"version": 199,
+			"versionNonce": 954039156,
+			"isDeleted": false,
+			"id": "O1oipscA",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4706.686455872533,
+			"y": -2950.614780697036,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1215.078857421875,
+			"height": 50,
+			"seed": 1980457488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348208,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
+			"rawText": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "The integral of the unit impulse function is a unit step function and the derivative of unit step function is a unit impulse\nfunction:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "text",
+			"version": 109,
+			"versionNonce": 1784751564,
+			"isDeleted": false,
+			"id": "mBTQRlQF",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4203.790239259375,
+			"y": -2877.4447234878467,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 70.05990600585938,
+			"height": 25,
+			"seed": 2080718864,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348208,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "u(t) = ",
+			"rawText": "u(t) = ",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "u(t) = ",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 139,
+			"versionNonce": 1141239028,
+			"isDeleted": false,
+			"id": "kAFAlUUq",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4045.5264651560624,
+			"y": -2785.5746829757704,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.71995544433594,
+			"height": 25,
+			"seed": 453122800,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348208,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "u(t)",
+			"rawText": "u(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "u(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3372,
+			"versionNonce": 1610686472,
+			"isDeleted": false,
+			"id": "I0ECnQadh657w3mT81zDs",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4090.179943332576,
+			"y": -2896.038977395771,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 117040656,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3401,
+			"versionNonce": 1948697720,
+			"isDeleted": false,
+			"id": "6pjcZAC9L1A2keXnVryYI",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4088.7143367924327,
+			"y": -2835.949534556507,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1223861264,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4756,
+			"versionNonce": 1508892424,
+			"isDeleted": false,
+			"id": "ehGD6wTWxtEc77jsErtMa",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4112.102860093602,
+			"y": -2890.6910644760615,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 153330192,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 221,
+			"versionNonce": 1690793336,
+			"isDeleted": false,
+			"id": "b6KFQw1Rc_WeUQCwoGDfR",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4120.798686496299,
+			"y": -2837.558878068718,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.724738906051243,
+			"height": 0,
+			"seed": 1451548688,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.724738906051243,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3359,
+			"versionNonce": 1169079816,
+			"isDeleted": false,
+			"id": "oEGiU8NfhYmFlE32qLBoL",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4067.0142806255517,
+			"y": -2875.49966225405,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 554589712,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 178,
+			"versionNonce": 1498582092,
+			"isDeleted": false,
+			"id": "6dJIgo4b",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4056.356230616302,
+			"y": -2871.799376679434,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 59.03993225097656,
+			"height": 25,
+			"seed": 431496208,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348209,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t) dt",
+			"rawText": "(t) dt",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t) dt",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 69,
+			"versionNonce": 69480052,
+			"isDeleted": false,
+			"id": "BvUQapzT",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4075.588584353877,
+			"y": -2794.9557268390377,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.379989624023438,
+			"height": 25,
+			"seed": 1328978160,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348210,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "d",
+			"rawText": "d",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "d",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 75,
+			"versionNonce": 1649615564,
+			"isDeleted": false,
+			"id": "TkAqdEUz",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4074.391569202254,
+			"y": -2766.7251170867685,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 22.679977416992188,
+			"height": 25,
+			"seed": 860422896,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348210,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "dt",
+			"rawText": "dt",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "dt",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 72,
+			"versionNonce": 923589640,
+			"isDeleted": false,
+			"id": "pUSboBGhsm-B0QcTtuNv1",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4086.843075328283,
+			"y": -2769.4765347542834,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 38.60725696025338,
+			"height": 0,
+			"seed": 267354640,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					38.60725696025338,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3410,
+			"versionNonce": 834979960,
+			"isDeleted": false,
+			"id": "eH64t8MZL2DVicr6A40To",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4163.820376499541,
+			"y": -2775.6794232057173,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1374276848,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726048,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 63,
+			"versionNonce": 2046705652,
 			"isDeleted": false,
 			"id": "62zS6P9q",
 			"fillStyle": "solid",
@@ -17412,7 +17688,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1706388348210,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -17424,12 +17700,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 19,
-			"versionNonce": 2140520464,
+			"version": 32,
+			"versionNonce": 1543301452,
 			"isDeleted": false,
 			"id": "qPgnsmUL",
 			"fillStyle": "solid",
@@ -17449,7 +17725,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1706388348213,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -17461,12 +17737,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "and:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 136,
-			"versionNonce": 1035077872,
+			"version": 149,
+			"versionNonce": 496640372,
 			"isDeleted": false,
 			"id": "E77RbNdZ",
 			"fillStyle": "solid",
@@ -17486,7 +17762,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1706388348214,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -17498,12 +17774,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "PROPERTIES OF CONTINUOUS-TIME UNIT IMPULSE FUNCTION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 96,
-			"versionNonce": 889404944,
+			"version": 103,
+			"versionNonce": 1763117688,
 			"isDeleted": false,
 			"id": "jP7g3ulNsmEV27bDfdMwC",
 			"fillStyle": "solid",
@@ -17523,7 +17799,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1704314726049,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -17544,8 +17820,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 103,
-			"versionNonce": 2120444656,
+			"version": 116,
+			"versionNonce": 967434188,
 			"isDeleted": false,
 			"id": "T8XlxnLG",
 			"fillStyle": "solid",
@@ -17565,7 +17841,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097093,
+			"updated": 1706388348215,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -17577,12 +17853,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1. It is an even function of time t, i.e,   (t) =   (-t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3436,
-			"versionNonce": 470875152,
+			"version": 3443,
+			"versionNonce": 532609912,
 			"isDeleted": false,
 			"id": "fthQebbS2ZC2JJfblrJYM",
 			"fillStyle": "solid",
@@ -17604,1995 +17880,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3445,
-			"versionNonce": 647531760,
-			"isDeleted": false,
-			"id": "NJ5DCdRVwPLgTArZERti4",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4179.790264193651,
-			"y": -2621.7857090050347,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 1821211888,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 17,
-			"versionNonce": 381090320,
-			"isDeleted": false,
-			"id": "hodIcEDd",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4656.646593005612,
-			"y": -2562.7106161167017,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 19.719985961914062,
-			"height": 25,
-			"seed": 174609648,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "2.",
-			"rawText": "2.",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "2.",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3396,
-			"versionNonce": 265907952,
-			"isDeleted": false,
-			"id": "CuIXy31HcuEypqHhuut_f",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4582.842470846396,
-			"y": -2579.4880386721443,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 144272112,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3425,
-			"versionNonce": 132986896,
-			"isDeleted": false,
-			"id": "HXORr30jeTi8eRd_Fup_N",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4581.376864306253,
-			"y": -2519.3985958328803,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 2047773936,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 4780,
-			"versionNonce": 581832944,
-			"isDeleted": false,
-			"id": "6PavZmi82N7J_hw-7LGXU",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4604.765387607423,
-			"y": -2574.140125752435,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 9.845901348774076,
-			"height": 41.589456947420416,
-			"seed": 76508912,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-2.3004523516478184,
-					1.209246316033144
-				],
-				[
-					-4.647215587003986,
-					7.474741786573146
-				],
-				[
-					-2.7824431328169865,
-					23.031382720284135
-				],
-				[
-					-1.929247599468808,
-					36.6778015252594
-				],
-				[
-					-4.76203365582413,
-					40.257893632991994
-				],
-				[
-					-5.815664686982577,
-					38.159200625341974
-				],
-				[
-					-7.110728970427248,
-					39.06231660896368
-				],
-				[
-					-5.698924137345239,
-					41.589456947420416
-				],
-				[
-					-1.9112206088837684,
-					40.06683409875895
-				],
-				[
-					-0.3264495593557388,
-					34.95376775974244
-				],
-				[
-					-0.8542846482743336,
-					22.90701973556727
-				],
-				[
-					-3.097498378143099,
-					6.542350217190476
-				],
-				[
-					-0.3185877841610525,
-					1.5678752667868323
-				],
-				[
-					1.3234560187953854,
-					3.660584469366615
-				],
-				[
-					2.735172378346828,
-					3.145557380114573
-				],
-				[
-					1.9308144075824294,
-					0.7935268837256421
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 245,
-			"versionNonce": 866891280,
-			"isDeleted": false,
-			"id": "9YBQGgBrRN09DIjiD_k3K",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4613.461214010119,
-			"y": -2521.0079393450915,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 11.724738906051243,
-			"height": 0,
-			"seed": 279187696,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					11.724738906051243,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3397,
-			"versionNonce": 1990095600,
-			"isDeleted": false,
-			"id": "SDXseyFL5CDIFD4POZ_nb",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4524.927339178001,
-			"y": -2563.2924439154945,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 903115504,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 229,
-			"versionNonce": 518681616,
-			"isDeleted": false,
-			"id": "CgpusKyt",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4512.097428976215,
-			"y": -2563.9357946918935,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 136.59983825683594,
-			"height": 25,
-			"seed": 1520997616,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t) dt = x(0);",
-			"rawText": "(t) dt = x(0);",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t) dt = x(0);",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 62,
-			"versionNonce": 1915917552,
-			"isDeleted": false,
-			"id": "MpPLEC5V",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4575.375156027243,
-			"y": -2565.753993510121,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 37.59996032714844,
-			"height": 25,
-			"seed": 715763216,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "x(t)",
-			"rawText": "x(t)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "x(t)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3419,
-			"versionNonce": 1872851472,
-			"isDeleted": false,
-			"id": "KpSF47WlBlPyNNlDxVDSA",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4273.9681752618835,
-			"y": -2579.074555694232,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 791606800,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097093,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3448,
-			"versionNonce": 1794275056,
-			"isDeleted": false,
-			"id": "rVI2s7jNM8rhojBjItEQn",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4272.50256872174,
-			"y": -2518.985112854968,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 1208333328,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 4804,
-			"versionNonce": 1288220688,
-			"isDeleted": false,
-			"id": "6g1Hwam1CuvBXAYZOd5__",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4295.89109202291,
-			"y": -2573.7266427745226,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 9.845901348774076,
-			"height": 41.589456947420416,
-			"seed": 1398059536,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-2.3004523516478184,
-					1.209246316033144
-				],
-				[
-					-4.647215587003986,
-					7.474741786573146
-				],
-				[
-					-2.7824431328169865,
-					23.031382720284135
-				],
-				[
-					-1.929247599468808,
-					36.6778015252594
-				],
-				[
-					-4.76203365582413,
-					40.257893632991994
-				],
-				[
-					-5.815664686982577,
-					38.159200625341974
-				],
-				[
-					-7.110728970427248,
-					39.06231660896368
-				],
-				[
-					-5.698924137345239,
-					41.589456947420416
-				],
-				[
-					-1.9112206088837684,
-					40.06683409875895
-				],
-				[
-					-0.3264495593557388,
-					34.95376775974244
-				],
-				[
-					-0.8542846482743336,
-					22.90701973556727
-				],
-				[
-					-3.097498378143099,
-					6.542350217190476
-				],
-				[
-					-0.3185877841610525,
-					1.5678752667868323
-				],
-				[
-					1.3234560187953854,
-					3.660584469366615
-				],
-				[
-					2.735172378346828,
-					3.145557380114573
-				],
-				[
-					1.9308144075824294,
-					0.7935268837256421
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 268,
-			"versionNonce": 1164318960,
-			"isDeleted": false,
-			"id": "6mm5ovV2Fn-ZUeO1kdb70",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4304.586918425606,
-			"y": -2520.594456367179,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 11.724738906051243,
-			"height": 0,
-			"seed": 1477701648,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					11.724738906051243,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3426,
-			"versionNonce": 1045966352,
-			"isDeleted": false,
-			"id": "yBf0yF7G1nMKpWAC55vjW",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4227.353034742757,
-			"y": -2558.535240552511,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 1044082192,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 256,
-			"versionNonce": 353729264,
-			"isDeleted": false,
-			"id": "r9xn1SVB",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4218.160534566104,
-			"y": -2560.6973244309206,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 190.65975952148438,
-			"height": 25,
-			"seed": 784542736,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t - to) dt = x(to)",
-			"rawText": "(t - to) dt = x(to)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t - to) dt = x(to)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 32,
-			"versionNonce": 222817296,
-			"isDeleted": false,
-			"id": "sB1XeCW4",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4275.2992556168,
-			"y": -2561.8028309621354,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 37.59996032714844,
-			"height": 25,
-			"seed": 964502256,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "x(t)",
-			"rawText": "x(t)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "x(t)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 27,
-			"versionNonce": 1015586032,
-			"isDeleted": false,
-			"id": "TczP3JWl",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4656.372664044376,
-			"y": -2485.8656419848244,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 19.0999755859375,
-			"height": 25,
-			"seed": 72034544,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "3.",
-			"rawText": "3.",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "3.",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3417,
-			"versionNonce": 596634128,
-			"isDeleted": false,
-			"id": "HNd5_2En1ofCFrGYtIu-y",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4612.462743251404,
-			"y": -2482.914950327117,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 2062800112,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 45,
-			"versionNonce": 222789360,
-			"isDeleted": false,
-			"id": "465LRtCB",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4595.62793715115,
-			"y": -2481.7174282483957,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 87.45988464355469,
-			"height": 25,
-			"seed": 1570264592,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(at) =  1",
-			"rawText": "(at) =  1",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(at) =  1",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 39,
-			"versionNonce": 1814571024,
-			"isDeleted": false,
-			"id": "RPSUBNWqvW73zq1AnK7Nk",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4522.169888693165,
-			"y": -2459.1720955582146,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 23.44950616587539,
-			"height": 0,
-			"seed": 509218032,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					23.44950616587539,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 31,
-			"versionNonce": 1742348528,
-			"isDeleted": false,
-			"id": "M0wa47m9",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4518.683423671002,
-			"y": -2452.3789851439437,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 20.059982299804688,
-			"height": 25,
-			"seed": 1411026160,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "|a|",
-			"rawText": "|a|",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "|a|",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3424,
-			"versionNonce": 856204816,
-			"isDeleted": false,
-			"id": "wi1txSBv84GTzFnC50wp6",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4486.105627085661,
-			"y": -2469.41027495049,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 1220197616,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.47861379166329243,
-					0.6148976118180371
-				],
-				[
-					2.7459702869508646,
-					0.21920164769727535
-				],
-				[
-					5.9336578619901275,
-					3.602587401808762
-				],
-				[
-					6.4741861962107645,
-					9.399942173055843
-				],
-				[
-					4.825584137230446,
-					13.36096134384025
-				],
-				[
-					0.9352144567093226,
-					13.640128174232249
-				],
-				[
-					0.03863248027629207,
-					10.456580617725495
-				],
-				[
-					1.5437866853996516,
-					8.645904905327507
-				],
-				[
-					4.410591563693601,
-					9.469686494182403
-				],
-				[
-					5.516580151810234,
-					9.702543349996933
-				],
-				[
-					5.50652846593968,
-					8.658538743086362
-				],
-				[
-					1.564219194464783,
-					7.770413087499971
-				],
-				[
-					-0.4687444119447881,
-					8.925174601782338
-				],
-				[
-					-0.8784731582983338,
-					11.78433041788163
-				],
-				[
-					0.3963304825998596,
-					14.628666080858068
-				],
-				[
-					3.642891355787948,
-					14.994789432989306
-				],
-				[
-					6.975934648943947,
-					12.077232336834529
-				],
-				[
-					6.94009547374867,
-					4.742637616202103
-				],
-				[
-					3.473850276912003,
-					-0.21475297636300184
-				],
-				[
-					1.2058274425126,
-					-0.5354580327556278
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "text",
-			"version": 24,
-			"versionNonce": 1539867376,
-			"isDeleted": false,
-			"id": "KfJUoMAE",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4470.945990263763,
-			"y": -2468.854115223057,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 26.359970092773438,
-			"height": 25,
-			"seed": 1308643568,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "(t)",
-			"rawText": "(t)",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "(t)",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "text",
-			"version": 178,
-			"versionNonce": 86598672,
-			"isDeleted": false,
-			"id": "1IBqd2hO",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4686.377505881909,
-			"y": -2177.9436076035795,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 924.2991333007812,
-			"height": 25,
-			"seed": 1953288944,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1703931097094,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 1,
-			"text": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
-			"rawText": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
-			"lineHeight": 1.25,
-			"baseline": 16
-		},
-		{
-			"type": "line",
-			"version": 3498,
-			"versionNonce": 1201317104,
-			"isDeleted": false,
-			"id": "n5wfL4hk67NUhKGN8BF4v",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4288.378604447912,
-			"y": -2178.391909577507,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 7.854407807242281,
-			"height": 15.530247465744933,
-			"seed": 1509894896,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097094,
+			"updated": 1704314726049,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -19694,7 +17982,1995 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		{
 			"type": "line",
 			"version": 3452,
-			"versionNonce": 276980240,
+			"versionNonce": 2086311944,
+			"isDeleted": false,
+			"id": "NJ5DCdRVwPLgTArZERti4",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4179.790264193651,
+			"y": -2621.7857090050347,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1821211888,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 30,
+			"versionNonce": 1983763188,
+			"isDeleted": false,
+			"id": "hodIcEDd",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4656.646593005612,
+			"y": -2562.7106161167017,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.719985961914062,
+			"height": 25,
+			"seed": 174609648,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348216,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "2.",
+			"rawText": "2.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "2.",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3403,
+			"versionNonce": 475682568,
+			"isDeleted": false,
+			"id": "CuIXy31HcuEypqHhuut_f",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4582.842470846396,
+			"y": -2579.4880386721443,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 144272112,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3432,
+			"versionNonce": 778075512,
+			"isDeleted": false,
+			"id": "HXORr30jeTi8eRd_Fup_N",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4581.376864306253,
+			"y": -2519.3985958328803,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 2047773936,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4787,
+			"versionNonce": 1141519880,
+			"isDeleted": false,
+			"id": "6PavZmi82N7J_hw-7LGXU",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4604.765387607423,
+			"y": -2574.140125752435,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 76508912,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 252,
+			"versionNonce": 23203448,
+			"isDeleted": false,
+			"id": "9YBQGgBrRN09DIjiD_k3K",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4613.461214010119,
+			"y": -2521.0079393450915,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.724738906051243,
+			"height": 0,
+			"seed": 279187696,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.724738906051243,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3404,
+			"versionNonce": 1214657800,
+			"isDeleted": false,
+			"id": "SDXseyFL5CDIFD4POZ_nb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4524.927339178001,
+			"y": -2563.2924439154945,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 903115504,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 242,
+			"versionNonce": 1936983628,
+			"isDeleted": false,
+			"id": "CgpusKyt",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4512.097428976215,
+			"y": -2563.9357946918935,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 136.59983825683594,
+			"height": 25,
+			"seed": 1520997616,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348217,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t) dt = x(0);",
+			"rawText": "(t) dt = x(0);",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t) dt = x(0);",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 75,
+			"versionNonce": 846156916,
+			"isDeleted": false,
+			"id": "MpPLEC5V",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4575.375156027243,
+			"y": -2565.753993510121,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.59996032714844,
+			"height": 25,
+			"seed": 715763216,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348217,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x(t)",
+			"rawText": "x(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3426,
+			"versionNonce": 2056966264,
+			"isDeleted": false,
+			"id": "KpSF47WlBlPyNNlDxVDSA",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4273.9681752618835,
+			"y": -2579.074555694232,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 791606800,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3455,
+			"versionNonce": 764580616,
+			"isDeleted": false,
+			"id": "rVI2s7jNM8rhojBjItEQn",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4272.50256872174,
+			"y": -2518.985112854968,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1208333328,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4811,
+			"versionNonce": 416940408,
+			"isDeleted": false,
+			"id": "6g1Hwam1CuvBXAYZOd5__",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4295.89109202291,
+			"y": -2573.7266427745226,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 1398059536,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 275,
+			"versionNonce": 2061169160,
+			"isDeleted": false,
+			"id": "6mm5ovV2Fn-ZUeO1kdb70",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4304.586918425606,
+			"y": -2520.594456367179,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.724738906051243,
+			"height": 0,
+			"seed": 1477701648,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.724738906051243,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3433,
+			"versionNonce": 1779110520,
+			"isDeleted": false,
+			"id": "yBf0yF7G1nMKpWAC55vjW",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4227.353034742757,
+			"y": -2558.535240552511,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1044082192,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726049,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 269,
+			"versionNonce": 1848990924,
+			"isDeleted": false,
+			"id": "r9xn1SVB",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4218.160534566104,
+			"y": -2560.6973244309206,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 190.65975952148438,
+			"height": 25,
+			"seed": 784542736,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348218,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t - to) dt = x(to)",
+			"rawText": "(t - to) dt = x(to)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t - to) dt = x(to)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 45,
+			"versionNonce": 1072997876,
+			"isDeleted": false,
+			"id": "sB1XeCW4",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4275.2992556168,
+			"y": -2561.8028309621354,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.59996032714844,
+			"height": 25,
+			"seed": 964502256,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348218,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x(t)",
+			"rawText": "x(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 40,
+			"versionNonce": 1669849932,
+			"isDeleted": false,
+			"id": "TczP3JWl",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4656.372664044376,
+			"y": -2485.8656419848244,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.0999755859375,
+			"height": 25,
+			"seed": 72034544,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348221,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "3.",
+			"rawText": "3.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "3.",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3424,
+			"versionNonce": 1204999288,
+			"isDeleted": false,
+			"id": "HNd5_2En1ofCFrGYtIu-y",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4612.462743251404,
+			"y": -2482.914950327117,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 2062800112,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726050,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 58,
+			"versionNonce": 1674823540,
+			"isDeleted": false,
+			"id": "465LRtCB",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4595.62793715115,
+			"y": -2481.7174282483957,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 87.45988464355469,
+			"height": 25,
+			"seed": 1570264592,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348222,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(at) =  1",
+			"rawText": "(at) =  1",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(at) =  1",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 46,
+			"versionNonce": 141657464,
+			"isDeleted": false,
+			"id": "RPSUBNWqvW73zq1AnK7Nk",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4522.169888693165,
+			"y": -2459.1720955582146,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 23.44950616587539,
+			"height": 0,
+			"seed": 509218032,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704314726050,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					23.44950616587539,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 44,
+			"versionNonce": 1237686732,
+			"isDeleted": false,
+			"id": "M0wa47m9",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4518.683423671002,
+			"y": -2452.3789851439437,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 20.059982299804688,
+			"height": 25,
+			"seed": 1411026160,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348223,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "|a|",
+			"rawText": "|a|",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "|a|",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3431,
+			"versionNonce": 68294264,
+			"isDeleted": false,
+			"id": "wi1txSBv84GTzFnC50wp6",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4486.105627085661,
+			"y": -2469.41027495049,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1220197616,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726050,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 37,
+			"versionNonce": 1381153012,
+			"isDeleted": false,
+			"id": "KfJUoMAE",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4470.945990263763,
+			"y": -2468.854115223057,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 26.359970092773438,
+			"height": 25,
+			"seed": 1308643568,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348224,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "(t)",
+			"rawText": "(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 191,
+			"versionNonce": 1007190092,
+			"isDeleted": false,
+			"id": "1IBqd2hO",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4686.377505881909,
+			"y": -2177.9436076035795,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 924.2991333007812,
+			"height": 25,
+			"seed": 1953288944,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348225,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
+			"rawText": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "The discrete-time unit impulse function   [n], also called unit sample sequence, is defined as:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3505,
+			"versionNonce": 2010106888,
+			"isDeleted": false,
+			"id": "n5wfL4hk67NUhKGN8BF4v",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4288.378604447912,
+			"y": -2178.391909577507,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1509894896,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726050,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3459,
+			"versionNonce": 115923064,
 			"isDeleted": false,
 			"id": "ajEQKzrPzS0o2lAE2slnb",
 			"fillStyle": "solid",
@@ -19716,7 +19992,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097094,
+			"updated": 1704314726050,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -19817,8 +20093,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3454,
-			"versionNonce": 2027456240,
+			"version": 3461,
+			"versionNonce": 1527319304,
 			"isDeleted": false,
 			"id": "o1f9d6yXHdSiY-buZXe5j",
 			"fillStyle": "solid",
@@ -19840,7 +20116,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097094,
+			"updated": 1704314726050,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -19941,8 +20217,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3456,
-			"versionNonce": 67870736,
+			"version": 3463,
+			"versionNonce": 2116487544,
 			"isDeleted": false,
 			"id": "rASUPBbYH8FUm6bPE1uWg",
 			"fillStyle": "solid",
@@ -19964,7 +20240,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097094,
+			"updated": 1704314726050,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -20065,8 +20341,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 41,
-			"versionNonce": 1275734256,
+			"version": 54,
+			"versionNonce": 1190623860,
 			"isDeleted": false,
 			"id": "L6sO5gQI",
 			"fillStyle": "solid",
@@ -20086,7 +20362,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097094,
+			"updated": 1706388348233,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20098,12 +20374,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 88,
-			"versionNonce": 1874664976,
+			"version": 101,
+			"versionNonce": 1646958284,
 			"isDeleted": false,
 			"id": "ISCTgalB",
 			"fillStyle": "solid",
@@ -20132,7 +20408,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097095,
+			"updated": 1706388348235,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20144,12 +20420,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for n = 0\n\n0  for n != 0",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 30,
-			"versionNonce": 1287097072,
+			"version": 37,
+			"versionNonce": 167241992,
 			"isDeleted": false,
 			"id": "sZMbm80rvV8b-pspaUBxn",
 			"fillStyle": "solid",
@@ -20169,7 +20445,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726050,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20194,8 +20470,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 27,
-			"versionNonce": 613342224,
+			"version": 34,
+			"versionNonce": 547163000,
 			"isDeleted": false,
 			"id": "ZIu1Hhos2OYZp2cVosDhD",
 			"fillStyle": "solid",
@@ -20215,7 +20491,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726050,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20240,8 +20516,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 101,
-			"versionNonce": 1432923376,
+			"version": 114,
+			"versionNonce": 478678004,
 			"isDeleted": false,
 			"id": "NGSyDtT5",
 			"fillStyle": "solid",
@@ -20261,7 +20537,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1706388348237,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20273,12 +20549,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The shifted unit impulse function  [n - k] is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 343464464,
+			"version": 44,
+			"versionNonce": 1489362252,
 			"isDeleted": false,
 			"id": "VFNtIkV5",
 			"fillStyle": "solid",
@@ -20298,7 +20574,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1706388348238,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20310,12 +20586,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n - k] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 799379184,
+			"version": 55,
+			"versionNonce": 1695182196,
 			"isDeleted": false,
 			"id": "QQTnyRzm",
 			"fillStyle": "solid",
@@ -20344,7 +20620,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097095,
+			"updated": 1706388348239,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20356,12 +20632,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for n = k\n\n0  for n != k",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 26,
-			"versionNonce": 846403600,
+			"version": 33,
+			"versionNonce": 2063240568,
 			"isDeleted": false,
 			"id": "1Kzrz2KQnRbB4mn6iKMyE",
 			"fillStyle": "solid",
@@ -20381,7 +20657,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20406,8 +20682,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 22,
-			"versionNonce": 871772400,
+			"version": 29,
+			"versionNonce": 836314632,
 			"isDeleted": false,
 			"id": "ZYpgH_lXr7BAP0MTziZkg",
 			"fillStyle": "solid",
@@ -20427,7 +20703,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20452,8 +20728,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 104,
-			"versionNonce": 1383437840,
+			"version": 117,
+			"versionNonce": 422859724,
 			"isDeleted": false,
 			"id": "kmeA2PeF",
 			"fillStyle": "solid",
@@ -20473,7 +20749,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1706388348240,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20485,12 +20761,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The graphical representation of   [n] and   [n - 3] are shown below:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3458,
-			"versionNonce": 1776456432,
+			"version": 3465,
+			"versionNonce": 2128028936,
 			"isDeleted": false,
 			"id": "EE2iIZ2BrkfdDud6_Iu8R",
 			"fillStyle": "solid",
@@ -20512,7 +20788,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -20613,8 +20889,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3488,
-			"versionNonce": 158880784,
+			"version": 3495,
+			"versionNonce": 1499434872,
 			"isDeleted": false,
 			"id": "UBm9DyaPYh2yDrebdg332",
 			"fillStyle": "solid",
@@ -20636,7 +20912,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -20737,8 +21013,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 670217456,
+			"version": 150,
+			"versionNonce": 29662964,
 			"isDeleted": false,
 			"id": "txxMPsdJ",
 			"fillStyle": "solid",
@@ -20758,7 +21034,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1706388348243,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -20770,12 +21046,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "PROPERTIES OF DISCRETE-TIME UNIT SAMPLE SEQUENCE",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 90,
-			"versionNonce": 225661456,
+			"version": 97,
+			"versionNonce": 1588519032,
 			"isDeleted": false,
 			"id": "7uvMPaWV7tALpZzR4WVhr",
 			"fillStyle": "solid",
@@ -20795,7 +21071,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -20816,8 +21092,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 119,
-			"versionNonce": 867079920,
+			"version": 126,
+			"versionNonce": 1351058184,
 			"isDeleted": false,
 			"id": "vLDbaLQ_4sHym3vn0aRnQ",
 			"fillStyle": "solid",
@@ -20837,7 +21113,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20862,8 +21138,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 59,
-			"versionNonce": 358518800,
+			"version": 66,
+			"versionNonce": 2146177400,
 			"isDeleted": false,
 			"id": "SW-v3Wm1kqxES6tE4BmFF",
 			"fillStyle": "solid",
@@ -20883,7 +21159,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -20904,8 +21180,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 89,
-			"versionNonce": 1637759216,
+			"version": 96,
+			"versionNonce": 1370612232,
 			"isDeleted": false,
 			"id": "w2AKJz5ByXIbaBESKzCIJ",
 			"fillStyle": "solid",
@@ -20927,7 +21203,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -20960,8 +21236,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 239,
-			"versionNonce": 959581712,
+			"version": 246,
+			"versionNonce": 1146823288,
 			"isDeleted": false,
 			"id": "_L-zlhOGSIF-EKKSaDcVE",
 			"fillStyle": "solid",
@@ -20983,7 +21259,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -21020,8 +21296,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 381,
-			"versionNonce": 894016240,
+			"version": 388,
+			"versionNonce": 473456904,
 			"isDeleted": false,
 			"id": "dknBSVLuqmd_00LEBU8yf",
 			"fillStyle": "solid",
@@ -21043,7 +21319,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -21080,8 +21356,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "ellipse",
-			"version": 84,
-			"versionNonce": 1374014480,
+			"version": 91,
+			"versionNonce": 717230968,
 			"isDeleted": false,
 			"id": "TlWHhxjekBP6qw-zSaeNa",
 			"fillStyle": "solid",
@@ -21103,14 +21379,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 70,
-			"versionNonce": 20495600,
+			"version": 77,
+			"versionNonce": 1872166920,
 			"isDeleted": false,
 			"id": "IykKq6Zps7S4pZg3w50QX",
 			"fillStyle": "solid",
@@ -21132,14 +21408,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 71,
-			"versionNonce": 1500629520,
+			"version": 78,
+			"versionNonce": 962520184,
 			"isDeleted": false,
 			"id": "k3REtlrQql5WEp0mwBe0K",
 			"fillStyle": "solid",
@@ -21161,14 +21437,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 54,
-			"versionNonce": 116629232,
+			"version": 61,
+			"versionNonce": 1003077384,
 			"isDeleted": false,
 			"id": "zS_WTTzw9Z7vmlHamNi9J",
 			"fillStyle": "solid",
@@ -21190,14 +21466,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 75,
-			"versionNonce": 1255016464,
+			"version": 82,
+			"versionNonce": 234591608,
 			"isDeleted": false,
 			"id": "BFvZWm77xCvHKOF6DExk1",
 			"fillStyle": "solid",
@@ -21219,14 +21495,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 45,
-			"versionNonce": 386023664,
+			"version": 52,
+			"versionNonce": 290233864,
 			"isDeleted": false,
 			"id": "Zs3hUHQhWO36QjayaDC93",
 			"fillStyle": "solid",
@@ -21253,14 +21529,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 47,
-			"versionNonce": 32671248,
+			"version": 54,
+			"versionNonce": 1843013240,
 			"isDeleted": false,
 			"id": "2OBYTmXN4A2u2yOSOrF1E",
 			"fillStyle": "solid",
@@ -21282,14 +21558,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726051,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 43,
-			"versionNonce": 820814576,
+			"version": 50,
+			"versionNonce": 287022344,
 			"isDeleted": false,
 			"id": "XjTnhy9m_oyOd-2s0ZFxj",
 			"fillStyle": "solid",
@@ -21311,14 +21587,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 45,
-			"versionNonce": 467092496,
+			"version": 52,
+			"versionNonce": 1438553976,
 			"isDeleted": false,
 			"id": "vGG_O2yWM3D5nFwND9JUK",
 			"fillStyle": "solid",
@@ -21340,14 +21616,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 49,
-			"versionNonce": 591054064,
+			"version": 56,
+			"versionNonce": 1555217416,
 			"isDeleted": false,
 			"id": "px3b1yO3rAw4NSdfHUU0d",
 			"fillStyle": "solid",
@@ -21369,14 +21645,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "ellipse",
-			"version": 83,
-			"versionNonce": 1450459664,
+			"version": 90,
+			"versionNonce": 166520952,
 			"isDeleted": false,
 			"id": "8glT1rrQtCpB8GHwp2pmw",
 			"fillStyle": "solid",
@@ -21398,14 +21674,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "line",
-			"version": 60,
-			"versionNonce": 729065200,
+			"version": 67,
+			"versionNonce": 101579528,
 			"isDeleted": false,
 			"id": "9BUrQ7vfi5KAlp1650njt",
 			"fillStyle": "solid",
@@ -21427,7 +21703,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -21448,8 +21724,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 69,
-			"versionNonce": 1891729424,
+			"version": 76,
+			"versionNonce": 640227704,
 			"isDeleted": false,
 			"id": "TA3xQk1FYkMwvdlf1Vtp_",
 			"fillStyle": "solid",
@@ -21471,7 +21747,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097095,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -21492,8 +21768,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 371345648,
+			"version": 26,
+			"versionNonce": 1636825676,
 			"isDeleted": false,
 			"id": "QuouKirz",
 			"fillStyle": "solid",
@@ -21513,7 +21789,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348254,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21525,12 +21801,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 179764752,
+			"version": 26,
+			"versionNonce": 993828980,
 			"isDeleted": false,
 			"id": "3m4ajBwB",
 			"fillStyle": "solid",
@@ -21550,7 +21826,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348254,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21562,12 +21838,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3475,
-			"versionNonce": 1590405872,
+			"version": 3482,
+			"versionNonce": 209770760,
 			"isDeleted": false,
 			"id": "8xL4TwKnjet37qbWobdPy",
 			"fillStyle": "solid",
@@ -21589,7 +21865,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -21690,8 +21966,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 32,
-			"versionNonce": 88914960,
+			"version": 45,
+			"versionNonce": 481480908,
 			"isDeleted": false,
 			"id": "PmaCaMsE",
 			"fillStyle": "solid",
@@ -21711,7 +21987,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348255,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21723,12 +21999,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3466,
-			"versionNonce": 1341705456,
+			"version": 3473,
+			"versionNonce": 806385672,
 			"isDeleted": false,
 			"id": "nJaaX7jtxx_1rs2xUhYZ2",
 			"fillStyle": "solid",
@@ -21750,7 +22026,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726052,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -21851,8 +22127,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 1652210192,
+			"version": 42,
+			"versionNonce": 1496871412,
 			"isDeleted": false,
 			"id": "v7XfHOAx",
 			"fillStyle": "solid",
@@ -21872,7 +22148,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21884,12 +22160,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n - 3]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 32,
-			"versionNonce": 590458608,
+			"version": 45,
+			"versionNonce": 1245108044,
 			"isDeleted": false,
 			"id": "0C9goRS4",
 			"fillStyle": "solid",
@@ -21909,7 +22185,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21921,12 +22197,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 624490512,
+			"version": 38,
+			"versionNonce": 985535348,
 			"isDeleted": false,
 			"id": "cW52dHVj",
 			"fillStyle": "solid",
@@ -21946,7 +22222,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21958,12 +22234,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 553537776,
+			"version": 33,
+			"versionNonce": 1719012812,
 			"isDeleted": false,
 			"id": "iZBDS1zb",
 			"fillStyle": "solid",
@@ -21983,7 +22259,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -21995,12 +22271,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 18,
-			"versionNonce": 830436880,
+			"version": 31,
+			"versionNonce": 1846772980,
 			"isDeleted": false,
 			"id": "TlA7zd4e",
 			"fillStyle": "solid",
@@ -22020,7 +22296,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22032,12 +22308,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 14,
-			"versionNonce": 1088860912,
+			"version": 27,
+			"versionNonce": 1384805452,
 			"isDeleted": false,
 			"id": "UI73ASBg",
 			"fillStyle": "solid",
@@ -22057,7 +22333,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22069,12 +22345,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 742798352,
+			"version": 26,
+			"versionNonce": 1220462196,
 			"isDeleted": false,
 			"id": "wdvN2zVp",
 			"fillStyle": "solid",
@@ -22094,7 +22370,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348258,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22106,12 +22382,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 1232262384,
+			"version": 37,
+			"versionNonce": 1011747532,
 			"isDeleted": false,
 			"id": "CCshRla6",
 			"fillStyle": "solid",
@@ -22131,7 +22407,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22143,12 +22419,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 21,
-			"versionNonce": 1535455760,
+			"version": 34,
+			"versionNonce": 2139478004,
 			"isDeleted": false,
 			"id": "Tbg12d4T",
 			"fillStyle": "solid",
@@ -22168,7 +22444,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22180,12 +22456,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 1881847536,
+			"version": 38,
+			"versionNonce": 106615116,
 			"isDeleted": false,
 			"id": "LZM8Yle1",
 			"fillStyle": "solid",
@@ -22205,7 +22481,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22217,12 +22493,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 104099856,
+			"version": 38,
+			"versionNonce": 1047443828,
 			"isDeleted": false,
 			"id": "dqC801Lu",
 			"fillStyle": "solid",
@@ -22242,7 +22518,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22254,12 +22530,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 2039896304,
+			"version": 44,
+			"versionNonce": 806012876,
 			"isDeleted": false,
 			"id": "bb6O7wdA",
 			"fillStyle": "solid",
@@ -22279,7 +22555,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22291,12 +22567,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 16,
-			"versionNonce": 1414262288,
+			"version": 29,
+			"versionNonce": 1086286580,
 			"isDeleted": false,
 			"id": "AaMVBPYv",
 			"fillStyle": "solid",
@@ -22316,7 +22592,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22328,12 +22604,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 19,
-			"versionNonce": 1497217776,
+			"version": 32,
+			"versionNonce": 1031269964,
 			"isDeleted": false,
 			"id": "8ZJwIjOr",
 			"fillStyle": "solid",
@@ -22353,7 +22629,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348259,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22365,12 +22641,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3477,
-			"versionNonce": 784575504,
+			"version": 3484,
+			"versionNonce": 2054038392,
 			"isDeleted": false,
 			"id": "F8yrAWaLkL0HQg2wZ4vXx",
 			"fillStyle": "solid",
@@ -22392,7 +22668,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726053,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -22493,8 +22769,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 52,
-			"versionNonce": 1370021104,
+			"version": 65,
+			"versionNonce": 1761471604,
 			"isDeleted": false,
 			"id": "OYyKMZ7U",
 			"fillStyle": "solid",
@@ -22514,7 +22790,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348260,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22526,12 +22802,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n] = u[n] - u[n - 1]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3477,
-			"versionNonce": 529771024,
+			"version": 3484,
+			"versionNonce": 147518584,
 			"isDeleted": false,
 			"id": "Pad9DJIMHSC6KNpbouunG",
 			"fillStyle": "solid",
@@ -22553,7 +22829,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726053,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -22654,8 +22930,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 41,
-			"versionNonce": 341819120,
+			"version": 54,
+			"versionNonce": 528237772,
 			"isDeleted": false,
 			"id": "k4RBylN8",
 			"fillStyle": "solid",
@@ -22675,7 +22951,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348260,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22687,12 +22963,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n - k] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3548,
-			"versionNonce": 833873936,
+			"version": 3555,
+			"versionNonce": 895853944,
 			"isDeleted": false,
 			"id": "cJe0BpNQ4SfMrKxQ7KWHC",
 			"fillStyle": "solid",
@@ -22714,7 +22990,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726053,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -22815,8 +23091,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 95,
-			"versionNonce": 1642750192,
+			"version": 108,
+			"versionNonce": 1492139508,
 			"isDeleted": false,
 			"id": "f70y0saV",
 			"fillStyle": "solid",
@@ -22836,7 +23112,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348266,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -22848,12 +23124,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n]    [n - no] = x[no]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3537,
-			"versionNonce": 1360815632,
+			"version": 3544,
+			"versionNonce": 1031943800,
 			"isDeleted": false,
 			"id": "gvpl5rHOgs9JvfgkPIbN6",
 			"fillStyle": "solid",
@@ -22875,7 +23151,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1704314726053,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -22976,8 +23252,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 701547248,
+			"version": 106,
+			"versionNonce": 464636748,
 			"isDeleted": false,
 			"id": "qiJ7XiUs",
 			"fillStyle": "solid",
@@ -22997,7 +23273,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348267,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23009,12 +23285,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[n - k]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 717562896,
+			"version": 41,
+			"versionNonce": 161242996,
 			"isDeleted": false,
 			"id": "f7PgNdo9",
 			"fillStyle": "solid",
@@ -23034,7 +23310,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348268,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23046,12 +23322,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 51,
-			"versionNonce": 714794224,
+			"version": 64,
+			"versionNonce": 879919564,
 			"isDeleted": false,
 			"id": "670EGwcb",
 			"fillStyle": "solid",
@@ -23071,7 +23347,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097096,
+			"updated": 1706388348269,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23083,12 +23359,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1  for n = k\n\n0 for n != k",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 212214288,
+			"version": 59,
+			"versionNonce": 1665683700,
 			"isDeleted": false,
 			"id": "eHrl2IE6",
 			"fillStyle": "solid",
@@ -23108,7 +23384,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348269,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23120,12 +23396,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[n] = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 298895088,
+			"version": 77,
+			"versionNonce": 282617932,
 			"isDeleted": false,
 			"id": "SgAD8UNj",
 			"fillStyle": "solid",
@@ -23145,7 +23421,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348271,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23157,12 +23433,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x[k]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 14,
-			"versionNonce": 1169645584,
+			"version": 27,
+			"versionNonce": 1434063476,
 			"isDeleted": false,
 			"id": "r1AjENTd",
 			"fillStyle": "solid",
@@ -23182,7 +23458,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348271,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23194,12 +23470,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 59,
-			"versionNonce": 469395696,
+			"version": 72,
+			"versionNonce": 1690140364,
 			"isDeleted": false,
 			"id": "O7neNGxr",
 			"fillStyle": "solid",
@@ -23219,7 +23495,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348272,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23231,12 +23507,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "4.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 59,
-			"versionNonce": 99671568,
+			"version": 72,
+			"versionNonce": 1861723124,
 			"isDeleted": false,
 			"id": "z26NGnhv",
 			"fillStyle": "solid",
@@ -23256,7 +23532,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348272,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23268,12 +23544,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "3.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 1871,
-			"versionNonce": 882887408,
+			"version": 1878,
+			"versionNonce": 1730791688,
 			"isDeleted": false,
 			"id": "9RwAPVpHD2Y1YcX4N5FQs",
 			"fillStyle": "solid",
@@ -23295,7 +23571,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -23380,8 +23656,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 1855,
-			"versionNonce": 1045077008,
+			"version": 1862,
+			"versionNonce": 1341729656,
 			"isDeleted": false,
 			"id": "HtBAIEStBlZMY41pcTCMZ",
 			"fillStyle": "solid",
@@ -23403,7 +23679,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -23488,8 +23764,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 17,
-			"versionNonce": 373878000,
+			"version": 30,
+			"versionNonce": 1488700748,
 			"isDeleted": false,
 			"id": "IJvEcpHO",
 			"fillStyle": "solid",
@@ -23509,7 +23785,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348273,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23521,12 +23797,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "k = -",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 12360208,
+			"version": 36,
+			"versionNonce": 1975977332,
 			"isDeleted": false,
 			"id": "MssiayQj",
 			"fillStyle": "solid",
@@ -23546,7 +23822,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348274,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -23558,12 +23834,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n = -",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3260,
-			"versionNonce": 1786629872,
+			"version": 3267,
+			"versionNonce": 931211016,
 			"isDeleted": false,
 			"id": "ErBv626_A8gTBL1OtWv2r",
 			"fillStyle": "solid",
@@ -23585,7 +23861,271 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3261,
+			"versionNonce": 1506717048,
+			"isDeleted": false,
+			"id": "zYM5Wbowamb4tWYSoK0jO",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -3924.2289419270787,
+			"y": -1301.0850168331983,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 932442640,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726054,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3265,
+			"versionNonce": 1909917192,
+			"isDeleted": false,
+			"id": "f9gGpBsE6shoLG8vXDbqI",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -4498.659809440098,
+			"y": -1337.2533924842398,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1546320624,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -23695,271 +24235,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		{
 			"type": "line",
 			"version": 3254,
-			"versionNonce": 1614731280,
-			"isDeleted": false,
-			"id": "zYM5Wbowamb4tWYSoK0jO",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -3924.2289419270787,
-			"y": -1301.0850168331983,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 932442640,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097097,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3258,
-			"versionNonce": 1774612720,
-			"isDeleted": false,
-			"id": "f9gGpBsE6shoLG8vXDbqI",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 100,
-			"angle": 0,
-			"x": -4498.659809440098,
-			"y": -1337.2533924842398,
-			"strokeColor": "#000000",
-			"backgroundColor": "#000000",
-			"width": 18.103371308638394,
-			"height": 7.371235523356667,
-			"seed": 1546320624,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"boundElements": [],
-			"updated": 1703931097097,
-			"link": null,
-			"locked": false,
-			"startBinding": null,
-			"endBinding": null,
-			"lastCommittedPoint": null,
-			"startArrowhead": null,
-			"endArrowhead": null,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					2.723515117468466,
-					1.2693130715717729
-				],
-				[
-					5.757153658937881,
-					0.1584407104143679
-				],
-				[
-					5.7283129925924925,
-					-3.323864263730762
-				],
-				[
-					1.8737579923465546,
-					-3.818380599554409
-				],
-				[
-					-5.642652705846473,
-					1.5844174034657996
-				],
-				[
-					-10.37585740063659,
-					0.7566303771615281
-				],
-				[
-					-11.022134662038823,
-					-4.048092503367329
-				],
-				[
-					-6.702342819435515,
-					-5.399847052321768
-				],
-				[
-					-2.73161136209535,
-					-2.6386109638197226
-				],
-				[
-					-3.411205543837127,
-					-1.9016727488717535
-				],
-				[
-					-6.699727873671321,
-					-4.416263059451445
-				],
-				[
-					-9.906204458463634,
-					-3.8833707396822987
-				],
-				[
-					-10.284032657324445,
-					-1.2855896499681094
-				],
-				[
-					-8.345697690100593,
-					0.9802582205000405
-				],
-				[
-					-4.775693241404568,
-					0.07248360697317935
-				],
-				[
-					1.8620677622442514,
-					-4.833352206265836
-				],
-				[
-					6.069452277623235,
-					-4.299906621635387
-				],
-				[
-					7.081236646599571,
-					-1.287045371459051
-				],
-				[
-					5.824745339266876,
-					1.39186688531899
-				],
-				[
-					1.84362529405945,
-					1.9713884710348992
-				],
-				[
-					-1.697560475237168,
-					-0.2684438869301857
-				],
-				[
-					-1.1760757628919691,
-					-0.9349252260650047
-				],
-				[
-					0,
-					0
-				]
-			]
-		},
-		{
-			"type": "line",
-			"version": 3247,
-			"versionNonce": 1355372048,
+			"versionNonce": 2139766392,
 			"isDeleted": false,
 			"id": "KCcFeYRfN0JozYl8c0SC7",
 			"fillStyle": "solid",
@@ -23981,7 +24257,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24090,8 +24366,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 124,
-			"versionNonce": 2074792688,
+			"version": 137,
+			"versionNonce": 1915567052,
 			"isDeleted": false,
 			"id": "T1kRy3Lf",
 			"fillStyle": "solid",
@@ -24111,7 +24387,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348275,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -24123,12 +24399,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "4  x(t)   (t - to) = x(to)   (t - to)  = x(to);   x(t)   (t) = x(0)   (t) = x(0)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 54,
-			"versionNonce": 122950672,
+			"version": 67,
+			"versionNonce": 2133735156,
 			"isDeleted": false,
 			"id": "jjv4MEb4",
 			"fillStyle": "solid",
@@ -24148,7 +24424,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348276,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -24160,12 +24436,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "5.  x(t) =       x(T)   (t - T) dT",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3442,
-			"versionNonce": 1454568688,
+			"version": 3449,
+			"versionNonce": 465773576,
 			"isDeleted": false,
 			"id": "BhVRw8finhJBTeuOQMbcR",
 			"fillStyle": "solid",
@@ -24187,7 +24463,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24296,8 +24572,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3486,
-			"versionNonce": 1507267088,
+			"version": 3493,
+			"versionNonce": 1349976184,
 			"isDeleted": false,
 			"id": "1_PzpjsqxlJKbbjoD_io8",
 			"fillStyle": "solid",
@@ -24319,7 +24595,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24428,8 +24704,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4873,
-			"versionNonce": 543610608,
+			"version": 4880,
+			"versionNonce": 1456562952,
 			"isDeleted": false,
 			"id": "LmsQaRjV2EI9MpikD0jFI",
 			"fillStyle": "solid",
@@ -24451,7 +24727,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24536,8 +24812,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3356,
-			"versionNonce": 524963856,
+			"version": 3363,
+			"versionNonce": 1135620472,
 			"isDeleted": false,
 			"id": "MRp4EMqtyDAeUeP_1Lisx",
 			"fillStyle": "solid",
@@ -24559,7 +24835,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24660,8 +24936,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 34,
-			"versionNonce": 223246576,
+			"version": 41,
+			"versionNonce": 868205064,
 			"isDeleted": false,
 			"id": "bHd_HVA-MG0o7U0ULzW8n",
 			"fillStyle": "solid",
@@ -24683,7 +24959,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24704,8 +24980,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3359,
-			"versionNonce": 262524432,
+			"version": 3366,
+			"versionNonce": 983253624,
 			"isDeleted": false,
 			"id": "NqDeER_Ko1_7bDWckxmNJ",
 			"fillStyle": "solid",
@@ -24727,7 +25003,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24828,8 +25104,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3362,
-			"versionNonce": 15850224,
+			"version": 3369,
+			"versionNonce": 1099579656,
 			"isDeleted": false,
 			"id": "80eb3PCVV3UCer4Biryn4",
 			"fillStyle": "solid",
@@ -24851,7 +25127,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726054,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -24952,8 +25228,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3356,
-			"versionNonce": 601984016,
+			"version": 3363,
+			"versionNonce": 603730808,
 			"isDeleted": false,
 			"id": "wQ8HkgtShr1pSikLk0wZC",
 			"fillStyle": "solid",
@@ -24975,7 +25251,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25076,8 +25352,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3356,
-			"versionNonce": 769195248,
+			"version": 3363,
+			"versionNonce": 1336729608,
 			"isDeleted": false,
 			"id": "XUQfh_6EErQBPvQZsa8WL",
 			"fillStyle": "solid",
@@ -25099,7 +25375,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25200,8 +25476,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 156,
-			"versionNonce": 1979025936,
+			"version": 170,
+			"versionNonce": 772984288,
 			"isDeleted": false,
 			"id": "LP9PvMR9",
 			"fillStyle": "solid",
@@ -25221,7 +25497,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1705925336420,
 			"link": null,
 			"locked": false,
 			"fontSize": 45.23908025568161,
@@ -25233,12 +25509,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "RECTANGULAR PLUSE FUNCTION",
 			"lineHeight": 1.25,
-			"baseline": 38
+			"baseline": 39
 		},
 		{
 			"type": "line",
-			"version": 86,
-			"versionNonce": 898359024,
+			"version": 93,
+			"versionNonce": 1579392776,
 			"isDeleted": false,
 			"id": "bnmrfitZdLqSzikeeLD-6",
 			"fillStyle": "solid",
@@ -25260,7 +25536,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25281,8 +25557,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 84,
-			"versionNonce": 551143440,
+			"version": 97,
+			"versionNonce": 2066473548,
 			"isDeleted": false,
 			"id": "eg7HQCnM",
 			"fillStyle": "solid",
@@ -25302,7 +25578,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348279,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25314,12 +25590,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The unit rectangular pulse function    (t/T) shown below is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3596,
-			"versionNonce": 1217560816,
+			"version": 3603,
+			"versionNonce": 225082888,
 			"isDeleted": false,
 			"id": "9pRNOeFxfALVXercdCblp",
 			"fillStyle": "solid",
@@ -25341,7 +25617,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25434,8 +25710,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3658,
-			"versionNonce": 545670672,
+			"version": 3665,
+			"versionNonce": 856311416,
 			"isDeleted": false,
 			"id": "E-0RCy6WPtoK26fMWM4Ia",
 			"fillStyle": "solid",
@@ -25457,7 +25733,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25550,8 +25826,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 14,
-			"versionNonce": 1182065392,
+			"version": 27,
+			"versionNonce": 129185908,
 			"isDeleted": false,
 			"id": "Nowo0RUB",
 			"fillStyle": "solid",
@@ -25571,7 +25847,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097097,
+			"updated": 1706388348279,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25583,12 +25859,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 838009872,
+			"version": 33,
+			"versionNonce": 1787934924,
 			"isDeleted": false,
 			"id": "2ygf6jxk",
 			"fillStyle": "solid",
@@ -25608,7 +25884,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348280,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25620,12 +25896,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 24,
-			"versionNonce": 1572537584,
+			"version": 31,
+			"versionNonce": 316185608,
 			"isDeleted": false,
 			"id": "CGHeul2HXOSv0nPbnD5yz",
 			"fillStyle": "solid",
@@ -25647,7 +25923,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25668,8 +25944,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 16,
-			"versionNonce": 857211408,
+			"version": 29,
+			"versionNonce": 186386932,
 			"isDeleted": false,
 			"id": "L8Z3w9jd",
 			"fillStyle": "solid",
@@ -25694,7 +25970,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097098,
+			"updated": 1706388348281,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25706,12 +25982,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": " = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 53,
-			"versionNonce": 736945904,
+			"version": 66,
+			"versionNonce": 1274593100,
 			"isDeleted": false,
 			"id": "eFzlanvU",
 			"fillStyle": "solid",
@@ -25740,7 +26016,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097098,
+			"updated": 1706388348283,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25752,12 +26028,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1  for |t| <= T / 2\n\n0 otherwise",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 24,
-			"versionNonce": 49102864,
+			"version": 31,
+			"versionNonce": 1271740792,
 			"isDeleted": false,
 			"id": "KsGCgQdLOI1wv_9inlYih",
 			"fillStyle": "solid",
@@ -25779,7 +26055,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -25804,8 +26080,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 21,
-			"versionNonce": 1569884400,
+			"version": 28,
+			"versionNonce": 232208904,
 			"isDeleted": false,
 			"id": "4hsmnQtRyCiAy-UxqMJAH",
 			"fillStyle": "solid",
@@ -25827,7 +26103,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -25856,8 +26132,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 1634385424,
+			"version": 56,
+			"versionNonce": 477014900,
 			"isDeleted": false,
 			"id": "wKiIsok4",
 			"fillStyle": "solid",
@@ -25877,7 +26153,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348284,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -25889,12 +26165,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "It is an even function of t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 59,
-			"versionNonce": 1312025328,
+			"version": 66,
+			"versionNonce": 1509079304,
 			"isDeleted": false,
 			"id": "JxdkBQGh_RgzFvDomIV2t",
 			"fillStyle": "solid",
@@ -25916,7 +26192,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -25937,8 +26213,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 51,
-			"versionNonce": 1334344720,
+			"version": 58,
+			"versionNonce": 2121743224,
 			"isDeleted": false,
 			"id": "IGctH9vm5vSEeYzhKNKtu",
 			"fillStyle": "solid",
@@ -25960,7 +26236,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726055,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -25985,8 +26261,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 676924656,
+			"version": 42,
+			"versionNonce": 666564044,
 			"isDeleted": false,
 			"id": "EGbQHl0d",
 			"fillStyle": "solid",
@@ -26011,7 +26287,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097098,
+			"updated": 1706388348284,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26023,12 +26299,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 1866365456,
+			"version": 36,
+			"versionNonce": 2112953588,
 			"isDeleted": false,
 			"id": "4alS2hNg",
 			"fillStyle": "solid",
@@ -26048,7 +26324,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348285,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26060,12 +26336,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 22,
-			"versionNonce": 92925680,
+			"version": 35,
+			"versionNonce": 1794268236,
 			"isDeleted": false,
 			"id": "sBrxbXge",
 			"fillStyle": "solid",
@@ -26085,7 +26361,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348285,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26097,12 +26373,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-T/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 81,
-			"versionNonce": 1669642256,
+			"version": 88,
+			"versionNonce": 1812512120,
 			"isDeleted": false,
 			"id": "iC-UQ6ArLaQ7uc2Qb4xV0",
 			"fillStyle": "solid",
@@ -26124,7 +26400,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26145,8 +26421,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 32,
-			"versionNonce": 240029936,
+			"version": 39,
+			"versionNonce": 1141241352,
 			"isDeleted": false,
 			"id": "SczYyDm10WmOMR0o7zLDt",
 			"fillStyle": "solid",
@@ -26168,7 +26444,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26189,8 +26465,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 26,
-			"versionNonce": 810759696,
+			"version": 33,
+			"versionNonce": 1610763896,
 			"isDeleted": false,
 			"id": "1uKzxDm33e4gJRn9HAw7I",
 			"fillStyle": "solid",
@@ -26212,7 +26488,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26233,8 +26509,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 439284464,
+			"version": 33,
+			"versionNonce": 959012468,
 			"isDeleted": false,
 			"id": "bXn9u0mL",
 			"fillStyle": "solid",
@@ -26254,7 +26530,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348286,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26266,12 +26542,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3671,
-			"versionNonce": 446821392,
+			"version": 3678,
+			"versionNonce": 547471224,
 			"isDeleted": false,
 			"id": "1LBvcAMq4mwdddm9jSBTn",
 			"fillStyle": "solid",
@@ -26293,7 +26569,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26386,8 +26662,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 1337136368,
+			"version": 41,
+			"versionNonce": 1333326540,
 			"isDeleted": false,
 			"id": "Irtk3633",
 			"fillStyle": "solid",
@@ -26407,7 +26683,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348287,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26419,12 +26695,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t / T)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 141095440,
+			"version": 33,
+			"versionNonce": 920481780,
 			"isDeleted": false,
 			"id": "1qOnQQv7",
 			"fillStyle": "solid",
@@ -26444,7 +26720,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348287,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26456,12 +26732,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 54,
-			"versionNonce": 1147336432,
+			"version": 67,
+			"versionNonce": 1139325260,
 			"isDeleted": false,
 			"id": "FOasrDAp",
 			"fillStyle": "solid",
@@ -26481,7 +26757,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348289,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26493,12 +26769,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Rectangular Pulse Function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 178,
-			"versionNonce": 1621110800,
+			"version": 185,
+			"versionNonce": 543310200,
 			"isDeleted": false,
 			"id": "rGfwhTgpljkYVZfAJbVCH",
 			"fillStyle": "solid",
@@ -26525,14 +26801,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 482777328,
+			"version": 91,
+			"versionNonce": 1537604556,
 			"isDeleted": false,
 			"id": "0rBlc7E7",
 			"fillStyle": "solid",
@@ -26552,7 +26828,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388341912,
 			"link": null,
 			"locked": false,
 			"fontSize": 42.944589590097465,
@@ -26568,8 +26844,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 70,
-			"versionNonce": 1799335440,
+			"version": 77,
+			"versionNonce": 1451971192,
 			"isDeleted": false,
 			"id": "Mgs3jInROWb9ZyyMzWvMm",
 			"fillStyle": "solid",
@@ -26591,7 +26867,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26612,8 +26888,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 83,
-			"versionNonce": 744880880,
+			"version": 96,
+			"versionNonce": 1460883828,
 			"isDeleted": false,
 			"id": "P2OIgc42",
 			"fillStyle": "solid",
@@ -26633,7 +26909,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348291,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26645,12 +26921,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The unit triangular pulse function    (t/T) shown below is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 496,
-			"versionNonce": 826240016,
+			"version": 503,
+			"versionNonce": 1735017336,
 			"isDeleted": false,
 			"id": "nywL6SuqMIAF1j0yK2kCB",
 			"fillStyle": "hachure",
@@ -26672,7 +26948,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26701,8 +26977,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 542,
-			"versionNonce": 365501680,
+			"version": 549,
+			"versionNonce": 1307037704,
 			"isDeleted": false,
 			"id": "Dv6qNK7OkllieilnQOnOU",
 			"fillStyle": "hachure",
@@ -26724,7 +27000,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26753,8 +27029,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 22,
-			"versionNonce": 1553426960,
+			"version": 35,
+			"versionNonce": 1402712012,
 			"isDeleted": false,
 			"id": "6UQOHEdR",
 			"fillStyle": "solid",
@@ -26774,7 +27050,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348291,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26786,12 +27062,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 1786248944,
+			"version": 38,
+			"versionNonce": 152109812,
 			"isDeleted": false,
 			"id": "BQ8rQfRm",
 			"fillStyle": "solid",
@@ -26811,7 +27087,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1706388348291,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26823,12 +27099,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 40,
-			"versionNonce": 406824976,
+			"version": 47,
+			"versionNonce": 1775879544,
 			"isDeleted": false,
 			"id": "o5SX9yn6VLhbJotKAB6p8",
 			"fillStyle": "solid",
@@ -26850,7 +27126,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097098,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -26871,8 +27147,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 1257939184,
+			"version": 37,
+			"versionNonce": 246142540,
 			"isDeleted": false,
 			"id": "mzjKYW2S",
 			"fillStyle": "solid",
@@ -26901,7 +27177,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097098,
+			"updated": 1706388348292,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26913,12 +27189,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "= ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 91,
-			"versionNonce": 1882203664,
+			"version": 104,
+			"versionNonce": 1667007604,
 			"isDeleted": false,
 			"id": "7sp2VWxT",
 			"fillStyle": "solid",
@@ -26947,7 +27223,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097099,
+			"updated": 1706388348293,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -26959,12 +27235,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1 - 2( |t| / T)   for |t| < (T/2)\n\n0                for |t| > (T/2)",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 40,
-			"versionNonce": 114885360,
+			"version": 47,
+			"versionNonce": 157183240,
 			"isDeleted": false,
 			"id": "-oKule2damegBVP8S-QmQ",
 			"fillStyle": "solid",
@@ -26986,7 +27262,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -27015,8 +27291,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 26,
-			"versionNonce": 828433424,
+			"version": 33,
+			"versionNonce": 332449656,
 			"isDeleted": false,
 			"id": "mQRZe_w3AQ8S5jrZbNjIR",
 			"fillStyle": "solid",
@@ -27038,7 +27314,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726056,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -27067,8 +27343,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 1016800496,
+			"version": 59,
+			"versionNonce": 1911762124,
 			"isDeleted": false,
 			"id": "1lJQuxBv",
 			"fillStyle": "solid",
@@ -27088,7 +27364,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27100,12 +27376,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "it is an even function of t.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 79,
-			"versionNonce": 1237967376,
+			"version": 86,
+			"versionNonce": 641276024,
 			"isDeleted": false,
 			"id": "nFzUIjP-vsxXAqN9M4T7k",
 			"fillStyle": "solid",
@@ -27127,7 +27403,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27148,8 +27424,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 76,
-			"versionNonce": 2043217648,
+			"version": 83,
+			"versionNonce": 1205652232,
 			"isDeleted": false,
 			"id": "kodKI1EEMBcdr7HKl5rr1",
 			"fillStyle": "solid",
@@ -27171,7 +27447,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -27196,8 +27472,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 62,
-			"versionNonce": 677584912,
+			"version": 69,
+			"versionNonce": 1232030072,
 			"isDeleted": false,
 			"id": "0sqn0YZti7anrx1q02gFl",
 			"fillStyle": "solid",
@@ -27219,7 +27495,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27240,8 +27516,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 60,
-			"versionNonce": 1525328112,
+			"version": 67,
+			"versionNonce": 1058941448,
 			"isDeleted": false,
 			"id": "kSqpcWoMhBZ60X3tfKp-d",
 			"fillStyle": "solid",
@@ -27263,7 +27539,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27284,8 +27560,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 19,
-			"versionNonce": 488939024,
+			"version": 32,
+			"versionNonce": 1002165748,
 			"isDeleted": false,
 			"id": "81Z5TDqG",
 			"fillStyle": "solid",
@@ -27305,7 +27581,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27317,12 +27593,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 730335984,
+			"version": 26,
+			"versionNonce": 1326166860,
 			"isDeleted": false,
 			"id": "BRL0ArZe",
 			"fillStyle": "solid",
@@ -27342,7 +27618,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27354,12 +27630,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 956718096,
+			"version": 37,
+			"versionNonce": 1060435828,
 			"isDeleted": false,
 			"id": "rHHph2Wk",
 			"fillStyle": "solid",
@@ -27379,7 +27655,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27391,12 +27667,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 103361776,
+			"version": 37,
+			"versionNonce": 877619660,
 			"isDeleted": false,
 			"id": "Uclg5rDA",
 			"fillStyle": "solid",
@@ -27416,7 +27692,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27428,12 +27704,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-T/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 31,
-			"versionNonce": 771774992,
+			"version": 44,
+			"versionNonce": 168683764,
 			"isDeleted": false,
 			"id": "vo0pbYQo",
 			"fillStyle": "solid",
@@ -27458,7 +27734,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097099,
+			"updated": 1706388348294,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27470,12 +27746,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 63,
-			"versionNonce": 1951796976,
+			"version": 76,
+			"versionNonce": 1423462476,
 			"isDeleted": false,
 			"id": "vwtfV6Sq",
 			"fillStyle": "solid",
@@ -27495,7 +27771,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348295,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27507,12 +27783,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Triangular Pulse Function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 580,
-			"versionNonce": 789223440,
+			"version": 587,
+			"versionNonce": 1076022648,
 			"isDeleted": false,
 			"id": "mNzw4GyifX-VRwJrrYqdd",
 			"fillStyle": "hachure",
@@ -27534,7 +27810,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27563,8 +27839,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 32,
-			"versionNonce": 244756720,
+			"version": 45,
+			"versionNonce": 1070377588,
 			"isDeleted": false,
 			"id": "mULYKlQN",
 			"fillStyle": "solid",
@@ -27584,7 +27860,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348295,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27596,12 +27872,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t / T)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 86,
-			"versionNonce": 1344083472,
+			"version": 93,
+			"versionNonce": 1180327544,
 			"isDeleted": false,
 			"id": "k3pcBEP3oHiRM6NE-jdQ_",
 			"fillStyle": "solid",
@@ -27628,14 +27904,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 121,
-			"versionNonce": 477303536,
+			"version": 133,
+			"versionNonce": 1546323424,
 			"isDeleted": false,
 			"id": "4rGL31gI",
 			"fillStyle": "solid",
@@ -27655,7 +27931,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1705925336432,
 			"link": null,
 			"locked": false,
 			"fontSize": 48.25268190298529,
@@ -27667,12 +27943,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "SIGNUM FUNCTION",
 			"lineHeight": 1.25,
-			"baseline": 43
+			"baseline": 42
 		},
 		{
 			"type": "line",
-			"version": 104,
-			"versionNonce": 1714410512,
+			"version": 111,
+			"versionNonce": 561500024,
 			"isDeleted": false,
 			"id": "s-_trjeoRZCNxh-NttZak",
 			"fillStyle": "solid",
@@ -27694,7 +27970,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27715,8 +27991,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 879965424,
+			"version": 106,
+			"versionNonce": 1887463116,
 			"isDeleted": false,
 			"id": "7lxnPlfM",
 			"fillStyle": "solid",
@@ -27736,7 +28012,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348298,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27748,12 +28024,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The unit signum function sgn (t) shown below is defined as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 57,
-			"versionNonce": 1731908112,
+			"version": 70,
+			"versionNonce": 590822388,
 			"isDeleted": false,
 			"id": "3f8WVgBW",
 			"fillStyle": "solid",
@@ -27773,7 +28049,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348299,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27785,12 +28061,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "sgn(t) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 64,
-			"versionNonce": 1545541360,
+			"version": 77,
+			"versionNonce": 1004645708,
 			"isDeleted": false,
 			"id": "YF5Nglqi",
 			"fillStyle": "solid",
@@ -27819,7 +28095,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097099,
+			"updated": 1706388348300,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -27831,12 +28107,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1   for t > 0\n\n-1 for  t < 0",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 85,
-			"versionNonce": 1245057040,
+			"version": 92,
+			"versionNonce": 1324634488,
 			"isDeleted": false,
 			"id": "12WqodUujW7J0t5gygPtJ",
 			"fillStyle": "solid",
@@ -27858,7 +28134,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -27883,8 +28159,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 101,
-			"versionNonce": 671004912,
+			"version": 108,
+			"versionNonce": 105751048,
 			"isDeleted": false,
 			"id": "06GmxlBHipOZhghdF3tLo",
 			"fillStyle": "solid",
@@ -27906,7 +28182,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -27931,8 +28207,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 148,
-			"versionNonce": 1729728016,
+			"version": 155,
+			"versionNonce": 140206712,
 			"isDeleted": false,
 			"id": "HnF7aQ-JUXH8kFcMfK1c-",
 			"fillStyle": "solid",
@@ -27954,7 +28230,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726057,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -27979,8 +28255,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 110,
-			"versionNonce": 1536826096,
+			"version": 117,
+			"versionNonce": 1197220104,
 			"isDeleted": false,
 			"id": "R8OYUZ4tsgAhRhkP4-d6h",
 			"fillStyle": "solid",
@@ -28002,7 +28278,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -28023,8 +28299,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 78,
-			"versionNonce": 1457343504,
+			"version": 85,
+			"versionNonce": 79188856,
 			"isDeleted": false,
 			"id": "gN5fwkzXXKCai5sFbiZXz",
 			"fillStyle": "solid",
@@ -28046,7 +28322,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -28067,8 +28343,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 108,
-			"versionNonce": 158940400,
+			"version": 115,
+			"versionNonce": 4374536,
 			"isDeleted": false,
 			"id": "3ywkZ3SAsqgVeN1Wiui8Y",
 			"fillStyle": "solid",
@@ -28090,7 +28366,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -28111,8 +28387,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 47,
-			"versionNonce": 1400457744,
+			"version": 60,
+			"versionNonce": 777231732,
 			"isDeleted": false,
 			"id": "VGCoE2AO",
 			"fillStyle": "solid",
@@ -28132,7 +28408,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348300,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28144,12 +28420,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 858005232,
+			"version": 58,
+			"versionNonce": 1213604812,
 			"isDeleted": false,
 			"id": "7ccrwVzX",
 			"fillStyle": "solid",
@@ -28169,7 +28445,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097099,
+			"updated": 1706388348300,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28181,12 +28457,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 400918544,
+			"version": 56,
+			"versionNonce": 711446260,
 			"isDeleted": false,
 			"id": "tmZ9g261",
 			"fillStyle": "solid",
@@ -28206,7 +28482,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348300,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28218,12 +28494,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 1763885296,
+			"version": 55,
+			"versionNonce": 1811401292,
 			"isDeleted": false,
 			"id": "S1vcSOq2",
 			"fillStyle": "solid",
@@ -28248,7 +28524,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097100,
+			"updated": 1706388348300,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28260,12 +28536,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 51,
-			"versionNonce": 1075447312,
+			"version": 64,
+			"versionNonce": 1207554164,
 			"isDeleted": false,
 			"id": "WEMqcPJf",
 			"fillStyle": "solid",
@@ -28285,7 +28561,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348301,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28297,12 +28573,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Signum Function",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 146,
-			"versionNonce": 1794974448,
+			"version": 159,
+			"versionNonce": 698392780,
 			"isDeleted": false,
 			"id": "FQYzfP1c",
 			"fillStyle": "solid",
@@ -28322,7 +28598,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348302,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28334,12 +28610,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The signum function can be expressed in terms of unit step function as:\n                \n                sgn(t) = -1 + 2u(t)",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "rectangle",
-			"version": 110,
-			"versionNonce": 688833552,
+			"version": 117,
+			"versionNonce": 1368840056,
 			"isDeleted": false,
 			"id": "GB1okOYpbb8RBkdtTjwPN",
 			"fillStyle": "solid",
@@ -28366,14 +28642,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 158,
-			"versionNonce": 1195066608,
+			"version": 165,
+			"versionNonce": 1501461512,
 			"isDeleted": false,
 			"id": "gXcmVqd8vDGnjJ7uiei3B",
 			"fillStyle": "solid",
@@ -28395,7 +28671,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -28428,8 +28704,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 168,
-			"versionNonce": 1354482192,
+			"version": 175,
+			"versionNonce": 1623009400,
 			"isDeleted": false,
 			"id": "LyBrbQDYJDeeONRPjzse2",
 			"fillStyle": "solid",
@@ -28451,7 +28727,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -28484,8 +28760,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 172,
-			"versionNonce": 2070226672,
+			"version": 179,
+			"versionNonce": 1935784712,
 			"isDeleted": false,
 			"id": "0z4j4BTpfLEGj5M3euFAl",
 			"fillStyle": "solid",
@@ -28507,7 +28783,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -28540,8 +28816,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 255,
-			"versionNonce": 907608080,
+			"version": 268,
+			"versionNonce": 919577076,
 			"isDeleted": false,
 			"id": "j5mQkC5w",
 			"fillStyle": "solid",
@@ -28561,7 +28837,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348304,
 			"link": null,
 			"locked": false,
 			"fontSize": 53.12625122070309,
@@ -28577,8 +28853,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 172,
-			"versionNonce": 335726832,
+			"version": 179,
+			"versionNonce": 210049544,
 			"isDeleted": false,
 			"id": "e-R2rbVHQmkjElygG1gWo",
 			"fillStyle": "solid",
@@ -28600,7 +28876,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -28621,8 +28897,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 799,
-			"versionNonce": 958299664,
+			"version": 812,
+			"versionNonce": 418031436,
 			"isDeleted": false,
 			"id": "oT5HNN7F",
 			"fillStyle": "solid",
@@ -28642,7 +28918,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348305,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28654,12 +28930,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "When we process a signal, this signal may undergo several manipulations involving the independent variable or the \namplitude of the signal. The basic operations on signals are:\n\n1. Time shifting                           2. Time reversal\n3. Time scaling                           4. Amplitude scaling\n5. Signal addition                         6 Signal multiplication\n\nThe first three operations correspond to transformation in independent variable t or n of a signal. The last there\noperations correspond to transformation on amplitude of a signal.",
 			"lineHeight": 1.25,
-			"baseline": 216
+			"baseline": 217
 		},
 		{
 			"type": "rectangle",
-			"version": 200,
-			"versionNonce": 1285303024,
+			"version": 207,
+			"versionNonce": 132421896,
 			"isDeleted": false,
 			"id": "Nk9cQkG4lbeEz0woUdakw",
 			"fillStyle": "solid",
@@ -28702,14 +28978,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 123,
-			"versionNonce": 2059680784,
+			"version": 178,
+			"versionNonce": 1226005368,
 			"isDeleted": false,
 			"id": "ckQXNxQsunZp-vW9nhS3e",
 			"fillStyle": "solid",
@@ -28718,11 +28994,11 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 74.87363995106534,
-			"y": 31.469680258609515,
+			"x": 73.08632377492813,
+			"y": 36.83162878702092,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 281.6194781135109,
+			"width": 258.38436782372787,
 			"height": 1750.95947265625,
 			"seed": 1878638608,
 			"groupIds": [],
@@ -28731,18 +29007,18 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726058,
 			"link": null,
 			"locked": false,
 			"startBinding": {
 				"elementId": "M3e1lYQJ",
-				"focus": -0.9920504516240455,
-				"gap": 14.130533435797929
+				"focus": -0.9891719967730046,
+				"gap": 12.343217259660719
 			},
 			"endBinding": {
 				"elementId": "Nk9cQkG4lbeEz0woUdakw",
-				"focus": 0.8848645145184614,
-				"gap": 31.918929706920153
+				"focus": 0.8981955279987246,
+				"gap": 30.131613530782943
 			},
 			"lastCommittedPoint": null,
 			"startArrowhead": null,
@@ -28753,8 +29029,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					0
 				],
 				[
-					250.07071102366717,
-					1080.5470275878906
+					226.83560073388412,
+					1075.185079059479
 				],
 				[
 					-31.54876708984375,
@@ -28764,8 +29040,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 209,
-			"versionNonce": 800673008,
+			"version": 222,
+			"versionNonce": 1039090548,
 			"isDeleted": false,
 			"id": "q5i6hbh0",
 			"fillStyle": "solid",
@@ -28785,7 +29061,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348307,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28797,12 +29073,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "TIME SHIFTING",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 262,
-			"versionNonce": 1023556112,
+			"version": 269,
+			"versionNonce": 1040788600,
 			"isDeleted": false,
 			"id": "rTSS4Uasx3hb6t2frN2HW",
 			"fillStyle": "solid",
@@ -28824,7 +29100,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -28845,8 +29121,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 843,
-			"versionNonce": 920792816,
+			"version": 857,
+			"versionNonce": 1311759820,
 			"isDeleted": false,
 			"id": "fTNlmq7E",
 			"fillStyle": "solid",
@@ -28866,7 +29142,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1706388348309,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -28878,12 +29154,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Mathematically, the time shifting of a continuous-time signal x(t) or discrete time signal\nx[n] can be represented by\n                            y(t) = x(t - T)\nOR\n                            y[n] = x[n - T]\n\nThe time shifting of a signal may result in time delay or time advance. In the above equation\nif T POSITIVE the shift is to the right and the shifting DELAYS the signal, and if T is\nNEGATIVE the shift is to the left and then the shifting ADVANCES the signal. An arbitrary\nsignal x(t), its delayed version and advanced version are shown. Shifting a signal in time means\nthat a signal may be either advanced in the time axis or delayed in the time axis.",
 			"lineHeight": 1.25,
-			"baseline": 265
+			"baseline": 267
 		},
 		{
 			"type": "rectangle",
-			"version": 258,
-			"versionNonce": 1120958480,
+			"version": 265,
+			"versionNonce": 370990456,
 			"isDeleted": false,
 			"id": "HzUUR-e6rZ6UIG44xYRff",
 			"fillStyle": "solid",
@@ -28910,14 +29186,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 150,
-			"versionNonce": 1788793072,
+			"version": 157,
+			"versionNonce": 214160904,
 			"isDeleted": false,
 			"id": "IJZU1HLzygiPVJId9tYit",
 			"fillStyle": "solid",
@@ -28939,7 +29215,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -28972,8 +29248,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 85,
-			"versionNonce": 807859728,
+			"version": 92,
+			"versionNonce": 1922199160,
 			"isDeleted": false,
 			"id": "fCBxnQGtZJ2SEEoiMZ2yx",
 			"fillStyle": "solid",
@@ -28995,7 +29271,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29016,8 +29292,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 151,
-			"versionNonce": 41366256,
+			"version": 158,
+			"versionNonce": 149673224,
 			"isDeleted": false,
 			"id": "Jh1zQG2demgdvwkb4gk8m",
 			"fillStyle": "solid",
@@ -29039,7 +29315,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29064,8 +29340,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 167,
-			"versionNonce": 1778234384,
+			"version": 174,
+			"versionNonce": 741203832,
 			"isDeleted": false,
 			"id": "fkCXOqJNn2w1cPCXflvde",
 			"fillStyle": "solid",
@@ -29087,7 +29363,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29108,8 +29384,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 150,
-			"versionNonce": 83055856,
+			"version": 157,
+			"versionNonce": 1572598792,
 			"isDeleted": false,
 			"id": "KDlPJRmL6rMSAXwsOQ0r6",
 			"fillStyle": "solid",
@@ -29131,7 +29407,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29156,8 +29432,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 154,
-			"versionNonce": 1984737808,
+			"version": 161,
+			"versionNonce": 1664299128,
 			"isDeleted": false,
 			"id": "pzOBwGzPgj0psW9m94qv9",
 			"fillStyle": "solid",
@@ -29179,7 +29455,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29200,8 +29476,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 130,
-			"versionNonce": 1738225392,
+			"version": 137,
+			"versionNonce": 19936008,
 			"isDeleted": false,
 			"id": "3wC6EtMnaJkxlkGEDdFMY",
 			"fillStyle": "solid",
@@ -29223,7 +29499,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29244,8 +29520,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 52,
-			"versionNonce": 1544286224,
+			"version": 59,
+			"versionNonce": 258367864,
 			"isDeleted": false,
 			"id": "gg5aKAffpxWIYLNfolHnA",
 			"fillStyle": "solid",
@@ -29267,7 +29543,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29288,8 +29564,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 32,
-			"versionNonce": 787929328,
+			"version": 39,
+			"versionNonce": 1237619208,
 			"isDeleted": false,
 			"id": "AMOmDtje0jx5FqjJFoWBc",
 			"fillStyle": "solid",
@@ -29311,7 +29587,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29332,8 +29608,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 30,
-			"versionNonce": 53702160,
+			"version": 37,
+			"versionNonce": 269185656,
 			"isDeleted": false,
 			"id": "r7PbM3aSC69QcV4rBomRc",
 			"fillStyle": "solid",
@@ -29355,7 +29631,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29376,8 +29652,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 67,
-			"versionNonce": 244202224,
+			"version": 74,
+			"versionNonce": 1584730376,
 			"isDeleted": false,
 			"id": "bv4Xo7-ew5JGSXNq0vGg_",
 			"fillStyle": "solid",
@@ -29399,7 +29675,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29420,8 +29696,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 132,
-			"versionNonce": 347810832,
+			"version": 139,
+			"versionNonce": 1004954488,
 			"isDeleted": false,
 			"id": "wfELmtO_vFPVrWeGddIBI",
 			"fillStyle": "solid",
@@ -29443,7 +29719,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29464,8 +29740,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 53,
-			"versionNonce": 149511408,
+			"version": 60,
+			"versionNonce": 649965576,
 			"isDeleted": false,
 			"id": "Rd4I34XDwFi7UKPYMLYjD",
 			"fillStyle": "solid",
@@ -29487,7 +29763,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29508,8 +29784,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 59,
-			"versionNonce": 1520118288,
+			"version": 66,
+			"versionNonce": 1899705464,
 			"isDeleted": false,
 			"id": "IWHT44BhdtBatJ7IsNzBh",
 			"fillStyle": "solid",
@@ -29531,7 +29807,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29552,8 +29828,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 68,
-			"versionNonce": 261111536,
+			"version": 75,
+			"versionNonce": 983199496,
 			"isDeleted": false,
 			"id": "wJx3OgLT-bfuGymnPfybH",
 			"fillStyle": "solid",
@@ -29575,7 +29851,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097100,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29596,8 +29872,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 62,
-			"versionNonce": 533424144,
+			"version": 69,
+			"versionNonce": 634250616,
 			"isDeleted": false,
 			"id": "Vez5esqV0p7QKFXEExa1q",
 			"fillStyle": "solid",
@@ -29619,7 +29895,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726059,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -29640,8 +29916,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 587915504,
+			"version": 26,
+			"versionNonce": 1402909940,
 			"isDeleted": false,
 			"id": "ad1Nv3cY",
 			"fillStyle": "solid",
@@ -29661,7 +29937,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348309,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29673,12 +29949,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 272885264,
+			"version": 26,
+			"versionNonce": 1116357708,
 			"isDeleted": false,
 			"id": "IzXpoJev",
 			"fillStyle": "solid",
@@ -29698,7 +29974,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348309,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29710,12 +29986,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 1927365360,
+			"version": 26,
+			"versionNonce": 895743604,
 			"isDeleted": false,
 			"id": "2ymECnB7",
 			"fillStyle": "solid",
@@ -29735,7 +30011,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348309,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29747,12 +30023,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 33,
-			"versionNonce": 419210256,
+			"version": 46,
+			"versionNonce": 1003739852,
 			"isDeleted": false,
 			"id": "0Jbed7dH",
 			"fillStyle": "solid",
@@ -29772,7 +30048,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348311,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29784,12 +30060,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 25,
-			"versionNonce": 2107335920,
+			"version": 38,
+			"versionNonce": 329716,
 			"isDeleted": false,
 			"id": "TURDSxWZ",
 			"fillStyle": "solid",
@@ -29809,7 +30085,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348311,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29821,12 +30097,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-T + 6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 26,
-			"versionNonce": 1206755856,
+			"version": 39,
+			"versionNonce": 883335500,
 			"isDeleted": false,
 			"id": "a357eMck",
 			"fillStyle": "solid",
@@ -29846,7 +30122,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348312,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29858,12 +30134,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T + 6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 22,
-			"versionNonce": 817972976,
+			"version": 35,
+			"versionNonce": 1200089460,
 			"isDeleted": false,
 			"id": "MNJPDXbL",
 			"fillStyle": "solid",
@@ -29883,7 +30159,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348312,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29895,12 +30171,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 739172368,
+			"version": 26,
+			"versionNonce": 1146918860,
 			"isDeleted": false,
 			"id": "TxuoOrsa",
 			"fillStyle": "solid",
@@ -29920,7 +30196,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348312,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29932,12 +30208,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 17,
-			"versionNonce": 148564208,
+			"version": 30,
+			"versionNonce": 791845620,
 			"isDeleted": false,
 			"id": "aCbwoLFU",
 			"fillStyle": "solid",
@@ -29957,7 +30233,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348312,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -29969,12 +30245,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 894983696,
+			"version": 59,
+			"versionNonce": 118472268,
 			"isDeleted": false,
 			"id": "apzTP7Ys",
 			"fillStyle": "solid",
@@ -29994,7 +30270,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348313,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30006,12 +30282,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t - T)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 28,
-			"versionNonce": 829442800,
+			"version": 41,
+			"versionNonce": 25894004,
 			"isDeleted": false,
 			"id": "LSHnORAY",
 			"fillStyle": "solid",
@@ -30031,7 +30307,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348313,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30043,12 +30319,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t + T)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 22,
-			"versionNonce": 348265488,
+			"version": 35,
+			"versionNonce": 93983948,
 			"isDeleted": false,
 			"id": "gmbL9Vd1",
 			"fillStyle": "solid",
@@ -30073,7 +30349,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097101,
+			"updated": 1706388348313,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30085,12 +30361,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 40,
-			"versionNonce": 621374704,
+			"version": 53,
+			"versionNonce": 1213689332,
 			"isDeleted": false,
 			"id": "y1yOBH5p",
 			"fillStyle": "solid",
@@ -30115,7 +30391,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097101,
+			"updated": 1706388348313,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30127,12 +30403,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 24,
-			"versionNonce": 474225168,
+			"version": 37,
+			"versionNonce": 496343884,
 			"isDeleted": false,
 			"id": "YCoFf75I",
 			"fillStyle": "solid",
@@ -30152,7 +30428,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348313,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30164,12 +30440,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 78,
-			"versionNonce": 1294880496,
+			"version": 91,
+			"versionNonce": 1688047476,
 			"isDeleted": false,
 			"id": "78pIJFru",
 			"fillStyle": "solid",
@@ -30189,7 +30465,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348314,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30201,12 +30477,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The same applies for discrete time signals",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 91,
-			"versionNonce": 517363728,
+			"version": 104,
+			"versionNonce": 1767657932,
 			"isDeleted": false,
 			"id": "QwHaLUPk",
 			"fillStyle": "solid",
@@ -30228,7 +30504,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348315,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30240,12 +30516,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "TIME REVERSAL",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 100,
-			"versionNonce": 577171696,
+			"version": 107,
+			"versionNonce": 55756296,
 			"isDeleted": false,
 			"id": "BHutwhNVtog_FfGQw1p5X",
 			"fillStyle": "solid",
@@ -30269,7 +30545,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30290,8 +30566,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 453,
-			"versionNonce": 1349572112,
+			"version": 466,
+			"versionNonce": 648249588,
 			"isDeleted": false,
 			"id": "Sdo69CuJ",
 			"fillStyle": "solid",
@@ -30311,7 +30587,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1706388348316,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -30323,12 +30599,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Time reversal, also called time folding of a signal x(t) can be obtained by folding the signal about t = 0.\nThis operation is very useful in CONVOLUTION. It is denoted by x(-t). It is obtained by replacing the \nindependent variable t by (-t). Folding is also called REFLECTION of the signal about the time origin t = 0.\nThe figure below shows an arbitrary signal x(t) and its reflection:",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "arrow",
-			"version": 113,
-			"versionNonce": 1278956272,
+			"version": 120,
+			"versionNonce": 807191816,
 			"isDeleted": false,
 			"id": "8gwmRdizJeVLH-tOZefHN",
 			"fillStyle": "solid",
@@ -30350,7 +30626,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -30375,8 +30651,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 77,
-			"versionNonce": 638293008,
+			"version": 84,
+			"versionNonce": 12840824,
 			"isDeleted": false,
 			"id": "oloOndgrIDsC7yr8qF-vM",
 			"fillStyle": "solid",
@@ -30398,7 +30674,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30419,8 +30695,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 136,
-			"versionNonce": 1093891312,
+			"version": 143,
+			"versionNonce": 1364124680,
 			"isDeleted": false,
 			"id": "mmproRAcyvVdq7Z6NV47T",
 			"fillStyle": "solid",
@@ -30442,7 +30718,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30463,8 +30739,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 92,
-			"versionNonce": 899584528,
+			"version": 99,
+			"versionNonce": 1518813304,
 			"isDeleted": false,
 			"id": "irUjB8ykwqeTCvZbVHi8Z",
 			"fillStyle": "solid",
@@ -30486,7 +30762,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30507,8 +30783,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 37,
-			"versionNonce": 1725388528,
+			"version": 44,
+			"versionNonce": 1692738312,
 			"isDeleted": false,
 			"id": "Y9SdMgBzLGbYN9FAstYQw",
 			"fillStyle": "solid",
@@ -30532,7 +30808,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30553,8 +30829,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 48,
-			"versionNonce": 371314704,
+			"version": 55,
+			"versionNonce": 565735800,
 			"isDeleted": false,
 			"id": "fNFtD4AZQOYxLdAq9jBPU",
 			"fillStyle": "solid",
@@ -30578,7 +30854,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30599,8 +30875,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 85,
-			"versionNonce": 833550576,
+			"version": 92,
+			"versionNonce": 1230733832,
 			"isDeleted": false,
 			"id": "WKg7o7HJQFpEJR4qNZ_Wg",
 			"fillStyle": "solid",
@@ -30624,7 +30900,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30645,8 +30921,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 60,
-			"versionNonce": 1066225168,
+			"version": 67,
+			"versionNonce": 765166200,
 			"isDeleted": false,
 			"id": "jTl-TCabpNCEIAcxbQ5C8",
 			"fillStyle": "solid",
@@ -30670,7 +30946,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726060,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30691,8 +30967,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 71,
-			"versionNonce": 1161976560,
+			"version": 78,
+			"versionNonce": 766378248,
 			"isDeleted": false,
 			"id": "P4bDRiSxAkgf07kLy4xbI",
 			"fillStyle": "solid",
@@ -30716,7 +30992,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30737,8 +31013,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 108,
-			"versionNonce": 1792609296,
+			"version": 115,
+			"versionNonce": 1291088760,
 			"isDeleted": false,
 			"id": "CcWlqcMq4wS4WR7Lj6MB1",
 			"fillStyle": "solid",
@@ -30762,7 +31038,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097101,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30783,8 +31059,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 62,
-			"versionNonce": 337214704,
+			"version": 69,
+			"versionNonce": 22585352,
 			"isDeleted": false,
 			"id": "jGwDjyBE3N-NbA60HaDlu",
 			"fillStyle": "solid",
@@ -30806,7 +31082,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30827,8 +31103,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 1912408592,
+			"version": 71,
+			"versionNonce": 1443316856,
 			"isDeleted": false,
 			"id": "yUgCxyZnTyUUa1Qc4Kyog",
 			"fillStyle": "solid",
@@ -30850,7 +31126,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30871,8 +31147,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 2143051504,
+			"version": 71,
+			"versionNonce": 1683447560,
 			"isDeleted": false,
 			"id": "iUgKGb8axPxttsnk-zvKA",
 			"fillStyle": "solid",
@@ -30894,7 +31170,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30915,8 +31191,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 68,
-			"versionNonce": 804341776,
+			"version": 75,
+			"versionNonce": 915928440,
 			"isDeleted": false,
 			"id": "LAXtG2S9l45IhGprGL9N6",
 			"fillStyle": "solid",
@@ -30938,7 +31214,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -30959,8 +31235,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 2024997104,
+			"version": 71,
+			"versionNonce": 388382216,
 			"isDeleted": false,
 			"id": "XA_7snHEZ6lLvC3OpUEYu",
 			"fillStyle": "solid",
@@ -30982,7 +31258,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31003,8 +31279,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 1622001168,
+			"version": 71,
+			"versionNonce": 65701496,
 			"isDeleted": false,
 			"id": "lQzFk1esRwTuo5eBo1WpZ",
 			"fillStyle": "solid",
@@ -31026,7 +31302,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31047,8 +31323,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 69,
-			"versionNonce": 512058096,
+			"version": 76,
+			"versionNonce": 1791048968,
 			"isDeleted": false,
 			"id": "3VzNrRWR-SQyEeXhX4t34",
 			"fillStyle": "solid",
@@ -31070,7 +31346,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31091,8 +31367,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 68,
-			"versionNonce": 19563536,
+			"version": 75,
+			"versionNonce": 180549496,
 			"isDeleted": false,
 			"id": "vCzE_LIF54DlnEuYbMR98",
 			"fillStyle": "solid",
@@ -31114,7 +31390,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31135,8 +31411,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 1606124784,
+			"version": 26,
+			"versionNonce": 671627340,
 			"isDeleted": false,
 			"id": "a64uKK7w",
 			"fillStyle": "solid",
@@ -31156,7 +31432,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348316,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31168,12 +31444,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 794788368,
+			"version": 26,
+			"versionNonce": 1710178932,
 			"isDeleted": false,
 			"id": "5vJlJeKj",
 			"fillStyle": "solid",
@@ -31193,7 +31469,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348316,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31205,12 +31481,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 17,
-			"versionNonce": 433940208,
+			"version": 30,
+			"versionNonce": 628313804,
 			"isDeleted": false,
 			"id": "9o3ILhTq",
 			"fillStyle": "solid",
@@ -31230,7 +31506,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348317,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31242,12 +31518,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(-t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 172277776,
+			"version": 26,
+			"versionNonce": 424072180,
 			"isDeleted": false,
 			"id": "pY4JBO6g",
 			"fillStyle": "solid",
@@ -31267,7 +31543,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348319,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31279,12 +31555,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 13,
-			"versionNonce": 963840240,
+			"version": 26,
+			"versionNonce": 574068044,
 			"isDeleted": false,
 			"id": "ixkhO7N1",
 			"fillStyle": "solid",
@@ -31304,7 +31580,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348319,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31316,12 +31592,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 16,
-			"versionNonce": 298991120,
+			"version": 29,
+			"versionNonce": 1857041780,
 			"isDeleted": false,
 			"id": "qdaTxjgj",
 			"fillStyle": "solid",
@@ -31341,7 +31617,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348319,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31353,12 +31629,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 126,
-			"versionNonce": 1510238960,
+			"version": 139,
+			"versionNonce": 1001327564,
 			"isDeleted": false,
 			"id": "VgqpIsHr",
 			"fillStyle": "solid",
@@ -31383,7 +31659,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097102,
+			"updated": 1706388348319,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31395,12 +31671,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 30,
-			"versionNonce": 117439504,
+			"version": 43,
+			"versionNonce": 1668376308,
 			"isDeleted": false,
 			"id": "9Crr21YV",
 			"fillStyle": "solid",
@@ -31420,7 +31696,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348320,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31432,12 +31708,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1      2     3     4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 45,
-			"versionNonce": 1712950512,
+			"version": 58,
+			"versionNonce": 1408479820,
 			"isDeleted": false,
 			"id": "SEAkas03",
 			"fillStyle": "solid",
@@ -31457,7 +31733,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348320,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31469,12 +31745,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-4    -3     -2    -1    0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 316,
-			"versionNonce": 1271265808,
+			"version": 329,
+			"versionNonce": 1544579188,
 			"isDeleted": false,
 			"id": "NtgY17Tn",
 			"fillStyle": "solid",
@@ -31494,7 +31770,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348321,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31506,12 +31782,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The signal x(-t + 3) obtained by shifting the reversed signal x(-t) to the right by 3 units (delay by 3 units)\nis whown below. the signal x(-t - 3) obtained by shifting the reversed signal x(-t) to the left by 3 units\n(advance by 3 units) is also shown below:",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "arrow",
-			"version": 121,
-			"versionNonce": 926576368,
+			"version": 128,
+			"versionNonce": 658626312,
 			"isDeleted": false,
 			"id": "DjQYbQBhtuFBqYZRP0kBr",
 			"fillStyle": "solid",
@@ -31533,7 +31809,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -31558,8 +31834,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 129,
-			"versionNonce": 1125922832,
+			"version": 138,
+			"versionNonce": 304881005,
 			"isDeleted": false,
 			"id": "lpEBbWO3gklcsTQ2lw0KR",
 			"fillStyle": "solid",
@@ -31568,8 +31844,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -2605.584079587633,
-			"y": 3061.9464552748395,
+			"x": -2602.9550410947945,
+			"y": 3060.631910597105,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 469.1940218351465,
@@ -31581,15 +31857,11 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1705535745323,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
-			"endBinding": {
-				"elementId": "TzcUfqjx",
-				"focus": 2.195684488932311,
-				"gap": 14.946056111653888
-			},
+			"endBinding": null,
 			"lastCommittedPoint": null,
 			"startArrowhead": null,
 			"endArrowhead": "arrow",
@@ -31606,8 +31878,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 89,
-			"versionNonce": 904859888,
+			"version": 96,
+			"versionNonce": 100775432,
 			"isDeleted": false,
 			"id": "5Vi0hseNLBZHW-E09kiFZ",
 			"fillStyle": "solid",
@@ -31631,7 +31903,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726061,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31652,8 +31924,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 100,
-			"versionNonce": 821736976,
+			"version": 107,
+			"versionNonce": 480415352,
 			"isDeleted": false,
 			"id": "EGKyonLYWzfY1Hjxw0NQd",
 			"fillStyle": "solid",
@@ -31677,7 +31949,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31698,8 +31970,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 137,
-			"versionNonce": 2042589936,
+			"version": 144,
+			"versionNonce": 1601025288,
 			"isDeleted": false,
 			"id": "71mwOhmDuPpAvPNlySBoI",
 			"fillStyle": "solid",
@@ -31723,7 +31995,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31744,8 +32016,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 64,
-			"versionNonce": 442070032,
+			"version": 71,
+			"versionNonce": 1597636472,
 			"isDeleted": false,
 			"id": "RuCzx7Z_CT08iH3yu3AVA",
 			"fillStyle": "solid",
@@ -31767,7 +32039,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31788,8 +32060,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 66,
-			"versionNonce": 1764988144,
+			"version": 73,
+			"versionNonce": 1224856584,
 			"isDeleted": false,
 			"id": "lph-CgopAiKZDmJl8cTVT",
 			"fillStyle": "solid",
@@ -31811,7 +32083,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31832,8 +32104,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 66,
-			"versionNonce": 623931920,
+			"version": 73,
+			"versionNonce": 532369528,
 			"isDeleted": false,
 			"id": "yNlindQEBuZFH40VXbcqQ",
 			"fillStyle": "solid",
@@ -31855,7 +32127,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31876,8 +32148,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 70,
-			"versionNonce": 1507030768,
+			"version": 77,
+			"versionNonce": 1220154120,
 			"isDeleted": false,
 			"id": "9EzFpdgYWWipOvFU26ji2",
 			"fillStyle": "solid",
@@ -31899,7 +32171,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -31920,8 +32192,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 16,
-			"versionNonce": 2021109776,
+			"version": 30,
+			"versionNonce": 2044692684,
 			"isDeleted": false,
 			"id": "TzcUfqjx",
 			"fillStyle": "solid",
@@ -31940,13 +32212,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [
-				{
-					"id": "lpEBbWO3gklcsTQ2lw0KR",
-					"type": "arrow"
-				}
-			],
-			"updated": 1703931097102,
+			"boundElements": [],
+			"updated": 1706388348321,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31958,12 +32225,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 41,
-			"versionNonce": 807868656,
+			"version": 54,
+			"versionNonce": 1012087284,
 			"isDeleted": false,
 			"id": "K3UZb0D2",
 			"fillStyle": "solid",
@@ -31983,7 +32250,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348321,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -31995,12 +32262,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 23,
-			"versionNonce": 472329744,
+			"version": 36,
+			"versionNonce": 1359777612,
 			"isDeleted": false,
 			"id": "Pdztu4vS",
 			"fillStyle": "solid",
@@ -32020,7 +32287,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097102,
+			"updated": 1706388348322,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32032,12 +32299,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(-t + 3)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 134,
-			"versionNonce": 2142665456,
+			"version": 147,
+			"versionNonce": 2134891380,
 			"isDeleted": false,
 			"id": "KHChKOlG",
 			"fillStyle": "solid",
@@ -32062,7 +32329,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097103,
+			"updated": 1706388348322,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32074,12 +32341,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 34,
-			"versionNonce": 1496771600,
+			"version": 47,
+			"versionNonce": 2043987404,
 			"isDeleted": false,
 			"id": "XzwAB7z2",
 			"fillStyle": "solid",
@@ -32099,7 +32366,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348322,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32111,12 +32378,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1      2     3     4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 20,
-			"versionNonce": 722050288,
+			"version": 33,
+			"versionNonce": 1327254772,
 			"isDeleted": false,
 			"id": "RXYZJO7l",
 			"fillStyle": "solid",
@@ -32136,7 +32403,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348322,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32148,12 +32415,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 68,
-			"versionNonce": 429845008,
+			"version": 75,
+			"versionNonce": 414405752,
 			"isDeleted": false,
 			"id": "cDNres747CdXnbOR3GCo1",
 			"fillStyle": "solid",
@@ -32175,7 +32442,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32196,8 +32463,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 210,
-			"versionNonce": 61374192,
+			"version": 217,
+			"versionNonce": 2117357320,
 			"isDeleted": false,
 			"id": "VPEX9DO1z7rxQ8jPbuULq",
 			"fillStyle": "solid",
@@ -32219,7 +32486,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32240,8 +32507,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 253,
-			"versionNonce": 1213671440,
+			"version": 260,
+			"versionNonce": 1765934456,
 			"isDeleted": false,
 			"id": "dOXdwKsK4DftP2Z20-SdV",
 			"fillStyle": "solid",
@@ -32263,7 +32530,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32284,8 +32551,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 211,
-			"versionNonce": 1780162800,
+			"version": 218,
+			"versionNonce": 1206201864,
 			"isDeleted": false,
 			"id": "53QDuIaOR-h3qhSp4FvnH",
 			"fillStyle": "solid",
@@ -32309,7 +32576,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32330,8 +32597,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 222,
-			"versionNonce": 827827728,
+			"version": 229,
+			"versionNonce": 1993512568,
 			"isDeleted": false,
 			"id": "FpSvJFKyxgh9N5wS_W2nY",
 			"fillStyle": "solid",
@@ -32355,7 +32622,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32376,8 +32643,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 259,
-			"versionNonce": 1844019952,
+			"version": 266,
+			"versionNonce": 102903048,
 			"isDeleted": false,
 			"id": "AK25C0dpoGwcBui3R7lhR",
 			"fillStyle": "solid",
@@ -32401,7 +32668,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32422,8 +32689,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 138,
-			"versionNonce": 1637377040,
+			"version": 145,
+			"versionNonce": 103352184,
 			"isDeleted": false,
 			"id": "9fvmii6h8HqSfQnnqa6FK",
 			"fillStyle": "solid",
@@ -32445,7 +32712,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32466,8 +32733,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 138,
-			"versionNonce": 1838916848,
+			"version": 145,
+			"versionNonce": 308759560,
 			"isDeleted": false,
 			"id": "xR6bSiOurA6ePfHxjtyxG",
 			"fillStyle": "solid",
@@ -32489,7 +32756,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32510,8 +32777,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 143,
-			"versionNonce": 118579728,
+			"version": 150,
+			"versionNonce": 596203640,
 			"isDeleted": false,
 			"id": "cR-8y297xcwsMBzknnh-k",
 			"fillStyle": "solid",
@@ -32533,7 +32800,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32554,8 +32821,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 142,
-			"versionNonce": 918128368,
+			"version": 149,
+			"versionNonce": 917539592,
 			"isDeleted": false,
 			"id": "YubTHg2LSGqj4ux8ga5ao",
 			"fillStyle": "solid",
@@ -32577,7 +32844,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726062,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32598,8 +32865,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 87,
-			"versionNonce": 1354407952,
+			"version": 100,
+			"versionNonce": 2035428428,
 			"isDeleted": false,
 			"id": "Cp6H1tnj",
 			"fillStyle": "solid",
@@ -32619,7 +32886,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348322,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32631,12 +32898,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 97,
-			"versionNonce": 634071280,
+			"version": 110,
+			"versionNonce": 493784692,
 			"isDeleted": false,
 			"id": "dIt2fVlR",
 			"fillStyle": "solid",
@@ -32656,7 +32923,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348323,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32668,12 +32935,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(-t - 3)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 117,
-			"versionNonce": 1317805584,
+			"version": 130,
+			"versionNonce": 559858380,
 			"isDeleted": false,
 			"id": "aajgyalN",
 			"fillStyle": "solid",
@@ -32693,7 +32960,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348323,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32705,12 +32972,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 119,
-			"versionNonce": 1180207856,
+			"version": 132,
+			"versionNonce": 989634548,
 			"isDeleted": false,
 			"id": "xzWCUtqx",
 			"fillStyle": "solid",
@@ -32730,7 +32997,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348323,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32742,12 +33009,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-4    -3     -2    -1    0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 145,
-			"versionNonce": 1367202832,
+			"version": 152,
+			"versionNonce": 1259178872,
 			"isDeleted": false,
 			"id": "jfgoBvd9byeOAcgoHAtfs",
 			"fillStyle": "solid",
@@ -32769,7 +33036,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32790,8 +33057,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 140,
-			"versionNonce": 1927916784,
+			"version": 147,
+			"versionNonce": 1593640968,
 			"isDeleted": false,
 			"id": "amRGmtPuOPjIFW5HHjgdY",
 			"fillStyle": "solid",
@@ -32813,7 +33080,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32834,8 +33101,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 140,
-			"versionNonce": 1267194384,
+			"version": 147,
+			"versionNonce": 1631411320,
 			"isDeleted": false,
 			"id": "XOoX7E7GKUjonq6yD-7Ko",
 			"fillStyle": "solid",
@@ -32857,7 +33124,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -32878,8 +33145,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 33,
-			"versionNonce": 1963364080,
+			"version": 46,
+			"versionNonce": 2023000396,
 			"isDeleted": false,
 			"id": "OB9WmbDQ",
 			"fillStyle": "solid",
@@ -32899,7 +33166,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348324,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32911,12 +33178,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-7    -6    -5",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 75,
-			"versionNonce": 799152144,
+			"version": 88,
+			"versionNonce": 1875673460,
 			"isDeleted": false,
 			"id": "AWGCZUo7",
 			"fillStyle": "solid",
@@ -32936,7 +33203,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348325,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -32948,12 +33215,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The same applies for discrete time signals",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 261,
-			"versionNonce": 624374000,
+			"version": 268,
+			"versionNonce": 1422960136,
 			"isDeleted": false,
 			"id": "CVZnsrrZHoLztl0FrTV3S",
 			"fillStyle": "solid",
@@ -32975,14 +33242,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 190,
-			"versionNonce": 1371837968,
+			"version": 197,
+			"versionNonce": 444243576,
 			"isDeleted": false,
 			"id": "YMv4c_rrumq_OvyAbaLIr",
 			"fillStyle": "solid",
@@ -33004,7 +33271,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -33041,8 +33308,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 184783600,
+			"version": 150,
+			"versionNonce": 2020568544,
 			"isDeleted": false,
 			"id": "ohK8RKAR",
 			"fillStyle": "solid",
@@ -33065,7 +33332,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1705925336461,
 			"link": null,
 			"locked": false,
 			"fontSize": 35.56405089499459,
@@ -33077,12 +33344,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "CLASSIFICATION OF SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 32
+			"baseline": 31
 		},
 		{
 			"type": "line",
-			"version": 132,
-			"versionNonce": 1189565456,
+			"version": 139,
+			"versionNonce": 126881656,
 			"isDeleted": false,
 			"id": "ptgSB4J7qhpkS9DHe2PG9",
 			"fillStyle": "solid",
@@ -33107,7 +33374,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33128,8 +33395,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 131,
-			"versionNonce": 2096346352,
+			"version": 139,
+			"versionNonce": 1979841904,
 			"isDeleted": false,
 			"id": "IIoiFsFt",
 			"fillStyle": "solid",
@@ -33151,7 +33418,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704371296219,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.177867542613722,
@@ -33167,8 +33434,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 627,
-			"versionNonce": 1157779984,
+			"version": 641,
+			"versionNonce": 575504332,
 			"isDeleted": false,
 			"id": "IlNcL5zs",
 			"fillStyle": "solid",
@@ -33190,7 +33457,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1706388348328,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33202,12 +33469,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A periodic continuous-time signal satisfies\n                x(t) = x(t + nT\n\nWhere\n n is an integer\n T is the period of the signal\n\nA periodic signal is on that repeats itself every T seconds.\n\n\nA popular example of a periodic signal is the sinusoid:\n                x(t) = Asin(wt +  )\nWhere\nA is the amplitude of the signal\nw  is the angular frequency in radians per second\n   is the phase in radians\n\n\nA non periodic signal is one which does not repeat itself after T seconds. An\nis the ramp function",
 			"lineHeight": 1.25,
-			"baseline": 490
+			"baseline": 492
 		},
 		{
 			"type": "line",
-			"version": 702,
-			"versionNonce": 1083152112,
+			"version": 709,
+			"versionNonce": 1823408904,
 			"isDeleted": false,
 			"id": "IrhipiIhdec0GI1gbjp2I",
 			"fillStyle": "hachure",
@@ -33230,7 +33497,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33259,8 +33526,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 730,
-			"versionNonce": 51220496,
+			"version": 737,
+			"versionNonce": 1006408056,
 			"isDeleted": false,
 			"id": "b1Dq_x4awUy5Ptx-G5OjG",
 			"fillStyle": "hachure",
@@ -33283,7 +33550,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097103,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33312,8 +33579,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 114,
-			"versionNonce": 710883568,
+			"version": 126,
+			"versionNonce": 2013704672,
 			"isDeleted": false,
 			"id": "myRnOhgY",
 			"fillStyle": "solid",
@@ -33335,7 +33602,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1705925336464,
 			"link": null,
 			"locked": false,
 			"fontSize": 32.33907906298725,
@@ -33347,12 +33614,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "ANALOG AND DIGITAL SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 27
+			"baseline": 28
 		},
 		{
 			"type": "text",
-			"version": 583,
-			"versionNonce": 419499536,
+			"version": 596,
+			"versionNonce": 321139444,
 			"isDeleted": false,
 			"id": "6M2ZQosr",
 			"fillStyle": "solid",
@@ -33374,7 +33641,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348330,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33386,12 +33653,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "If a continuous time signal x(t) can assume any value in the range of -   < t  <   , then it is \ncalled an analog signal. Although all analog signals are continuous-time signals, not all continuous\ntime signals are analog signals.\n\nIf a discrete-time signal assumes only finite values, then it is called a digital signal.\n\n\n    An ANALOG SIGNAL is a continuous-time signal in which the variations withe time is analogous\n     (or proportional) to some physical phenomena.",
 			"lineHeight": 1.25,
-			"baseline": 216
+			"baseline": 217
 		},
 		{
 			"type": "text",
-			"version": 149,
-			"versionNonce": 1038785264,
+			"version": 162,
+			"versionNonce": 1185130060,
 			"isDeleted": false,
 			"id": "YieOTteI",
 			"fillStyle": "solid",
@@ -33413,7 +33680,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348331,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33425,12 +33692,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A DIGITAL SIGNAL is a discrete-time signal that can have a finite number of values (usually binary).",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 296,
-			"versionNonce": 1607781392,
+			"version": 309,
+			"versionNonce": 596227188,
 			"isDeleted": false,
 			"id": "0YBzISwn",
 			"fillStyle": "solid",
@@ -33452,7 +33719,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348332,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33464,12 +33731,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A digital signal can assume only finite number of values. The difference between analog and digital\nsignals is that analog is a continuous electric signal, whereas digital is a discrete electric signal.",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 61,
-			"versionNonce": 1304018160,
+			"version": 72,
+			"versionNonce": 1313642060,
 			"isDeleted": false,
 			"id": "f0nBBq5p",
 			"fillStyle": "solid",
@@ -33491,7 +33758,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388344297,
 			"link": null,
 			"locked": false,
 			"fontSize": 38.28917572463744,
@@ -33503,12 +33770,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "ENERGY AND POWER SIGNALS",
 			"lineHeight": 1.25,
-			"baseline": 33
+			"baseline": 34
 		},
 		{
 			"type": "line",
-			"version": 107,
-			"versionNonce": 1367394832,
+			"version": 114,
+			"versionNonce": 2034197624,
 			"isDeleted": false,
 			"id": "pkzKoSolj69UOZfO9ZH2R",
 			"fillStyle": "solid",
@@ -33532,7 +33799,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33553,8 +33820,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 109,
-			"versionNonce": 458530544,
+			"version": 116,
+			"versionNonce": 1211186952,
 			"isDeleted": false,
 			"id": "ai_bULRQmYG98p5n6XGwn",
 			"fillStyle": "solid",
@@ -33578,7 +33845,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726063,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33599,8 +33866,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 434,
-			"versionNonce": 1761413136,
+			"version": 441,
+			"versionNonce": 2110526840,
 			"isDeleted": false,
 			"id": "GQJVhMYL6VZcBvbNP7Nh9",
 			"fillStyle": "solid",
@@ -33629,14 +33896,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 122,
-			"versionNonce": 2000896240,
+			"version": 135,
+			"versionNonce": 2054225100,
 			"isDeleted": false,
 			"id": "zTtCcZQl",
 			"fillStyle": "solid",
@@ -33658,7 +33925,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348334,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33670,12 +33937,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "For continuous-time signals x(t), the normalized energy E of x(t) (assuming x(t) is real) is:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 73,
-			"versionNonce": 37848592,
+			"version": 86,
+			"versionNonce": 1589839348,
 			"isDeleted": false,
 			"id": "qXl8f47u",
 			"fillStyle": "solid",
@@ -33698,7 +33965,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348335,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33710,12 +33977,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)  dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 101,
-			"versionNonce": 1628283632,
+			"version": 114,
+			"versionNonce": 659522380,
 			"isDeleted": false,
 			"id": "lFcr209R",
 			"fillStyle": "solid",
@@ -33738,7 +34005,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348335,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33750,12 +34017,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 98,
-			"versionNonce": 977683472,
+			"version": 111,
+			"versionNonce": 1507207028,
 			"isDeleted": false,
 			"id": "oFcBDWzZ",
 			"fillStyle": "solid",
@@ -33778,7 +34045,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348336,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -33790,12 +34057,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "E = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3212,
-			"versionNonce": 658228464,
+			"version": 3219,
+			"versionNonce": 407518216,
 			"isDeleted": false,
 			"id": "YtkK2bLLEn7PfgM1WkcOg",
 			"fillStyle": "solid",
@@ -33820,7 +34087,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -33929,8 +34196,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4591,
-			"versionNonce": 1325613584,
+			"version": 4598,
+			"versionNonce": 361588856,
 			"isDeleted": false,
 			"id": "66DPl_9cAgzv4zaRltGGp",
 			"fillStyle": "solid",
@@ -33955,7 +34222,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34040,8 +34307,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3190,
-			"versionNonce": 123053808,
+			"version": 3197,
+			"versionNonce": 1656060680,
 			"isDeleted": false,
 			"id": "Z_NAYSty1tKoRLjeqyXzj",
 			"fillStyle": "solid",
@@ -34066,7 +34333,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34175,8 +34442,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 58,
-			"versionNonce": 2138079248,
+			"version": 65,
+			"versionNonce": 1773771128,
 			"isDeleted": false,
 			"id": "l9NJkgiKW56WxJH4dZuBm",
 			"fillStyle": "solid",
@@ -34201,7 +34468,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34222,8 +34489,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 91,
-			"versionNonce": 1306740976,
+			"version": 104,
+			"versionNonce": 1939421644,
 			"isDeleted": false,
 			"id": "rmXKKUPX",
 			"fillStyle": "solid",
@@ -34245,7 +34512,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348337,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34257,12 +34524,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "If x(t) is complex valued, The above equation can be generalized:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 129,
-			"versionNonce": 1803943440,
+			"version": 142,
+			"versionNonce": 420026612,
 			"isDeleted": false,
 			"id": "ySw2k17w",
 			"fillStyle": "solid",
@@ -34285,7 +34552,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348337,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34297,12 +34564,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "| x(t) |  dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 184,
-			"versionNonce": 1986833136,
+			"version": 197,
+			"versionNonce": 711467084,
 			"isDeleted": false,
 			"id": "shvHdiQA",
 			"fillStyle": "solid",
@@ -34325,7 +34592,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348337,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34337,12 +34604,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 144,
-			"versionNonce": 1950071824,
+			"version": 157,
+			"versionNonce": 669112948,
 			"isDeleted": false,
 			"id": "CaJ1Xtev",
 			"fillStyle": "solid",
@@ -34365,7 +34632,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348338,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34377,12 +34644,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "E = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3258,
-			"versionNonce": 1266273520,
+			"version": 3265,
+			"versionNonce": 602404872,
 			"isDeleted": false,
 			"id": "Eq_WSL3TeT4sQo7WH7_C8",
 			"fillStyle": "solid",
@@ -34407,7 +34674,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34516,8 +34783,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4637,
-			"versionNonce": 462010896,
+			"version": 4644,
+			"versionNonce": 1756982392,
 			"isDeleted": false,
 			"id": "IU2y7ujoAIAGqJlahoMvv",
 			"fillStyle": "solid",
@@ -34542,7 +34809,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34627,8 +34894,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3236,
-			"versionNonce": 110276336,
+			"version": 3243,
+			"versionNonce": 725333768,
 			"isDeleted": false,
 			"id": "yEScB0qX1UjL3AwEpFvjl",
 			"fillStyle": "solid",
@@ -34653,7 +34920,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34762,8 +35029,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 104,
-			"versionNonce": 1684535312,
+			"version": 111,
+			"versionNonce": 12918136,
 			"isDeleted": false,
 			"id": "6cF16-QL4tWafV8gpN-ZM",
 			"fillStyle": "solid",
@@ -34788,7 +35055,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -34809,8 +35076,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 107,
-			"versionNonce": 1883197680,
+			"version": 120,
+			"versionNonce": 597046988,
 			"isDeleted": false,
 			"id": "FEkJOveu",
 			"fillStyle": "solid",
@@ -34832,7 +35099,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348338,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34844,12 +35111,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Where |x(t)| is the magnitude of x(t). The normalized power P for real x(t) is:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 129,
-			"versionNonce": 852391440,
+			"version": 142,
+			"versionNonce": 824601588,
 			"isDeleted": false,
 			"id": "m64ZnkJB",
 			"fillStyle": "solid",
@@ -34872,7 +35139,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348338,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34884,12 +35151,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)  dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 152,
-			"versionNonce": 504560,
+			"version": 165,
+			"versionNonce": 733838668,
 			"isDeleted": false,
 			"id": "2WUxSGaj",
 			"fillStyle": "solid",
@@ -34912,7 +35179,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348338,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34924,12 +35191,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 169,
-			"versionNonce": 733295632,
+			"version": 182,
+			"versionNonce": 383569268,
 			"isDeleted": false,
 			"id": "Bymc7IAW",
 			"fillStyle": "solid",
@@ -34952,7 +35219,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -34964,12 +35231,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "P = lim ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 4632,
-			"versionNonce": 2087965936,
+			"version": 4639,
+			"versionNonce": 1153938440,
 			"isDeleted": false,
 			"id": "rzPA1E2mI0fqWdC2gMtEf",
 			"fillStyle": "solid",
@@ -34994,7 +35261,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726064,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35079,8 +35346,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 98,
-			"versionNonce": 353645072,
+			"version": 105,
+			"versionNonce": 331575416,
 			"isDeleted": false,
 			"id": "6-6rE772kyoexFPB2TWch",
 			"fillStyle": "solid",
@@ -35105,7 +35372,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097104,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35126,8 +35393,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 29,
-			"versionNonce": 453752560,
+			"version": 42,
+			"versionNonce": 1815606220,
 			"isDeleted": false,
 			"id": "2f8bArm8",
 			"fillStyle": "solid",
@@ -35150,7 +35417,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.251147889254307,
@@ -35166,8 +35433,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 46,
-			"versionNonce": 904097808,
+			"version": 59,
+			"versionNonce": 172687092,
 			"isDeleted": false,
 			"id": "5BmJTXhE",
 			"fillStyle": "solid",
@@ -35190,7 +35457,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.251147889254675,
@@ -35206,8 +35473,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 75,
-			"versionNonce": 542595312,
+			"version": 88,
+			"versionNonce": 1394580044,
 			"isDeleted": false,
 			"id": "5CrbbMMe",
 			"fillStyle": "solid",
@@ -35230,7 +35497,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35242,12 +35509,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 907734544,
+			"version": 106,
+			"versionNonce": 603390068,
 			"isDeleted": false,
 			"id": "rPZKHwOV",
 			"fillStyle": "solid",
@@ -35270,7 +35537,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35282,12 +35549,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 165,
-			"versionNonce": 2145303280,
+			"version": 172,
+			"versionNonce": 1813565704,
 			"isDeleted": false,
 			"id": "v-cLTzureglWBxY68Fc74",
 			"fillStyle": "solid",
@@ -35312,7 +35579,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35333,8 +35600,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 71,
-			"versionNonce": 2125638672,
+			"version": 82,
+			"versionNonce": 2068738252,
 			"isDeleted": false,
 			"id": "94xUPpPJ",
 			"fillStyle": "solid",
@@ -35357,7 +35624,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348340,
 			"link": null,
 			"locked": false,
 			"fontSize": 9.673738729078446,
@@ -35373,8 +35640,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 2468,
-			"versionNonce": 2083118320,
+			"version": 2475,
+			"versionNonce": 1240035336,
 			"isDeleted": false,
 			"id": "Sb7cpkggF3dWSHmuDJMJq",
 			"fillStyle": "solid",
@@ -35399,7 +35666,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35468,8 +35735,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3373,
-			"versionNonce": 430090768,
+			"version": 3380,
+			"versionNonce": 933983352,
 			"isDeleted": false,
 			"id": "XYR5DKJLY_MeQ9FFFnP2d",
 			"fillStyle": "solid",
@@ -35494,7 +35761,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35603,8 +35870,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 69,
-			"versionNonce": 1187036912,
+			"version": 82,
+			"versionNonce": 2074530292,
 			"isDeleted": false,
 			"id": "pCpwyQAR",
 			"fillStyle": "solid",
@@ -35626,7 +35893,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348341,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35638,12 +35905,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "This can be generalized for complex values x(t) as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 159,
-			"versionNonce": 300083216,
+			"version": 172,
+			"versionNonce": 341735244,
 			"isDeleted": false,
 			"id": "8ZUw0C9y",
 			"fillStyle": "solid",
@@ -35666,7 +35933,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348341,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35678,12 +35945,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "| x(t) |  dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 207,
-			"versionNonce": 539713776,
+			"version": 220,
+			"versionNonce": 1080062836,
 			"isDeleted": false,
 			"id": "oicN13Cb",
 			"fillStyle": "solid",
@@ -35706,7 +35973,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348341,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35718,12 +35985,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 194,
-			"versionNonce": 1399547408,
+			"version": 207,
+			"versionNonce": 1252634060,
 			"isDeleted": false,
 			"id": "SJ2cWVna",
 			"fillStyle": "solid",
@@ -35746,7 +36013,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348341,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -35758,12 +36025,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "P = lim ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 4657,
-			"versionNonce": 2012332784,
+			"version": 4664,
+			"versionNonce": 1967394056,
 			"isDeleted": false,
 			"id": "_cEftl-WUmt0zlf6Wma87",
 			"fillStyle": "solid",
@@ -35788,7 +36055,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35873,8 +36140,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 123,
-			"versionNonce": 187966480,
+			"version": 130,
+			"versionNonce": 2056595320,
 			"isDeleted": false,
 			"id": "30a4Vlq_AlZTpsHS4LobK",
 			"fillStyle": "solid",
@@ -35899,7 +36166,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -35920,8 +36187,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 54,
-			"versionNonce": 211543280,
+			"version": 67,
+			"versionNonce": 1349117172,
 			"isDeleted": false,
 			"id": "nocNyVjO",
 			"fillStyle": "solid",
@@ -35944,7 +36211,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348342,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.251147889254307,
@@ -35960,8 +36227,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 71,
-			"versionNonce": 120922640,
+			"version": 84,
+			"versionNonce": 793384012,
 			"isDeleted": false,
 			"id": "5OtleyKn",
 			"fillStyle": "solid",
@@ -35984,7 +36251,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348342,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.251147889254675,
@@ -36000,8 +36267,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 196200176,
+			"version": 113,
+			"versionNonce": 1363748468,
 			"isDeleted": false,
 			"id": "w0CsDPgu",
 			"fillStyle": "solid",
@@ -36024,7 +36291,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348342,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36036,12 +36303,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 118,
-			"versionNonce": 375808016,
+			"version": 131,
+			"versionNonce": 538553036,
 			"isDeleted": false,
 			"id": "60L5kf41",
 			"fillStyle": "solid",
@@ -36064,7 +36331,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348342,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36076,12 +36343,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "T",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 190,
-			"versionNonce": 834365680,
+			"version": 197,
+			"versionNonce": 1969736200,
 			"isDeleted": false,
 			"id": "G9nKNfc2UlKXGKHsDPjxV",
 			"fillStyle": "solid",
@@ -36106,7 +36373,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36127,8 +36394,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 96,
-			"versionNonce": 1757404688,
+			"version": 107,
+			"versionNonce": 1204041716,
 			"isDeleted": false,
 			"id": "HcVbjWmZ",
 			"fillStyle": "solid",
@@ -36151,7 +36418,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348342,
 			"link": null,
 			"locked": false,
 			"fontSize": 9.673738729078446,
@@ -36167,8 +36434,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 2493,
-			"versionNonce": 1782631152,
+			"version": 2500,
+			"versionNonce": 552683784,
 			"isDeleted": false,
 			"id": "0AG3LGh6qNydHYrcdXAoe",
 			"fillStyle": "solid",
@@ -36193,7 +36460,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726065,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36262,8 +36529,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3398,
-			"versionNonce": 1866046480,
+			"version": 3405,
+			"versionNonce": 409578360,
 			"isDeleted": false,
 			"id": "_snLjTn-UboRMawpZknuZ",
 			"fillStyle": "solid",
@@ -36288,7 +36555,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36397,8 +36664,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 91,
-			"versionNonce": 1875504368,
+			"version": 104,
+			"versionNonce": 800223564,
 			"isDeleted": false,
 			"id": "MBvcLUZb",
 			"fillStyle": "solid",
@@ -36420,7 +36687,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348343,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36432,12 +36699,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Similarly, for a discrete-time signal x[n], the normalized energy E of x[n] is",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 111,
-			"versionNonce": 1003198992,
+			"version": 124,
+			"versionNonce": 803281268,
 			"isDeleted": false,
 			"id": "jGEynDIW",
 			"fillStyle": "solid",
@@ -36460,7 +36727,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348343,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36472,12 +36739,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "E =    | x[n] |",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 131,
-			"versionNonce": 1809764080,
+			"version": 144,
+			"versionNonce": 225339340,
 			"isDeleted": false,
 			"id": "wSiJVrUT",
 			"fillStyle": "solid",
@@ -36500,7 +36767,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1706388348343,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36512,12 +36779,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 1867,
-			"versionNonce": 1634588688,
+			"version": 1874,
+			"versionNonce": 538914168,
 			"isDeleted": false,
 			"id": "Xa8SwYAaq35oyYruBZ9j-",
 			"fillStyle": "solid",
@@ -36542,7 +36809,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097105,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36627,8 +36894,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 76,
-			"versionNonce": 386363632,
+			"version": 93,
+			"versionNonce": 447621152,
 			"isDeleted": false,
 			"id": "0GqIUjYs",
 			"fillStyle": "solid",
@@ -36651,7 +36918,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1705925336474,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.524202716883883,
@@ -36663,12 +36930,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n = -",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
 			"type": "line",
-			"version": 3472,
-			"versionNonce": 1410881040,
+			"version": 3479,
+			"versionNonce": 667598456,
 			"isDeleted": false,
 			"id": "Rj_IWz_tdk7gLEvxSVFIn",
 			"fillStyle": "solid",
@@ -36694,7 +36961,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36803,8 +37070,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3432,
-			"versionNonce": 1489752816,
+			"version": 3439,
+			"versionNonce": 505447688,
 			"isDeleted": false,
 			"id": "GER5tZbw749oLe2q0f9pT",
 			"fillStyle": "solid",
@@ -36830,7 +37097,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -36939,8 +37206,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 43,
-			"versionNonce": 1220744208,
+			"version": 56,
+			"versionNonce": 350604020,
 			"isDeleted": false,
 			"id": "ekYSSSl8",
 			"fillStyle": "solid",
@@ -36962,7 +37229,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348344,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -36974,12 +37241,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "While the normalized power P is:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 222,
-			"versionNonce": 1739846896,
+			"version": 235,
+			"versionNonce": 1835503180,
 			"isDeleted": false,
 			"id": "W8te6slb",
 			"fillStyle": "solid",
@@ -37002,7 +37269,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348345,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37014,12 +37281,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "        | x[n] |",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 225,
-			"versionNonce": 359010832,
+			"version": 238,
+			"versionNonce": 693652596,
 			"isDeleted": false,
 			"id": "8aQvqLAg",
 			"fillStyle": "solid",
@@ -37042,7 +37309,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348345,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37054,12 +37321,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 1961,
-			"versionNonce": 1766315760,
+			"version": 1968,
+			"versionNonce": 1962468104,
 			"isDeleted": false,
 			"id": "NBTcS6jRqQgh0mesQjnIF",
 			"fillStyle": "solid",
@@ -37084,7 +37351,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -37169,8 +37436,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 170,
-			"versionNonce": 284774416,
+			"version": 187,
+			"versionNonce": 18522144,
 			"isDeleted": false,
 			"id": "uhC4Y6Id",
 			"fillStyle": "solid",
@@ -37193,7 +37460,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1705925336476,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.524202716883883,
@@ -37205,12 +37472,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "n = -",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
 			"type": "text",
-			"version": 92,
-			"versionNonce": 303003888,
+			"version": 103,
+			"versionNonce": 1886905548,
 			"isDeleted": false,
 			"id": "IheiWA3h",
 			"fillStyle": "solid",
@@ -37233,7 +37500,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348346,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.688237576439194,
@@ -37249,8 +37516,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 128,
-			"versionNonce": 1937034768,
+			"version": 139,
+			"versionNonce": 1593744884,
 			"isDeleted": false,
 			"id": "sMLYC0gH",
 			"fillStyle": "solid",
@@ -37273,7 +37540,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348346,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.688237576439194,
@@ -37289,8 +37556,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 257,
-			"versionNonce": 1167252208,
+			"version": 268,
+			"versionNonce": 205089612,
 			"isDeleted": false,
 			"id": "OjU9aqxc",
 			"fillStyle": "solid",
@@ -37313,7 +37580,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348346,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.688237576439194,
@@ -37329,8 +37596,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 902859792,
+			"version": 111,
+			"versionNonce": 2128527220,
 			"isDeleted": false,
 			"id": "YKEJKgq8",
 			"fillStyle": "solid",
@@ -37353,7 +37620,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348347,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.704745944274283,
@@ -37369,8 +37636,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 140,
-			"versionNonce": 911867120,
+			"version": 154,
+			"versionNonce": 729215456,
 			"isDeleted": false,
 			"id": "8lcpFKhh",
 			"fillStyle": "solid",
@@ -37393,7 +37660,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1705925336477,
 			"link": null,
 			"locked": false,
 			"fontSize": 12.704745944274283,
@@ -37405,12 +37672,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 10
+			"baseline": 11
 		},
 		{
 			"type": "line",
-			"version": 239,
-			"versionNonce": 1912900112,
+			"version": 246,
+			"versionNonce": 334988408,
 			"isDeleted": false,
 			"id": "6KzwArFxm8MiVkmmgIbp6",
 			"fillStyle": "solid",
@@ -37435,7 +37702,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -37460,8 +37727,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3530,
-			"versionNonce": 99409648,
+			"version": 3537,
+			"versionNonce": 1821056776,
 			"isDeleted": false,
 			"id": "R_n6lJFPblnLMoML-cRy8",
 			"fillStyle": "solid",
@@ -37487,7 +37754,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -37596,8 +37863,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 2623,
-			"versionNonce": 1124648976,
+			"version": 2630,
+			"versionNonce": 1283470712,
 			"isDeleted": false,
 			"id": "X_0GuI6LD-FWZwOls422x",
 			"fillStyle": "solid",
@@ -37623,7 +37890,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726066,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -37692,8 +37959,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 135,
-			"versionNonce": 1691582704,
+			"version": 148,
+			"versionNonce": 1929781708,
 			"isDeleted": false,
 			"id": "jxQsg3T1",
 			"fillStyle": "solid",
@@ -37716,7 +37983,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348348,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37728,12 +37995,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "lim",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 81,
-			"versionNonce": 617956880,
+			"version": 94,
+			"versionNonce": 1094627572,
 			"isDeleted": false,
 			"id": "o5QI9qIv",
 			"fillStyle": "solid",
@@ -37756,7 +38023,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348349,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37768,12 +38035,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "P = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 113,
-			"versionNonce": 848683760,
+			"version": 126,
+			"versionNonce": 2079852620,
 			"isDeleted": false,
 			"id": "VFAC5hWq",
 			"fillStyle": "solid",
@@ -37795,7 +38062,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348350,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37807,12 +38074,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Based on the definitions of E and P in the equation above, we define the following:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 163,
-			"versionNonce": 1415709712,
+			"version": 176,
+			"versionNonce": 1705276020,
 			"isDeleted": false,
 			"id": "2X0aFDYW",
 			"fillStyle": "solid",
@@ -37835,7 +38102,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1706388348351,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -37847,12 +38114,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A signal x(t) or x[n] is an ENERGY SIGNAL if and only if  0 < E <    consequently P = 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3611,
-			"versionNonce": 498861296,
+			"version": 3618,
+			"versionNonce": 275782664,
 			"isDeleted": false,
 			"id": "YMj-vTCnYa41Q1UpLonGC",
 			"fillStyle": "solid",
@@ -37879,7 +38146,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097106,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -37988,8 +38255,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 169,
-			"versionNonce": 799474192,
+			"version": 182,
+			"versionNonce": 183049932,
 			"isDeleted": false,
 			"id": "PHnbCuq6",
 			"fillStyle": "solid",
@@ -38012,7 +38279,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348351,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38024,12 +38291,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A signal x(t) or x[n] is a POWER SIGNAL if and only if 0 < P <    and consequently E = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 3648,
-			"versionNonce": 1137567472,
+			"version": 3655,
+			"versionNonce": 455039752,
 			"isDeleted": false,
 			"id": "LFekQUWbAk9mj4X1tKiwh",
 			"fillStyle": "solid",
@@ -38057,7 +38324,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -38166,8 +38433,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 3654,
-			"versionNonce": 362561552,
+			"version": 3661,
+			"versionNonce": 761117048,
 			"isDeleted": false,
 			"id": "cSyIsnvxx3lgnc-oBC0EF",
 			"fillStyle": "solid",
@@ -38195,7 +38462,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -38304,8 +38571,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 176,
-			"versionNonce": 1364429040,
+			"version": 189,
+			"versionNonce": 1255539700,
 			"isDeleted": false,
 			"id": "ivPeyMjy",
 			"fillStyle": "solid",
@@ -38327,7 +38594,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348352,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38339,12 +38606,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Or in otherwords, A POWER SIGNAL HAS INFINITE ENERGY AND AN ENERGY SIGNAL HAS ZERO AVERAGE POWER",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 65,
-			"versionNonce": 1178189328,
+			"version": 72,
+			"versionNonce": 626510456,
 			"isDeleted": false,
 			"id": "cKACRzJbeDKE8BOX9NxCx",
 			"fillStyle": "solid",
@@ -38368,14 +38635,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 175,
-			"versionNonce": 567601904,
+			"version": 182,
+			"versionNonce": 1421490440,
 			"isDeleted": false,
 			"id": "O--wz2Y0DcfURaXDLAmju",
 			"fillStyle": "solid",
@@ -38399,14 +38666,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 108,
-			"versionNonce": 1115126800,
+			"version": 118,
+			"versionNonce": 288985120,
 			"isDeleted": false,
 			"id": "0v2LcOl2",
 			"fillStyle": "solid",
@@ -38428,7 +38695,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1705925336482,
 			"link": null,
 			"locked": false,
 			"fontSize": 40.02325032884463,
@@ -38444,8 +38711,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 169,
-			"versionNonce": 1608125680,
+			"version": 176,
+			"versionNonce": 1780340744,
 			"isDeleted": false,
 			"id": "1FyvXo4synh1qTLiAsCwO",
 			"fillStyle": "solid",
@@ -38469,7 +38736,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1704314726067,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -38490,8 +38757,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 105,
-			"versionNonce": 743275024,
+			"version": 118,
+			"versionNonce": 2020828492,
 			"isDeleted": false,
 			"id": "Tle7gDTc",
 			"fillStyle": "solid",
@@ -38513,7 +38780,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348354,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38525,12 +38792,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "By definition, a signal is even if ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 65,
-			"versionNonce": 619376368,
+			"version": 80,
+			"versionNonce": 114910580,
 			"isDeleted": false,
 			"id": "iBSjoApS",
 			"fillStyle": "solid",
@@ -38552,7 +38819,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348355,
 			"link": null,
 			"locked": false,
 			"fontSize": 32.08251953125,
@@ -38564,12 +38831,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t) = x(-t)",
 			"lineHeight": 1.25,
-			"baseline": 27
+			"baseline": 28
 		},
 		{
 			"type": "text",
-			"version": 218,
-			"versionNonce": 649312272,
+			"version": 231,
+			"versionNonce": 2045828044,
 			"isDeleted": false,
 			"id": "XAuk5Gav",
 			"fillStyle": "solid",
@@ -38591,7 +38858,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348357,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38603,12 +38870,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A function is even if its plot is symmetric about the vertical axis; that is the signal for t < 0 is the mirror\nimage of the signal for t > 0. Examples are cos, t, t^2, and t^4.",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 428839152,
+			"version": 55,
+			"versionNonce": 2129958644,
 			"isDeleted": false,
 			"id": "sODkHIyR",
 			"fillStyle": "solid",
@@ -38630,7 +38897,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348357,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38642,12 +38909,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "By definition a signal is odd if",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 90,
-			"versionNonce": 899823120,
+			"version": 109,
+			"versionNonce": 159089228,
 			"isDeleted": false,
 			"id": "W2uCA9QH",
 			"fillStyle": "solid",
@@ -38669,24 +38936,24 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348358,
 			"link": null,
 			"locked": false,
 			"fontSize": 32.08251953125,
 			"fontFamily": 1,
-			"text": "x(t) = -x(-t)",
-			"rawText": "x(t) = -x(-t)",
+			"text": "x(-t) = -x(t)",
+			"rawText": "x(-t) = -x(t)",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "x(t) = -x(-t)",
+			"originalText": "x(-t) = -x(t)",
 			"lineHeight": 1.25,
-			"baseline": 27
+			"baseline": 28
 		},
 		{
 			"type": "text",
-			"version": 203,
-			"versionNonce": 357561072,
+			"version": 216,
+			"versionNonce": 2142083188,
 			"isDeleted": false,
 			"id": "wtb09GSU",
 			"fillStyle": "solid",
@@ -38708,7 +38975,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348359,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38720,12 +38987,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "The plot of an odd function is antisymmetrical about the vertical axis. Exaples of odd functions are t, t^3,\nand sin t",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
-			"version": 83,
-			"versionNonce": 504427536,
+			"version": 96,
+			"versionNonce": 1307400396,
 			"isDeleted": false,
 			"id": "Ro58bEX2",
 			"fillStyle": "solid",
@@ -38747,7 +39014,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348360,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38759,12 +39026,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Any signal x(t) can be represented as the sum of even and odd signals as:",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 58,
-			"versionNonce": 1051989232,
+			"version": 69,
+			"versionNonce": 1650491424,
 			"isDeleted": false,
 			"id": "aXDwpugQ",
 			"fillStyle": "solid",
@@ -38786,7 +39053,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1705925336488,
 			"link": null,
 			"locked": false,
 			"fontSize": 26.712516622339532,
@@ -38798,12 +39065,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t) = x (t)  + x (t)",
 			"lineHeight": 1.25,
-			"baseline": 24
+			"baseline": 23
 		},
 		{
 			"type": "text",
-			"version": 60,
-			"versionNonce": 1173877264,
+			"version": 73,
+			"versionNonce": 1422551540,
 			"isDeleted": false,
 			"id": "mJCvbNXo",
 			"fillStyle": "solid",
@@ -38825,7 +39092,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348361,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38837,12 +39104,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "e",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 57,
-			"versionNonce": 725874416,
+			"version": 70,
+			"versionNonce": 48258892,
 			"isDeleted": false,
 			"id": "GWkCogvm",
 			"fillStyle": "solid",
@@ -38864,7 +39131,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348362,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38876,12 +39143,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "o",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 49,
-			"versionNonce": 340733968,
+			"version": 62,
+			"versionNonce": 1632701300,
 			"isDeleted": false,
 			"id": "g7weE1Om",
 			"fillStyle": "solid",
@@ -38903,7 +39170,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348363,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38915,12 +39182,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Where x (t)  = \n\n\nand  x (t) = ",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "text",
-			"version": 68,
-			"versionNonce": 2139592944,
+			"version": 81,
+			"versionNonce": 1622054348,
 			"isDeleted": false,
 			"id": "WOxVQg8N",
 			"fillStyle": "solid",
@@ -38942,7 +39209,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097107,
+			"updated": 1706388348363,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38954,12 +39221,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "e",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 65,
-			"versionNonce": 1359916560,
+			"version": 78,
+			"versionNonce": 931626228,
 			"isDeleted": false,
 			"id": "JJoKnIse",
 			"fillStyle": "solid",
@@ -38981,7 +39248,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348364,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -38993,12 +39260,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "o",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 78,
-			"versionNonce": 252115696,
+			"version": 91,
+			"versionNonce": 74579020,
 			"isDeleted": false,
 			"id": "g1Jh6m50",
 			"fillStyle": "solid",
@@ -39021,7 +39288,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348365,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39033,12 +39300,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[x(t) + x(-t)]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 80,
-			"versionNonce": 86928400,
+			"version": 93,
+			"versionNonce": 821280372,
 			"isDeleted": false,
 			"id": "eN0lV6fB",
 			"fillStyle": "solid",
@@ -39061,7 +39328,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348365,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39073,12 +39340,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 81,
-			"versionNonce": 2085231856,
+			"version": 88,
+			"versionNonce": 339693576,
 			"isDeleted": false,
 			"id": "DmdZQlo7fRWjpymPSl6_d",
 			"fillStyle": "solid",
@@ -39103,7 +39370,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39124,8 +39391,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 82,
-			"versionNonce": 1520855568,
+			"version": 95,
+			"versionNonce": 1476694732,
 			"isDeleted": false,
 			"id": "Erni9UgD",
 			"fillStyle": "solid",
@@ -39148,7 +39415,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348365,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39160,12 +39427,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "[x(t) - x(-t)]",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 86,
-			"versionNonce": 1490616048,
+			"version": 99,
+			"versionNonce": 106680308,
 			"isDeleted": false,
 			"id": "pnfbXc5B",
 			"fillStyle": "solid",
@@ -39188,7 +39455,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348365,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39200,12 +39467,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 94,
-			"versionNonce": 2087626768,
+			"version": 101,
+			"versionNonce": 111822200,
 			"isDeleted": false,
 			"id": "OigPm-WDhqrgA65DwMUe5",
 			"fillStyle": "solid",
@@ -39230,7 +39497,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39251,8 +39518,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 84,
-			"versionNonce": 1161535728,
+			"version": 98,
+			"versionNonce": 2046843212,
 			"isDeleted": false,
 			"id": "wWtMHVcR",
 			"fillStyle": "solid",
@@ -39274,7 +39541,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348366,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.46466064453145,
@@ -39290,8 +39557,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 550,
-			"versionNonce": 1988044304,
+			"version": 560,
+			"versionNonce": 1123542496,
 			"isDeleted": false,
 			"id": "f9o1s29V",
 			"fillStyle": "solid",
@@ -39313,7 +39580,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1705925336493,
 			"link": null,
 			"locked": false,
 			"fontSize": 25.328244357638937,
@@ -39329,8 +39596,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 91,
-			"versionNonce": 284820208,
+			"version": 121,
+			"versionNonce": 82177288,
 			"isDeleted": false,
 			"id": "ULLmPUoIxmP0p7KOr_UXW",
 			"fillStyle": "solid",
@@ -39343,7 +39610,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"y": 2.3186645943694657,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 315.48828125,
+			"width": 252.93229084140557,
 			"height": 2247.853546142579,
 			"seed": 351810800,
 			"groupIds": [],
@@ -39352,17 +39619,17 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": {
 				"elementId": "M3e1lYQJ",
-				"focus": -1.0035898880988523,
+				"focus": -1.0115269663689976,
 				"gap": 19.482416252489088
 			},
 			"endBinding": {
 				"elementId": "GQJVhMYL6VZcBvbNP7Nh9",
-				"focus": 0.07851219702261868,
+				"focus": 0.1712869462347924,
 				"gap": 16.889429891212785
 			},
 			"lastCommittedPoint": null,
@@ -39374,8 +39641,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					0
 				],
 				[
-					315.48828125,
-					859.7053527832036
+					252.93229084140557,
+					877.5784387883689
 				],
 				[
 					39.43603515625,
@@ -39385,8 +39652,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 155,
-			"versionNonce": 365945872,
+			"version": 164,
+			"versionNonce": 1967777824,
 			"isDeleted": false,
 			"id": "avlbZdEg",
 			"fillStyle": "solid",
@@ -39408,7 +39675,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1705925336494,
 			"link": null,
 			"locked": false,
 			"fontSize": 49.406701626867964,
@@ -39424,8 +39691,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 163,
-			"versionNonce": 1520182512,
+			"version": 176,
+			"versionNonce": 1741009268,
 			"isDeleted": false,
 			"id": "MEIb6i7u",
 			"fillStyle": "solid",
@@ -39447,7 +39714,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348369,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39459,12 +39726,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "A continuous-time sinusoidal signal in the most general form is given by",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 84,
-			"versionNonce": 1213784592,
+			"version": 97,
+			"versionNonce": 633294796,
 			"isDeleted": false,
 			"id": "iPe6y59F",
 			"fillStyle": "solid",
@@ -39486,7 +39753,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348370,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39498,12 +39765,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t) = A sin (wt +  )",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 722,
-			"versionNonce": 799672048,
+			"version": 729,
+			"versionNonce": 662981384,
 			"isDeleted": false,
 			"id": "S4xMf13TRlyNdDtxin83H",
 			"fillStyle": "hachure",
@@ -39526,7 +39793,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39555,8 +39822,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 176,
-			"versionNonce": 2098339856,
+			"version": 189,
+			"versionNonce": 343368436,
 			"isDeleted": false,
 			"id": "fPFgAIT0",
 			"fillStyle": "solid",
@@ -39578,7 +39845,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348372,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39590,12 +39857,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Where\n    A = Amplitude\n    w = Angular frequency in radians\n      = Phase angle in radians",
 			"lineHeight": 1.25,
-			"baseline": 91
+			"baseline": 92
 		},
 		{
 			"type": "line",
-			"version": 808,
-			"versionNonce": 749447408,
+			"version": 815,
+			"versionNonce": 1037412872,
 			"isDeleted": false,
 			"id": "q2OTtKaCfJNgp15tPsJXL",
 			"fillStyle": "hachure",
@@ -39618,7 +39885,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39647,8 +39914,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 81,
-			"versionNonce": 66297360,
+			"version": 88,
+			"versionNonce": 1933040248,
 			"isDeleted": false,
 			"id": "GP1U_FWW1888-WlffY6NN",
 			"fillStyle": "solid",
@@ -39672,7 +39939,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39693,8 +39960,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "rectangle",
-			"version": 102,
-			"versionNonce": 489229040,
+			"version": 109,
+			"versionNonce": 1621305608,
 			"isDeleted": false,
 			"id": "LXpB0Kf0-TtCxZSH_ogDF",
 			"fillStyle": "solid",
@@ -39723,14 +39990,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 368,
-			"versionNonce": 1844796432,
+			"version": 375,
+			"versionNonce": 1296419704,
 			"isDeleted": false,
 			"id": "FQgCyMJAoHF76q2raEMVh",
 			"fillStyle": "solid",
@@ -39740,7 +40007,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"opacity": 100,
 			"angle": 0,
 			"x": -2162.4873873082192,
-			"y": -976.3410367689062,
+			"y": -1076.3943047392577,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
 			"width": 1407.0773925781273,
@@ -39752,7 +40019,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726068,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39767,34 +40034,34 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"points": [
 				[
 					0,
-					-100.0532679703515
+					0
 				],
 				[
 					-239.77099609375045,
-					-326.7590306118637
+					-226.7057626415122
 				],
 				[
 					-498.4714355468759,
-					-430.92129795808955
+					-330.86802998773805
 				],
 				[
 					-1142.0673828125014,
-					-522.8293343128803
+					-422.7760663425288
 				],
 				[
 					-1231.9814249674491,
-					-3272.403262554952
+					-3172.3499945846006
 				],
 				[
 					-1407.0773925781273,
-					-3457.7506103515675
+					-3357.697342381216
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 196,
-			"versionNonce": 464137456,
+			"version": 203,
+			"versionNonce": 1802029064,
 			"isDeleted": false,
 			"id": "B6nNheSaMhPzhQHMlz_3m",
 			"fillStyle": "solid",
@@ -39816,7 +40083,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -39857,8 +40124,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 56,
-			"versionNonce": 1829722640,
+			"version": 69,
+			"versionNonce": 458978892,
 			"isDeleted": false,
 			"id": "0wtb5j5S",
 			"fillStyle": "solid",
@@ -39878,7 +40145,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348373,
 			"link": null,
 			"locked": false,
 			"fontSize": 38.815522198416566,
@@ -39890,12 +40157,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "TIME SCALING",
 			"lineHeight": 1.25,
-			"baseline": 33
+			"baseline": 34
 		},
 		{
 			"type": "line",
-			"version": 66,
-			"versionNonce": 834080496,
+			"version": 73,
+			"versionNonce": 1780647688,
 			"isDeleted": false,
 			"id": "V87ffQFRTbZF31k_8cXtz",
 			"fillStyle": "solid",
@@ -39917,7 +40184,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -39938,8 +40205,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 641,
-			"versionNonce": 876189712,
+			"version": 654,
+			"versionNonce": 1928782964,
 			"isDeleted": false,
 			"id": "D7TtYJdm",
 			"fillStyle": "solid",
@@ -39959,7 +40226,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097108,
+			"updated": 1706388348374,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -39971,12 +40238,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "Time scaling involves the compression or expansion of a signal in time. Given a continuous-time signal x(t), the time-scalled\nform x(t) is x(at), where a is a constant. The scaled signal x(at) will be compressed is |a| > 1 or expanded if |a| < 1;\na negative value of a yields time reversal as well as compression or expansion.\n\nAgain, we can obtain x(at) from a signal by replacing every t with at and simplifying. Notice that the time reversal can be\nconsidered a special case of time scaling with the scaling factor a = -1",
 			"lineHeight": 1.25,
-			"baseline": 141
+			"baseline": 142
 		},
 		{
 			"type": "text",
-			"version": 68,
-			"versionNonce": 2010624240,
+			"version": 83,
+			"versionNonce": 941561332,
 			"isDeleted": false,
 			"id": "PQgDxRDh",
 			"fillStyle": "solid",
@@ -39996,7 +40263,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388344329,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.73236083984375,
@@ -40012,8 +40279,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 325,
-			"versionNonce": 1466701328,
+			"version": 332,
+			"versionNonce": 1285217912,
 			"isDeleted": false,
 			"id": "xrfRKnfLiur4owVSriADk",
 			"fillStyle": "solid",
@@ -40037,7 +40304,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40062,8 +40329,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 338,
-			"versionNonce": 898896624,
+			"version": 345,
+			"versionNonce": 98723080,
 			"isDeleted": false,
 			"id": "tRl26mtls4wRvLHEIZkei",
 			"fillStyle": "solid",
@@ -40088,7 +40355,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40113,8 +40380,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 147,
-			"versionNonce": 731829264,
+			"version": 154,
+			"versionNonce": 195579768,
 			"isDeleted": false,
 			"id": "iYgdMKcHqrHW4nTeUtPxR",
 			"fillStyle": "solid",
@@ -40139,7 +40406,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40160,8 +40427,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 150,
-			"versionNonce": 24392944,
+			"version": 157,
+			"versionNonce": 492864520,
 			"isDeleted": false,
 			"id": "4rw8FQIgVLZRIsTImnZJs",
 			"fillStyle": "solid",
@@ -40186,7 +40453,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40207,8 +40474,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 123,
-			"versionNonce": 650760720,
+			"version": 136,
+			"versionNonce": 128896204,
 			"isDeleted": false,
 			"id": "Ko38g0lS",
 			"fillStyle": "solid",
@@ -40236,7 +40503,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40248,12 +40515,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 119,
-			"versionNonce": 1627395824,
+			"version": 132,
+			"versionNonce": 688535028,
 			"isDeleted": false,
 			"id": "LxVv1e6V",
 			"fillStyle": "solid",
@@ -40281,7 +40548,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40293,12 +40560,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "x(t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 114,
-			"versionNonce": 1071976464,
+			"version": 127,
+			"versionNonce": 1817400140,
 			"isDeleted": false,
 			"id": "36SRqa2L",
 			"fillStyle": "solid",
@@ -40321,7 +40588,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40333,12 +40600,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 119,
-			"versionNonce": 1757395184,
+			"version": 132,
+			"versionNonce": 867653492,
 			"isDeleted": false,
 			"id": "tS1Lys66",
 			"fillStyle": "solid",
@@ -40361,7 +40628,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40373,12 +40640,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 129,
-			"versionNonce": 1323863568,
+			"version": 142,
+			"versionNonce": 128125388,
 			"isDeleted": false,
 			"id": "OEs8xQZS",
 			"fillStyle": "solid",
@@ -40401,7 +40668,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40413,12 +40680,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 123,
-			"versionNonce": 1547377392,
+			"version": 136,
+			"versionNonce": 2135181556,
 			"isDeleted": false,
 			"id": "fJXcVHxk",
 			"fillStyle": "solid",
@@ -40441,7 +40708,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40453,12 +40720,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 648,
-			"versionNonce": 1825328144,
+			"version": 655,
+			"versionNonce": 313054072,
 			"isDeleted": false,
 			"id": "gi50HUIu09MUkLlertjDC",
 			"fillStyle": "solid",
@@ -40482,7 +40749,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40507,8 +40774,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 802,
-			"versionNonce": 1308245232,
+			"version": 809,
+			"versionNonce": 1738162184,
 			"isDeleted": false,
 			"id": "8R-6cJZsqCiRwj3FlESeh",
 			"fillStyle": "solid",
@@ -40533,7 +40800,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40558,8 +40825,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 350,
-			"versionNonce": 1401440784,
+			"version": 357,
+			"versionNonce": 640656504,
 			"isDeleted": false,
 			"id": "h2UlnqZ6fLG9brX-WShr8",
 			"fillStyle": "solid",
@@ -40584,7 +40851,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40605,8 +40872,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 357,
-			"versionNonce": 1065688816,
+			"version": 364,
+			"versionNonce": 1365573384,
 			"isDeleted": false,
 			"id": "5yyDMFsZSPTICSQE2Xi9A",
 			"fillStyle": "solid",
@@ -40631,7 +40898,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726069,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40652,8 +40919,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 286,
-			"versionNonce": 1041532944,
+			"version": 299,
+			"versionNonce": 1018687564,
 			"isDeleted": false,
 			"id": "01bhP3pj",
 			"fillStyle": "solid",
@@ -40681,7 +40948,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097109,
+			"updated": 1706388348375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40693,12 +40960,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 322,
-			"versionNonce": 1097056496,
+			"version": 335,
+			"versionNonce": 2134313588,
 			"isDeleted": false,
 			"id": "dF0RJV9L",
 			"fillStyle": "solid",
@@ -40726,7 +40993,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097109,
+			"updated": 1706388348376,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40738,12 +41005,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "y(x) = x(2t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 277,
-			"versionNonce": 1214842384,
+			"version": 290,
+			"versionNonce": 2070677196,
 			"isDeleted": false,
 			"id": "mkMeK9Vi",
 			"fillStyle": "solid",
@@ -40766,7 +41033,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348376,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40778,12 +41045,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 323,
-			"versionNonce": 320742128,
+			"version": 336,
+			"versionNonce": 1180015604,
 			"isDeleted": false,
 			"id": "Fv6L3DzZ",
 			"fillStyle": "solid",
@@ -40806,7 +41073,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348376,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40818,12 +41085,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 292,
-			"versionNonce": 1333642256,
+			"version": 305,
+			"versionNonce": 676941132,
 			"isDeleted": false,
 			"id": "Lo0VUx7h",
 			"fillStyle": "solid",
@@ -40846,7 +41113,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348376,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40858,12 +41125,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 1128023280,
+			"version": 343,
+			"versionNonce": 514194804,
 			"isDeleted": false,
 			"id": "s6CDBvhj",
 			"fillStyle": "solid",
@@ -40886,7 +41153,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1706388348377,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -40898,12 +41165,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-1/2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 477,
-			"versionNonce": 1363853840,
+			"version": 484,
+			"versionNonce": 677226616,
 			"isDeleted": false,
 			"id": "6cDCbj6mfjjwYgThqCHmO",
 			"fillStyle": "solid",
@@ -40927,7 +41194,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097109,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -40952,8 +41219,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 571,
-			"versionNonce": 1329997552,
+			"version": 578,
+			"versionNonce": 1409891080,
 			"isDeleted": false,
 			"id": "TVZz0HX7wbk-zep5urn8C",
 			"fillStyle": "solid",
@@ -40977,7 +41244,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -41006,8 +41273,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 267,
-			"versionNonce": 1288175632,
+			"version": 274,
+			"versionNonce": 948033912,
 			"isDeleted": false,
 			"id": "UGTatD8PxQDTMf47czlga",
 			"fillStyle": "solid",
@@ -41031,7 +41298,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -41052,8 +41319,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 275,
-			"versionNonce": 1136904432,
+			"version": 282,
+			"versionNonce": 1815910920,
 			"isDeleted": false,
 			"id": "cIu0fy5PiMnIrY7c1xWSY",
 			"fillStyle": "solid",
@@ -41077,7 +41344,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -41098,8 +41365,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 255,
-			"versionNonce": 569212432,
+			"version": 268,
+			"versionNonce": 81380300,
 			"isDeleted": false,
 			"id": "1OaspUVV",
 			"fillStyle": "solid",
@@ -41126,7 +41393,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097110,
+			"updated": 1706388348377,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41138,12 +41405,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 223,
-			"versionNonce": 1547512560,
+			"version": 236,
+			"versionNonce": 560869108,
 			"isDeleted": false,
 			"id": "Jmd8DxtL",
 			"fillStyle": "solid",
@@ -41170,7 +41437,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097110,
+			"updated": 1706388348379,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41182,12 +41449,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "y(x) = x(1/2t)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 190,
-			"versionNonce": 1907571728,
+			"version": 203,
+			"versionNonce": 386361932,
 			"isDeleted": false,
 			"id": "FdKBTS7M",
 			"fillStyle": "solid",
@@ -41209,7 +41476,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1706388348379,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41221,12 +41488,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 239,
-			"versionNonce": 591023344,
+			"version": 252,
+			"versionNonce": 1328820340,
 			"isDeleted": false,
 			"id": "WBej0l0M",
 			"fillStyle": "solid",
@@ -41248,7 +41515,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1706388348379,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41260,12 +41527,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 205,
-			"versionNonce": 2115058192,
+			"version": 218,
+			"versionNonce": 297550028,
 			"isDeleted": false,
 			"id": "T5yBxp2E",
 			"fillStyle": "solid",
@@ -41287,7 +41554,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1706388348379,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41299,12 +41566,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 247,
-			"versionNonce": 306392816,
+			"version": 260,
+			"versionNonce": 666763764,
 			"isDeleted": false,
 			"id": "adW6fpGe",
 			"fillStyle": "solid",
@@ -41326,7 +41593,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1706388348379,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41338,12 +41605,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "-2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 36,
-			"versionNonce": 167737360,
+			"version": 49,
+			"versionNonce": 1016219468,
 			"isDeleted": false,
 			"id": "H8HEUoFY",
 			"fillStyle": "solid",
@@ -41368,7 +41635,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097110,
+			"updated": 1706388348380,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41380,12 +41647,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "a < 1 (signal expanded)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 48,
-			"versionNonce": 836751600,
+			"version": 61,
+			"versionNonce": 1108452212,
 			"isDeleted": false,
 			"id": "fl2G5gyB",
 			"fillStyle": "solid",
@@ -41405,7 +41672,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1706388348381,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -41417,12 +41684,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "a > 1 (signal compressed",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
-			"version": 197,
-			"versionNonce": 964032016,
+			"version": 204,
+			"versionNonce": 668135032,
 			"isDeleted": false,
 			"id": "SEGp2-vXyTOw7g4I3-EFH",
 			"fillStyle": "solid",
@@ -41449,14 +41716,14 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "arrow",
-			"version": 196,
-			"versionNonce": 966275824,
+			"version": 203,
+			"versionNonce": 636704008,
 			"isDeleted": false,
 			"id": "572tTRBJyvH3PkPsJKVCY",
 			"fillStyle": "solid",
@@ -41478,7 +41745,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -41515,8 +41782,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 108,
-			"versionNonce": 1902949392,
+			"version": 120,
+			"versionNonce": 352934944,
 			"isDeleted": false,
 			"id": "4U3xo1Wj",
 			"fillStyle": "solid",
@@ -41538,7 +41805,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1705925322269,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.952133898207627,
@@ -41550,12 +41817,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "AMPLITUDE SCALING",
 			"lineHeight": 1.25,
-			"baseline": 25
+			"baseline": 26
 		},
 		{
 			"type": "line",
-			"version": 153,
-			"versionNonce": 804541680,
+			"version": 160,
+			"versionNonce": 1842574344,
 			"isDeleted": false,
 			"id": "3pLB-taAb0_p5vkYOmqEt",
 			"fillStyle": "solid",
@@ -41579,7 +41846,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -41599,252 +41866,261 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			]
 		},
 		{
-			"id": "h8iGeDiC",
 			"type": "text",
+			"version": 243,
+			"versionNonce": 1541635532,
+			"isDeleted": false,
+			"id": "h8iGeDiC",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2539.534042883217,
 			"y": 4811.660140647437,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 488.8394775390625,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1661649136,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1661649136,
-			"version": 230,
-			"versionNonce": 937144848,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097110,
+			"boundElements": [],
+			"updated": 1706388348383,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "Amplitude transformations take the general form:",
 			"rawText": "Amplitude transformations take the general form:",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "Amplitude transformations take the general form:",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "ZDFxISKV",
 			"type": "text",
+			"version": 80,
+			"versionNonce": 843494432,
+			"isDeleted": false,
+			"id": "ZDFxISKV",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2095.168982894377,
 			"y": 4870.111329961053,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 285.29608154296875,
 			"height": 43.02795410156284,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1314777840,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1314777840,
-			"version": 69,
-			"versionNonce": 175912688,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097110,
+			"boundElements": [],
+			"updated": 1705925336506,
 			"link": null,
 			"locked": false,
-			"text": "y(t) = Ax(t) + B",
-			"rawText": "y(t) = Ax(t) + B",
 			"fontSize": 34.42236328125027,
 			"fontFamily": 1,
+			"text": "y(t) = Ax(t) + B",
+			"rawText": "y(t) = Ax(t) + B",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 30,
 			"containerId": null,
 			"originalText": "y(t) = Ax(t) + B",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 30
 		},
 		{
-			"id": "aUbf9I0L",
 			"type": "text",
+			"version": 66,
+			"versionNonce": 1685394676,
+			"isDeleted": false,
+			"id": "aUbf9I0L",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2526.676900026074,
 			"y": 4971.660140647437,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 470.8594665527344,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1118628880,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1118628880,
-			"version": 53,
-			"versionNonce": 331018256,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097110,
+			"boundElements": [],
+			"updated": 1706388348385,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "Where A and B are constants. For example, let",
 			"rawText": "Where A and B are constants. For example, let",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "Where A and B are constants. For example, let",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "GP3GP2X3",
 			"type": "text",
+			"version": 36,
+			"versionNonce": 415884364,
+			"isDeleted": false,
+			"id": "GP3GP2X3",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2090.9626143117885,
 			"y": 5017.374426361723,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 173.43978881835938,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 765854960,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 765854960,
-			"version": 23,
-			"versionNonce": 1303894256,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097110,
+			"boundElements": [],
+			"updated": 1706388348386,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "y(t) = -2x(t) + 4",
 			"rawText": "y(t) = -2x(t) + 4",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "y(t) = -2x(t) + 4",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "MT8NiQCx",
 			"type": "text",
-			"x": -2541.2632124563193,
-			"y": 5088.581788945428,
-			"width": 1206.778564453125,
-			"height": 50,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 243,
+			"versionNonce": 476993140,
+			"isDeleted": false,
+			"id": "MT8NiQCx",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2541.2632124563193,
+			"y": 5088.581788945428,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1206.778564453125,
+			"height": 50,
+			"seed": 648156688,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 648156688,
-			"version": 230,
-			"versionNonce": 1828875792,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097110,
+			"boundElements": [],
+			"updated": 1706388348388,
 			"link": null,
 			"locked": false,
-			"text": "We notice that A = -2 means amplitude reversal (-x(t) implies reflection about the horizontal axis) and amplitude scaling\n(|A| = 2). Also B = 4 shifts vertically the amplitude of the signal.",
-			"rawText": "We notice that A = -2 means amplitude reversal (-x(t) implies reflection about the horizontal axis) and amplitude scaling\n(|A| = 2). Also B = 4 shifts vertically the amplitude of the signal.",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "We notice that A = -2 means amplitude reversal (-x(t) implies reflection about the horizontal axis) and amplitude scaling\n(|A| = 2). Also B = 4 shifts vertically the amplitude of the signal.",
+			"rawText": "We notice that A = -2 means amplitude reversal (-x(t) implies reflection about the horizontal axis) and amplitude scaling\n(|A| = 2). Also B = 4 shifts vertically the amplitude of the signal.",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 41,
 			"containerId": null,
 			"originalText": "We notice that A = -2 means amplitude reversal (-x(t) implies reflection about the horizontal axis) and amplitude scaling\n(|A| = 2). Also B = 4 shifts vertically the amplitude of the signal.",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 42
 		},
 		{
-			"id": "c7ZXzLTlLKtgYMHwAkZ02",
 			"type": "rectangle",
-			"x": -2642.573920638518,
-			"y": 4690.885691707705,
-			"width": 1408.4293692452566,
-			"height": 493.5136631556916,
-			"angle": 0,
-			"strokeColor": "#e03131",
-			"backgroundColor": "transparent",
+			"version": 109,
+			"versionNonce": 2075955464,
+			"isDeleted": false,
+			"id": "c7ZXzLTlLKtgYMHwAkZ02",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2642.573920638518,
+			"y": 4690.885691707705,
+			"strokeColor": "#e03131",
+			"backgroundColor": "transparent",
+			"width": 1408.4293692452566,
+			"height": 493.5136631556916,
+			"seed": 551062032,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
-			"seed": 551062032,
-			"version": 102,
-			"versionNonce": 758070000,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "aIwziKMFqGqJY-f4nfXnU",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703931097110,
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false
 		},
 		{
-			"id": "aIwziKMFqGqJY-f4nfXnU",
 			"type": "arrow",
-			"x": -1282.1777476154766,
-			"y": 2061.9056320385744,
-			"width": 296.558837890625,
-			"height": 2687.95947265625,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 107,
+			"versionNonce": 416736120,
+			"isDeleted": false,
+			"id": "aIwziKMFqGqJY-f4nfXnU",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -1282.1777476154766,
+			"y": 2061.9056320385744,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 296.558837890625,
+			"height": 2687.95947265625,
+			"seed": 2056276208,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
-			"seed": 2056276208,
-			"version": 100,
-			"versionNonce": 1823091728,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703931097111,
+			"boundElements": [],
+			"updated": 1704314726070,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "c7ZXzLTlLKtgYMHwAkZ02",
+				"focus": 0.28724175517865386,
+				"gap": 2.444831121534662
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -41862,74 +42138,66 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					50.47802734375,
 					2687.95947265625
 				]
-			],
-			"lastCommittedPoint": [
-				50.47802734375,
-				2687.95947265625
-			],
-			"startBinding": null,
-			"endBinding": {
-				"elementId": "c7ZXzLTlLKtgYMHwAkZ02",
-				"focus": 0.28724175517865386,
-				"gap": 2.444831121534662
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			]
 		},
 		{
-			"id": "rvqrmFw6",
 			"type": "text",
-			"x": -3008.7342101234544,
-			"y": -6014.569216847252,
-			"width": 568.1546630859375,
-			"height": 40.77440534319158,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 191,
+			"versionNonce": 763130700,
+			"isDeleted": false,
+			"id": "rvqrmFw6",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3008.7342101234544,
+			"y": -6014.569216847252,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 568.1546630859375,
+			"height": 40.77440534319158,
+			"seed": 229246192,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 229246192,
-			"version": 175,
-			"versionNonce": 1421584912,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388344338,
 			"link": null,
 			"locked": false,
-			"text": "THE UNIT PARABOLIC FUNCTION",
-			"rawText": "THE UNIT PARABOLIC FUNCTION",
 			"fontSize": 32.619524274553264,
 			"fontFamily": 1,
+			"text": "THE UNIT PARABOLIC FUNCTION",
+			"rawText": "THE UNIT PARABOLIC FUNCTION",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 27,
 			"containerId": null,
 			"originalText": "THE UNIT PARABOLIC FUNCTION",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 28
 		},
 		{
-			"id": "hhfNiy8GUmixDKhJ8Dy4f",
 			"type": "line",
-			"x": -2971.208168456788,
-			"y": -5970.98337598625,
-			"width": 486.37766520182277,
-			"height": 0,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 135,
+			"versionNonce": 1545319544,
+			"isDeleted": false,
+			"id": "hhfNiy8GUmixDKhJ8Dy4f",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2971.208168456788,
+			"y": -5970.98337598625,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 486.37766520182277,
+			"height": 0,
+			"seed": 359739120,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -41937,14 +42205,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 359739120,
-			"version": 128,
-			"versionNonce": 31189008,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726071,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
 			"points": [
 				[
 					0,
@@ -41954,151 +42223,150 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					486.37766520182277,
 					0
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
+			]
 		},
 		{
-			"id": "cJchVIt7",
 			"type": "text",
+			"version": 306,
+			"versionNonce": 1763670732,
+			"isDeleted": false,
+			"id": "cJchVIt7",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -3185.3109623319824,
 			"y": -5936.401335562812,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 1057.3389892578125,
 			"height": 75,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1737139440,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1737139440,
-			"version": 293,
-			"versionNonce": 1547986448,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348389,
 			"link": null,
 			"locked": false,
-			"text": "The continuous-time unit parabolic function p(t), also called unit acceleration signal starts at t = 0, and\nis defined as:\n",
-			"rawText": "The continuous-time unit parabolic function p(t), also called unit acceleration signal starts at t = 0, and\nis defined as:\n",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "The continuous-time unit parabolic function p(t), also called unit acceleration signal starts at t = 0, and\nis defined as:\n",
+			"rawText": "The continuous-time unit parabolic function p(t), also called unit acceleration signal starts at t = 0, and\nis defined as:\n",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 66,
 			"containerId": null,
 			"originalText": "The continuous-time unit parabolic function p(t), also called unit acceleration signal starts at t = 0, and\nis defined as:\n",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 67
 		},
 		{
-			"id": "YYIGU6FW",
 			"type": "text",
-			"x": -2934.589221609326,
-			"y": -5812.211500968086,
-			"width": 68.55990600585938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 141,
+			"versionNonce": 1455646708,
+			"isDeleted": false,
+			"id": "YYIGU6FW",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2934.589221609326,
+			"y": -5812.211500968086,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 68.55990600585938,
+			"height": 25,
+			"seed": 1276269072,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1276269072,
-			"version": 128,
-			"versionNonce": 283976720,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "vZYG5WRhuW4HKmkVSJ3Jw",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348390,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "p(t) = ",
 			"rawText": "p(t) = ",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "p(t) = ",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "SCSSanET",
 			"type": "text",
+			"version": 197,
+			"versionNonce": 2004762956,
+			"isDeleted": false,
+			"id": "SCSSanET",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2750.29211772749,
 			"y": -5829.482085074531,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 106.4998779296875,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 422243856,
 			"groupIds": [
 				"k286v5rEBGmXeQV-kucoF",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 422243856,
-			"version": 184,
-			"versionNonce": 1105158160,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348391,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "for t >= 0",
 			"rawText": "for t >= 0",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "for t >= 0",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "RBr8cAc2",
 			"type": "text",
+			"version": 165,
+			"versionNonce": 2004502900,
+			"isDeleted": false,
+			"id": "RBr8cAc2",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2826.929309499951,
 			"y": -5845.4858845130075,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 11.29998779296875,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1586888208,
 			"groupIds": [
 				"O5BjthEuaNfLov6THEGww",
 				"k286v5rEBGmXeQV-kucoF",
@@ -42106,40 +42374,40 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1586888208,
-			"version": 152,
-			"versionNonce": 1025039888,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348391,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "t",
 			"rawText": "t",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "t",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "eBAW4pxk",
 			"type": "text",
+			"version": 172,
+			"versionNonce": 188757964,
+			"isDeleted": false,
+			"id": "eBAW4pxk",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2822.263934744092,
 			"y": -5812.3167103186715,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 14.239990234375,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 501118480,
 			"groupIds": [
 				"O5BjthEuaNfLov6THEGww",
 				"k286v5rEBGmXeQV-kucoF",
@@ -42147,40 +42415,40 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 501118480,
-			"version": 159,
-			"versionNonce": 1349688336,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348391,
 			"link": null,
 			"locked": false,
-			"text": "2",
-			"rawText": "2",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "2",
+			"rawText": "2",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "2",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "xMBFe1tC",
 			"type": "text",
-			"x": -2812.3522831327637,
-			"y": -5853.741347159492,
-			"width": 8.324539184570225,
-			"height": 14.614720669672554,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 202,
+			"versionNonce": 1910045428,
+			"isDeleted": false,
+			"id": "xMBFe1tC",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2812.3522831327637,
+			"y": -5853.741347159492,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 8.324539184570225,
+			"height": 14.614720669672554,
+			"seed": 1740958448,
 			"groupIds": [
 				"O5BjthEuaNfLov6THEGww",
 				"k286v5rEBGmXeQV-kucoF",
@@ -42188,40 +42456,40 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1740958448,
-			"version": 187,
-			"versionNonce": 233085456,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348391,
 			"link": null,
 			"locked": false,
-			"text": "2",
-			"rawText": "2",
 			"fontSize": 11.691776535738043,
 			"fontFamily": 1,
+			"text": "2",
+			"rawText": "2",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 9,
 			"containerId": null,
 			"originalText": "2",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 10
 		},
 		{
-			"id": "2wWIxLmihcQJBJs-6xFRU",
 			"type": "line",
-			"x": -2835.830905569287,
-			"y": -5821.0962360755075,
-			"width": 39.43603515625,
-			"height": 0,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 172,
+			"versionNonce": 328789000,
+			"isDeleted": false,
+			"id": "2wWIxLmihcQJBJs-6xFRU",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2835.830905569287,
+			"y": -5821.0962360755075,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 39.43603515625,
+			"height": 0,
+			"seed": 1966858480,
 			"groupIds": [
 				"O5BjthEuaNfLov6THEGww",
 				"k286v5rEBGmXeQV-kucoF",
@@ -42231,14 +42499,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 1966858480,
-			"version": 165,
-			"versionNonce": 140957712,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726071,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
 			"points": [
 				[
 					0,
@@ -42248,62 +42517,57 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					39.43603515625,
 					0
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
+			]
 		},
 		{
-			"id": "nAdhbswR",
 			"type": "text",
-			"x": -2820.679309499951,
-			"y": -5770.256544913398,
-			"width": 170.31979370117188,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 214,
+			"versionNonce": 1887395404,
+			"isDeleted": false,
+			"id": "nAdhbswR",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2820.679309499951,
+			"y": -5770.256544913398,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 170.31979370117188,
+			"height": 25,
+			"seed": 1868601072,
 			"groupIds": [
 				"k286v5rEBGmXeQV-kucoF",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1868601072,
-			"version": 201,
-			"versionNonce": 871454224,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "vZYG5WRhuW4HKmkVSJ3Jw",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348391,
 			"link": null,
 			"locked": false,
-			"text": "0      for t < 0",
-			"rawText": "0      for t < 0",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "0      for t < 0",
+			"rawText": "0      for t < 0",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "0      for t < 0",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 134,
-			"versionNonce": 318706192,
+			"version": 147,
+			"versionNonce": 1617263732,
 			"isDeleted": false,
 			"id": "FV71CyYV",
 			"fillStyle": "solid",
@@ -42326,7 +42590,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42338,12 +42602,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "t",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 141,
-			"versionNonce": 1936871440,
+			"version": 154,
+			"versionNonce": 1612035276,
 			"isDeleted": false,
 			"id": "7wf9PFsV",
 			"fillStyle": "solid",
@@ -42366,7 +42630,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42378,12 +42642,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 169,
-			"versionNonce": 516804112,
+			"version": 184,
+			"versionNonce": 484822516,
 			"isDeleted": false,
 			"id": "tzOTN5HT",
 			"fillStyle": "solid",
@@ -42406,7 +42670,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.691776535738043,
@@ -42418,12 +42682,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
 			"type": "line",
-			"version": 147,
-			"versionNonce": 235506704,
+			"version": 154,
+			"versionNonce": 1889008248,
 			"isDeleted": false,
 			"id": "AVkKIGeYrlGvHGfMPLdAb",
 			"fillStyle": "solid",
@@ -42448,7 +42712,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726071,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -42468,59 +42732,63 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			]
 		},
 		{
-			"id": "iq1trtgD",
 			"type": "text",
-			"x": -3064.589221609326,
-			"y": -5693.461500968086,
-			"width": 28.079971313476562,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 137,
+			"versionNonce": 1738357580,
+			"isDeleted": false,
+			"id": "iq1trtgD",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3064.589221609326,
+			"y": -5693.461500968086,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 28.079971313476562,
+			"height": 25,
+			"seed": 1434922000,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1434922000,
-			"version": 124,
-			"versionNonce": 1528662544,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
-			"text": "OR",
-			"rawText": "OR",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "OR",
+			"rawText": "OR",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "OR",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "d4krxJJ6ArSCO4_LMjj3b",
 			"type": "arrow",
-			"x": -2843.7180591947754,
-			"y": -5821.0962360755075,
-			"width": 27.605209350585938,
-			"height": 19.718017578125,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 138,
+			"versionNonce": 1772219256,
+			"isDeleted": false,
+			"id": "d4krxJJ6ArSCO4_LMjj3b",
 			"fillStyle": "solid",
 			"strokeWidth": 0.5,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2843.7180591947754,
+			"y": -5821.0962360755075,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 27.605209350585938,
+			"height": 19.718017578125,
+			"seed": 329539088,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -42528,14 +42796,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 329539088,
-			"version": 131,
-			"versionNonce": 553764880,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726071,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -42545,28 +42814,27 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					-27.605209350585938,
 					19.718017578125
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			]
 		},
 		{
-			"id": "vZYG5WRhuW4HKmkVSJ3Jw",
 			"type": "arrow",
-			"x": -2831.8872333891113,
-			"y": -5761.9421833411325,
-			"width": 27.605209350585938,
-			"height": 27.605209350585938,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 466,
+			"versionNonce": 1784588296,
+			"isDeleted": false,
+			"id": "vZYG5WRhuW4HKmkVSJ3Jw",
 			"fillStyle": "solid",
 			"strokeWidth": 0.5,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2831.8872333891113,
+			"y": -5761.9421833411325,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 27.605209350585938,
+			"height": 27.605209350585938,
+			"seed": 631701744,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -42574,25 +42842,10 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 631701744,
-			"version": 459,
-			"versionNonce": 1302020336,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049475,
+			"boundElements": [],
+			"updated": 1704314726071,
 			"link": null,
 			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-27.605209350585938,
-					-27.605209350585938
-				]
-			],
-			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "nAdhbswR",
 				"focus": -0.9439102977248194,
@@ -42603,130 +42856,141 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"focus": -0.6552532788652513,
 				"gap": 6.536872863769531
 			},
+			"lastCommittedPoint": null,
 			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-27.605209350585938,
+					-27.605209350585938
+				]
+			]
 		},
 		{
-			"id": "QHUy5vCk",
 			"type": "text",
+			"version": 159,
+			"versionNonce": 1482682228,
+			"isDeleted": false,
+			"id": "QHUy5vCk",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2852.388064993115,
 			"y": -5670.010344351875,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 68.55990600585938,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 808290032,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 808290032,
-			"version": 146,
-			"versionNonce": 1209730064,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "p(t) = ",
 			"rawText": "p(t) = ",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "p(t) = ",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "57mVA6m5",
 			"type": "text",
+			"version": 152,
+			"versionNonce": 1366290892,
+			"isDeleted": false,
+			"id": "57mVA6m5",
+			"fillStyle": "solid",
+			"strokeWidth": 0.5,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2725.4162479765137,
 			"y": -5669.482161368476,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 37.71995544433594,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 0.5,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 912169712,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 912169712,
-			"version": 139,
-			"versionNonce": 1145045520,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348392,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "u(t)",
 			"rawText": "u(t)",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "u(t)",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "ET7FP59O",
 			"type": "text",
-			"x": -3179.589221609326,
-			"y": -5583.461500968086,
-			"width": 699.4192504882812,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 204,
+			"versionNonce": 857334004,
+			"isDeleted": false,
+			"id": "ET7FP59O",
 			"fillStyle": "solid",
 			"strokeWidth": 0.5,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3179.589221609326,
+			"y": -5583.461500968086,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 699.4192504882812,
+			"height": 25,
+			"seed": 2045247728,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 2045247728,
-			"version": 191,
-			"versionNonce": 789921808,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348393,
 			"link": null,
 			"locked": false,
-			"text": "The shifted version of the unit parabolic sequence p(t - a) is given by",
-			"rawText": "The shifted version of the unit parabolic sequence p(t - a) is given by",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "The shifted version of the unit parabolic sequence p(t - a) is given by",
+			"rawText": "The shifted version of the unit parabolic sequence p(t - a) is given by",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "The shifted version of the unit parabolic sequence p(t - a) is given by",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 205,
-			"versionNonce": 1217576464,
+			"version": 218,
+			"versionNonce": 212326476,
 			"isDeleted": false,
 			"id": "XPUDYBI6",
 			"fillStyle": "solid",
@@ -42757,7 +43021,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348394,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42769,12 +43033,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "p(t - a) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 244,
-			"versionNonce": 1001175056,
+			"version": 257,
+			"versionNonce": 1419354740,
 			"isDeleted": false,
 			"id": "KOAF4bgB",
 			"fillStyle": "solid",
@@ -42797,7 +43061,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348395,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42809,12 +43073,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "for t >= a",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 251,
-			"versionNonce": 1132148240,
+			"version": 264,
+			"versionNonce": 354348748,
 			"isDeleted": false,
 			"id": "NR9ndnOr",
 			"fillStyle": "solid",
@@ -42843,7 +43107,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348395,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42855,12 +43119,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 234,
-			"versionNonce": 1905324560,
+			"version": 247,
+			"versionNonce": 61158388,
 			"isDeleted": false,
 			"id": "R0GfB58S",
 			"fillStyle": "solid",
@@ -42884,7 +43148,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348395,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -42896,12 +43160,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 285,
-			"versionNonce": 1690841104,
+			"version": 300,
+			"versionNonce": 1534014796,
 			"isDeleted": false,
 			"id": "lVu18gtY",
 			"fillStyle": "solid",
@@ -42925,7 +43189,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348395,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.691776535738043,
@@ -42937,12 +43201,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
 			"type": "line",
-			"version": 254,
-			"versionNonce": 711437840,
+			"version": 261,
+			"versionNonce": 145211512,
 			"isDeleted": false,
 			"id": "LkoflJZdpKZOxAF7E5-en",
 			"fillStyle": "solid",
@@ -42968,7 +43232,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -42989,8 +43253,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 261,
-			"versionNonce": 1265069072,
+			"version": 274,
+			"versionNonce": 1044551028,
 			"isDeleted": false,
 			"id": "GBMG4EUQ",
 			"fillStyle": "solid",
@@ -43018,7 +43282,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43030,12 +43294,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "0      for t < a",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 203,
-			"versionNonce": 1214752784,
+			"version": 216,
+			"versionNonce": 754101196,
 			"isDeleted": false,
 			"id": "LpMiOcfZ",
 			"fillStyle": "solid",
@@ -43058,7 +43322,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43070,12 +43334,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 172,
-			"versionNonce": 1532503568,
+			"version": 185,
+			"versionNonce": 1370998516,
 			"isDeleted": false,
 			"id": "NDGgzcbh",
 			"fillStyle": "solid",
@@ -43098,7 +43362,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43110,12 +43374,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 215,
-			"versionNonce": 2005459984,
+			"version": 230,
+			"versionNonce": 465785420,
 			"isDeleted": false,
 			"id": "ucOkFdZg",
 			"fillStyle": "solid",
@@ -43138,7 +43402,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.691776535738043,
@@ -43150,12 +43414,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
 			"type": "line",
-			"version": 180,
-			"versionNonce": 183624208,
+			"version": 187,
+			"versionNonce": 200638728,
 			"isDeleted": false,
 			"id": "8lRt3q0Xx04hO2zzJf1HL",
 			"fillStyle": "solid",
@@ -43180,7 +43444,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -43201,8 +43465,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 154,
-			"versionNonce": 76226576,
+			"version": 167,
+			"versionNonce": 1921697908,
 			"isDeleted": false,
 			"id": "yVd1ekta",
 			"fillStyle": "solid",
@@ -43224,7 +43488,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43236,12 +43500,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "OR",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 610,
-			"versionNonce": 1200866544,
+			"version": 617,
+			"versionNonce": 716185608,
 			"isDeleted": false,
 			"id": "4JTmiAxmqOnTkiN3jxdpX",
 			"fillStyle": "solid",
@@ -43265,7 +43529,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049480,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -43294,8 +43558,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 876,
-			"versionNonce": 943409392,
+			"version": 883,
+			"versionNonce": 803718264,
 			"isDeleted": false,
 			"id": "b2PShKTlypBriCo5tarqo",
 			"fillStyle": "solid",
@@ -43319,7 +43583,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049480,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -43348,8 +43612,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 213,
-			"versionNonce": 455629328,
+			"version": 226,
+			"versionNonce": 1723541708,
 			"isDeleted": false,
 			"id": "sE4FxUEJ",
 			"fillStyle": "solid",
@@ -43371,7 +43635,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43383,12 +43647,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "p(t - a) = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 173,
-			"versionNonce": 926062608,
+			"version": 186,
+			"versionNonce": 1417779700,
 			"isDeleted": false,
 			"id": "olrpKV8a",
 			"fillStyle": "solid",
@@ -43410,7 +43674,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348396,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -43422,62 +43686,66 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "u(t - a)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
-			"id": "wTxyvsl6",
 			"type": "text",
-			"x": -3144.2789057556192,
-			"y": -5244.439639965088,
-			"width": 672.8392944335938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 146,
+			"versionNonce": 1635004236,
+			"isDeleted": false,
+			"id": "wTxyvsl6",
 			"fillStyle": "solid",
 			"strokeWidth": 0.5,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3144.2789057556192,
+			"y": -5244.439639965088,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 672.8392944335938,
+			"height": 25,
+			"seed": 2119664656,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 2119664656,
-			"version": 133,
-			"versionNonce": 323294736,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
-			"text": "The graphical representations of p(t) and p(t - a) are shown below:",
-			"rawText": "The graphical representations of p(t) and p(t - a) are shown below:",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "The graphical representations of p(t) and p(t - a) are shown below:",
+			"rawText": "The graphical representations of p(t) and p(t - a) are shown below:",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "The graphical representations of p(t) and p(t - a) are shown below:",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "9SGIhgwR2MKoLt6I6ltfo",
 			"type": "arrow",
-			"x": -3171.6724532625126,
-			"y": -4913.9346997077355,
-			"width": 398.99977740119493,
-			"height": 0,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 244,
+			"versionNonce": 1068172920,
+			"isDeleted": false,
+			"id": "9SGIhgwR2MKoLt6I6ltfo",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3171.6724532625126,
+			"y": -4913.9346997077355,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 398.99977740119493,
+			"height": 0,
+			"seed": 181596912,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -43485,14 +43753,19 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 181596912,
-			"version": 237,
-			"versionNonce": 1438952176,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049482,
+			"boundElements": [],
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "oDsoocav",
+				"focus": 1.1481330343524314,
+				"gap": 1.8516629294053928
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -43502,32 +43775,27 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					398.99977740119493,
 					0
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": {
-				"elementId": "oDsoocav",
-				"focus": 1.1481330343524314,
-				"gap": 1.8516629294053928
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			]
 		},
 		{
-			"id": "upxNgd4aWOI-LkZ782iO1",
 			"type": "arrow",
-			"x": -3065.891131456446,
-			"y": -4865.683536449463,
-			"width": 0,
-			"height": 302.49755859375,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 266,
+			"versionNonce": 692632840,
+			"isDeleted": false,
+			"id": "upxNgd4aWOI-LkZ782iO1",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3065.891131456446,
+			"y": -4865.683536449463,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 302.49755859375,
+			"seed": 281550576,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -43535,14 +43803,19 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 281550576,
-			"version": 259,
-			"versionNonce": 2144455920,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049483,
+			"boundElements": [],
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "ZbGINOX0",
+				"focus": 1.2526199515923067,
+				"gap": 4.574941695511825
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -43552,21 +43825,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					0,
 					-302.49755859375
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": {
-				"elementId": "ZbGINOX0",
-				"focus": 1.2526199515923067,
-				"gap": 4.574941695511825
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			]
 		},
 		{
 			"type": "arrow",
-			"version": 215,
-			"versionNonce": 1877651184,
+			"version": 222,
+			"versionNonce": 2054387576,
 			"isDeleted": false,
 			"id": "wSsdzDL4rGCBYvXGw8f4N",
 			"fillStyle": "solid",
@@ -43590,7 +43854,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049484,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -43615,8 +43879,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "arrow",
-			"version": 215,
-			"versionNonce": 1855410416,
+			"version": 222,
+			"versionNonce": 842783752,
 			"isDeleted": false,
 			"id": "pt94Cx1xVJaac-FLDozzY",
 			"fillStyle": "solid",
@@ -43640,7 +43904,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049485,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -43664,20 +43928,24 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			]
 		},
 		{
-			"id": "FRrq9nzKwYEmQJX3mWUcF",
 			"type": "line",
-			"x": -3064.4363069484307,
-			"y": -4914.703750754025,
-			"width": 147.22785101996533,
-			"height": 236.61614312065922,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 182,
+			"versionNonce": 84265080,
+			"isDeleted": false,
+			"id": "FRrq9nzKwYEmQJX3mWUcF",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3064.4363069484307,
+			"y": -4914.703750754025,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 147.22785101996533,
+			"height": 236.61614312065922,
+			"seed": 2050644496,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -43685,14 +43953,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 2050644496,
-			"version": 175,
-			"versionNonce": 553995280,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
 			"points": [
 				[
 					0,
@@ -43714,20 +43983,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					147.22785101996533,
 					-236.61614312065922
 				]
-			],
-			"lastCommittedPoint": [
-				147.22785101996533,
-				-236.61614312065922
-			],
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
+			]
 		},
 		{
 			"type": "line",
-			"version": 212,
-			"versionNonce": 413223440,
+			"version": 219,
+			"versionNonce": 225647368,
 			"isDeleted": false,
 			"id": "6p4YeE384El_EuIhb2L35",
 			"fillStyle": "solid",
@@ -43751,7 +44012,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726072,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -43783,511 +44044,515 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			]
 		},
 		{
-			"id": "bljhlHfo",
 			"type": "text",
-			"x": -2432.8032774345456,
-			"y": -4889.000388395084,
-			"width": 13.759994506835938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 79,
+			"versionNonce": 1117928308,
+			"isDeleted": false,
+			"id": "bljhlHfo",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2432.8032774345456,
+			"y": -4889.000388395084,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 13.759994506835938,
+			"height": 25,
+			"seed": 2075566608,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 2075566608,
-			"version": 66,
-			"versionNonce": 2014152720,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "pt94Cx1xVJaac-FLDozzY",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "0",
 			"rawText": "0",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "0",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "gn4z02NS",
 			"type": "text",
+			"version": 83,
+			"versionNonce": 1548248524,
+			"isDeleted": false,
+			"id": "gn4z02NS",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2334.9001741359343,
 			"y": -4897.2944218694765,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 13.339981079101562,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1426020368,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1426020368,
-			"version": 70,
-			"versionNonce": 523682832,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
-			"text": "a",
-			"rawText": "a",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "a",
+			"rawText": "a",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "a",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "145U9vB2",
 			"type": "text",
-			"x": -2144.258559010066,
-			"y": -4895.885933913747,
-			"width": 11.29998779296875,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 89,
+			"versionNonce": 926067956,
+			"isDeleted": false,
+			"id": "145U9vB2",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2144.258559010066,
+			"y": -4895.885933913747,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.29998779296875,
+			"height": 25,
+			"seed": 1662384368,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1662384368,
-			"version": 76,
-			"versionNonce": 1105445392,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "wSsdzDL4rGCBYvXGw8f4N",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
-			"text": "t",
-			"rawText": "t",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "t",
+			"rawText": "t",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "t",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "oDsoocav",
 			"type": "text",
-			"x": -2771.3947216619763,
-			"y": -4912.08303677833,
-			"width": 11.29998779296875,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 88,
+			"versionNonce": 206687308,
+			"isDeleted": false,
+			"id": "oDsoocav",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2771.3947216619763,
+			"y": -4912.08303677833,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.29998779296875,
+			"height": 25,
+			"seed": 1859181072,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1859181072,
-			"version": 75,
-			"versionNonce": 4619792,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "9SGIhgwR2MKoLt6I6ltfo",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "t",
 			"rawText": "t",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "t",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "1wWqXFif",
 			"type": "text",
+			"version": 78,
+			"versionNonce": 1941499508,
+			"isDeleted": false,
+			"id": "1wWqXFif",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -3049.469944101212,
 			"y": -4899.000388395084,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 13.759994506835938,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1150351376,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1150351376,
-			"version": 65,
-			"versionNonce": 1512716816,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348397,
 			"link": null,
 			"locked": false,
-			"text": "0",
-			"rawText": "0",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "0",
+			"rawText": "0",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "0",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "ZbGINOX0",
 			"type": "text",
-			"x": -3061.3161897609343,
-			"y": -5189.093924772037,
-			"width": 36.21995544433594,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 100,
+			"versionNonce": 1936351948,
+			"isDeleted": false,
+			"id": "ZbGINOX0",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3061.3161897609343,
+			"y": -5189.093924772037,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 36.21995544433594,
+			"height": 25,
+			"seed": 1203656944,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1203656944,
-			"version": 87,
-			"versionNonce": 2063104016,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "upxNgd4aWOI-LkZ782iO1",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932049154,
+			"updated": 1706388348398,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "p(t)",
 			"rawText": "p(t)",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "p(t)",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "M1BCkwdc",
 			"type": "text",
+			"version": 87,
+			"versionNonce": 419102708,
+			"isDeleted": false,
+			"id": "M1BCkwdc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2426.136610767879,
 			"y": -5181.222610617307,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 77.77989196777344,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 391574256,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 391574256,
-			"version": 74,
-			"versionNonce": 941995024,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348398,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "p(t - a)",
 			"rawText": "p(t - a)",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "p(t - a)",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "ab4cVO59",
 			"type": "text",
+			"version": 196,
+			"versionNonce": 1210853708,
+			"isDeleted": false,
+			"id": "ab4cVO59",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -3061.9766897575428,
 			"y": -4775.333798870078,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 903.5191650390625,
 			"height": 50,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 283255824,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 283255824,
-			"version": 183,
-			"versionNonce": 1064612368,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348399,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "The unit parabolic function can be obtained by integrating the unit ramp function or double\nintegrating the unit step function",
 			"rawText": "The unit parabolic function can be obtained by integrating the unit ramp function or double\nintegrating the unit step function",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 41,
 			"containerId": null,
 			"originalText": "The unit parabolic function can be obtained by integrating the unit ramp function or double\nintegrating the unit step function",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 42
 		},
 		{
-			"id": "Py0kh4Jh",
 			"type": "text",
+			"version": 135,
+			"versionNonce": 1056891252,
+			"isDeleted": false,
+			"id": "Py0kh4Jh",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2904.1015702303616,
 			"y": -4682.853192790976,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 614.0994873046875,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1243018992,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1243018992,
-			"version": 122,
-			"versionNonce": 1077145616,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348400,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "p(t) =     u(t) dt =   r(t) dt =   tdt =          for t >= 0",
 			"rawText": "p(t) =     u(t) dt =   r(t) dt =   tdt =          for t >= 0",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "p(t) =     u(t) dt =   r(t) dt =   tdt =          for t >= 0",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "HYPzD8XW",
 			"type": "text",
+			"version": 101,
+			"versionNonce": 1576083404,
+			"isDeleted": false,
+			"id": "HYPzD8XW",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2460.3120194491116,
 			"y": -4700.302655681601,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 11.29998779296875,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 851161840,
 			"groupIds": [
 				"EEDaUZ2qfGf5fjQJD3mJi",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 851161840,
-			"version": 88,
-			"versionNonce": 576417296,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348400,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "t",
 			"rawText": "t",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "t",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "2lfW7OCe",
 			"type": "text",
+			"version": 109,
+			"versionNonce": 218796788,
+			"isDeleted": false,
+			"id": "2lfW7OCe",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2456.931526285049,
 			"y": -4664.7673163261325,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 14.239990234375,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1530833936,
 			"groupIds": [
 				"EEDaUZ2qfGf5fjQJD3mJi",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1530833936,
-			"version": 96,
-			"versionNonce": 249768976,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348400,
 			"link": null,
 			"locked": false,
-			"text": "2",
-			"rawText": "2",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "2",
+			"rawText": "2",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "2",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "sNh8bB0p",
 			"type": "text",
-			"x": -2444.6066361483304,
-			"y": -4704.93565128707,
-			"width": 7.930236816406253,
-			"height": 13.922475868808618,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 151,
+			"versionNonce": 215172684,
+			"isDeleted": false,
+			"id": "sNh8bB0p",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2444.6066361483304,
+			"y": -4704.93565128707,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 7.930236816406253,
+			"height": 13.922475868808618,
+			"seed": 1103111184,
 			"groupIds": [
 				"EEDaUZ2qfGf5fjQJD3mJi",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1103111184,
-			"version": 137,
-			"versionNonce": 1338190352,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348400,
 			"link": null,
 			"locked": false,
-			"text": "2",
-			"rawText": "2",
 			"fontSize": 11.137980695046894,
 			"fontFamily": 1,
+			"text": "2",
+			"rawText": "2",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 9,
 			"containerId": null,
 			"originalText": "2",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 10
 		},
 		{
-			"id": "EpMSvWTbp18bFcUoMMgAV",
 			"type": "line",
-			"x": -2469.293525796768,
-			"y": -4673.2858710136325,
-			"width": 34.70367431640625,
-			"height": 0,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 115,
+			"versionNonce": 912949112,
+			"isDeleted": false,
+			"id": "EpMSvWTbp18bFcUoMMgAV",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2469.293525796768,
+			"y": -4673.2858710136325,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 34.70367431640625,
+			"height": 0,
+			"seed": 509549072,
 			"groupIds": [
 				"EEDaUZ2qfGf5fjQJD3mJi",
 				"7YqY8ICnsj5opCX1Y-KNS"
@@ -44296,14 +44561,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 509549072,
-			"version": 108,
-			"versionNonce": 804481040,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
 			"points": [
 				[
 					0,
@@ -44313,17 +44579,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					34.70367431640625,
 					0
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
+			]
 		},
 		{
 			"type": "line",
-			"version": 4632,
-			"versionNonce": 1533797904,
+			"version": 4639,
+			"versionNonce": 454644744,
 			"isDeleted": false,
 			"id": "M19GGfazmqlqDY5xI_P4n",
 			"fillStyle": "solid",
@@ -44347,7 +44608,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -44432,8 +44693,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4647,
-			"versionNonce": 1059365904,
+			"version": 4654,
+			"versionNonce": 1021038712,
 			"isDeleted": false,
 			"id": "pSNDpmYH_pouZXiy4OxM3",
 			"fillStyle": "solid",
@@ -44457,7 +44718,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -44542,8 +44803,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4641,
-			"versionNonce": 1763025424,
+			"version": 4648,
+			"versionNonce": 1809945352,
 			"isDeleted": false,
 			"id": "hO6TTUbbSw4LF_la3apwO",
 			"fillStyle": "solid",
@@ -44567,7 +44828,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -44652,8 +44913,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "line",
-			"version": 4641,
-			"versionNonce": 1748426768,
+			"version": 4648,
+			"versionNonce": 1794834808,
 			"isDeleted": false,
 			"id": "4O4yJlKf_6bEs_jjV5X4I",
 			"fillStyle": "solid",
@@ -44677,7 +44938,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -44761,178 +45022,182 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			]
 		},
 		{
-			"id": "fjlPvrf1",
 			"type": "text",
+			"version": 244,
+			"versionNonce": 1369707636,
+			"isDeleted": false,
+			"id": "fjlPvrf1",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -3073.5089798983304,
 			"y": -4625.585492595664,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 992.1790161132812,
 			"height": 50,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 817108496,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 817108496,
-			"version": 231,
-			"versionNonce": 746610192,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348401,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "The ramp function is the derivative of the parabolic function and step function is double derivative\nof the parabolic function",
 			"rawText": "The ramp function is the derivative of the parabolic function and step function is double derivative\nof the parabolic function",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 41,
 			"containerId": null,
 			"originalText": "The ramp function is the derivative of the parabolic function and step function is double derivative\nof the parabolic function",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 42
 		},
 		{
-			"id": "JuW0iiuc",
 			"type": "text",
+			"version": 109,
+			"versionNonce": 430742732,
+			"isDeleted": false,
+			"id": "JuW0iiuc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2781.8473588045804,
 			"y": -4564.782514080039,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 364.9595947265625,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 107068432,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 107068432,
-			"version": 96,
-			"versionNonce": 1726618640,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "r(t) =     p(t);      u(t) =      p(t)",
 			"rawText": "r(t) =     p(t);      u(t) =      p(t)",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "r(t) =     p(t);      u(t) =      p(t)",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "Ad0zILn3",
 			"type": "text",
+			"version": 102,
+			"versionNonce": 445736436,
+			"isDeleted": false,
+			"id": "Ad0zILn3",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": -2710.6166764315335,
 			"y": -4575.162885173789,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 11.379989624023438,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1406745616,
 			"groupIds": [
 				"Bi6hwJsWzIsJOt9JZ96Zm",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1406745616,
-			"version": 89,
-			"versionNonce": 1768692240,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "d",
 			"rawText": "d",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "d",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "QuXxbG4b",
 			"type": "text",
-			"x": -2712.4601212557523,
-			"y": -4545.2336249198825,
-			"width": 22.679977416992188,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 118,
+			"versionNonce": 504832844,
+			"isDeleted": false,
+			"id": "QuXxbG4b",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2712.4601212557523,
+			"y": -4545.2336249198825,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 22.679977416992188,
+			"height": 25,
+			"seed": 278049808,
 			"groupIds": [
 				"Bi6hwJsWzIsJOt9JZ96Zm",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 278049808,
-			"version": 105,
-			"versionNonce": 117331984,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
-			"text": "dt",
-			"rawText": "dt",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "dt",
+			"rawText": "dt",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "dt",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "9sdwPIpx5TVRSOrLYKC3o",
 			"type": "line",
-			"x": -2719.9382706698148,
-			"y": -4549.7370428886325,
-			"width": 37.85858154296875,
-			"height": 0,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 98,
+			"versionNonce": 443224072,
+			"isDeleted": false,
+			"id": "9sdwPIpx5TVRSOrLYKC3o",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2719.9382706698148,
+			"y": -4549.7370428886325,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.85858154296875,
+			"height": 0,
+			"seed": 265725168,
 			"groupIds": [
 				"Bi6hwJsWzIsJOt9JZ96Zm",
 				"7YqY8ICnsj5opCX1Y-KNS"
@@ -44941,14 +45206,15 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 2
 			},
-			"seed": 265725168,
-			"version": 91,
-			"versionNonce": 1939396112,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
 			"points": [
 				[
 					0,
@@ -44958,57 +45224,52 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					37.85858154296875,
 					0
 				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
+			]
 		},
 		{
-			"id": "9jyl4b2x",
 			"type": "text",
-			"x": -2482.1386185702054,
-			"y": -4584.824567302695,
-			"width": 7.9210662841796875,
-			"height": 13.922475868808615,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 128,
+			"versionNonce": 1289258868,
+			"isDeleted": false,
+			"id": "9jyl4b2x",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2482.1386185702054,
+			"y": -4584.824567302695,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 7.930236816406251,
+			"height": 13.922475868808615,
+			"seed": 1676361456,
 			"groupIds": [
 				"ibQ2DX2Fn5ufBAz9xITLX",
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1676361456,
-			"version": 114,
-			"versionNonce": 607360016,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
-			"text": "2",
-			"rawText": "2",
 			"fontSize": 11.137980695046892,
 			"fontFamily": 1,
+			"text": "2",
+			"rawText": "2",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 8,
 			"containerId": null,
 			"originalText": "2",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 10
 		},
 		{
 			"type": "text",
-			"version": 82,
-			"versionNonce": 784765456,
+			"version": 95,
+			"versionNonce": 1886181836,
 			"isDeleted": false,
 			"id": "K8wlFZmL",
 			"fillStyle": "solid",
@@ -45032,7 +45293,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -45044,12 +45305,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "d",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 98,
-			"versionNonce": 709480464,
+			"version": 111,
+			"versionNonce": 1019181300,
 			"isDeleted": false,
 			"id": "WYysiwdj",
 			"fillStyle": "solid",
@@ -45073,7 +45334,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -45085,12 +45346,12 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "dt",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
-			"version": 84,
-			"versionNonce": 246763024,
+			"version": 91,
+			"versionNonce": 39628296,
 			"isDeleted": false,
 			"id": "WKs8Fx0-XZZGZlXcDZgde",
 			"fillStyle": "solid",
@@ -45116,7 +45377,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -45137,8 +45398,8 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		},
 		{
 			"type": "text",
-			"version": 107,
-			"versionNonce": 352390160,
+			"version": 121,
+			"versionNonce": 197640268,
 			"isDeleted": false,
 			"id": "ZC938EFW",
 			"fillStyle": "solid",
@@ -45161,7 +45422,7 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1703932049154,
+			"updated": 1706388348403,
 			"link": null,
 			"locked": false,
 			"fontSize": 11.137980695046892,
@@ -45173,62 +45434,66 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 9
+			"baseline": 10
 		},
 		{
-			"id": "FzDSaYBI",
 			"type": "text",
-			"x": -2925.38237136765,
-			"y": -4490.73162856165,
-			"width": 516.4393920898438,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 113,
+			"versionNonce": 1171012212,
+			"isDeleted": false,
+			"id": "FzDSaYBI",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -2925.38237136765,
+			"y": -4490.73162856165,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 516.4393920898438,
+			"height": 25,
+			"seed": 1392514288,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1392514288,
-			"version": 100,
-			"versionNonce": 388303376,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1703932049154,
+			"boundElements": [],
+			"updated": 1706388348404,
 			"link": null,
 			"locked": false,
-			"text": "The same applies for discrete time parabolic signals",
-			"rawText": "The same applies for discrete time parabolic signals",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "The same applies for discrete time parabolic signals",
+			"rawText": "The same applies for discrete time parabolic signals",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "The same applies for discrete time parabolic signals",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "aXY-O4G4IHm5NEvVO66Rp",
 			"type": "rectangle",
-			"x": -3256.0970320121824,
-			"y": -6055.387688674499,
-			"width": 1230.4039306640634,
-			"height": 1640.5384521484386,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 215,
+			"versionNonce": 1155106680,
+			"isDeleted": false,
+			"id": "aXY-O4G4IHm5NEvVO66Rp",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -3256.0970320121824,
+			"y": -6055.387688674499,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1230.4039306640634,
+			"height": 1640.5384521484386,
+			"seed": 969473552,
 			"groupIds": [
 				"7YqY8ICnsj5opCX1Y-KNS"
 			],
@@ -45236,48 +45501,57 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 			"roundness": {
 				"type": 3
 			},
-			"seed": 969473552,
-			"version": 208,
-			"versionNonce": 1735164144,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "4lXWzC-yfpfZeQr_QwGYN",
 					"type": "arrow"
 				}
 			],
-			"updated": 1703932062023,
+			"updated": 1704314726073,
 			"link": null,
 			"locked": false
 		},
 		{
-			"id": "4lXWzC-yfpfZeQr_QwGYN",
 			"type": "arrow",
-			"x": -1539.8881697074944,
-			"y": -1374.19591621356,
-			"width": 473.23242187500045,
-			"height": 3400.962890625002,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 161,
+			"versionNonce": 889113608,
+			"isDeleted": false,
+			"id": "4lXWzC-yfpfZeQr_QwGYN",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": -1539.8881697074944,
+			"y": -1374.19591621356,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 473.23242187500045,
+			"height": 3400.962890625002,
+			"seed": 970798096,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
-			"seed": 970798096,
-			"version": 154,
-			"versionNonce": 858296560,
-			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1703932066179,
+			"updated": 1704314726074,
 			"link": null,
 			"locked": false,
+			"startBinding": {
+				"elementId": "DOfM1hI5A0MC6AWsUQ4Zb",
+				"focus": 0.12094475853072544,
+				"gap": 22.236058913559646
+			},
+			"endBinding": {
+				"elementId": "aXY-O4G4IHm5NEvVO66Rp",
+				"focus": -0.4911714812279569,
+				"gap": 12.57250976562409
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
@@ -45295,107 +45569,10626 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 					-473.23242187500045,
 					-3400.962890625002
 				]
-			],
-			"lastCommittedPoint": [
-				-473.23242187500045,
-				-3400.962890625002
-			],
-			"startBinding": {
-				"elementId": "DOfM1hI5A0MC6AWsUQ4Zb",
-				"focus": 0.12094475853072544,
-				"gap": 22.236058913559646
-			},
-			"endBinding": {
-				"elementId": "aXY-O4G4IHm5NEvVO66Rp",
-				"focus": -0.4911714812279569,
-				"gap": 12.57250976562409
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			]
 		},
 		{
-			"id": "7bJETWEI",
 			"type": "text",
-			"x": -2441.0966228858997,
-			"y": -4390.276135694284,
-			"width": 9.999984741210938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 194,
+			"versionNonce": 2013386444,
+			"isDeleted": false,
+			"id": "SEJTeMBa",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
-			"strokeStyle": "solid",
+			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 215.10721496956307,
+			"y": -736.2142328636729,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 236.04382896903897,
+			"height": 35.75843490616318,
+			"seed": 841932664,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 770836720,
-			"version": 2,
-			"versionNonce": 1473313808,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1703931988598,
+			"boundElements": [],
+			"updated": 1706388348404,
 			"link": null,
 			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 20,
+			"fontSize": 28.606747924930545,
 			"fontFamily": 1,
+			"text": "INTRODUCTION",
+			"rawText": "INTRODUCTION",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
-			"originalText": "",
-			"lineHeight": 1.25
+			"originalText": "INTRODUCTION",
+			"lineHeight": 1.25,
+			"baseline": 25
 		},
 		{
-			"id": "fwEQSv5o",
-			"type": "text",
-			"x": -1867.6378009020536,
-			"y": -3262.0849737870494,
-			"width": 9.999984741210938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"type": "line",
+			"version": 107,
+			"versionNonce": 441977608,
+			"isDeleted": false,
+			"id": "p9SbA5wluoXuqKzfXl1iD",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 206.4177061920547,
+			"y": -699.5455623300531,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 272.6400553385417,
+			"height": 0,
+			"seed": 1386658936,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					272.6400553385417,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 686,
+			"versionNonce": 1657064436,
+			"isDeleted": false,
+			"id": "Hf7zIetZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 193.24931220326408,
+			"y": -680.732497675897,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 898.3590698242188,
+			"height": 200,
+			"seed": 1338490632,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1298006544,
-			"version": 2,
-			"versionNonce": 1538460912,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1703932063861,
+			"boundElements": [],
+			"updated": 1706388348405,
 			"link": null,
 			"locked": false,
-			"text": "",
-			"rawText": "",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "A system is a mathematical model of a physical process that relates the input \n(or excitation) signal to the output (or response) signal\n    Let x and y be the input and output signals, respectively, of a system. then the\nsystem is viewed as a transformation (or mapping) of x into y. The transformation by the\nmathematical notation is: \n                                         y = Tx\nWhere T is the operator representing some well defined rule by which x is transformed into\ny.",
+			"rawText": "A system is a mathematical model of a physical process that relates the input \n(or excitation) signal to the output (or response) signal\n    Let x and y be the input and output signals, respectively, of a system. then the\nsystem is viewed as a transformation (or mapping) of x into y. The transformation by the\nmathematical notation is: \n                                         y = Tx\nWhere T is the operator representing some well defined rule by which x is transformed into\ny.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A system is a mathematical model of a physical process that relates the input \n(or excitation) signal to the output (or response) signal\n    Let x and y be the input and output signals, respectively, of a system. then the\nsystem is viewed as a transformation (or mapping) of x into y. The transformation by the\nmathematical notation is: \n                                         y = Tx\nWhere T is the operator representing some well defined rule by which x is transformed into\ny.",
+			"lineHeight": 1.25,
+			"baseline": 192
+		},
+		{
+			"type": "rectangle",
+			"version": 741,
+			"versionNonce": 540109320,
+			"isDeleted": false,
+			"id": "vqYh1LtDN4q1yYBHmCq8c",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 174.76309931381337,
+			"y": -760.0137723527539,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 929.3381129673547,
+			"height": 438.42312317344283,
+			"seed": 1667162632,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [
+				{
+					"id": "9o5LgrYetVzili0jT8pbY",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "rectangle",
+			"version": 50,
+			"versionNonce": 1165499000,
+			"isDeleted": false,
+			"id": "zRfi3IQ0oJQCLWEIcR6pu",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 305.25431404179744,
+			"y": -449.6229253656404,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 160.8582096446741,
+			"height": 76.8544819395886,
+			"seed": 185597560,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [
+				{
+					"id": "AbP3dbaHsh7XNc06PhN0F",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "rectangle",
+			"version": 103,
+			"versionNonce": 25618696,
+			"isDeleted": false,
+			"id": "L3wzYqMyCRjUmdgpTarKl",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 785.5450922147647,
+			"y": -454.48842453486606,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 160.8582096446741,
+			"height": 76.8544819395886,
+			"seed": 312695304,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [
+				{
+					"id": "b40PAwr2LGtQml0R47WUT",
+					"type": "arrow"
+				},
+				{
+					"id": "ZIHW70VOKw5FUZTc_5CuZ",
+					"type": "arrow"
+				},
+				{
+					"id": "Lc4mpBW4rBAet7IkeP59V",
+					"type": "arrow"
+				},
+				{
+					"type": "text",
+					"id": "BVapNawx"
+				}
+			],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "text",
+			"version": 14,
+			"versionNonce": 1836977016,
+			"isDeleted": false,
+			"id": "BVapNawx",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 832.9742351840745,
+			"y": -428.56118356507176,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 65.99992370605469,
+			"height": 25,
+			"seed": 60984696,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "system",
+			"rawText": "system",
 			"textAlign": "center",
 			"verticalAlign": "middle",
-			"baseline": 16,
-			"containerId": "4lXWzC-yfpfZeQr_QwGYN",
-			"originalText": "",
-			"lineHeight": 1.25
+			"containerId": "L3wzYqMyCRjUmdgpTarKl",
+			"originalText": "system",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "arrow",
+			"version": 41,
+			"versionNonce": 970229768,
+			"isDeleted": false,
+			"id": "AbP3dbaHsh7XNc06PhN0F",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 467.6699147765404,
+			"y": -408.418958198967,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 97.0925468328104,
+			"height": 0,
+			"seed": 1560648456,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "zRfi3IQ0oJQCLWEIcR6pu",
+				"focus": 0.07225931726562816,
+				"gap": 1.557391090068819
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					97.0925468328104,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 41,
+			"versionNonce": 1637735544,
+			"isDeleted": false,
+			"id": "PXhlSp_VPYTiR5yN4I8Tl",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 208.0397255264037,
+			"y": -410.7095278065576,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 102.6553587369585,
+			"height": 0,
+			"seed": 294371592,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					102.6553587369585,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 22,
+			"versionNonce": 833953100,
+			"isDeleted": false,
+			"id": "6WJkdegU",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 337.3405877203776,
+			"y": -423.5181006011201,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 92.07989501953125,
+			"height": 25,
+			"seed": 1337779064,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348406,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "system T",
+			"rawText": "system T",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "system T",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 15,
+			"versionNonce": 1169108340,
+			"isDeleted": false,
+			"id": "jbCqolY9",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 229.82358638227197,
+			"y": -442.2167095294863,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.239990234375,
+			"height": 25,
+			"seed": 1625179400,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348407,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x",
+			"rawText": "x",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 29,
+			"versionNonce": 305894348,
+			"isDeleted": false,
+			"id": "96INNA79",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 503.1505080990275,
+			"y": -443.47884993965397,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 9.379989624023438,
+			"height": 25,
+			"seed": 833585416,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348408,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y",
+			"rawText": "y",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "arrow",
+			"version": 70,
+			"versionNonce": 119384098,
+			"isDeleted": false,
+			"id": "b40PAwr2LGtQml0R47WUT",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 670.4563514301221,
+			"y": -443.33861607905374,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 109.38683369912928,
+			"height": 0,
+			"seed": 1086293880,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1707774349630,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "L3wzYqMyCRjUmdgpTarKl",
+				"gap": 5.701907085513312,
+				"focus": 0.7098462399479417
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					109.38683369912928,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 46,
+			"versionNonce": 921052424,
+			"isDeleted": false,
+			"id": "CuULcUT2xTgqhuyoyubdM",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 670.7968795311343,
+			"y": -393.59528706788547,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 109.38683369912928,
+			"height": 0,
+			"seed": 500542840,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726074,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					109.38683369912928,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 94,
+			"versionNonce": 1854375842,
+			"isDeleted": false,
+			"id": "Lc4mpBW4rBAet7IkeP59V",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 950.0139087112257,
+			"y": -447.4473007538492,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 109.3868336991294,
+			"height": 0,
+			"seed": 501088376,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1707774349630,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "L3wzYqMyCRjUmdgpTarKl",
+				"gap": 3.6106068517868835,
+				"focus": -0.8167673867985603
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					109.3868336991294,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 92,
+			"versionNonce": 389567458,
+			"isDeleted": false,
+			"id": "ZIHW70VOKw5FUZTc_5CuZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 951.4630394904491,
+			"y": -390.8839802137286,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 109.38683369912928,
+			"height": 0,
+			"seed": 1406353672,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1707774349630,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "L3wzYqMyCRjUmdgpTarKl",
+				"gap": 5.059737631010194,
+				"focus": 0.6551915442259748
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					109.38683369912928,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 81,
+			"versionNonce": 111684044,
+			"isDeleted": false,
+			"id": "UY5rCPwr",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 717.3431076116377,
+			"y": -437.58877814108405,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 3.0182952880859375,
+			"height": 41.34251819484734,
+			"seed": 1226978424,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388344354,
+			"link": null,
+			"locked": false,
+			"fontSize": 11.024671518625956,
+			"fontFamily": 1,
+			"text": ".\n.\n.",
+			"rawText": ".\n.\n.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": ".\n.\n.",
+			"lineHeight": 1.25,
+			"baseline": 37
+		},
+		{
+			"type": "text",
+			"version": 43,
+			"versionNonce": 916531444,
+			"isDeleted": false,
+			"id": "sbCCxWZe",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 992.8525943862616,
+			"y": -439.6549413270524,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 3.0182952880859375,
+			"height": 41.34251819484734,
+			"seed": 1640599160,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388344354,
+			"link": null,
+			"locked": false,
+			"fontSize": 11.024671518625956,
+			"fontFamily": 1,
+			"text": ".\n.\n.",
+			"rawText": ".\n.\n.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": ".\n.\n.",
+			"lineHeight": 1.25,
+			"baseline": 37
+		},
+		{
+			"type": "text",
+			"version": 24,
+			"versionNonce": 1875992308,
+			"isDeleted": false,
+			"id": "6ajyRaTn",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 709.0689531885668,
+			"y": -472.46171517748127,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 16.659988403320312,
+			"height": 25,
+			"seed": 736523784,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348410,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x1",
+			"rawText": "x1",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x1",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 28,
+			"versionNonce": 934230604,
+			"isDeleted": false,
+			"id": "b0RHF1gU",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 710.7985516889902,
+			"y": -396.96607449624946,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 20.579986572265625,
+			"height": 25,
+			"seed": 455197560,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348411,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "xn",
+			"rawText": "xn",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "xn",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 27,
+			"versionNonce": 1236361332,
+			"isDeleted": false,
+			"id": "VKE0220g",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 980.853231109188,
+			"y": -473.8641251130151,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 14.79998779296875,
+			"height": 25,
+			"seed": 1829587720,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348412,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y1",
+			"rawText": "y1",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y1",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 29,
+			"versionNonce": 1827279052,
+			"isDeleted": false,
+			"id": "E2DLdqHm",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 980.0585487892763,
+			"y": -391.9174415260467,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 18.719985961914062,
+			"height": 25,
+			"seed": 959800840,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348412,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "yn",
+			"rawText": "yn",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "yn",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 67,
+			"versionNonce": 991244788,
+			"isDeleted": false,
+			"id": "V50M8d4V",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 300.03688288055605,
+			"y": -354.5202236693142,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 183.03977966308594,
+			"height": 25,
+			"seed": 1129896200,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348413,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "single input system",
+			"rawText": "single input system",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "single input system",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 49,
+			"versionNonce": 294000460,
+			"isDeleted": false,
+			"id": "MBrnqgam",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 785.9669681405661,
+			"y": -362.1399296330738,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 175.41978454589844,
+			"height": 25,
+			"seed": 1537827592,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348413,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "multi-input system",
+			"rawText": "multi-input system",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "multi-input system",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 181,
+			"versionNonce": 1124258676,
+			"isDeleted": false,
+			"id": "C54uWVbu",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 410.0314798600717,
+			"y": -175.24728203679277,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 484.13958740234375,
+			"height": 25,
+			"seed": 1695770120,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348414,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "DETERMINISTIC AND  STOCHASTIC SYSTEMS:",
+			"rawText": "DETERMINISTIC AND  STOCHASTIC SYSTEMS:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "DETERMINISTIC AND  STOCHASTIC SYSTEMS:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 119,
+			"versionNonce": 1553514248,
+			"isDeleted": false,
+			"id": "0m5jEKyQ-l_xBl3meLVgY",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 408.58231341608223,
+			"y": -145.23595193677673,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 493.08236879827996,
+			"height": 0,
+			"seed": 886444408,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					493.08236879827996,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 372,
+			"versionNonce": 31280588,
+			"isDeleted": false,
+			"id": "T3jr4bei",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 410.4989022855616,
+			"y": -130.5108259375004,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 857.5592041015625,
+			"height": 125,
+			"seed": 891049592,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348416,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "If the input and output signals x and y are deterministic signals (defined for every \ninstant of t), then the system is called a deterministic system.\n\nIf the input and output signals x and y are random signals, then the system is called\na stochastic system",
+			"rawText": "If the input and output signals x and y are deterministic signals (defined for every \ninstant of t), then the system is called a deterministic system.\n\nIf the input and output signals x and y are random signals, then the system is called\na stochastic system",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "If the input and output signals x and y are deterministic signals (defined for every \ninstant of t), then the system is called a deterministic system.\n\nIf the input and output signals x and y are random signals, then the system is called\na stochastic system",
+			"lineHeight": 1.25,
+			"baseline": 117
+		},
+		{
+			"type": "text",
+			"version": 147,
+			"versionNonce": 1266064864,
+			"isDeleted": false,
+			"id": "h7LFhakG",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 623.7565499528939,
+			"y": -236.81249687104366,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 355.78436279296875,
+			"height": 28.36575531346852,
+			"seed": 2081576824,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1705925336530,
+			"link": null,
+			"locked": false,
+			"fontSize": 22.692604250774814,
+			"fontFamily": 1,
+			"text": "CLASSIFICATION OF SYSTEMS",
+			"rawText": "CLASSIFICATION OF SYSTEMS",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "CLASSIFICATION OF SYSTEMS",
+			"lineHeight": 1.25,
+			"baseline": 20
+		},
+		{
+			"type": "line",
+			"version": 145,
+			"versionNonce": 693839480,
+			"isDeleted": false,
+			"id": "ED50dHfQfS_hDhG8drmlw",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 628.8519394315522,
+			"y": -206.4271860329162,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 324.794852778218,
+			"height": 0,
+			"seed": 1484423432,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					324.794852778218,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 108,
+			"versionNonce": 264258804,
+			"isDeleted": false,
+			"id": "dWYITJqz",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 409.84441816148393,
+			"y": 39.13223651534031,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 539.6394653320312,
+			"height": 25,
+			"seed": 180275064,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348421,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "CONTINUOUS-TIME AND DISCRETE-TIME SYSTEMS:",
+			"rawText": "CONTINUOUS-TIME AND DISCRETE-TIME SYSTEMS:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "CONTINUOUS-TIME AND DISCRETE-TIME SYSTEMS:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 93,
+			"versionNonce": 2032113528,
+			"isDeleted": false,
+			"id": "iAqooGfKnA_AoNnRk6ZWm",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 401.804028448307,
+			"y": 63.25345915202047,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 563.7630698896708,
+			"height": 0,
+			"seed": 841284104,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					563.7630698896708,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 323,
+			"versionNonce": 2131342412,
+			"isDeleted": false,
+			"id": "2p4t1S99",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 397.550095630399,
+			"y": 77.27741584829471,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 890.5189208984375,
+			"height": 75,
+			"seed": 873108856,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348423,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "If the input and output signals are continuous-time signals, then the system is called\na continuous-time system. If the input and output are discrete-time signals or sequences\nthen the system is called a discrete-time system.",
+			"rawText": "If the input and output signals are continuous-time signals, then the system is called\na continuous-time system. If the input and output are discrete-time signals or sequences\nthen the system is called a discrete-time system.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "If the input and output signals are continuous-time signals, then the system is called\na continuous-time system. If the input and output are discrete-time signals or sequences\nthen the system is called a discrete-time system.",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "text",
+			"version": 70,
+			"versionNonce": 382961268,
+			"isDeleted": false,
+			"id": "veqGAO4h",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 402.9727450034791,
+			"y": 189.42227724527055,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 406.5196228027344,
+			"height": 25,
+			"seed": 1126682488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348424,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "SYSTEMS WITH AND WITHOUT MEMORY",
+			"rawText": "SYSTEMS WITH AND WITHOUT MEMORY",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "SYSTEMS WITH AND WITHOUT MEMORY",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 73,
+			"versionNonce": 1197275912,
+			"isDeleted": false,
+			"id": "vzjQdUi6-y3vE60Fhz4iV",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 400.21469947324977,
+			"y": 213.16951914383966,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 419.03584106388837,
+			"height": 0,
+			"seed": 2059253000,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					419.03584106388837,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 717,
+			"versionNonce": 384125644,
+			"isDeleted": false,
+			"id": "FY8pCEi0",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 399.08539503969456,
+			"y": 227.09437616017397,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 883.5391235351562,
+			"height": 250,
+			"seed": 438548488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348426,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "A system is said to be memory-less if the output at any time depends on only the input\nat that same time. Otherwise, the system is said to have memory. An example of a \nmemoryless system is a Resistor R with the input x(t) taken as the current and the\nvoltage taken as the output y(t). The input-output relationship (Ohm's law) of a \nresistor is \n                                y(t) = Rx(t)\nAn example of a system with memory is a capacitor C with the current as the input x(t)\nand the voltage as the output y(t); then:\n                            \n                               ",
+			"rawText": "A system is said to be memory-less if the output at any time depends on only the input\nat that same time. Otherwise, the system is said to have memory. An example of a \nmemoryless system is a Resistor R with the input x(t) taken as the current and the\nvoltage taken as the output y(t). The input-output relationship (Ohm's law) of a \nresistor is \n                                y(t) = Rx(t)\nAn example of a system with memory is a capacitor C with the current as the input x(t)\nand the voltage as the output y(t); then:\n                            \n                               ",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A system is said to be memory-less if the output at any time depends on only the input\nat that same time. Otherwise, the system is said to have memory. An example of a \nmemoryless system is a Resistor R with the input x(t) taken as the current and the\nvoltage taken as the output y(t). The input-output relationship (Ohm's law) of a \nresistor is \n                                y(t) = Rx(t)\nAn example of a system with memory is a capacitor C with the current as the input x(t)\nand the voltage as the output y(t); then:\n                            \n                               ",
+			"lineHeight": 1.25,
+			"baseline": 242
+		},
+		{
+			"type": "text",
+			"version": 60,
+			"versionNonce": 755144692,
+			"isDeleted": false,
+			"id": "U6tObEAI",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 422.6529909560455,
+			"y": 552.3155528479929,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 363.47967529296875,
+			"height": 25,
+			"seed": 1956453128,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348427,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "CAUSAL AND NONCAUSAL SYSTEMS:",
+			"rawText": "CAUSAL AND NONCAUSAL SYSTEMS:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "CAUSAL AND NONCAUSAL SYSTEMS:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 58,
+			"versionNonce": 806722936,
+			"isDeleted": false,
+			"id": "SUfkCGx7EqMBo1FeCplY3",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 414.61260124286855,
+			"y": 571.4816555313812,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 375.28109331833,
+			"height": 0,
+			"seed": 1743105400,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					375.28109331833,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 598,
+			"versionNonce": 201986380,
+			"isDeleted": false,
+			"id": "8YDFKcSJ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 393.4364145054734,
+			"y": 582.2332986015658,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 899.6989135742188,
+			"height": 200,
+			"seed": 96629368,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348429,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "A system is called casual if its output at the present time depends on only the present\nand // or past values of the input. Thus, in a casual system, it is not possible to obtain\nan output before an input is applied to the system. \nA system is called noncausal (or anticipative) if its output at the present time depends\non future values of the input. Examples of noncasual systems are:\n                            y(t) = x(t + 1)\n                            y[n] = x[-n]\nNOTE: all memoryless systems are casual, but not vice versa.",
+			"rawText": "A system is called casual if its output at the present time depends on only the present\nand // or past values of the input. Thus, in a casual system, it is not possible to obtain\nan output before an input is applied to the system. \nA system is called noncausal (or anticipative) if its output at the present time depends\non future values of the input. Examples of noncasual systems are:\n                            y(t) = x(t + 1)\n                            y[n] = x[-n]\nNOTE: all memoryless systems are casual, but not vice versa.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A system is called casual if its output at the present time depends on only the present\nand // or past values of the input. Thus, in a casual system, it is not possible to obtain\nan output before an input is applied to the system. \nA system is called noncausal (or anticipative) if its output at the present time depends\non future values of the input. Examples of noncasual systems are:\n                            y(t) = x(t + 1)\n                            y[n] = x[-n]\nNOTE: all memoryless systems are casual, but not vice versa.",
+			"lineHeight": 1.25,
+			"baseline": 192
+		},
+		{
+			"type": "rectangle",
+			"version": 298,
+			"versionNonce": 1332948600,
+			"isDeleted": false,
+			"id": "Unj1OkIejwFfI4TDpSXnc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 361.9577198904417,
+			"y": -260.0155940039922,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 982.7979656913965,
+			"height": 2357.3176469609402,
+			"seed": 452276088,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [
+				{
+					"id": "yuzuVKBf4ZbzoPL4zBed0",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "arrow",
+			"version": 197,
+			"versionNonce": 2004292872,
+			"isDeleted": false,
+			"id": "yuzuVKBf4ZbzoPL4zBed0",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 225.63358366124612,
+			"y": -326.66127904022886,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 135.32413622919552,
+			"height": 234.01863279150035,
+			"seed": 1165403656,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726075,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "Unj1OkIejwFfI4TDpSXnc",
+				"gap": 1,
+				"focus": 0.769478391724152
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					28.44107822800595,
+					221.20850527864678
+				],
+				[
+					135.32413622919552,
+					234.01863279150035
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 59,
+			"versionNonce": 508787060,
+			"isDeleted": false,
+			"id": "5nCEV44N",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 394.7579252221101,
+			"y": 807.9829544490499,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 465.29962158203125,
+			"height": 25,
+			"seed": 2106509320,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348430,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "LINEAR SYSTEMS AND NON-LINEAR SYSTEMS",
+			"rawText": "LINEAR SYSTEMS AND NON-LINEAR SYSTEMS",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "LINEAR SYSTEMS AND NON-LINEAR SYSTEMS",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 61,
+			"versionNonce": 1491022856,
+			"isDeleted": false,
+			"id": "x6NZU2_IYkacMR4AL0Nze",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 380.65276962090775,
+			"y": 831.0869733986397,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 486.69081594610316,
+			"height": 0,
+			"seed": 1633612664,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					486.69081594610316,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 214,
+			"versionNonce": 1037174732,
+			"isDeleted": false,
+			"id": "jvZjcnvg",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 376.88579057215145,
+			"y": 848.6242278566409,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 956.638916015625,
+			"height": 50,
+			"seed": 1171252488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348432,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "If the operator T satisfies the following two conditions, then T is called a linear operator and\nthe system represented by a linear operator T is called a LINEAR SYSTEM:",
+			"rawText": "If the operator T satisfies the following two conditions, then T is called a linear operator and\nthe system represented by a linear operator T is called a LINEAR SYSTEM:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "If the operator T satisfies the following two conditions, then T is called a linear operator and\nthe system represented by a linear operator T is called a LINEAR SYSTEM:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "text",
+			"version": 866,
+			"versionNonce": 1175202548,
+			"isDeleted": false,
+			"id": "Kfr0L8rZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 387.837090375834,
+			"y": 925.2364262987835,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 948.9990844726562,
+			"height": 400,
+			"seed": 1521099640,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348434,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "1. Additivity:\nGiven that Tx1 = y1 and Tx2 = y2, then\n                                T{x1 + x2} = y1 + y2\nfor any signals x1 and x2\n\n2. Homogeneity (or scalling):\n                                T{ax} = ay\nfor any signals x and any scalar a.\n    Any system that does not satisfy the above two conditions are classified as nonlinear \nsystems. The above two conditions can be combined into a single condition as:\n                            T{a1x1 + a2x2} = a1y1 + a2y2\nWhere a1 and a2 are arbitrary scalars. This above equation is known as the SUPERPOSITION\nPROPERTY. \n\nNOTE: A consequence of the homogeneity property of linear systems is that a zero input yeilds\na zero output.",
+			"rawText": "1. Additivity:\nGiven that Tx1 = y1 and Tx2 = y2, then\n                                T{x1 + x2} = y1 + y2\nfor any signals x1 and x2\n\n2. Homogeneity (or scalling):\n                                T{ax} = ay\nfor any signals x and any scalar a.\n    Any system that does not satisfy the above two conditions are classified as nonlinear \nsystems. The above two conditions can be combined into a single condition as:\n                            T{a1x1 + a2x2} = a1y1 + a2y2\nWhere a1 and a2 are arbitrary scalars. This above equation is known as the SUPERPOSITION\nPROPERTY. \n\nNOTE: A consequence of the homogeneity property of linear systems is that a zero input yeilds\na zero output.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "1. Additivity:\nGiven that Tx1 = y1 and Tx2 = y2, then\n                                T{x1 + x2} = y1 + y2\nfor any signals x1 and x2\n\n2. Homogeneity (or scalling):\n                                T{ax} = ay\nfor any signals x and any scalar a.\n    Any system that does not satisfy the above two conditions are classified as nonlinear \nsystems. The above two conditions can be combined into a single condition as:\n                            T{a1x1 + a2x2} = a1y1 + a2y2\nWhere a1 and a2 are arbitrary scalars. This above equation is known as the SUPERPOSITION\nPROPERTY. \n\nNOTE: A consequence of the homogeneity property of linear systems is that a zero input yeilds\na zero output.",
+			"lineHeight": 1.25,
+			"baseline": 392
+		},
+		{
+			"type": "text",
+			"version": 75,
+			"versionNonce": 274148940,
+			"isDeleted": false,
+			"id": "nZjoBjrR",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 378.032299397039,
+			"y": 1356.9127523765376,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 496.799560546875,
+			"height": 25,
+			"seed": 1377002760,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348435,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "TIME-INVARIANT AND TIME-VARYING SYSTEMS:",
+			"rawText": "TIME-INVARIANT AND TIME-VARYING SYSTEMS:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "TIME-INVARIANT AND TIME-VARYING SYSTEMS:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 54,
+			"versionNonce": 1159189000,
+			"isDeleted": false,
+			"id": "MvzZyiHfGJkJISKJX_aZa",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 376.442320314928,
+			"y": 1384.648854775358,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 515.1496761196436,
+			"height": 0,
+			"seed": 1019708168,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					515.1496761196436,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 466,
+			"versionNonce": 649243764,
+			"isDeleted": false,
+			"id": "nsZdgYN4",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 379.57807799572646,
+			"y": 1405.8042658753557,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 940.4591064453125,
+			"height": 125,
+			"seed": 590787080,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348436,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "A system is called time-invariant if a time shift (delay or advance) in the input signal causes\nthe same time shift in the output. Thus for a continuous-time system, the system is invariant\nif:\n                                   T{x(t - T)} = y(t - T)\nA system which does not satisfy the above equation is called a time-varying system.",
+			"rawText": "A system is called time-invariant if a time shift (delay or advance) in the input signal causes\nthe same time shift in the output. Thus for a continuous-time system, the system is invariant\nif:\n                                   T{x(t - T)} = y(t - T)\nA system which does not satisfy the above equation is called a time-varying system.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A system is called time-invariant if a time shift (delay or advance) in the input signal causes\nthe same time shift in the output. Thus for a continuous-time system, the system is invariant\nif:\n                                   T{x(t - T)} = y(t - T)\nA system which does not satisfy the above equation is called a time-varying system.",
+			"lineHeight": 1.25,
+			"baseline": 117
+		},
+		{
+			"type": "text",
+			"version": 105,
+			"versionNonce": 1416856780,
+			"isDeleted": false,
+			"id": "a6VhHlMj",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 374.6756909302823,
+			"y": 1561.8419294745013,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 187.8798370361328,
+			"height": 50,
+			"seed": 687611512,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348438,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "STABLE SYSTEMS:\n",
+			"rawText": "STABLE SYSTEMS:\n",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "STABLE SYSTEMS:\n",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "line",
+			"version": 52,
+			"versionNonce": 877601656,
+			"isDeleted": false,
+			"id": "X9pkVXdv3v-U9k0N1izj3",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 378.03229097308576,
+			"y": 1589.0480641178117,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 187.61622597634323,
+			"height": 0,
+			"seed": 998126456,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					187.61622597634323,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 377,
+			"versionNonce": 34405876,
+			"isDeleted": false,
+			"id": "N8Tj0y70",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 381.2122238654479,
+			"y": 1621.951554307738,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 962.2988891601562,
+			"height": 150,
+			"seed": 1391767160,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348440,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "A system is bounded-input / bounded-output (BIBO) stable if for any bounded input x defined by\n                                        |x| <= k1\nThe corresponding output y is also bounded defined by\n                                        |y| <= k2\nwhere k1 and k2 are finite real constants. An unstable system is one in which not all bounded\ninputs lead to bounded outputs.",
+			"rawText": "A system is bounded-input / bounded-output (BIBO) stable if for any bounded input x defined by\n                                        |x| <= k1\nThe corresponding output y is also bounded defined by\n                                        |y| <= k2\nwhere k1 and k2 are finite real constants. An unstable system is one in which not all bounded\ninputs lead to bounded outputs.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A system is bounded-input / bounded-output (BIBO) stable if for any bounded input x defined by\n                                        |x| <= k1\nThe corresponding output y is also bounded defined by\n                                        |y| <= k2\nwhere k1 and k2 are finite real constants. An unstable system is one in which not all bounded\ninputs lead to bounded outputs.",
+			"lineHeight": 1.25,
+			"baseline": 142
+		},
+		{
+			"type": "text",
+			"version": 39,
+			"versionNonce": 801180492,
+			"isDeleted": false,
+			"id": "v9hYw58t",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 388.5879004933493,
+			"y": 1813.9843495337188,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 213.3598175048828,
+			"height": 25,
+			"seed": 1160879224,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348441,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "FEEDBACK SYSTEMS:",
+			"rawText": "FEEDBACK SYSTEMS:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "FEEDBACK SYSTEMS:",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 50,
+			"versionNonce": 397782792,
+			"isDeleted": false,
+			"id": "D_Si1TGv08nurO6CqMKNn",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 374.9406748080374,
+			"y": 1836.994748865443,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 235.31526990549622,
+			"height": 0,
+			"seed": 47150088,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					235.31526990549622,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 230,
+			"versionNonce": 1897996148,
+			"isDeleted": false,
+			"id": "EHMUeUKK",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 398.87853455981127,
+			"y": 1860.4467486816432,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 907.4591674804688,
+			"height": 75,
+			"seed": 215349368,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348442,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "A special case of systems of great importance consists of systems having feedback. In a \nfeedback system, the output signal is fed back and added to the input to the system as \nshown below:",
+			"rawText": "A special case of systems of great importance consists of systems having feedback. In a \nfeedback system, the output signal is fed back and added to the input to the system as \nshown below:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "A special case of systems of great importance consists of systems having feedback. In a \nfeedback system, the output signal is fed back and added to the input to the system as \nshown below:",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "rectangle",
+			"version": 51,
+			"versionNonce": 1782222344,
+			"isDeleted": false,
+			"id": "4NNXdTbDpFZms1Pww-sAM",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 724.2478373820663,
+			"y": 1960.791398816957,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 200.33593227393192,
+			"height": 66.77870025099992,
+			"seed": 236326920,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [
+				{
+					"id": "wEWaCD2fzTc1hUOPjxtzE",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "text",
+			"version": 28,
+			"versionNonce": 77185484,
+			"isDeleted": false,
+			"id": "k9Ddpbf0",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 790.849803090998,
+			"y": 1980.8426991943707,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 65.99992370605469,
+			"height": 25,
+			"seed": 1681273208,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348443,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "system",
+			"rawText": "system",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "system",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "arrow",
+			"version": 76,
+			"versionNonce": 1993051400,
+			"isDeleted": false,
+			"id": "wEWaCD2fzTc1hUOPjxtzE",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 930.9436522886293,
+			"y": 1994.1807152466436,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 217.82564320948097,
+			"height": 0,
+			"seed": 1870884360,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "4NNXdTbDpFZms1Pww-sAM",
+				"focus": -0.0000010091784767533025,
+				"gap": 6.359882632631013
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					217.82564320948097,
+					0
+				]
+			]
+		},
+		{
+			"type": "ellipse",
+			"version": 45,
+			"versionNonce": 1464182648,
+			"isDeleted": false,
+			"id": "z7Nze3qtL0oItfrvsz6Of",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 598.6403575624828,
+			"y": 1970.3312227659037,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 54.05890128992405,
+			"height": 47.69905235310648,
+			"seed": 1816708872,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [
+				{
+					"id": "StMz_Q_nTFoaSYRPm6cRS",
+					"type": "arrow"
+				},
+				{
+					"id": "xn_A7gF_6RVgOFfxn1mc5",
+					"type": "arrow"
+				},
+				{
+					"id": "-HfOhh6DVAe5a7WuQPfpi",
+					"type": "arrow"
+				}
+			],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "arrow",
+			"version": 37,
+			"versionNonce": 1726262280,
+			"isDeleted": false,
+			"id": "StMz_Q_nTFoaSYRPm6cRS",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 659.0591414850379,
+			"y": 1992.5907445884857,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 66.7786665551863,
+			"height": 0,
+			"seed": 1046594168,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "z7Nze3qtL0oItfrvsz6Of",
+				"focus": -0.06666817370712823,
+				"gap": 6.405964725647028
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					66.7786665551863,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 46,
+			"versionNonce": 1746008184,
+			"isDeleted": false,
+			"id": "xn_A7gF_6RVgOFfxn1mc5",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 478.376949532353,
+			"y": 1998.111500376288,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 109.70779008591262,
+			"height": 0,
+			"seed": 1377952376,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "z7Nze3qtL0oItfrvsz6Of",
+				"focus": -0.16481465521505786,
+				"gap": 10.799023207454006
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					109.70779008591262,
+					0
+				]
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 164,
+			"versionNonce": 1417800456,
+			"isDeleted": false,
+			"id": "-HfOhh6DVAe5a7WuQPfpi",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1030.0958749740453,
+			"y": 1996.52152971813,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 410.21178958425094,
+			"height": 77.90842746647718,
+			"seed": 1689867896,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": {
+				"elementId": "z7Nze3qtL0oItfrvsz6Of",
+				"focus": 0.2140525493339566,
+				"gap": 10.697985016777213
+			},
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					77.90842746647718
+				],
+				[
+					-410.21178958425094,
+					77.90842746647718
+				],
+				[
+					-410.21178958425094,
+					31.79934577152858
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 17,
+			"versionNonce": 2083852532,
+			"isDeleted": false,
+			"id": "KdIPl8PZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1083.4480739663907,
+			"y": 1965.3404684294255,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 35.739959716796875,
+			"height": 25,
+			"seed": 380685576,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348444,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t)",
+			"rawText": "y(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 17,
+			"versionNonce": 1511499852,
+			"isDeleted": false,
+			"id": "UoxAFrB1",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 496.0432433788097,
+			"y": 1965.3404684294255,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.59996032714844,
+			"height": 25,
+			"seed": 1980974600,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348444,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x(t)",
+			"rawText": "x(t)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x(t)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 1838,
+			"versionNonce": 1909996152,
+			"isDeleted": false,
+			"id": "W92bFkTG94VagJcNLAcbF",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 624.9416053204073,
+			"y": 1986.8385398642395,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 12.068738870452815,
+			"height": 21.59956162895954,
+			"seed": 461772552,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					5.84644789572106,
+					0.12237711971079104
+				],
+				[
+					5.842519227215726,
+					1.4278393193729277
+				],
+				[
+					-3.257306684758899,
+					1.8257243425532557
+				],
+				[
+					-3.7166704479940895,
+					3.732502151179979
+				],
+				[
+					1.21104992125652,
+					10.21848949585337
+				],
+				[
+					1.3780912897056963,
+					12.604843330214319
+				],
+				[
+					-2.9649842899728984,
+					17.744682358068722
+				],
+				[
+					-3.8837118164433493,
+					20.131036192429686
+				],
+				[
+					5.88820823783336,
+					20.171722309586592
+				],
+				[
+					5.888208237833343,
+					21.59956162895954
+				],
+				[
+					-6.180530632619456,
+					21.293618829682455
+				],
+				[
+					-4.050753184892565,
+					17.132796759514633
+				],
+				[
+					-0.04176034211232693,
+					12.482466210503512
+				],
+				[
+					-0.29232239478611177,
+					10.4020551754196
+				],
+				[
+					-5.846447895721103,
+					2.937050873059628
+				],
+				[
+					-5.261803106148963,
+					0.7342627182648958
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 65,
+			"versionNonce": 2198560,
+			"isDeleted": false,
+			"id": "9ChQaQoJ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1904.754664627545,
+			"y": -847.3839577107473,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 298.39288330078125,
+			"height": 51.181807084516954,
+			"seed": 1853975672,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1705925336545,
+			"link": null,
+			"locked": false,
+			"fontSize": 40.94544566761356,
+			"fontFamily": 1,
+			"text": "CONVOLUTION",
+			"rawText": "CONVOLUTION",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "CONVOLUTION",
+			"lineHeight": 1.25,
+			"baseline": 36
+		},
+		{
+			"type": "line",
+			"version": 70,
+			"versionNonce": 1490692984,
+			"isDeleted": false,
+			"id": "hKuK4zRR9Rcvd1HA1bSUO",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1870.0118842145987,
+			"y": -792.7138091337382,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 366.5454101562502,
+			"height": 0,
+			"seed": 1579686920,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704314726076,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					366.5454101562502,
+					0
+				]
+			]
+		},
+		{
+			"type": "rectangle",
+			"version": 284,
+			"versionNonce": 459710810,
+			"isDeleted": false,
+			"id": "1Q9OD3fZcoFw0d3K9Ar3d",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1418.396243995443,
+			"y": -878.3655972260171,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "transparent",
+			"width": 2161.7438061206376,
+			"height": 2172.5917601482183,
+			"seed": 1505859592,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [],
+			"updated": 1705059796299,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "arrow",
+			"version": 67,
+			"versionNonce": 1282800760,
+			"isDeleted": false,
+			"id": "9o5LgrYetVzili0jT8pbY",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 908.8338502124678,
+			"y": -779.0837749223433,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 522.5142996651786,
+			"height": 131.6571480887277,
+			"seed": 1951076616,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": {
+				"elementId": "vqYh1LtDN4q1yYBHmCq8c",
+				"focus": -0.3660989968103564,
+				"gap": 19.070002569589462
+			},
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					366.17143903459817,
+					-131.6571480887277
+				],
+				[
+					522.5142996651786,
+					-86.40001569475453
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 58,
+			"versionNonce": 852415092,
+			"isDeleted": false,
+			"id": "i3M1oXaX",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1447.9677940426825,
+			"y": -772.4391826371842,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 165.02667803307256,
+			"height": 25,
+			"seed": 1829549688,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348446,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "INTRODUCTION",
+			"rawText": "INTRODUCTION",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "INTRODUCTION",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 51,
+			"versionNonce": 1584377208,
+			"isDeleted": false,
+			"id": "j_BREY1dXejIEPeAlxF9m",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1430.4249386436868,
+			"y": -747.5820049028092,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 187.20001220703125,
+			"height": 0,
+			"seed": 1463684872,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					187.20001220703125,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 798,
+			"versionNonce": 1142210252,
+			"isDeleted": false,
+			"id": "5SQZBxsv",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1435.3123643842464,
+			"y": -744.6580576139323,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1200.2786865234375,
+			"height": 125,
+			"seed": 889062664,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348448,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "As we have seen before, a system may be regarded as a process that transforms an input signal into an output signal.\nThe system must be capable of accepting input signals, operating on them, and producing output signals. The behavior of\nthe system can be described mathematically either in the time domain, or in the frequency domain. \nHere we will seek to understand a technique called convolution, which is a tool for time-domain analysis of systems. We \nwill learn how to apply it in finding the response of LTI (linear, time-invariant) systems to input signals",
+			"rawText": "As we have seen before, a system may be regarded as a process that transforms an input signal into an output signal.\nThe system must be capable of accepting input signals, operating on them, and producing output signals. The behavior of\nthe system can be described mathematically either in the time domain, or in the frequency domain. \nHere we will seek to understand a technique called convolution, which is a tool for time-domain analysis of systems. We \nwill learn how to apply it in finding the response of LTI (linear, time-invariant) systems to input signals",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "As we have seen before, a system may be regarded as a process that transforms an input signal into an output signal.\nThe system must be capable of accepting input signals, operating on them, and producing output signals. The behavior of\nthe system can be described mathematically either in the time domain, or in the frequency domain. \nHere we will seek to understand a technique called convolution, which is a tool for time-domain analysis of systems. We \nwill learn how to apply it in finding the response of LTI (linear, time-invariant) systems to input signals",
+			"lineHeight": 1.25,
+			"baseline": 117
+		},
+		{
+			"type": "text",
+			"version": 55,
+			"versionNonce": 1135895540,
+			"isDeleted": false,
+			"id": "SpJO6BGL",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1434.390562736811,
+			"y": -525.2891419810792,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 206.79978942871094,
+			"height": 25,
+			"seed": 1863980552,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348449,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "IMPULSE RESPONSE",
+			"rawText": "IMPULSE RESPONSE",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "IMPULSE RESPONSE",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 46,
+			"versionNonce": 206783352,
+			"isDeleted": false,
+			"id": "TaUA7rhDxWUTqwyi74YJV",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1429.1635555887535,
+			"y": -500.7979156624206,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 227.18590599731965,
+			"height": 0,
+			"seed": 1062729224,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704315803727,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					227.18590599731965,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 898,
+			"versionNonce": 1261110604,
+			"isDeleted": false,
+			"id": "WxewNlZZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1431.3642059312579,
+			"y": -491.0575808305563,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1163.5789794921875,
+			"height": 275,
+			"seed": 1049039112,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348450,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "We recall that if x(t) is the input signal and y(t) is the output signal or response of a system, they are related\nthrough the transformation:   y(t) =  x(t)\nwhere   is an operator transforming x(t) into y(t). The impulse response h(t) is the response of the system when the\ninput is the unit impulse function  (t), that is:\n                                                    h(t) =    (t)\nThe impulse response to an LTI system is the output of the system to a unit impulse function.\n                The input x(t) can be expressed as:\n                                                    x(t) =    x(T)  (t - T) dT\n\nWhere T is a dummy variable. The above equation is the shifting property of the unit impulse.\nThe response y(t) to the input x(t) is obtained by combining equtions i and iii",
+			"rawText": "We recall that if x(t) is the input signal and y(t) is the output signal or response of a system, they are related\nthrough the transformation:   y(t) =  x(t)\nwhere   is an operator transforming x(t) into y(t). The impulse response h(t) is the response of the system when the\ninput is the unit impulse function  (t), that is:\n                                                    h(t) =    (t)\nThe impulse response to an LTI system is the output of the system to a unit impulse function.\n                The input x(t) can be expressed as:\n                                                    x(t) =    x(T)  (t - T) dT\n\nWhere T is a dummy variable. The above equation is the shifting property of the unit impulse.\nThe response y(t) to the input x(t) is obtained by combining equtions i and iii",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "We recall that if x(t) is the input signal and y(t) is the output signal or response of a system, they are related\nthrough the transformation:   y(t) =  x(t)\nwhere   is an operator transforming x(t) into y(t). The impulse response h(t) is the response of the system when the\ninput is the unit impulse function  (t), that is:\n                                                    h(t) =    (t)\nThe impulse response to an LTI system is the output of the system to a unit impulse function.\n                The input x(t) can be expressed as:\n                                                    x(t) =    x(T)  (t - T) dT\n\nWhere T is a dummy variable. The above equation is the shifting property of the unit impulse.\nThe response y(t) to the input x(t) is obtained by combining equtions i and iii",
+			"lineHeight": 1.25,
+			"baseline": 267
+		},
+		{
+			"type": "line",
+			"version": 3368,
+			"versionNonce": 2113020936,
+			"isDeleted": false,
+			"id": "BTIQvjGjyPLJ28ejBrMYe",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1767.6901891825387,
+			"y": -421.22588459051565,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 737988360,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3401,
+			"versionNonce": 750256248,
+			"isDeleted": false,
+			"id": "BSOsEFmr7UKI36BSls13e",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2043.5903955746585,
+			"y": -395.54011034735896,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 701248376,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3395,
+			"versionNonce": 455107336,
+			"isDeleted": false,
+			"id": "TU93RmnVUZvpqX4sVJlfz",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2105.4243648092965,
+			"y": -321.02933991577083,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 178134136,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4710,
+			"versionNonce": 1875980664,
+			"isDeleted": false,
+			"id": "5K4gG4CfZom65stBy0ojD",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2040.3544409187737,
+			"y": -333.3064843335409,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 710303496,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3283,
+			"versionNonce": 372163080,
+			"isDeleted": false,
+			"id": "ns0jPhiRKtpAG1FBgJdtH",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2047.5497957127288,
+			"y": -280.20189187368953,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 2034932488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 54,
+			"versionNonce": 983319160,
+			"isDeleted": false,
+			"id": "tRmArpsMbffMQ8Lr83id1",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2018.919217542506,
+			"y": -280.76383193899096,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.873180658400088,
+			"height": 0,
+			"seed": 1340111736,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.873180658400088,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3253,
+			"versionNonce": 2115584264,
+			"isDeleted": false,
+			"id": "s8rSOq86-Z0_MdAfpaCOa",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2045.7451719933554,
+			"y": -340.7318097675156,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 59278456,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 118,
+			"versionNonce": 350995828,
+			"isDeleted": false,
+			"id": "LDY2Kn19",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1883.9388814237218,
+			"y": -467.4446996651518,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 129.45977783203125,
+			"height": 25,
+			"seed": 147279224,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348451,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- i",
+			"rawText": "-------------- i",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- i",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 88,
+			"versionNonce": 1421114316,
+			"isDeleted": false,
+			"id": "zS5k1U4v",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2244.289331202074,
+			"y": -321.565034657674,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 138.21975708007812,
+			"height": 25,
+			"seed": 150103416,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348452,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- iii",
+			"rawText": "-------------- iii",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- iii",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 42,
+			"versionNonce": 1538979572,
+			"isDeleted": false,
+			"id": "zY08mBy6",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2098.914313178069,
+			"y": -404.13444813465355,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 133.8397674560547,
+			"height": 25,
+			"seed": 1635062536,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348454,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- ii",
+			"rawText": "-------------- ii",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- ii",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 95,
+			"versionNonce": 181084748,
+			"isDeleted": false,
+			"id": "rHbjFPe1",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1783.7663417320452,
+			"y": -177.33311849297047,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 348.51953125,
+			"height": 25,
+			"seed": 1038455672,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348455,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) = x(t) =       x(T)  (t-T) dT",
+			"rawText": "y(t) = x(t) =       x(T)  (t-T) dT",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) = x(t) =       x(T)  (t-T) dT",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 4753,
+			"versionNonce": 1381021048,
+			"isDeleted": false,
+			"id": "azStdEfl01UJfZ6NEc5uI",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1976.6640763275961,
+			"y": -188.12474602892746,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 196663304,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 125,
+			"versionNonce": 1079606792,
+			"isDeleted": false,
+			"id": "OOfJ4webp48I7VKtOuGlK",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1962.4723901517857,
+			"y": -215.408448992437,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 24.50825743299606,
+			"height": 108.53658453176513,
+			"seed": 2064591736,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-3.501184933260447,
+					45.51532993273133
+				],
+				[
+					-12.254110166584269,
+					57.769477199143125
+				],
+				[
+					0,
+					70.02362446555492
+				],
+				[
+					1.7505924666302235,
+					101.53421466524412
+				],
+				[
+					12.254147266411792,
+					108.53658453176513
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 241,
+			"versionNonce": 713770616,
+			"isDeleted": false,
+			"id": "Hnyy5ts_oQYQfaPJx85JE",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 3.141592653589793,
+			"x": 2133.0963605659013,
+			"y": -219.24113714047263,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 24.50825743299606,
+			"height": 108.53658453176513,
+			"seed": 1268426248,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-3.501184933260447,
+					45.51532993273133
+				],
+				[
+					-12.254110166584269,
+					57.769477199143125
+				],
+				[
+					0,
+					70.02362446555492
+				],
+				[
+					1.7505924666302235,
+					101.53421466524412
+				],
+				[
+					12.254147266411792,
+					108.53658453176513
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3439,
+			"versionNonce": 193756424,
+			"isDeleted": false,
+			"id": "vDLUF2Od6GjAU4qQ5e-yK",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2034.0847726809156,
+			"y": -172.12738071452077,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 860756600,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3292,
+			"versionNonce": 525055864,
+			"isDeleted": false,
+			"id": "TIpT5QzLdaEY86HfqCBdS",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1986.474495553601,
+			"y": -198.74166766017782,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1972371464,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3308,
+			"versionNonce": 369597448,
+			"isDeleted": false,
+			"id": "rVT2r5YVEe_zlXcj8DGAc",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1996.9780503533823,
+			"y": -134.31024861286238,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1177626232,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 120,
+			"versionNonce": 1691748472,
+			"isDeleted": false,
+			"id": "QkAQAO4xNgrR9C_-B3GiD",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1973.3501124924924,
+			"y": -138.66442323095214,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 8.37199572513964,
+			"height": 0,
+			"seed": 358949752,
+			"groupIds": [
+				"EmimoQ-QQvIArry6eSDlD"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					8.37199572513964,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 165,
+			"versionNonce": 883423348,
+			"isDeleted": false,
+			"id": "LAhwgY2Q",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2181.8740488310586,
+			"y": -72.26149646503433,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 139.91976928710938,
+			"height": 25,
+			"seed": 1916278792,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348456,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- iv",
+			"rawText": "-------------- iv",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- iv",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 107,
+			"versionNonce": 116275576,
+			"isDeleted": false,
+			"id": "zQGP32kZEhBRrmZGpK4x4",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2023.7838784393928,
+			"y": -401.05338393035504,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 1275909752,
+			"groupIds": [
+				"ZHueb8x6j_fkFcDmBNqZn"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 102,
+			"versionNonce": 1363556872,
+			"isDeleted": false,
+			"id": "nVObhMkWOptAWoaabNtaA",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2029.7801794208858,
+			"y": -383.06442652372556,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 394579464,
+			"groupIds": [
+				"ZHueb8x6j_fkFcDmBNqZn"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 128,
+			"versionNonce": 2027440760,
+			"isDeleted": false,
+			"id": "Ot2BuaMPLSB25M2j2syGu",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1490.381411121064,
+			"y": -446.91884355021836,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 533336328,
+			"groupIds": [
+				"9TiYpGihZz79tJzXjyL-e"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726077,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 123,
+			"versionNonce": 1468119304,
+			"isDeleted": false,
+			"id": "CnCB82wIkfblgxmf-HmHV",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1496.3777121025573,
+			"y": -428.9298861435889,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 1970450440,
+			"groupIds": [
+				"9TiYpGihZz79tJzXjyL-e"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 130,
+			"versionNonce": 626539384,
+			"isDeleted": false,
+			"id": "BQRSmnDtdAEwJ8PcLhkFN",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1801.3541697208177,
+			"y": -475.56046697931913,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 255686264,
+			"groupIds": [
+				"4Dpm96bcfV9m5K8flijz-"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 125,
+			"versionNonce": 670390280,
+			"isDeleted": false,
+			"id": "hEj4nU2rsGjLf_UsYtCjO",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1807.350470702311,
+			"y": -457.57150957268965,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 238544760,
+			"groupIds": [
+				"4Dpm96bcfV9m5K8flijz-"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 117,
+			"versionNonce": 2125597816,
+			"isDeleted": false,
+			"id": "tq23GOa-kWFj9MbY_I-Fh",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1838.1652493940783,
+			"y": -179.0786413537212,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 452098680,
+			"groupIds": [
+				"xfjDkEjyPYfGiOlE9qGhr"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 112,
+			"versionNonce": 110958344,
+			"isDeleted": false,
+			"id": "o11UJZU-Jv3N_rNA4nRi2",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1844.161550375571,
+			"y": -161.08968394709171,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 1689021304,
+			"groupIds": [
+				"xfjDkEjyPYfGiOlE9qGhr"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 115,
+			"versionNonce": 246005112,
+			"isDeleted": false,
+			"id": "YlGLdxkaXqbjLiLcwoRff",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1927.4452054934277,
+			"y": -173.82686395383053,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 1674036744,
+			"groupIds": [
+				"MDAx-GasnYRql5MPaESkK"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 110,
+			"versionNonce": 1475671560,
+			"isDeleted": false,
+			"id": "oT7pEUzUNwu2Di_tvcXG_",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1933.4415064749205,
+			"y": -155.83790654720104,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 972145928,
+			"groupIds": [
+				"MDAx-GasnYRql5MPaESkK"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 71,
+			"versionNonce": 1145632972,
+			"isDeleted": false,
+			"id": "4A7yfSdc",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1907.669155471281,
+			"y": -74.34013860524726,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 242.83969116210938,
+			"height": 25,
+			"seed": 1219202168,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348457,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "=   x(T)     (t - T) dT",
+			"rawText": "=   x(T)     (t - T) dT",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "=   x(T)     (t - T) dT",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 127,
+			"versionNonce": 284751112,
+			"isDeleted": false,
+			"id": "91Vw9hwziXK6YhdHPfhs5",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1999.1708587512421,
+			"y": -76.28013876244394,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 1467584888,
+			"groupIds": [
+				"RTBEogge23Tfgs8sOzrrs",
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 122,
+			"versionNonce": 1325580152,
+			"isDeleted": false,
+			"id": "cmWdtmtuguDy36cec6by2",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2005.167159732735,
+			"y": -58.291181355814444,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 1312334456,
+			"groupIds": [
+				"RTBEogge23Tfgs8sOzrrs",
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 246,
+			"versionNonce": 656741384,
+			"isDeleted": false,
+			"id": "RXMhVRdAftOkaqSVHmBQp",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2021.4468959183637,
+			"y": -89.38038716197161,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 15.741919814527488,
+			"height": 43.630513518438875,
+			"seed": 1560592392,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-5.996933938046852,
+					2.1026785715988994
+				],
+				[
+					-2.998466969023474,
+					15.244397363345936
+				],
+				[
+					-8.995385020647559,
+					23.655089368995423
+				],
+				[
+					-1.499233484511688,
+					28.386116155092974
+				],
+				[
+					-1.499233484511688,
+					40.47649566104054
+				],
+				[
+					6.746534793879929,
+					43.630513518438875
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 350,
+			"versionNonce": 409735288,
+			"isDeleted": false,
+			"id": "3lD4P_co4DD5KpfPWgj2c",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 3.141592653589793,
+			"x": 2112.871330091601,
+			"y": -87.31144655198376,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 15.741919814527488,
+			"height": 43.630513518438875,
+			"seed": 574264696,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-5.996933938046852,
+					2.1026785715988994
+				],
+				[
+					-2.998466969023474,
+					15.244397363345936
+				],
+				[
+					-8.995385020647559,
+					23.655089368995423
+				],
+				[
+					-1.499233484511688,
+					28.386116155092974
+				],
+				[
+					-1.499233484511688,
+					40.47649566104054
+				],
+				[
+					6.746534793879929,
+					43.630513518438875
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3433,
+			"versionNonce": 7688968,
+			"isDeleted": false,
+			"id": "Vg8yA3GEfsDj53sPhZeCD",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2028.2980899662289,
+			"y": -71.85752817496586,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 1336734728,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4747,
+			"versionNonce": 1786986872,
+			"isDeleted": false,
+			"id": "7V3Pnp8EG9LbLWb0ja52k",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1940.6310913392533,
+			"y": -81.24155241539779,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 2103109240,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3287,
+			"versionNonce": 1667609096,
+			"isDeleted": false,
+			"id": "C2xrBud98tTEMA8CfWaPR",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1947.475230946792,
+			"y": -88.6004413836859,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 383473160,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3290,
+			"versionNonce": 881611384,
+			"isDeleted": false,
+			"id": "sldyxDwiyoJka6jAk80Xx",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1957.5897198541998,
+			"y": -33.89451955105966,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1513336952,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 92,
+			"versionNonce": 1727148296,
+			"isDeleted": false,
+			"id": "5zVZQXfWrQR2H1dOKT7oT",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1927.8347454599314,
+			"y": -34.650307687493864,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.873180658400088,
+			"height": 0,
+			"seed": 1840835592,
+			"groupIds": [
+				"l2FS9JthrBMylbVYtsuF_"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.873180658400088,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 218,
+			"versionNonce": 997771764,
+			"isDeleted": false,
+			"id": "7SqEJQik",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1440.3181415552872,
+			"y": -10.084949243913911,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 830.6591796875,
+			"height": 50,
+			"seed": 1907434616,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348459,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "in which the interchange of operations is allowed by virtue of the system's linearity.\nSince we are assuming that the system is time-invariant, equation ii implies that:",
+			"rawText": "in which the interchange of operations is allowed by virtue of the system's linearity.\nSince we are assuming that the system is time-invariant, equation ii implies that:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "in which the interchange of operations is allowed by virtue of the system's linearity.\nSince we are assuming that the system is time-invariant, equation ii implies that:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "line",
+			"version": 282,
+			"versionNonce": 1654050824,
+			"isDeleted": false,
+			"id": "c7ZXB8LDElUJPzFeok1AC",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1985.7073710257882,
+			"y": 57.069023714589775,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.992620117035967,
+			"height": 0,
+			"seed": 1541685000,
+			"groupIds": [
+				"bF0OylHkUo1DcYW8oMW5d",
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.992620117035967,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 280,
+			"versionNonce": 1392776312,
+			"isDeleted": false,
+			"id": "7o3EqXgQaWCq5KJH7FqLg",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1991.703672007281,
+			"y": 75.05798112121926,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 0,
+			"height": 15.419070040438921,
+			"seed": 1243029000,
+			"groupIds": [
+				"bF0OylHkUo1DcYW8oMW5d",
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					-15.419070040438921
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 74,
+			"versionNonce": 1825046348,
+			"isDeleted": false,
+			"id": "4jPsBSHh",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1881.1872900526325,
+			"y": 59.08524207534117,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 213.5397186279297,
+			"height": 25,
+			"seed": 980678776,
+			"groupIds": [
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348460,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "h(t - T) =    (t - T)",
+			"rawText": "h(t - T) =    (t - T)",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "h(t - T) =    (t - T)",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 3465,
+			"versionNonce": 461030776,
+			"isDeleted": false,
+			"id": "dvDi00hdzGN8b4HeQSsLd",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2014.9710527131024,
+			"y": 58.153071382454954,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 7.854407807242281,
+			"height": 15.530247465744933,
+			"seed": 2120462856,
+			"groupIds": [
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					0.47861379166329243,
+					0.6148976118180371
+				],
+				[
+					2.7459702869508646,
+					0.21920164769727535
+				],
+				[
+					5.9336578619901275,
+					3.602587401808762
+				],
+				[
+					6.4741861962107645,
+					9.399942173055843
+				],
+				[
+					4.825584137230446,
+					13.36096134384025
+				],
+				[
+					0.9352144567093226,
+					13.640128174232249
+				],
+				[
+					0.03863248027629207,
+					10.456580617725495
+				],
+				[
+					1.5437866853996516,
+					8.645904905327507
+				],
+				[
+					4.410591563693601,
+					9.469686494182403
+				],
+				[
+					5.516580151810234,
+					9.702543349996933
+				],
+				[
+					5.50652846593968,
+					8.658538743086362
+				],
+				[
+					1.564219194464783,
+					7.770413087499971
+				],
+				[
+					-0.4687444119447881,
+					8.925174601782338
+				],
+				[
+					-0.8784731582983338,
+					11.78433041788163
+				],
+				[
+					0.3963304825998596,
+					14.628666080858068
+				],
+				[
+					3.642891355787948,
+					14.994789432989306
+				],
+				[
+					6.975934648943947,
+					12.077232336834529
+				],
+				[
+					6.94009547374867,
+					4.742637616202103
+				],
+				[
+					3.473850276912003,
+					-0.21475297636300184
+				],
+				[
+					1.2058274425126,
+					-0.5354580327556278
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 341,
+			"versionNonce": 43544072,
+			"isDeleted": false,
+			"id": "YiTVfhkcV6T4kR9j0_f0h",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2010.5444246934067,
+			"y": 43.38084679607573,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 15.741919814527488,
+			"height": 43.630513518438875,
+			"seed": 1724798840,
+			"groupIds": [
+				"hXEQTNAaeJFJxAUsKiKQz",
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-5.996933938046852,
+					2.1026785715988994
+				],
+				[
+					-2.998466969023474,
+					15.244397363345936
+				],
+				[
+					-8.995385020647559,
+					23.655089368995423
+				],
+				[
+					-1.499233484511688,
+					28.386116155092974
+				],
+				[
+					-1.499233484511688,
+					40.47649566104054
+				],
+				[
+					6.746534793879929,
+					43.630513518438875
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 363,
+			"versionNonce": 1676891768,
+			"isDeleted": false,
+			"id": "dXEivXBNcKPRA5VzCNlCM",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 3.141592653589793,
+			"x": 2107.1430829556675,
+			"y": 45.375216625841745,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 15.741919814527488,
+			"height": 43.630513518438875,
+			"seed": 40213000,
+			"groupIds": [
+				"uXxnNMN48GhyFi0Qo086l",
+				"ZPRRFMHbz9hICr1T5lg6B"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-5.996933938046852,
+					2.1026785715988994
+				],
+				[
+					-2.998466969023474,
+					15.244397363345936
+				],
+				[
+					-8.995385020647559,
+					23.655089368995423
+				],
+				[
+					-1.499233484511688,
+					28.386116155092974
+				],
+				[
+					-1.499233484511688,
+					40.47649566104054
+				],
+				[
+					6.746534793879929,
+					43.630513518438875
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 170,
+			"versionNonce": 590572404,
+			"isDeleted": false,
+			"id": "zWbeIVo6",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2127.179974496131,
+			"y": 57.54777495268479,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 135.53977966308594,
+			"height": 25,
+			"seed": 1963871752,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348462,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- v",
+			"rawText": "-------------- v",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- v",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 42,
+			"versionNonce": 1822569932,
+			"isDeleted": false,
+			"id": "78fPZMyV",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1473.083449191059,
+			"y": 105.81702873757206,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 317.2196044921875,
+			"height": 25,
+			"seed": 1703182968,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348463,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "From equations iv and v, we get",
+			"rawText": "From equations iv and v, we get",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "From equations iv and v, we get",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 120,
+			"versionNonce": 1310579956,
+			"isDeleted": false,
+			"id": "ueRTKBNR",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1883.6711127389042,
+			"y": 154.0296260022251,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 258.4596862792969,
+			"height": 25,
+			"seed": 2034900232,
+			"groupIds": [
+				"1S001ka5NMRpiSTKh-GKW"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348464,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) =    x(T)h(t - T) dT",
+			"rawText": "y(t) =    x(T)h(t - T) dT",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) =    x(T)h(t - T) dT",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 4877,
+			"versionNonce": 1333401720,
+			"isDeleted": false,
+			"id": "vEmmn9q32icF2GKU5v0Yn",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1963.7637845551635,
+			"y": 147.39833207421316,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 770842376,
+			"groupIds": [
+				"EGbP9ZGNGHQzC9LiMD_sr",
+				"1S001ka5NMRpiSTKh-GKW"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3388,
+			"versionNonce": 254528264,
+			"isDeleted": false,
+			"id": "m9HXDya0WmqyEBvrjSOHk",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1969.989534144715,
+			"y": 137.2058155703034,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 811501688,
+			"groupIds": [
+				"1S001ka5NMRpiSTKh-GKW"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726078,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3388,
+			"versionNonce": 579881336,
+			"isDeleted": false,
+			"id": "Ho9x-bongNdUCVA-UAZg6",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1985.251100950235,
+			"y": 195.6939227520017,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 484522248,
+			"groupIds": [
+				"1S001ka5NMRpiSTKh-GKW"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 187,
+			"versionNonce": 1150102024,
+			"isDeleted": false,
+			"id": "eZpXPBEhGJyW3H2TrRfke",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1954.6596047923786,
+			"y": 194.06814340155393,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.873180658400088,
+			"height": 0,
+			"seed": 1334081032,
+			"groupIds": [
+				"1S001ka5NMRpiSTKh-GKW"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					11.873180658400088,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 186,
+			"versionNonce": 284269644,
+			"isDeleted": false,
+			"id": "eoVmtcNo",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2153.259471352792,
+			"y": 149.5506366471027,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 139.91976928710938,
+			"height": 25,
+			"seed": 1968829960,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348465,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "-------------- vi",
+			"rawText": "-------------- vi",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "-------------- vi",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 58,
+			"versionNonce": 1706958452,
+			"isDeleted": false,
+			"id": "flmi1uF2",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1440.696010471452,
+			"y": 247.28986821095907,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 263.5597839355469,
+			"height": 25,
+			"seed": 1462983944,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348466,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "CONVOLUTION INTEGRAL",
+			"rawText": "CONVOLUTION INTEGRAL",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "CONVOLUTION INTEGRAL",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 43,
+			"versionNonce": 733367160,
+			"isDeleted": false,
+			"id": "Wtd0zr1cDdGWKB63W1WS3",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1432.3282046747254,
+			"y": 276.12202813232886,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 296.5596379958595,
+			"height": 0,
+			"seed": 1297156104,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					296.5596379958595,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 104,
+			"versionNonce": 1938830028,
+			"isDeleted": false,
+			"id": "yt2l5JwU",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1703.0838754323504,
+			"y": 199.9027797975392,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 722.8593139648438,
+			"height": 25,
+			"seed": 179166584,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348467,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "This shows that an LTI system is characterized by its impulse response",
+			"rawText": "This shows that an LTI system is characterized by its impulse response",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "This shows that an LTI system is characterized by its impulse response",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 295,
+			"versionNonce": 1926901748,
+			"isDeleted": false,
+			"id": "PNBIUiM6",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1444.4854961504975,
+			"y": 293.89577014459445,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1181.6788330078125,
+			"height": 75,
+			"seed": 562282872,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348468,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Equation vi is known as the convolution integral or superposition integral. The convolution integral occurs frequently in \nscience, mathematics, and engineering. The convolution of two signals x(t) and h(x) is usually written in terms of the \noperator * as",
+			"rawText": "Equation vi is known as the convolution integral or superposition integral. The convolution integral occurs frequently in \nscience, mathematics, and engineering. The convolution of two signals x(t) and h(x) is usually written in terms of the \noperator * as",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Equation vi is known as the convolution integral or superposition integral. The convolution integral occurs frequently in \nscience, mathematics, and engineering. The convolution of two signals x(t) and h(x) is usually written in terms of the \noperator * as",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "text",
+			"version": 106,
+			"versionNonce": 1662515532,
+			"isDeleted": false,
+			"id": "1NCfp03o",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1770.5072013866893,
+			"y": 377.9616352944592,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 559.1993408203125,
+			"height": 25,
+			"seed": 492039032,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348470,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) = x(t) * h(x) =     x(T)h(t-T) dT    --------------vii",
+			"rawText": "y(t) = x(t) * h(x) =     x(T)h(t-T) dT    --------------vii",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) = x(t) * h(x) =     x(T)h(t-T) dT    --------------vii",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 4748,
+			"versionNonce": 12832120,
+			"isDeleted": false,
+			"id": "5rbzI5BNO3YV8bY9KXHWe",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1988.687929666214,
+			"y": 369.1527574993173,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 347766024,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3321,
+			"versionNonce": 943973896,
+			"isDeleted": false,
+			"id": "Z3UfPdXnzi4WE9OHLPiNW",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2002.6269751552818,
+			"y": 363.65114201213856,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1797273976,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3368,
+			"versionNonce": 1255890552,
+			"isDeleted": false,
+			"id": "P9Jgud6D-nEWYJJBoGy9A",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2003.1996680263755,
+			"y": 421.6511420121385,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 878925832,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 88,
+			"versionNonce": 1776936200,
+			"isDeleted": false,
+			"id": "mF_cHkhEn51qUTAbRHjKy",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1966.837218476533,
+			"y": 418.22249955227176,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 17.527099609375,
+			"height": 0,
+			"seed": 1743773048,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					17.527099609375,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 294,
+			"versionNonce": 1970803060,
+			"isDeleted": false,
+			"id": "zETypgq7",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1441.6952100129924,
+			"y": 430.6428486733654,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1163.498779296875,
+			"height": 50,
+			"seed": 847182344,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348471,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "That is, y(t) equals x(t) convolved with h(t). The asterisk denotes convolution here and should not be confused with\nthe complex conjugate. We can split the integral in eqn vi into two parts:",
+			"rawText": "That is, y(t) equals x(t) convolved with h(t). The asterisk denotes convolution here and should not be confused with\nthe complex conjugate. We can split the integral in eqn vi into two parts:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "That is, y(t) equals x(t) convolved with h(t). The asterisk denotes convolution here and should not be confused with\nthe complex conjugate. We can split the integral in eqn vi into two parts:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "text",
+			"version": 139,
+			"versionNonce": 1256386508,
+			"isDeleted": false,
+			"id": "wZSaEVDN",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1637.9771924348674,
+			"y": 504.63412064602164,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 938.3590698242188,
+			"height": 25,
+			"seed": 1734539272,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348472,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) = x(t) * h(t) =     x(T)h(t-T) dT +    s(T)h(t-T) dT == y  (t) +  y  (t)   ------------viii",
+			"rawText": "y(t) = x(t) * h(t) =     x(T)h(t-T) dT +    s(T)h(t-T) dT == y  (t) +  y  (t)   ------------viii",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) = x(t) * h(t) =     x(T)h(t-T) dT +    s(T)h(t-T) dT == y  (t) +  y  (t)   ------------viii",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 46,
+			"versionNonce": 785626572,
+			"isDeleted": false,
+			"id": "BIvtaKBr",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2282.5339856477576,
+			"y": 516.9660094806571,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 20.7569580078125,
+			"height": 21.261789596307906,
+			"seed": 1152421240,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388342040,
+			"link": null,
+			"locked": false,
+			"fontSize": 17.009431677046326,
+			"fontFamily": 1,
+			"text": "zir",
+			"rawText": "zir",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zir",
+			"lineHeight": 1.25,
+			"baseline": 14
+		},
+		{
+			"type": "text",
+			"version": 39,
+			"versionNonce": 524026736,
+			"isDeleted": false,
+			"id": "F4TdTxSM",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2377.555754853487,
+			"y": 512.5423441160737,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.91595458984375,
+			"height": 16.137135031389892,
+			"seed": 1019281416,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704371296353,
+			"link": null,
+			"locked": false,
+			"fontSize": 12.909708025111913,
+			"fontFamily": 1,
+			"text": "zsr",
+			"rawText": "zsr",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zsr",
+			"lineHeight": 1.25,
+			"baseline": 11
+		},
+		{
+			"type": "line",
+			"version": 4794,
+			"versionNonce": 924143992,
+			"isDeleted": false,
+			"id": "Ng3er65cbqnLK5h1K7B2o",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1851.5107840261599,
+			"y": 496.8099306560556,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 529280264,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4780,
+			"versionNonce": 1824301576,
+			"isDeleted": false,
+			"id": "FX-uBsdNRcMmpStmUXRrx",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2066.442119475378,
+			"y": 497.3630617595711,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 661490040,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3367,
+			"versionNonce": 1146905208,
+			"isDeleted": false,
+			"id": "fdxElzWBCDPsvI_QJ7SNi",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1869.7831628485612,
+			"y": 544.3083151688769,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1662568200,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3357,
+			"versionNonce": 132849928,
+			"isDeleted": false,
+			"id": "NZY6rv87fjy3-p8beLVex",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2080.5098372463467,
+			"y": 487.55848810181953,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 2076577656,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 102,
+			"versionNonce": 2094908148,
+			"isDeleted": false,
+			"id": "mqznBnso",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1860.519529216687,
+			"y": 483.94561102281216,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 12.553817749023438,
+			"height": 14.045613606770873,
+			"seed": 554359304,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348475,
+			"link": null,
+			"locked": false,
+			"fontSize": 11.236490885416698,
+			"fontFamily": 1,
+			"text": "to",
+			"rawText": "to",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "to",
+			"lineHeight": 1.25,
+			"baseline": 10
+		},
+		{
+			"type": "text",
+			"version": 83,
+			"versionNonce": 453711436,
+			"isDeleted": false,
+			"id": "YCzias38",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2069.669406129122,
+			"y": 539.5511306354422,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 12.553726828084205,
+			"height": 14.045511881510338,
+			"seed": 1990500728,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348475,
+			"link": null,
+			"locked": false,
+			"fontSize": 11.23640950520827,
+			"fontFamily": 1,
+			"text": "to",
+			"rawText": "to",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "to",
+			"lineHeight": 1.25,
+			"baseline": 10
+		},
+		{
+			"type": "line",
+			"version": 160,
+			"versionNonce": 437265528,
+			"isDeleted": false,
+			"id": "Q-jUar_sWx7w9R6ThKMfa",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1854.5833262137576,
+			"y": 548.9676854043224,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 178.92270406087232,
+			"height": 43.817799886067746,
+			"seed": 298985080,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					1.825739542643305,
+					16.431681315104242
+				],
+				[
+					58.42374165852857,
+					20.083160400390625
+				],
+				[
+					85.80986022949219,
+					43.817799886067746
+				],
+				[
+					113.1959788004558,
+					23.73463948567712
+				],
+				[
+					166.14255269368505,
+					23.73463948567712
+				],
+				[
+					178.92270406087232,
+					5.477193196614621
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 204,
+			"versionNonce": 1775009544,
+			"isDeleted": false,
+			"id": "kUVdJi6FDuJ2wYJSy-pv5",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2056.6705586154844,
+			"y": 551.8120230994642,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 175.27122497558594,
+			"height": 43.81785074869788,
+			"seed": 269924872,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726079,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					1.825739542643305,
+					16.431681315104242
+				],
+				[
+					58.42374165852857,
+					20.083160400390625
+				],
+				[
+					85.80986022949219,
+					43.817799886067746
+				],
+				[
+					113.1959788004558,
+					23.73463948567712
+				],
+				[
+					169.7939809163413,
+					21.90887451171875
+				],
+				[
+					175.27122497558594,
+					-0.00005086263013254211
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 32,
+			"versionNonce": 1066484852,
+			"isDeleted": false,
+			"id": "tsmvhmgi",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1928.0791910819214,
+			"y": 595.6412185260672,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.379974365234375,
+			"height": 25,
+			"seed": 1134757496,
+			"groupIds": [
+				"Zg0rVtJjevPNpJwibLmOg"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348476,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y ",
+			"rawText": "y ",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y ",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 68,
+			"versionNonce": 566516980,
+			"isDeleted": false,
+			"id": "y15vGZPI",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1940.162717693249,
+			"y": 606.3588955052571,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 20.7569580078125,
+			"height": 21.261789596307906,
+			"seed": 1972049528,
+			"groupIds": [
+				"Zg0rVtJjevPNpJwibLmOg"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388342042,
+			"link": null,
+			"locked": false,
+			"fontSize": 17.009431677046326,
+			"fontFamily": 1,
+			"text": "zir",
+			"rawText": "zir",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zir",
+			"lineHeight": 1.25,
+			"baseline": 14
+		},
+		{
+			"type": "text",
+			"version": 38,
+			"versionNonce": 812281036,
+			"isDeleted": false,
+			"id": "ReUP1SKZ",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2124.109566244682,
+			"y": 593.3382603554943,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 9.379989624023438,
+			"height": 25,
+			"seed": 869397000,
+			"groupIds": [
+				"jAKNOSoY5aCKoS2aMN2--"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348476,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y",
+			"rawText": "y",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 87,
+			"versionNonce": 1819769200,
+			"isDeleted": false,
+			"id": "wsLx5nhf",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2139.946978760958,
+			"y": 605.6637764986533,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.91595458984375,
+			"height": 16.137135031389892,
+			"seed": 2025004664,
+			"groupIds": [
+				"jAKNOSoY5aCKoS2aMN2--"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704371296355,
+			"link": null,
+			"locked": false,
+			"fontSize": 12.909708025111913,
+			"fontFamily": 1,
+			"text": "zsr",
+			"rawText": "zsr",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zsr",
+			"lineHeight": 1.25,
+			"baseline": 11
+		},
+		{
+			"type": "text",
+			"version": 230,
+			"versionNonce": 861443572,
+			"isDeleted": false,
+			"id": "XKl1IUMd",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1459.3342540329036,
+			"y": 635.2034650606265,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 783.6192016601562,
+			"height": 100,
+			"seed": 1581500024,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348478,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Where\n    y   (t) is the zero-input response (or the natural response) of the system\n    y   (t) is the zero-state response (or the forced response) of the system\n    to   is the initial time",
+			"rawText": "Where\n    y   (t) is the zero-input response (or the natural response) of the system\n    y   (t) is the zero-state response (or the forced response) of the system\n    to   is the initial time",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Where\n    y   (t) is the zero-input response (or the natural response) of the system\n    y   (t) is the zero-state response (or the forced response) of the system\n    to   is the initial time",
+			"lineHeight": 1.25,
+			"baseline": 92
+		},
+		{
+			"type": "text",
+			"version": 70,
+			"versionNonce": 284367948,
+			"isDeleted": false,
+			"id": "ID9IvraR",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1513.3944541943074,
+			"y": 666.794792484695,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 20.7569580078125,
+			"height": 21.261789596307906,
+			"seed": 1485400184,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388342043,
+			"link": null,
+			"locked": false,
+			"fontSize": 17.009431677046326,
+			"fontFamily": 1,
+			"text": "zir",
+			"rawText": "zir",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zir",
+			"lineHeight": 1.25,
+			"baseline": 14
+		},
+		{
+			"type": "text",
+			"version": 63,
+			"versionNonce": 1326572432,
+			"isDeleted": false,
+			"id": "dHVcfnIa",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1511.5984989602039,
+			"y": 693.8015642115985,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 19.91595458984375,
+			"height": 16.137135031389892,
+			"seed": 191537528,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1704371296356,
+			"link": null,
+			"locked": false,
+			"fontSize": 12.909708025111913,
+			"fontFamily": 1,
+			"text": "zsr",
+			"rawText": "zsr",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "zsr",
+			"lineHeight": 1.25,
+			"baseline": 11
+		},
+		{
+			"type": "text",
+			"version": 411,
+			"versionNonce": 1016787788,
+			"isDeleted": false,
+			"id": "ZYTcY8B6",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1443.3159598044558,
+			"y": 764.8046872048593,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1185.998779296875,
+			"height": 75,
+			"seed": 553875464,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348480,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Thus, the complete response of a physical system is divided into the zero-input response and the zero-state response.\nThe convolution integral in eqn vii is a general one. It applies to any LTI system, however, the convolution integral can\nbe simpliified if we assume that a system has two properties. First, if x(t) = 0 for t < 0, then",
+			"rawText": "Thus, the complete response of a physical system is divided into the zero-input response and the zero-state response.\nThe convolution integral in eqn vii is a general one. It applies to any LTI system, however, the convolution integral can\nbe simpliified if we assume that a system has two properties. First, if x(t) = 0 for t < 0, then",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Thus, the complete response of a physical system is divided into the zero-input response and the zero-state response.\nThe convolution integral in eqn vii is a general one. It applies to any LTI system, however, the convolution integral can\nbe simpliified if we assume that a system has two properties. First, if x(t) = 0 for t < 0, then",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "text",
+			"version": 128,
+			"versionNonce": 624539508,
+			"isDeleted": false,
+			"id": "XlYUDL6T",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1783.6758097342656,
+			"y": 877.6260309446864,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 542.5593872070312,
+			"height": 25,
+			"seed": 1819640952,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348481,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) =    x(T)h(t-T) dT =    x(T)h(t-T) dT  --------ix",
+			"rawText": "y(t) =    x(T)h(t-T) dT =    x(T)h(t-T) dT  --------ix",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) =    x(T)h(t-T) dT =    x(T)h(t-T) dT  --------ix",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 4796,
+			"versionNonce": 1408506376,
+			"isDeleted": false,
+			"id": "bfGI3OurWchxxi_MHJ8e6",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1859.6236278575384,
+			"y": 874.3623700277996,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 2005873016,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726080,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 4796,
+			"versionNonce": 678980216,
+			"isDeleted": false,
+			"id": "veQiJfRnidHS5kS7p4u3H",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2067.956961190872,
+			"y": 876.0290366944661,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 486400008,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314726080,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3376,
+			"versionNonce": 5442824,
+			"isDeleted": false,
+			"id": "Ez7urdoMk3znjRplVNkVN",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1872.259715176033,
+			"y": 922.8911805660114,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1082767224,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314741707,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3376,
+			"versionNonce": 1193409032,
+			"isDeleted": false,
+			"id": "AQHuHGjzIBcoUV9bK1SHC",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1875.5171614650958,
+			"y": 867.3379985998656,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1785215496,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314732961,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3387,
+			"versionNonce": 188098568,
+			"isDeleted": false,
+			"id": "nb56wKfajo4aRrhsPW83H",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2087.501973883716,
+			"y": 866.3835104813761,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 422579320,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314728059,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 39,
+			"versionNonce": 462205560,
+			"isDeleted": false,
+			"id": "Ie5H2Jw_tGhr-fRc3-ycw",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1839.6664866141468,
+			"y": 921.5056289264571,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 14.605941772460938,
+			"height": 0,
+			"seed": 702617608,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314739208,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					14.605941772460938,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 16,
+			"versionNonce": 771140044,
+			"isDeleted": false,
+			"id": "iW59Sq39",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2071.1703165702015,
+			"y": 910.7243789264571,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 13.759994506835938,
+			"height": 25,
+			"seed": 746604808,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348481,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "0",
+			"rawText": "0",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "0",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 140,
+			"versionNonce": 1366993140,
+			"isDeleted": false,
+			"id": "NdSDD6g9",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1460.776232911347,
+			"y": 965.1712478229415,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 741.33935546875,
+			"height": 50,
+			"seed": 1100821000,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348482,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Second, if we assume that the system is causal, h(t) = 0 for t < 0, then\nh(t-T) = 0 for t-T < 0 or T > t, so that eqn ix becomes:",
+			"rawText": "Second, if we assume that the system is causal, h(t) = 0 for t < 0, then\nh(t-T) = 0 for t-T < 0 or T > t, so that eqn ix becomes:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Second, if we assume that the system is causal, h(t) = 0 for t < 0, then\nh(t-T) = 0 for t-T < 0 or T > t, so that eqn ix becomes:",
+			"lineHeight": 1.25,
+			"baseline": 42
+		},
+		{
+			"type": "text",
+			"version": 115,
+			"versionNonce": 395808844,
+			"isDeleted": false,
+			"id": "ox2NJfmb",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1836.716225180227,
+			"y": 1032.072950703801,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 496.619384765625,
+			"height": 25,
+			"seed": 1656314488,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348483,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "y(t) = x(t) * h(t) =   x(T)h(t-T) dT   -----------x",
+			"rawText": "y(t) = x(t) * h(t) =   x(T)h(t-T) dT   -----------x",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "y(t) = x(t) * h(t) =   x(T)h(t-T) dT   -----------x",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "line",
+			"version": 4847,
+			"versionNonce": 1553696264,
+			"isDeleted": false,
+			"id": "QqwVXW1cmbUxC84feogeC",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2048.896953459752,
+			"y": 1024.5974062419925,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 9.845901348774076,
+			"height": 41.589456947420416,
+			"seed": 755252744,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704314856704,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-2.3004523516478184,
+					1.209246316033144
+				],
+				[
+					-4.647215587003986,
+					7.474741786573146
+				],
+				[
+					-2.7824431328169865,
+					23.031382720284135
+				],
+				[
+					-1.929247599468808,
+					36.6778015252594
+				],
+				[
+					-4.76203365582413,
+					40.257893632991994
+				],
+				[
+					-5.815664686982577,
+					38.159200625341974
+				],
+				[
+					-7.110728970427248,
+					39.06231660896368
+				],
+				[
+					-5.698924137345239,
+					41.589456947420416
+				],
+				[
+					-1.9112206088837684,
+					40.06683409875895
+				],
+				[
+					-0.3264495593557388,
+					34.95376775974244
+				],
+				[
+					-0.8542846482743336,
+					22.90701973556727
+				],
+				[
+					-3.097498378143099,
+					6.542350217190476
+				],
+				[
+					-0.3185877841610525,
+					1.5678752667868323
+				],
+				[
+					1.3234560187953854,
+					3.660584469366615
+				],
+				[
+					2.735172378346828,
+					3.145557380114573
+				],
+				[
+					1.9308144075824294,
+					0.7935268837256421
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 97,
+			"versionNonce": 2074176116,
+			"isDeleted": false,
+			"id": "o74Z5oLX",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2053.646754456757,
+			"y": 1058.0653314817957,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 13.759994506835938,
+			"height": 25,
+			"seed": 869759352,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348483,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "0",
+			"rawText": "0",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "0",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 70,
+			"versionNonce": 425174732,
+			"isDeleted": false,
+			"id": "cwtTGhuN",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2051.5789469412953,
+			"y": 1009.9759353229417,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 11.29998779296875,
+			"height": 25,
+			"seed": 132919048,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348483,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "t",
+			"rawText": "t",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "t",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 729,
+			"versionNonce": 108264436,
+			"isDeleted": false,
+			"id": "uwCYNt9i",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1441.9187093110866,
+			"y": 1083.5443557330977,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1214.598876953125,
+			"height": 100,
+			"seed": 895666552,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348484,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Some important properties of the convolution integral are shown below. Property #1 states that the order in which two\nfunctions are convoluted is unimportant. Another property of the convolution integral is the width property. If the \ndurations of x(t) and h(t) are T1 and T2, respectively, then the duration of y(t) = x(t) * h(t) is T1 + T2. If the areas\nx(t) and h(t) are A1 and A2 respectively, then the area under y(t) = x(t) * h(t) is A1A2. That is:",
+			"rawText": "Some important properties of the convolution integral are shown below. Property #1 states that the order in which two\nfunctions are convoluted is unimportant. Another property of the convolution integral is the width property. If the \ndurations of x(t) and h(t) are T1 and T2, respectively, then the duration of y(t) = x(t) * h(t) is T1 + T2. If the areas\nx(t) and h(t) are A1 and A2 respectively, then the area under y(t) = x(t) * h(t) is A1A2. That is:",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Some important properties of the convolution integral are shown below. Property #1 states that the order in which two\nfunctions are convoluted is unimportant. Another property of the convolution integral is the width property. If the \ndurations of x(t) and h(t) are T1 and T2, respectively, then the duration of y(t) = x(t) * h(t) is T1 + T2. If the areas\nx(t) and h(t) are A1 and A2 respectively, then the area under y(t) = x(t) * h(t) is A1A2. That is:",
+			"lineHeight": 1.25,
+			"baseline": 92
+		},
+		{
+			"type": "text",
+			"version": 97,
+			"versionNonce": 1204874572,
+			"isDeleted": false,
+			"id": "KCas7DGR",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1724.7950024934594,
+			"y": 1199.8792988686773,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 636.2991943359375,
+			"height": 25,
+			"seed": 386993528,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348486,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "Area under y(t) = Area under x(t) . Area under h(t) -----------xi",
+			"rawText": "Area under y(t) = Area under x(t) . Area under h(t) -----------xi",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Area under y(t) = Area under x(t) . Area under h(t) -----------xi",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 518,
+			"versionNonce": 200826228,
+			"isDeleted": false,
+			"id": "V2OXyjyy",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1433.9315381379906,
+			"y": -614.6933329672605,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 1192.45654296875,
+			"height": 75.13791475210175,
+			"seed": 1012051832,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348487,
+			"link": null,
+			"locked": false,
+			"fontSize": 20.03677726722713,
+			"fontFamily": 1,
+			"text": "Convolution is a mathematical method used to combine two signals to form a third one. convolution is very important as\nit relates the input signal and impulse response to produce the output signal of the system. In other words, it \nexpresses the input and output relationship of an LTI system.",
+			"rawText": "Convolution is a mathematical method used to combine two signals to form a third one. convolution is very important as\nit relates the input signal and impulse response to produce the output signal of the system. In other words, it \nexpresses the input and output relationship of an LTI system.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Convolution is a mathematical method used to combine two signals to form a third one. convolution is very important as\nit relates the input signal and impulse response to produce the output signal of the system. In other words, it \nexpresses the input and output relationship of an LTI system.",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "text",
+			"version": 369,
+			"versionNonce": 341664716,
+			"isDeleted": false,
+			"id": "72Ya4KiU",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2773.667394358394,
+			"y": -743.8656111793623,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 686.2391967773438,
+			"height": 100,
+			"seed": 276921242,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348489,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "in simpler terms, convolution operation involves integrating the \nproduct of the two signals shifted with respect to each other.\nThis operation is used to find the output of a linear time invariant \n(LTI) system when the input is known",
+			"rawText": "in simpler terms, convolution operation involves integrating the \nproduct of the two signals shifted with respect to each other.\nThis operation is used to find the output of a linear time invariant \n(LTI) system when the input is known",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "in simpler terms, convolution operation involves integrating the \nproduct of the two signals shifted with respect to each other.\nThis operation is used to find the output of a linear time invariant \n(LTI) system when the input is known",
+			"lineHeight": 1.25,
+			"baseline": 92
+		},
+		{
+			"type": "text",
+			"version": 382,
+			"versionNonce": 1970573044,
+			"isDeleted": false,
+			"id": "rFWLMlPK",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2768.44844330141,
+			"y": -631.1647217415558,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 708.21923828125,
+			"height": 100,
+			"seed": 216177050,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348490,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "For discrete time signals, the convolution operation is slightly different.\nIf we have two discrete-time signals, x[n] and h[n], their convolution,\ndenoted by (x*h)[n], is given by\n",
+			"rawText": "For discrete time signals, the convolution operation is slightly different.\nIf we have two discrete-time signals, x[n] and h[n], their convolution,\ndenoted by (x*h)[n], is given by\n",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "For discrete time signals, the convolution operation is slightly different.\nIf we have two discrete-time signals, x[n] and h[n], their convolution,\ndenoted by (x*h)[n], is given by\n",
+			"lineHeight": 1.25,
+			"baseline": 92
+		},
+		{
+			"type": "rectangle",
+			"version": 166,
+			"versionNonce": 1064732870,
+			"isDeleted": false,
+			"id": "GeM7SWCebxpEfv6NXK1yY",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2738.5090742493458,
+			"y": -774.9485579567067,
+			"strokeColor": "#c2255c",
+			"backgroundColor": "transparent",
+			"width": 755.1268666585288,
+			"height": 458.6263631184895,
+			"seed": 137676998,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [],
+			"updated": 1705059783417,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "text",
+			"version": 400,
+			"versionNonce": 890702412,
+			"isDeleted": false,
+			"id": "556uhEE9",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2766.86187271126,
+			"y": -422.30949952571837,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 701.439208984375,
+			"height": 75,
+			"seed": 1595204122,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348491,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "The convolution operation is critical in analyzing and understanding the\nbehavior of linear-time invariant systems, as it allows us to find the \nsystem's response to any input signal. ",
+			"rawText": "The convolution operation is critical in analyzing and understanding the\nbehavior of linear-time invariant systems, as it allows us to find the \nsystem's response to any input signal. ",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "The convolution operation is critical in analyzing and understanding the\nbehavior of linear-time invariant systems, as it allows us to find the \nsystem's response to any input signal. ",
+			"lineHeight": 1.25,
+			"baseline": 67
+		},
+		{
+			"type": "line",
+			"version": 1864,
+			"versionNonce": 399787654,
+			"isDeleted": false,
+			"id": "o-iDB8OAYWq5nbn3P0y1k",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3067.9695949919965,
+			"y": -514.2795419558965,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 20.3192084036864,
+			"height": 32.618601391763576,
+			"seed": 993560026,
+			"groupIds": [
+				"i-JhYFdoMLPW_tz_vr1x7",
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1705059940089,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					9.843215143654266,
+					0.18480793989663538
+				],
+				[
+					9.8366007463286,
+					2.1562530948622793
+				],
+				[
+					-5.484077008607414,
+					2.757119593628204
+				],
+				[
+					-6.257472484180191,
+					5.636642166848667
+				],
+				[
+					2.0389517083284083,
+					15.431462981372556
+				],
+				[
+					2.3201864267185357,
+					19.035217809357736
+				],
+				[
+					-4.99191625142479,
+					26.797151285018206
+				],
+				[
+					-6.538707202570457,
+					30.40090611300341
+				],
+				[
+					9.913523823251808,
+					30.46234829690127
+				],
+				[
+					9.91352382325178,
+					32.618601391763576
+				],
+				[
+					-10.405684580434592,
+					32.156581542021826
+				],
+				[
+					-6.819941920960652,
+					25.873111585534826
+				],
+				[
+					-0.0703086795975878,
+					18.850409869461078
+				],
+				[
+					-0.4921607571828126,
+					15.708674891217575
+				],
+				[
+					-9.843215143654337,
+					4.43539055752022
+				],
+				[
+					-8.858893629288854,
+					1.1088476393800382
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3268,
+			"versionNonce": 332760518,
+			"isDeleted": false,
+			"id": "tb8GvuhyIeAdte9qXXaTA",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3071.848973702494,
+			"y": -524.5004322030337,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 1619430022,
+			"groupIds": [
+				"i-JhYFdoMLPW_tz_vr1x7",
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1705059940089,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "line",
+			"version": 3267,
+			"versionNonce": 1408032006,
+			"isDeleted": false,
+			"id": "G55lFiNM5JFp8_oNKF-Tm",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3109.6210154720825,
+			"y": -462.3663828435437,
+			"strokeColor": "#000000",
+			"backgroundColor": "#000000",
+			"width": 18.103371308638394,
+			"height": 7.371235523356667,
+			"seed": 853719750,
+			"groupIds": [
+				"i-JhYFdoMLPW_tz_vr1x7",
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1705059940089,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					2.723515117468466,
+					1.2693130715717729
+				],
+				[
+					5.757153658937881,
+					0.1584407104143679
+				],
+				[
+					5.7283129925924925,
+					-3.323864263730762
+				],
+				[
+					1.8737579923465546,
+					-3.818380599554409
+				],
+				[
+					-5.642652705846473,
+					1.5844174034657996
+				],
+				[
+					-10.37585740063659,
+					0.7566303771615281
+				],
+				[
+					-11.022134662038823,
+					-4.048092503367329
+				],
+				[
+					-6.702342819435515,
+					-5.399847052321768
+				],
+				[
+					-2.73161136209535,
+					-2.6386109638197226
+				],
+				[
+					-3.411205543837127,
+					-1.9016727488717535
+				],
+				[
+					-6.699727873671321,
+					-4.416263059451445
+				],
+				[
+					-9.906204458463634,
+					-3.8833707396822987
+				],
+				[
+					-10.284032657324445,
+					-1.2855896499681094
+				],
+				[
+					-8.345697690100593,
+					0.9802582205000405
+				],
+				[
+					-4.775693241404568,
+					0.07248360697317935
+				],
+				[
+					1.8620677622442514,
+					-4.833352206265836
+				],
+				[
+					6.069452277623235,
+					-4.299906621635387
+				],
+				[
+					7.081236646599571,
+					-1.287045371459051
+				],
+				[
+					5.824745339266876,
+					1.39186688531899
+				],
+				[
+					1.84362529405945,
+					1.9713884710348992
+				],
+				[
+					-1.697560475237168,
+					-0.2684438869301857
+				],
+				[
+					-1.1760757628919691,
+					-0.9349252260650047
+				],
+				[
+					0,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 106,
+			"versionNonce": 326013044,
+			"isDeleted": false,
+			"id": "CVwjNgjp",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3042.154777434188,
+			"y": -474.02397176480764,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 50.2999267578125,
+			"height": 25,
+			"seed": 551160538,
+			"groupIds": [
+				"i-JhYFdoMLPW_tz_vr1x7",
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348492,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "k = -",
+			"rawText": "k = -",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "k = -",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 57,
+			"versionNonce": 215474380,
+			"isDeleted": false,
+			"id": "l0oSTlXP",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3086.4268075352907,
+			"y": -507.24845906949514,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 137.79983520507812,
+			"height": 25,
+			"seed": 919335494,
+			"groupIds": [
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348493,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "x[k]  h[n - k]",
+			"rawText": "x[k]  h[n - k]",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "x[k]  h[n - k]",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 63,
+			"versionNonce": 872053748,
+			"isDeleted": false,
+			"id": "AEBPIK17",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 3126.4803748606582,
+			"y": -547.3391148623539,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 17.077896118164062,
+			"height": 77.91442934524831,
+			"seed": 1127232582,
+			"groupIds": [
+				"d04-ncrfTzN_MNdTAMSxl"
+			],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388344400,
+			"link": null,
+			"locked": false,
+			"fontSize": 62.33154347619865,
+			"fontFamily": 1,
+			"text": ".",
+			"rawText": ".",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": ".",
+			"lineHeight": 1.25,
+			"baseline": 54
+		},
+		{
+			"type": "text",
+			"version": 51,
+			"versionNonce": 900489716,
+			"isDeleted": false,
+			"id": "oqDCW8od",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2914.554931099169,
+			"y": -507.809910700929,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 127.99984741210938,
+			"height": 25,
+			"seed": 1211818842,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348495,
+			"link": null,
+			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
+			"text": "( x * h)[n] =",
+			"rawText": "( x * h)[n] =",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "( x * h)[n] =",
+			"lineHeight": 1.25,
+			"baseline": 17
+		},
+		{
+			"type": "text",
+			"version": 82,
+			"versionNonce": 322561868,
+			"isDeleted": false,
+			"id": "iF4xpo94",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2794.8918040975686,
+			"y": -175.03387408490852,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 566.1521606445312,
+			"height": 28.65147908528644,
+			"seed": 889087834,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1706388348496,
+			"link": null,
+			"locked": false,
+			"fontSize": 22.92118326822915,
+			"fontFamily": 1,
+			"text": "PROPERTIES OF THE CONVOLUTION INTEGRAL",
+			"rawText": "PROPERTIES OF THE CONVOLUTION INTEGRAL",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "PROPERTIES OF THE CONVOLUTION INTEGRAL",
+			"lineHeight": 1.25,
+			"baseline": 20
+		},
+		{
+			"type": "line",
+			"version": 35,
+			"versionNonce": 1606910362,
+			"isDeleted": false,
+			"id": "LfkJ26sjkxRkKwI8NKvk-",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2774.9173625692483,
+			"y": -147.49211586550746,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 618.9265187581382,
+			"height": 0,
+			"seed": 1853324934,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1705059997743,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					618.9265187581382,
+					0
+				]
+			]
+		},
+		{
+			"type": "rectangle",
+			"version": 129,
+			"versionNonce": 392193562,
+			"isDeleted": false,
+			"id": "NXhlteD28XSKAXhG-ELhM",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 2731.519080836053,
+			"y": -203.51818677818665,
+			"strokeColor": "#2f9e44",
+			"backgroundColor": "transparent",
+			"width": 733.9482879638672,
+			"height": 1462.4193572998051,
+			"seed": 590570266,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [],
+			"updated": 1705060017083,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "rectangle",
+			"version": 216,
+			"versionNonce": 1339291590,
+			"isDeleted": false,
+			"id": "popS4-c6GdCuMBFs4uD5C",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 1853.4661639913659,
+			"y": 121.13988028927662,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "transparent",
+			"width": 452.7840169270831,
+			"height": 80.3326416015625,
+			"seed": 1907189318,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 3
+			},
+			"boundElements": [],
+			"updated": 1705060383332,
+			"link": null,
+			"locked": false
+		},
+		{
+			"type": "image",
+			"version": 176,
+			"versionNonce": 501348995,
+			"isDeleted": false,
+			"id": "tSuCCBnO",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 704.8836846300323,
+			"y": 437.7100940310097,
+			"strokeColor": "#000000",
+			"backgroundColor": "transparent",
+			"width": 269.1627604166664,
+			"height": 73.85563548018285,
+			"seed": 86785,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1705535672519,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "cc617bc9e528cf4830db3a8c006618e9b9498ef1",
+			"scale": [
+				1,
+				1
+			]
 		}
 	],
 	"appState": {
 		"theme": "dark",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#1e1e1e",
+		"currentItemStrokeColor": "#f08c00",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "dashed",
+		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 1,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 1,
@@ -45403,10 +56196,10 @@ The same applies for discrete time parabolic signals ^FzDSaYBI
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1698.5015141080444,
-		"scrollY": 952.3548737141673,
+		"scrollX": 4642.397177831398,
+		"scrollY": -34.655285501064256,
 		"zoom": {
-			"value": 1.0800000000000003
+			"value": 0.5499999999999999
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

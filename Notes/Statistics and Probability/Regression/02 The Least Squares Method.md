@@ -87,6 +87,55 @@ $$b_0 = \bar{y} - b_1\bar{x} = 10 - 0.1462(74) = -0.8188$$
 $$\hat{y_i} =0.1462x -0.8188$$
 ![[Pasted image 20231225155440.png]]
 
+#### Fit and Coefficient of Determination
+It is important to note that a regression model is unique to the data it models, and adding and removing data points will most certainly change the regression model. The model is also only valid for the range of data points under analysis.
+
+So once a regression line is calculated, how much better is it than using only the mean of the dependent variable alone. To answer this question, we have to calculate the sum of squares errors, however, this time we will do so using the regression line. We will also be able to quantify the fit of the regression model using a simple ration called the coefficient of determination.
+
+Continuing with our waiter /business owner example, previously we discovered with only the mean of the dependent variable was $10, and using this as our regression line, we found the errors to be the difference between the mean line and that data point, we then summed these errors up and squared them, giving us an SSE = 120.
+
+>[!note]
+>With only the dependent variable, the only sum of squares is due to error. Therefore it is also the total, and MAXIMUM sum of squares for the data under analysis.
+
+so SSE = SST = 120
+
+>[!note]
+>With both the Independent variable and the Dependent variable, the total sum of squares remains the same. But (ideally) the error sum of squares will be reduced significantly. The difference between SST and SSE is due to regression, SSR.
+
+
+| mean | Observed total bill ($) | Observed tip amount ($) | $\hat{y}_i$ (predicted tip amount) | Error: (observed - predicted) ($y - \hat{y}_i$) | Squared Error |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+|  | x | y |  |  |  |
+| 1 | 34 | 5 | 4.1505 | 0.8495 | 0.7217 |
+| 2 | 108 | 17 | 14.9693 | 2.0307 | 4.1237 |
+| 3 | 64 | 11 | 8.5365 | 2.4635 | 6.0688 |
+| 4 | 88 | 8 | 12.0453 | -4.0453 | 16.3645 |
+| 5 | 91 | 14 | 13.6535 | 0.3465 | 0.1201 |
+| 6 | 51 | 5 | 6.6359 | -1.6359 | 2.6762 |
+|  |  |  |  |  |  |
+|  | $\bar{x} = 74$ | $\bar{y} = 10$ |  |  | SSE = 30.075 |
+
+#### Sum of Squared Errors Comparison
+D.V (Tip amount) ONLY
+SSE = 120
+
+D.V and I.V (tip amount as function of meal amount)
+SSE = 30.075
+
+So, when we conducted the regression, the SSE decreased from 120 to 30.075. That is, 30.075 of the sum of squares was explained or allocated to ERROR.
+
+Where did the other 89.925 go?
+
+The 89.925 is the sum of squares due to REGRESSION.
+
+SST = SSR + SSE
+120 = 86.925 + 30.0725
+
+#### Coefficient of Determination
+How well does the estimated regression equation fit our data ?
+
+This is where regression begins to look a lot like ANOVA; the total sum of squares is partitioned or allocated to SSE and SSR.
+
 ---
 ### References
 

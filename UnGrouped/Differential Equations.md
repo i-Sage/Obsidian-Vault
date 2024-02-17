@@ -2,6 +2,12 @@
 => Type : Note
 => Tags : #Calculus #Differentiation #Equations
 
+
+---
+>[!summary]
+>- ORDER: The of an ODE refers to the highest derivative in the equation
+>- DEGREE: The degree of an ODE refers to the highest power of the highest derivative present in the equation.
+
 ---
 A *differential Equation* is a relationship between an independent variable, $x$, a dependent variable $y$, and one or more derivatives of $y$ with respect to $x$. eg. $$x^2\frac{dy}{dx} = y \sin x = 0$$
 $$xy \frac{d^2y}{dx^2} + y\frac{dy}{dx} + e^{3x} = 0$$
@@ -31,7 +37,7 @@ ie $$\frac{d^2y}{dx^2} = -y \quad \quad \therefore  \frac{d^2y}{dx^2} + y = 0$$
 >Generalizing this: <br>
 >**An nth-order differential equation is derived form a function having n arbitrary constants**
 
-----
+---
 ### Solution to differential equation
 To solve a differential equation, we have to find the function for which the equation is true. This means that we have to manipulate the equation so as to eliminate all the derivatives and leave the relationship between y and x.
 
@@ -42,7 +48,7 @@ If the equation can be arranged in the form $\frac{dy}{dx} = f(x)$, then the equ
 ###### Example 1 $$\frac{dy}{dx} = 3x^2 - 6x + 5$$
 Then $$y = \int(3x^2 - 6x + 5)dx = x^3 - 3x^2 + 5x + c$$
 ie $y = x^3 - 3x^2 + 5x + c$
-As always, of course, the constant of integration must be included. Here it provides the one arbitrary constant which we always get when solving a first-order differential.
+As always, of course, the con26stant of integration must be included. Here it provides the one arbitrary constant which we always get when solving a first-order differential.
 
 ###### Example 2
 Find the particular solution of the equation $e^x\frac{dy}{dx} = 4$ given that $y = 3$ when $x = 0$.
@@ -65,6 +71,12 @@ We can rewrite this as $$(y + 1)\frac{dy}{dx} = 2x$$
 Now integrate both sides with respect to x:$$\int(y + 1)\frac{dy}{dx}dx = \int 2xdx$$
 $$\int(y+1)dy = \int 2xdx$$
 and this gives $$\frac{y^2}{2} + y = x^2 + c$$
+>[!note] Solutions to initial value problems
+>The solution to an initial value problem can be obtained by solving the equation:$$\int_{x_0}^x A(x) dx + \int_{y_0}^y B(y) dy = 0$$
+
+>[!warning]
+> Without initial values; the above equation becomes:
+> $$\int A(x)dx + \int B(y) dy = C$$
 
 ---
 #### Method 3: Homogeneous equations - by substituting y = vx
@@ -115,8 +127,7 @@ This converts the LHS into the derivative of a product.
 >#### So: To solve a differential equation of the form
 >$$\frac{dy}{dx} + Py = Q$$
 >*where P and Q are constants or functions of x, multiply both sides by the integrating factor*: $$e^{\int Pdx}$$
-
-
+>y $\cdot$ IF = $\int Q.IFdx$ where IF = $e^{\int Pdx}$
 ##### Example 1
 To solve $\frac{dy}{dx} - y = x$
 If we compare this with $\frac{dy}{dx} + Py = Q$, we see that in this case
@@ -152,7 +163,67 @@ Remembering that $z = y^{1}$ and that $\frac{dz}{dx} = (1-n)y^{-n}\frac{dy}{dx}$
 This we can solve by use of an integrating factor in the normal way.
 Finally, having found z, we convert back to y using $$z = y^{1-n}$$
 ##### Example
-Solve $$\frac{dy}{dx} + \frac{1}{x}y = xy^2$$
+Solve $\frac{dy}{dx} + \frac{1}{x}y = xy^2$
+- Dividing through by $y^2$, giving $$y^{-2}\frac{dy}{dx} + \frac{1}{x}y^{-1} = x$$
+- Now put $z = y^{1 - n}$, ie, in this case $z = y^{1 - 2} = y^{-1}$
+$$z = y^{-1} \quad \therefore \frac{dz}{dx} = -y^{-2}\frac{dy}{dx}$$
+- Multiply through by (-1), to make the first term $\frac{dz}{dx}$ so that:$$\frac{dz}{dx} - \frac{1}{x}z = -x$$
+which is of the form $\frac{dz}{dx} + Pz = Q$ so that you can now solve the equation by the normal integrating factor method.
+
+- Solving this gives: $$y = (Cx - x^2)^{-1}$$
+---
+#### Exact First-order Differential Equations
+A differential equation $$M(x, y)dx + N(x, y)dy = 0 \quad \ldots \quad (i)$$
+is exact if there exists a function g(x, y) such that$$dg(x, y) = M(x, y)dx + N(x, y)dy \quad \ldots \quad (ii)$$
+**Test for exactness**: If $M(x, y)$ and $N(x, y)$ are continuous functions and have continuous first partial derivatives on some rectangle of the $xy$ plane, then eqn i above is exact if and only if: $$\frac{\partial M(x, y)}{\partial x} = \frac{\partial N(x, y)}{\partial x} \quad \ldots (iii)$$
+#### Method of solution
+To solve equation (i), assuming that it is exact, first solve the equations: $$\frac{\partial g(x, y)}{\partial x} = M(x, y) \quad \ldots (iv)$$
+$$\frac{\partial g(x, y)}{\partial y} = N(x, y)$$
+for g(x, y), the solution to eqn i is then given implicitly by:$$g(x, y) = c$$
+where $c$ represents an arbitrary constant.
+
+---
+## Second-Order Differential Equations
+
+### Second-Order Homogeneous Differential Equations
+Many Practical problems in engineering give rise to second-order differential equations of the form: $$a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = f(x)$$
+where $a$, and $b$ and $c$ are constant coefficients and $f(x)$ is a given function of $x$. The solution to differential equations of this form is seen to be
+>[!note]
+>$$y = Ae^{m_1x} + Be^{m_2x}$$
+>Where $A$ and $B$ are two arbitrary constants and $m_1$ and $m_2$ are the roots of the quadratic equation $am^2 + bm + c = 0$.
+>This quadratic equation is called the auxiliary equation and is obtained directly from the equation $$a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = 0$$
+>by writing $m^2$ for $\frac{d^2y}{dx^2}$, $m$ for $\frac{dy}{dx}$, $1$ for $y$.
+
+> [!summary]
+>The solution to the differential equation we get, depends on the roots of the auxiliary equation:
+> - *Roots real and different* $m = m_1$ and $m = m_2$ $$y = Ae^{m_1x} + Be^{m_2x}$$
+> - *Real and equal roots* $m = m_1$ (twice) $$y = e^{m_1x}(A + Bx)$$
+> - *Complex roots* $m = \alpha \pm i \beta$
+$$y = e^{\alpha x}(A \cos \beta x + B \sin \beta x)$$	
+In each case, we use the auxiliary equation to establish the values of $m$ and substitute in the appropriate form of the result.
+
+#### A Special Case
+There is a special case when b is 0:$$a \frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = 0$$
+ie:$$a \frac{d^2y}{dx^2} + cy = 0 \quad \text{ie} \quad \frac{d^2y}{dx^2} + \frac{c}{a}y = 0$$
+which can be written as:$$\frac{d^2y}{dx^2} \pm n^2y = 0$$
+To cover the two cases when the coefficient of y is $+$ or $-$
+>[!note]
+>Solutions to differential equations of this type have general solutions as:
+>- if $$\frac{d^2y}{dx^2} + n^2y \quad \quad m^2 + n^2 = 0 \quad \therefore m^2 = -n^2$$
+> $$y = A \cos nx + B \sin nx$$
+> - if $$\frac{d^2y}{dx^2} - n^2y \quad \quad m^2 - n^2 = 0 \quad \therefore m^2 = n^2 \quad \quad m = \pm n$$
+> $$y = A \cosh nx + B \sinh nx$$
+> 
+
+---
+### In-Homogeneous Differential Equations
+
+
+---
+### Linear Differential Equations: Theory of Solutions
+An nth order linear differential equation has the form $$b_n(x)y^{(n)} + b_{n - 1}(x)y^{(n - 1)} + \ldots + b_2(x)y'' + b_1(x)y' + b_0(x)y = g(x)$$
+where $g(x)$ and the coefficients $b_j(x)$ $j = 0, 1, 2, \ldots, n$ depend solely on the variable x. In other words, they do not depend on $y$ or any derivative of $y$. If $g(x) \equiv 0$ then the above equation is *homogeneous*; if not, is is *non-homogeneous*.
+
 
 
 ---

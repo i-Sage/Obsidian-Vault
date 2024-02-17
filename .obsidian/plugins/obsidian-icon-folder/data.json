@@ -1,6 +1,6 @@
 {
   "settings": {
-    "migrated": 3,
+    "migrated": 4,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
     "emojiStyle": "none",
@@ -24,19 +24,20 @@
     "iconInTitleEnabled": false,
     "iconInFrontmatterEnabled": false,
     "iconsBackgroundCheckEnabled": false,
-    "iconsInNotesEnabled": true
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":"
   },
   "Notes": "SiWritedotas",
   "Files": "SiFiles",
   "Templates": "RiBracesLine",
   "UnGrouped": "RiSubtractFill",
   "Notes/Arduino 101": "SiArduino",
-  "Notes/Machine Learning 101": "SiOpenai",
   "Notes/Statistics and Probability": "RiAddFill",
   "Notes/x86_64 Assembly": "SiAssemblyscript",
   "Excalidraw": "SiE",
   "Notes/Engineering Mathematics 101": "RiCalculatorFill",
   "Notes/Electrical Eng 101": "SiCapacitor",
   "Notes/Electrical Eng 101/01 Foundations": "RiCalculatorLine",
-  "Notes/Electrical Eng 101/Electrical Eng Materials": "SiMaterialdesign"
+  "Notes/Electrical Eng 101/Electrical Eng Materials": "SiMaterialdesign",
+  "Notes/Machine Learning 101": "SiOpenai"
 }
