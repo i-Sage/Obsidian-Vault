@@ -434,7 +434,7 @@ Good Fit! ^xVWLhubj
 {
 	"type": "excalidraw",
 	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.13",
+	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.20",
 	"elements": [
 		{
 			"type": "text",
@@ -514,8 +514,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 601,
-			"versionNonce": 1314790667,
+			"version": 602,
+			"versionNonce": 654696399,
 			"isDeleted": false,
 			"id": "6ZBX8Dzo",
 			"fillStyle": "solid",
@@ -537,7 +537,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704115944605,
+			"updated": 1708260055083,
 			"link": null,
 			"locked": false,
 			"fontSize": 23.093031939338246,
@@ -553,8 +553,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 251,
-			"versionNonce": 336271992,
+			"version": 252,
+			"versionNonce": 480512161,
 			"isDeleted": false,
 			"id": "24hKGY1C",
 			"fillStyle": "solid",
@@ -576,7 +576,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676317,
+			"updated": 1708260055086,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -588,7 +588,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bivariate means two variables\n",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "rectangle",
@@ -703,7 +703,7 @@ Good Fit! ^xVWLhubj
 			"containerId": "IA-7v4bjndR-_ask7ByHm",
 			"originalText": "ANOVA",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -751,8 +751,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 92,
-			"versionNonce": 1503914248,
+			"version": 93,
+			"versionNonce": 1979125231,
 			"isDeleted": false,
 			"id": "3cDdD2WE",
 			"fillStyle": "solid",
@@ -774,7 +774,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676319,
+			"updated": 1708260055088,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -786,12 +786,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "CORRELATION",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
-			"version": 195,
-			"versionNonce": 519840888,
+			"version": 197,
+			"versionNonce": 1272002447,
 			"isDeleted": false,
 			"id": "XMpxtXV5iyb4NtWZANMm-",
 			"fillStyle": "solid",
@@ -815,7 +815,7 @@ Good Fit! ^xVWLhubj
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1704292909511,
+			"updated": 1708260037520,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -898,8 +898,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 76,
-			"versionNonce": 1907428216,
+			"version": 77,
+			"versionNonce": 1396460673,
 			"isDeleted": false,
 			"id": "BJvw8Sw3",
 			"fillStyle": "solid",
@@ -921,7 +921,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676337,
+			"updated": 1708260055089,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -933,7 +933,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "LINEAR REGRESSION\n",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "line",
@@ -1029,8 +1029,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 74,
-			"versionNonce": 106006536,
+			"version": 75,
+			"versionNonce": 684789665,
 			"isDeleted": false,
 			"id": "jSOKQkXQ",
 			"fillStyle": "solid",
@@ -1052,7 +1052,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676338,
+			"updated": 1708260065019,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.854402415108975,
@@ -1064,12 +1064,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "variable 1",
 			"lineHeight": 1.25,
-			"baseline": 15
+			"baseline": 14
 		},
 		{
 			"type": "text",
-			"version": 92,
-			"versionNonce": 1735449720,
+			"version": 93,
+			"versionNonce": 1413609199,
 			"isDeleted": false,
 			"id": "Y49x0C3C",
 			"fillStyle": "solid",
@@ -1091,7 +1091,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676342,
+			"updated": 1708260065020,
 			"link": null,
 			"locked": false,
 			"fontSize": 16.08459487654334,
@@ -1103,7 +1103,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "variable 2",
 			"lineHeight": 1.25,
-			"baseline": 14
+			"baseline": 13
 		},
 		{
 			"type": "text",
@@ -1142,12 +1142,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "correlation and regression also have something\nin common, and that is the data points are\nplotted on a coordinate plane\n",
 			"lineHeight": 1.25,
-			"baseline": 83
+			"baseline": 82
 		},
 		{
 			"type": "text",
-			"version": 52,
-			"versionNonce": 386829688,
+			"version": 53,
+			"versionNonce": 1188919311,
 			"isDeleted": false,
 			"id": "xMH7hQo3",
 			"fillStyle": "solid",
@@ -1169,7 +1169,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676348,
+			"updated": 1708260055097,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1181,12 +1181,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 55,
-			"versionNonce": 285550088,
+			"version": 56,
+			"versionNonce": 971052129,
 			"isDeleted": false,
 			"id": "SdIArAJ7",
 			"fillStyle": "solid",
@@ -1208,7 +1208,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676350,
+			"updated": 1708260055098,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1220,7 +1220,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -1847,8 +1847,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 1238244984,
+			"version": 95,
+			"versionNonce": 531734063,
 			"isDeleted": false,
 			"id": "yP4IQvrQ",
 			"fillStyle": "solid",
@@ -1870,7 +1870,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676352,
+			"updated": 1708260055100,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1882,12 +1882,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "The value of ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 101,
-			"versionNonce": 411247880,
+			"version": 102,
+			"versionNonce": 610394177,
 			"isDeleted": false,
 			"id": "IA8dWgoJ",
 			"fillStyle": "solid",
@@ -1909,7 +1909,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676354,
+			"updated": 1708260055101,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1921,12 +1921,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "one variable,",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 102,
-			"versionNonce": 7573368,
+			"version": 103,
+			"versionNonce": 861667407,
 			"isDeleted": false,
 			"id": "JbarKNFb",
 			"fillStyle": "solid",
@@ -1948,7 +1948,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676356,
+			"updated": 1708260055103,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1960,12 +1960,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "is a function of",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 116,
-			"versionNonce": 501826568,
+			"version": 117,
+			"versionNonce": 1084108833,
 			"isDeleted": false,
 			"id": "ii63WRqb",
 			"fillStyle": "solid",
@@ -1987,7 +1987,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676358,
+			"updated": 1708260055105,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1999,12 +1999,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "the other variable",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 54714488,
+			"version": 95,
+			"versionNonce": 1135943279,
 			"isDeleted": false,
 			"id": "DlvWq1dT",
 			"fillStyle": "solid",
@@ -2026,7 +2026,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676360,
+			"updated": 1708260055106,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2038,12 +2038,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "The value of y, is a function of x; y = f(x)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 141,
-			"versionNonce": 1865646856,
+			"version": 142,
+			"versionNonce": 1418036225,
 			"isDeleted": false,
 			"id": "6Kle8atZ",
 			"fillStyle": "solid",
@@ -2065,7 +2065,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676363,
+			"updated": 1708260055108,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2077,12 +2077,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "the value of the dependent variable, is a function of the independent variable.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 200,
-			"versionNonce": 1524714248,
+			"version": 202,
+			"versionNonce": 36729729,
 			"isDeleted": false,
 			"id": "s9rKJBkI",
 			"fillStyle": "solid",
@@ -2104,7 +2104,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704122440902,
+			"updated": 1708260065028,
 			"link": null,
 			"locked": false,
 			"fontSize": 47.83636267869023,
@@ -2116,12 +2116,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Algebra Review: Lines",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 41
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 1912607096,
+			"version": 101,
+			"versionNonce": 1008163809,
 			"isDeleted": false,
 			"id": "hOAWFAJH",
 			"fillStyle": "solid",
@@ -2143,7 +2143,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676366,
+			"updated": 1708260055112,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2155,7 +2155,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "slope-intercept from of a line: ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
@@ -2194,7 +2194,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y = mx + b",
 			"lineHeight": 1.25,
-			"baseline": 27
+			"baseline": 28
 		},
 		{
 			"type": "arrow",
@@ -2298,8 +2298,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 95,
-			"versionNonce": 1408180856,
+			"version": 96,
+			"versionNonce": 948276911,
 			"isDeleted": false,
 			"id": "fJlOhyPh",
 			"fillStyle": "solid",
@@ -2326,7 +2326,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676367,
+			"updated": 1708260055114,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2338,12 +2338,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 89,
-			"versionNonce": 2145673480,
+			"version": 90,
+			"versionNonce": 660813761,
 			"isDeleted": false,
 			"id": "zxDaGaMs",
 			"fillStyle": "solid",
@@ -2370,7 +2370,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676367,
+			"updated": 1708260055114,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2382,12 +2382,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 85,
-			"versionNonce": 668210040,
+			"version": 86,
+			"versionNonce": 1566433487,
 			"isDeleted": false,
 			"id": "k4U2xipY",
 			"fillStyle": "solid",
@@ -2409,7 +2409,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676393,
+			"updated": 1708260055116,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2421,12 +2421,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x = random variable\n\nm = slope of the line rise",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 60,
-			"versionNonce": 2109931528,
+			"version": 61,
+			"versionNonce": 411604897,
 			"isDeleted": false,
 			"id": "kc7mqCoe",
 			"fillStyle": "solid",
@@ -2448,7 +2448,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676394,
+			"updated": 1708260055117,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2460,7 +2460,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "run",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "line",
@@ -2510,8 +2510,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 90,
-			"versionNonce": 1945298040,
+			"version": 91,
+			"versionNonce": 61271791,
 			"isDeleted": false,
 			"id": "3I21eu6P",
 			"fillStyle": "solid",
@@ -2533,7 +2533,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676395,
+			"updated": 1708260055119,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2545,12 +2545,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "b = y-intercept (crosses y-axis)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 100,
-			"versionNonce": 611696392,
+			"version": 101,
+			"versionNonce": 565640065,
 			"isDeleted": false,
 			"id": "IxcIVO3g",
 			"fillStyle": "solid",
@@ -2572,7 +2572,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676396,
+			"updated": 1708260055120,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2584,7 +2584,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y-intercept is where x = 0",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
@@ -2722,8 +2722,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 61,
-			"versionNonce": 75013640,
+			"version": 62,
+			"versionNonce": 904476943,
 			"isDeleted": false,
 			"id": "YRObfc7C",
 			"fillStyle": "solid",
@@ -2745,7 +2745,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676420,
+			"updated": 1708260055123,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2757,7 +2757,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "m = slope = 2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -2807,8 +2807,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 128,
-			"versionNonce": 325985912,
+			"version": 129,
+			"versionNonce": 1663951713,
 			"isDeleted": false,
 			"id": "fyUhjoOx",
 			"fillStyle": "solid",
@@ -2830,7 +2830,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676423,
+			"updated": 1708260055125,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2842,12 +2842,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y-intercept = y = (0) = 3\ny = 3\n(0, 3)",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "text",
-			"version": 84,
-			"versionNonce": 1053269256,
+			"version": 85,
+			"versionNonce": 429735727,
 			"isDeleted": false,
 			"id": "5rW0wRSp",
 			"fillStyle": "solid",
@@ -2874,7 +2874,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676425,
+			"updated": 1708260055127,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -2886,7 +2886,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "comparing\n",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "arrow",
@@ -3025,8 +3025,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 48,
-			"versionNonce": 684889976,
+			"version": 49,
+			"versionNonce": 1228721985,
 			"isDeleted": false,
 			"id": "Zi7iPxHd",
 			"fillStyle": "solid",
@@ -3048,7 +3048,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676427,
+			"updated": 1708260055128,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3060,12 +3060,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "(0,3)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 121,
-			"versionNonce": 1960754184,
+			"version": 122,
+			"versionNonce": 288063823,
 			"isDeleted": false,
 			"id": "GstWn8Zt",
 			"fillStyle": "solid",
@@ -3087,7 +3087,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676428,
+			"updated": 1708260055129,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3099,12 +3099,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "But we need two points to draw a line",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 1518397560,
+			"version": 138,
+			"versionNonce": 172179233,
 			"isDeleted": false,
 			"id": "rILWGE0m",
 			"fillStyle": "solid",
@@ -3126,7 +3126,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676431,
+			"updated": 1708260055131,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3138,12 +3138,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "we can use x = 1, and plug that into the equation of the line",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 83,
-			"versionNonce": 951712520,
+			"version": 84,
+			"versionNonce": 502038383,
 			"isDeleted": false,
 			"id": "tq0cqCiW",
 			"fillStyle": "solid",
@@ -3165,7 +3165,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676434,
+			"updated": 1708260055133,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3177,7 +3177,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y = 2(1) + 3 = 5\n",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "ellipse",
@@ -3212,8 +3212,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 69,
-			"versionNonce": 1144854904,
+			"version": 70,
+			"versionNonce": 1689301761,
 			"isDeleted": false,
 			"id": "9YzbM89I",
 			"fillStyle": "solid",
@@ -3235,7 +3235,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676436,
+			"updated": 1708260055134,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3247,7 +3247,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "(1, 5)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -3383,12 +3383,12 @@ Good Fit! ^xVWLhubj
 			"containerId": "59a4rLUBHtNH8NdkauAqm",
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 18
 		},
 		{
 			"type": "text",
-			"version": 59,
-			"versionNonce": 2094357000,
+			"version": 60,
+			"versionNonce": 36223375,
 			"isDeleted": false,
 			"id": "hLYoxXtV",
 			"fillStyle": "solid",
@@ -3410,7 +3410,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676438,
+			"updated": 1708260055136,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3422,7 +3422,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "/1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -3512,7 +3512,7 @@ Good Fit! ^xVWLhubj
 			"containerId": "QCE3SkS7rkRm8PI-dSrSt",
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3668,8 +3668,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 300,
-			"versionNonce": 62909547,
+			"version": 301,
+			"versionNonce": 486845153,
 			"isDeleted": false,
 			"id": "x2KoVwEz",
 			"fillStyle": "solid",
@@ -3691,7 +3691,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704115944678,
+			"updated": 1708260055140,
 			"link": null,
 			"locked": false,
 			"fontSize": 36.496093750000014,
@@ -3707,8 +3707,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 379,
-			"versionNonce": 1766533752,
+			"version": 380,
+			"versionNonce": 588820399,
 			"isDeleted": false,
 			"id": "4NnthU52",
 			"fillStyle": "solid",
@@ -3730,7 +3730,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676456,
+			"updated": 1708260055141,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3742,7 +3742,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y) = Bo + B1x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -3846,8 +3846,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 75,
-			"versionNonce": 70048008,
+			"version": 76,
+			"versionNonce": 1003398849,
 			"isDeleted": false,
 			"id": "hm4wrne3",
 			"fillStyle": "solid",
@@ -3874,7 +3874,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676456,
+			"updated": 1708260055143,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3886,12 +3886,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 75,
-			"versionNonce": 1148132216,
+			"version": 76,
+			"versionNonce": 719643087,
 			"isDeleted": false,
 			"id": "3FXfr5cR",
 			"fillStyle": "solid",
@@ -3918,7 +3918,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676456,
+			"updated": 1708260055143,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3930,12 +3930,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 118,
-			"versionNonce": 1379694600,
+			"version": 119,
+			"versionNonce": 195962529,
 			"isDeleted": false,
 			"id": "jDlCHll9",
 			"fillStyle": "solid",
@@ -3957,7 +3957,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676457,
+			"updated": 1708260055144,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3969,12 +3969,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y) = Bo + 0(x)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 79,
-			"versionNonce": 1475144824,
+			"version": 80,
+			"versionNonce": 1789251567,
 			"isDeleted": false,
 			"id": "e49jrSyA",
 			"fillStyle": "solid",
@@ -3996,7 +3996,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676458,
+			"updated": 1708260055145,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4008,7 +4008,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bo",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -4058,8 +4058,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 89,
-			"versionNonce": 452998920,
+			"version": 90,
+			"versionNonce": 1465035393,
 			"isDeleted": false,
 			"id": "6lALi02Y",
 			"fillStyle": "solid",
@@ -4081,7 +4081,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676459,
+			"updated": 1708260055147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4093,7 +4093,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "case 1",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -4197,8 +4197,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 152,
-			"versionNonce": 1032363384,
+			"version": 153,
+			"versionNonce": 2086926863,
 			"isDeleted": false,
 			"id": "stw5KyrT",
 			"fillStyle": "solid",
@@ -4225,7 +4225,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676459,
+			"updated": 1708260055147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4237,12 +4237,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 152,
-			"versionNonce": 854857224,
+			"version": 153,
+			"versionNonce": 1736159841,
 			"isDeleted": false,
 			"id": "CN9SiFyS",
 			"fillStyle": "solid",
@@ -4269,7 +4269,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676459,
+			"updated": 1708260055147,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4281,12 +4281,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 208,
-			"versionNonce": 914763384,
+			"version": 209,
+			"versionNonce": 622321711,
 			"isDeleted": false,
 			"id": "VKNOKml4",
 			"fillStyle": "solid",
@@ -4308,7 +4308,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676461,
+			"updated": 1708260055148,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4320,12 +4320,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y) = Bo + B1(x)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 187,
-			"versionNonce": 2132022536,
+			"version": 188,
+			"versionNonce": 1090043457,
 			"isDeleted": false,
 			"id": "2H2UaQGI",
 			"fillStyle": "solid",
@@ -4347,7 +4347,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676461,
+			"updated": 1708260055148,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4359,12 +4359,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bo",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 184,
-			"versionNonce": 1000972152,
+			"version": 185,
+			"versionNonce": 1990853199,
 			"isDeleted": false,
 			"id": "DVu2q8Gf",
 			"fillStyle": "solid",
@@ -4386,7 +4386,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676461,
+			"updated": 1708260055150,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4398,7 +4398,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "case 2",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -4448,8 +4448,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 101,
-			"versionNonce": 1692152840,
+			"version": 102,
+			"versionNonce": 581520929,
 			"isDeleted": false,
 			"id": "L9NxpG7l",
 			"fillStyle": "solid",
@@ -4471,7 +4471,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676462,
+			"updated": 1708260055151,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4483,7 +4483,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "slope B1 is +ive",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -4587,8 +4587,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 189,
-			"versionNonce": 221704312,
+			"version": 190,
+			"versionNonce": 838000751,
 			"isDeleted": false,
 			"id": "sCNNXOdU",
 			"fillStyle": "solid",
@@ -4615,7 +4615,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676462,
+			"updated": 1708260055151,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4627,12 +4627,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 189,
-			"versionNonce": 977826568,
+			"version": 190,
+			"versionNonce": 1132257793,
 			"isDeleted": false,
 			"id": "4zwc5Z95",
 			"fillStyle": "solid",
@@ -4659,7 +4659,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676462,
+			"updated": 1708260055151,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4671,12 +4671,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 253,
-			"versionNonce": 1123164536,
+			"version": 254,
+			"versionNonce": 1757084303,
 			"isDeleted": false,
 			"id": "wDT2W6o4",
 			"fillStyle": "solid",
@@ -4698,7 +4698,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676463,
+			"updated": 1708260055152,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4710,12 +4710,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y) = Bo - B1(x)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 270,
-			"versionNonce": 903139848,
+			"version": 271,
+			"versionNonce": 1349712353,
 			"isDeleted": false,
 			"id": "de2vAC3S",
 			"fillStyle": "solid",
@@ -4737,7 +4737,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676463,
+			"updated": 1708260055152,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4749,12 +4749,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bo",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 234,
-			"versionNonce": 1545548408,
+			"version": 235,
+			"versionNonce": 1606078639,
 			"isDeleted": false,
 			"id": "mPXNuUyX",
 			"fillStyle": "solid",
@@ -4776,7 +4776,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676464,
+			"updated": 1708260055153,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4788,12 +4788,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "case 3",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 210,
-			"versionNonce": 1585271048,
+			"version": 211,
+			"versionNonce": 714806721,
 			"isDeleted": false,
 			"id": "UifyREAi",
 			"fillStyle": "solid",
@@ -4815,7 +4815,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676464,
+			"updated": 1708260055155,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4827,7 +4827,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "slope B1 is -ive",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -4877,8 +4877,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 331,
-			"versionNonce": 1333928824,
+			"version": 332,
+			"versionNonce": 815456975,
 			"isDeleted": false,
 			"id": "kYO7Kysq",
 			"fillStyle": "solid",
@@ -4900,7 +4900,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676465,
+			"updated": 1708260055156,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -4912,7 +4912,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "These are the general types of simple linear regression\nlines that are based on the sign and the value of B1\nwhich is the slope",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "line",
@@ -5076,8 +5076,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 212,
-			"versionNonce": 93499144,
+			"version": 213,
+			"versionNonce": 1306738959,
 			"isDeleted": false,
 			"id": "olckQGJx",
 			"fillStyle": "solid",
@@ -5099,7 +5099,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676468,
+			"updated": 1708260065061,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.288467900417974,
@@ -5111,7 +5111,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y = Bo + B1x + e",
 			"lineHeight": 1.25,
-			"baseline": 21
+			"baseline": 20
 		},
 		{
 			"type": "rectangle",
@@ -5245,8 +5245,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 220,
-			"versionNonce": 1434035576,
+			"version": 221,
+			"versionNonce": 1695856033,
 			"isDeleted": false,
 			"id": "XbfX7Cou",
 			"fillStyle": "solid",
@@ -5268,7 +5268,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676469,
+			"updated": 1708260055161,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5280,12 +5280,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bo = y-intercept population parameter",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 174,
-			"versionNonce": 343379464,
+			"version": 175,
+			"versionNonce": 737390831,
 			"isDeleted": false,
 			"id": "OFnpSW7U",
 			"fillStyle": "solid",
@@ -5307,7 +5307,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676469,
+			"updated": 1708260055162,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5319,12 +5319,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "B1 = slope of population parameter",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 140,
-			"versionNonce": 991311480,
+			"version": 142,
+			"versionNonce": 1706580833,
 			"isDeleted": false,
 			"id": "U7Tuvel0",
 			"fillStyle": "solid",
@@ -5351,7 +5351,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676470,
+			"updated": 1708260065064,
 			"link": null,
 			"locked": false,
 			"fontSize": 23.689915707236846,
@@ -5363,12 +5363,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Simple Linear Regression Equation",
 			"lineHeight": 1.25,
-			"baseline": 21
+			"baseline": 20
 		},
 		{
 			"type": "text",
-			"version": 90,
-			"versionNonce": 1365806344,
+			"version": 91,
+			"versionNonce": 2068691727,
 			"isDeleted": false,
 			"id": "C9RPoMUl",
 			"fillStyle": "solid",
@@ -5390,7 +5390,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676470,
+			"updated": 1708260055164,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5402,7 +5402,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y) = Bo + B1x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
@@ -5572,8 +5572,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 1090037624,
+			"version": 94,
+			"versionNonce": 1976205665,
 			"isDeleted": false,
 			"id": "jKAoCKbw",
 			"fillStyle": "solid",
@@ -5600,7 +5600,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676505,
+			"updated": 1708260055167,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5612,12 +5612,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 122,
-			"versionNonce": 1709288456,
+			"version": 123,
+			"versionNonce": 52527407,
 			"isDeleted": false,
 			"id": "JUIhwbKi",
 			"fillStyle": "solid",
@@ -5639,7 +5639,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676505,
+			"updated": 1708260055167,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5651,7 +5651,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -5870,8 +5870,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 109,
-			"versionNonce": 593819768,
+			"version": 110,
+			"versionNonce": 1519758657,
 			"isDeleted": false,
 			"id": "E9H3t3Y4",
 			"fillStyle": "solid",
@@ -5893,7 +5893,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676505,
+			"updated": 1708260055167,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -5905,7 +5905,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
@@ -5944,7 +5944,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Lets say we pick a value of x, that corresponds to an expected value of y\nit is really not that simple, there is actually a distribution of ys for that x.\nRemember our regression model is not perfect, so any expected value of y we\ncome up with, is at best going to be an approximation. So when we say the \nexpected value, we mean is that it is the mean of a small distribution for that\ny. We want to have the expected value of our y in a narrower range",
 			"lineHeight": 1.25,
-			"baseline": 116
+			"baseline": 117
 		},
 		{
 			"type": "arrow",
@@ -6044,8 +6044,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 125,
-			"versionNonce": 1981753720,
+			"version": 126,
+			"versionNonce": 81232719,
 			"isDeleted": false,
 			"id": "bAjPI1xq",
 			"fillStyle": "solid",
@@ -6072,7 +6072,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676534,
+			"updated": 1708260055170,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6084,12 +6084,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 154,
-			"versionNonce": 1574717960,
+			"version": 155,
+			"versionNonce": 2026921249,
 			"isDeleted": false,
 			"id": "AH39xiUt",
 			"fillStyle": "solid",
@@ -6111,7 +6111,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676534,
+			"updated": 1708260055170,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6123,7 +6123,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -6342,8 +6342,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 141,
-			"versionNonce": 879442552,
+			"version": 142,
+			"versionNonce": 13123951,
 			"isDeleted": false,
 			"id": "JNy64mO1",
 			"fillStyle": "solid",
@@ -6365,7 +6365,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676534,
+			"updated": 1708260055170,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6377,7 +6377,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
@@ -6459,8 +6459,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 275,
-			"versionNonce": 1282238411,
+			"version": 276,
+			"versionNonce": 890652463,
 			"isDeleted": false,
 			"id": "dMv8519p",
 			"fillStyle": "solid",
@@ -6482,7 +6482,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704115944703,
+			"updated": 1708260065076,
 			"link": null,
 			"locked": false,
 			"fontSize": 17.094149133459503,
@@ -6685,8 +6685,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 170,
-			"versionNonce": 1359817592,
+			"version": 171,
+			"versionNonce": 2146046209,
 			"isDeleted": false,
 			"id": "6CA0lzIQ",
 			"fillStyle": "solid",
@@ -6708,7 +6708,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676544,
+			"updated": 1708260055178,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6720,12 +6720,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "If we actually knew the population parameters, Bo and B1, we could use the simple linear regression equation",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 118,
-			"versionNonce": 1917282312,
+			"version": 120,
+			"versionNonce": 1480342415,
 			"isDeleted": false,
 			"id": "WCCL60S4",
 			"fillStyle": "solid",
@@ -6747,7 +6747,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676544,
+			"updated": 1708260055178,
 			"link": null,
 			"locked": false,
 			"fontSize": 26.6684368845453,
@@ -6763,8 +6763,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 288,
-			"versionNonce": 1179188344,
+			"version": 289,
+			"versionNonce": 90327265,
 			"isDeleted": false,
 			"id": "hmnCsreq",
 			"fillStyle": "solid",
@@ -6786,7 +6786,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676546,
+			"updated": 1708260055180,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6798,7 +6798,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "In reality we almost never have the population parameters. Therefore we will estimate them using sample data. When using\nsample data, we have to change our equation a little bit.",
 			"lineHeight": 1.25,
-			"baseline": 41
+			"baseline": 42
 		},
 		{
 			"type": "text",
@@ -6846,8 +6846,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 191,
-			"versionNonce": 1546462984,
+			"version": 192,
+			"versionNonce": 795603375,
 			"isDeleted": false,
 			"id": "pqnhKhSS",
 			"fillStyle": "solid",
@@ -6869,7 +6869,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676547,
+			"updated": 1708260055183,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6881,12 +6881,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y is the point estimator of E(y)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 187,
-			"versionNonce": 635612536,
+			"version": 188,
+			"versionNonce": 1120437441,
 			"isDeleted": false,
 			"id": "m8eMYSB2",
 			"fillStyle": "solid",
@@ -6908,7 +6908,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676548,
+			"updated": 1708260055184,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -6920,7 +6920,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y is the mean value of y for a given value of x",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "rectangle",
@@ -7053,8 +7053,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 267,
-			"versionNonce": 553846280,
+			"version": 268,
+			"versionNonce": 260039631,
 			"isDeleted": false,
 			"id": "69tOxX0j",
 			"fillStyle": "solid",
@@ -7076,7 +7076,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676567,
+			"updated": 1708260055187,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7088,12 +7088,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Going back to our previous example, we now add the bill price of the meal to our data.",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 289,
-			"versionNonce": 689847928,
+			"version": 290,
+			"versionNonce": 331105441,
 			"isDeleted": false,
 			"id": "EYQCjqvR",
 			"fillStyle": "solid",
@@ -7115,7 +7115,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676572,
+			"updated": 1708260055189,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.12872748621846,
@@ -7185,8 +7185,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 253,
-			"versionNonce": 767886600,
+			"version": 254,
+			"versionNonce": 1217434095,
 			"isDeleted": false,
 			"id": "Rkyl10kw",
 			"fillStyle": "solid",
@@ -7213,7 +7213,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676586,
+			"updated": 1708260055190,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7225,7 +7225,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "tip amount ($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -7275,8 +7275,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 125,
-			"versionNonce": 1086304120,
+			"version": 126,
+			"versionNonce": 871172225,
 			"isDeleted": false,
 			"id": "JH5GhhbR",
 			"fillStyle": "solid",
@@ -7298,7 +7298,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676588,
+			"updated": 1708260055190,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7310,12 +7310,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bill amount($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 54,
-			"versionNonce": 1877943304,
+			"version": 55,
+			"versionNonce": 329677839,
 			"isDeleted": false,
 			"id": "mvTGKhgY",
 			"fillStyle": "solid",
@@ -7342,7 +7342,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676590,
+			"updated": 1708260055191,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7354,12 +7354,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "20",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 110,
-			"versionNonce": 621478008,
+			"version": 111,
+			"versionNonce": 1025134689,
 			"isDeleted": false,
 			"id": "863WO49I",
 			"fillStyle": "solid",
@@ -7381,7 +7381,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676591,
+			"updated": 1708260055192,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7393,12 +7393,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "40",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 71,
-			"versionNonce": 1165845256,
+			"version": 72,
+			"versionNonce": 1958355503,
 			"isDeleted": false,
 			"id": "QP9CTFit",
 			"fillStyle": "solid",
@@ -7420,7 +7420,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676593,
+			"updated": 1708260055193,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7432,12 +7432,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "60",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 93,
-			"versionNonce": 1707356536,
+			"version": 94,
+			"versionNonce": 1695784001,
 			"isDeleted": false,
 			"id": "VqcXtv1p",
 			"fillStyle": "solid",
@@ -7459,7 +7459,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676594,
+			"updated": 1708260055194,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7471,12 +7471,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "80",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 76,
-			"versionNonce": 1827389960,
+			"version": 77,
+			"versionNonce": 1555301455,
 			"isDeleted": false,
 			"id": "zDqdM3Xz",
 			"fillStyle": "solid",
@@ -7498,7 +7498,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676596,
+			"updated": 1708260055195,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7510,12 +7510,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "100",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 69,
-			"versionNonce": 2049917560,
+			"version": 70,
+			"versionNonce": 2075683873,
 			"isDeleted": false,
 			"id": "iQUnCBM0",
 			"fillStyle": "solid",
@@ -7537,7 +7537,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676603,
+			"updated": 1708260055195,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7549,12 +7549,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "120",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 92,
-			"versionNonce": 1966489864,
+			"version": 93,
+			"versionNonce": 191668847,
 			"isDeleted": false,
 			"id": "cZegTbor",
 			"fillStyle": "solid",
@@ -7576,7 +7576,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676604,
+			"updated": 1708260055196,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7588,12 +7588,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 96,
-			"versionNonce": 1360016248,
+			"version": 97,
+			"versionNonce": 687357953,
 			"isDeleted": false,
 			"id": "uWkh5c2A",
 			"fillStyle": "solid",
@@ -7615,7 +7615,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676606,
+			"updated": 1708260055197,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7627,12 +7627,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 124,
-			"versionNonce": 769187848,
+			"version": 125,
+			"versionNonce": 833387663,
 			"isDeleted": false,
 			"id": "exeZe884",
 			"fillStyle": "solid",
@@ -7654,7 +7654,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676607,
+			"updated": 1708260055197,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7666,12 +7666,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "8",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 123,
-			"versionNonce": 1621820536,
+			"version": 124,
+			"versionNonce": 1792186337,
 			"isDeleted": false,
 			"id": "1JCiIpdW",
 			"fillStyle": "solid",
@@ -7693,7 +7693,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676608,
+			"updated": 1708260055198,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7705,12 +7705,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "10",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 123,
-			"versionNonce": 382705416,
+			"version": 124,
+			"versionNonce": 1395397295,
 			"isDeleted": false,
 			"id": "8Hxpjr79",
 			"fillStyle": "solid",
@@ -7732,7 +7732,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676612,
+			"updated": 1708260055199,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7744,12 +7744,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "12",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 127,
-			"versionNonce": 918795640,
+			"version": 128,
+			"versionNonce": 1398207425,
 			"isDeleted": false,
 			"id": "FZ3Ym0xe",
 			"fillStyle": "solid",
@@ -7771,7 +7771,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676614,
+			"updated": 1708260055200,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7783,12 +7783,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "16",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 90,
-			"versionNonce": 1352039944,
+			"version": 91,
+			"versionNonce": 1754522831,
 			"isDeleted": false,
 			"id": "zv6I2mG0",
 			"fillStyle": "solid",
@@ -7810,7 +7810,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676616,
+			"updated": 1708260055201,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7822,7 +7822,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "18",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -8090,8 +8090,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 312,
-			"versionNonce": 204045576,
+			"version": 313,
+			"versionNonce": 111465377,
 			"isDeleted": false,
 			"id": "nuaouPHT",
 			"fillStyle": "solid",
@@ -8113,7 +8113,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676667,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.12872748621846,
@@ -8183,8 +8183,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 276,
-			"versionNonce": 1123989368,
+			"version": 277,
+			"versionNonce": 1098674927,
 			"isDeleted": false,
 			"id": "49a7GpK3",
 			"fillStyle": "solid",
@@ -8211,7 +8211,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676667,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8223,7 +8223,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "tip amount ($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -8273,8 +8273,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 148,
-			"versionNonce": 2063899656,
+			"version": 149,
+			"versionNonce": 2028713857,
 			"isDeleted": false,
 			"id": "dUskGHd9",
 			"fillStyle": "solid",
@@ -8296,7 +8296,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676667,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8308,12 +8308,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bill amount($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 77,
-			"versionNonce": 438896760,
+			"version": 78,
+			"versionNonce": 644758799,
 			"isDeleted": false,
 			"id": "Q6KUE03I",
 			"fillStyle": "solid",
@@ -8340,7 +8340,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676667,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8352,12 +8352,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "20",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 133,
-			"versionNonce": 1059314440,
+			"version": 134,
+			"versionNonce": 1818959713,
 			"isDeleted": false,
 			"id": "LfPYnlnR",
 			"fillStyle": "solid",
@@ -8379,7 +8379,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676667,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8391,12 +8391,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "40",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 94,
-			"versionNonce": 434190712,
+			"version": 95,
+			"versionNonce": 987874095,
 			"isDeleted": false,
 			"id": "TkKRCQTw",
 			"fillStyle": "solid",
@@ -8418,7 +8418,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8430,12 +8430,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "60",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 116,
-			"versionNonce": 1526938120,
+			"version": 117,
+			"versionNonce": 796035905,
 			"isDeleted": false,
 			"id": "5979Vyeg",
 			"fillStyle": "solid",
@@ -8457,7 +8457,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055204,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8469,12 +8469,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "80",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 99,
-			"versionNonce": 896223864,
+			"version": 100,
+			"versionNonce": 524256591,
 			"isDeleted": false,
 			"id": "TyfkQHW9",
 			"fillStyle": "solid",
@@ -8496,7 +8496,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8508,12 +8508,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "100",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 92,
-			"versionNonce": 564050184,
+			"version": 93,
+			"versionNonce": 442596129,
 			"isDeleted": false,
 			"id": "XV6jJaa0",
 			"fillStyle": "solid",
@@ -8535,7 +8535,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8547,12 +8547,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "120",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 115,
-			"versionNonce": 1468742520,
+			"version": 116,
+			"versionNonce": 1390412655,
 			"isDeleted": false,
 			"id": "Hirf10gl",
 			"fillStyle": "solid",
@@ -8574,7 +8574,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8586,12 +8586,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 119,
-			"versionNonce": 645027848,
+			"version": 120,
+			"versionNonce": 1302818561,
 			"isDeleted": false,
 			"id": "GqdAol0X",
 			"fillStyle": "solid",
@@ -8613,7 +8613,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8625,12 +8625,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 147,
-			"versionNonce": 1921322104,
+			"version": 148,
+			"versionNonce": 1443609999,
 			"isDeleted": false,
 			"id": "xjAseuOW",
 			"fillStyle": "solid",
@@ -8652,7 +8652,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676668,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8664,12 +8664,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "8",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 146,
-			"versionNonce": 762976008,
+			"version": 147,
+			"versionNonce": 801367777,
 			"isDeleted": false,
 			"id": "iAK5F53F",
 			"fillStyle": "solid",
@@ -8691,7 +8691,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676669,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8703,12 +8703,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "10",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 146,
-			"versionNonce": 270318968,
+			"version": 147,
+			"versionNonce": 201012143,
 			"isDeleted": false,
 			"id": "LdVLEWQF",
 			"fillStyle": "solid",
@@ -8730,7 +8730,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676669,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8742,12 +8742,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "12",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 150,
-			"versionNonce": 456259080,
+			"version": 151,
+			"versionNonce": 726033089,
 			"isDeleted": false,
 			"id": "x1kYrmox",
 			"fillStyle": "solid",
@@ -8769,7 +8769,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676669,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8781,12 +8781,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "16",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 113,
-			"versionNonce": 1637240440,
+			"version": 114,
+			"versionNonce": 1557587407,
 			"isDeleted": false,
 			"id": "SzP27wqn",
 			"fillStyle": "solid",
@@ -8808,7 +8808,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676669,
+			"updated": 1708260055205,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -8820,7 +8820,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "18",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -9285,8 +9285,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 354,
-			"versionNonce": 2132939784,
+			"version": 355,
+			"versionNonce": 751723169,
 			"isDeleted": false,
 			"id": "gPSYMw9c",
 			"fillStyle": "solid",
@@ -9313,7 +9313,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676690,
+			"updated": 1708260055206,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9325,7 +9325,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "tip amount ($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -9379,8 +9379,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 226,
-			"versionNonce": 180293752,
+			"version": 227,
+			"versionNonce": 397890543,
 			"isDeleted": false,
 			"id": "tBqCMSqR",
 			"fillStyle": "solid",
@@ -9402,7 +9402,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676690,
+			"updated": 1708260055206,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9414,12 +9414,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bill amount($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 155,
-			"versionNonce": 1355961096,
+			"version": 156,
+			"versionNonce": 1628137089,
 			"isDeleted": false,
 			"id": "p1pmuQGw",
 			"fillStyle": "solid",
@@ -9446,7 +9446,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676690,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9458,12 +9458,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "20",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 211,
-			"versionNonce": 443957624,
+			"version": 212,
+			"versionNonce": 346357263,
 			"isDeleted": false,
 			"id": "K9xM1hcJ",
 			"fillStyle": "solid",
@@ -9485,7 +9485,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676691,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9497,12 +9497,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "40",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 172,
-			"versionNonce": 539144712,
+			"version": 173,
+			"versionNonce": 851242593,
 			"isDeleted": false,
 			"id": "LmRkDPAn",
 			"fillStyle": "solid",
@@ -9524,7 +9524,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676691,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9536,12 +9536,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "60",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 194,
-			"versionNonce": 1847546488,
+			"version": 195,
+			"versionNonce": 379085871,
 			"isDeleted": false,
 			"id": "KYLnrTZX",
 			"fillStyle": "solid",
@@ -9563,7 +9563,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676691,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9575,12 +9575,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "80",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 177,
-			"versionNonce": 68104456,
+			"version": 178,
+			"versionNonce": 145914433,
 			"isDeleted": false,
 			"id": "jZqfJJiA",
 			"fillStyle": "solid",
@@ -9602,7 +9602,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676691,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9614,12 +9614,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "100",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 170,
-			"versionNonce": 1820214136,
+			"version": 171,
+			"versionNonce": 1836713551,
 			"isDeleted": false,
 			"id": "Pp4PPtI3",
 			"fillStyle": "solid",
@@ -9641,7 +9641,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676692,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9653,12 +9653,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "120",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 193,
-			"versionNonce": 1410584584,
+			"version": 194,
+			"versionNonce": 1137412641,
 			"isDeleted": false,
 			"id": "Rx1xjBvU",
 			"fillStyle": "solid",
@@ -9680,7 +9680,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676692,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9692,12 +9692,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 197,
-			"versionNonce": 64427128,
+			"version": 198,
+			"versionNonce": 1478648943,
 			"isDeleted": false,
 			"id": "dn1lxczk",
 			"fillStyle": "solid",
@@ -9719,7 +9719,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676693,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9731,12 +9731,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 225,
-			"versionNonce": 405573384,
+			"version": 226,
+			"versionNonce": 2096602625,
 			"isDeleted": false,
 			"id": "izGtj9OR",
 			"fillStyle": "solid",
@@ -9758,7 +9758,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676693,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9770,12 +9770,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "8",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 224,
-			"versionNonce": 971883896,
+			"version": 225,
+			"versionNonce": 643432079,
 			"isDeleted": false,
 			"id": "jPricv6b",
 			"fillStyle": "solid",
@@ -9797,7 +9797,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676693,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9809,12 +9809,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "10",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 224,
-			"versionNonce": 2027253256,
+			"version": 225,
+			"versionNonce": 53884385,
 			"isDeleted": false,
 			"id": "eSshjiAc",
 			"fillStyle": "solid",
@@ -9836,7 +9836,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676694,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9848,12 +9848,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "12",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 228,
-			"versionNonce": 1007048312,
+			"version": 229,
+			"versionNonce": 450450607,
 			"isDeleted": false,
 			"id": "KgDo8O1m",
 			"fillStyle": "solid",
@@ -9875,7 +9875,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676694,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9887,12 +9887,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "16",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 191,
-			"versionNonce": 789212424,
+			"version": 192,
+			"versionNonce": 429314497,
 			"isDeleted": false,
 			"id": "8I6yu8Hh",
 			"fillStyle": "solid",
@@ -9914,7 +9914,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676694,
+			"updated": 1708260055207,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -9926,7 +9926,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "18",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -10155,8 +10155,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 185,
-			"versionNonce": 416480120,
+			"version": 186,
+			"versionNonce": 222881487,
 			"isDeleted": false,
 			"id": "DbDDwq35",
 			"fillStyle": "solid",
@@ -10178,7 +10178,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704122441026,
+			"updated": 1708260055208,
 			"link": null,
 			"locked": false,
 			"fontSize": 45.10772235576879,
@@ -10190,7 +10190,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "x' = 74",
 			"lineHeight": 1.25,
-			"baseline": 39
+			"baseline": 40
 		},
 		{
 			"type": "text",
@@ -10229,7 +10229,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y' = 10",
 			"lineHeight": 1.25,
-			"baseline": 31
+			"baseline": 30
 		},
 		{
 			"type": "line",
@@ -10325,8 +10325,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 127,
-			"versionNonce": 2127370360,
+			"version": 128,
+			"versionNonce": 1966666145,
 			"isDeleted": false,
 			"id": "301OhoAx",
 			"fillStyle": "solid",
@@ -10348,7 +10348,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676705,
+			"updated": 1708260055210,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10360,7 +10360,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "(74, 10) CENTROID",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "diamond",
@@ -10395,8 +10395,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 236,
-			"versionNonce": 1921567496,
+			"version": 237,
+			"versionNonce": 62408513,
 			"isDeleted": false,
 			"id": "txKSANZz",
 			"fillStyle": "solid",
@@ -10418,7 +10418,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676768,
+			"updated": 1708260065126,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.430776742788478,
@@ -10488,8 +10488,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 366,
-			"versionNonce": 1870875000,
+			"version": 367,
+			"versionNonce": 1279341807,
 			"isDeleted": false,
 			"id": "z7n0BAXG",
 			"fillStyle": "solid",
@@ -10516,7 +10516,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676769,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10528,7 +10528,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "tip amount ($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "arrow",
@@ -10578,8 +10578,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 238,
-			"versionNonce": 877275656,
+			"version": 239,
+			"versionNonce": 2068583809,
 			"isDeleted": false,
 			"id": "3nHYMXxF",
 			"fillStyle": "solid",
@@ -10601,7 +10601,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676769,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10613,12 +10613,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "Bill amount($)",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 167,
-			"versionNonce": 743135864,
+			"version": 168,
+			"versionNonce": 1061863183,
 			"isDeleted": false,
 			"id": "93H2LN79",
 			"fillStyle": "solid",
@@ -10645,7 +10645,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676769,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10657,12 +10657,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "20",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 223,
-			"versionNonce": 344434952,
+			"version": 224,
+			"versionNonce": 1057996129,
 			"isDeleted": false,
 			"id": "9DvJf9bH",
 			"fillStyle": "solid",
@@ -10684,7 +10684,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676769,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10696,12 +10696,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "40",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 184,
-			"versionNonce": 401165176,
+			"version": 185,
+			"versionNonce": 1222509871,
 			"isDeleted": false,
 			"id": "KCLKfUya",
 			"fillStyle": "solid",
@@ -10723,7 +10723,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10735,12 +10735,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "60",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 206,
-			"versionNonce": 784156680,
+			"version": 207,
+			"versionNonce": 1070819649,
 			"isDeleted": false,
 			"id": "aQwvZbXk",
 			"fillStyle": "solid",
@@ -10762,7 +10762,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10774,12 +10774,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "80",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 189,
-			"versionNonce": 480320632,
+			"version": 190,
+			"versionNonce": 1751353167,
 			"isDeleted": false,
 			"id": "RcEHtayJ",
 			"fillStyle": "solid",
@@ -10801,7 +10801,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055211,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10813,12 +10813,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "100",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 182,
-			"versionNonce": 1323763464,
+			"version": 183,
+			"versionNonce": 1727437089,
 			"isDeleted": false,
 			"id": "OquOd6ys",
 			"fillStyle": "solid",
@@ -10840,7 +10840,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10852,12 +10852,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "120",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 205,
-			"versionNonce": 1010224504,
+			"version": 206,
+			"versionNonce": 473154927,
 			"isDeleted": false,
 			"id": "JEdJX5bt",
 			"fillStyle": "solid",
@@ -10879,7 +10879,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10891,12 +10891,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "4",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 209,
-			"versionNonce": 1635837448,
+			"version": 210,
+			"versionNonce": 1172884737,
 			"isDeleted": false,
 			"id": "YmiqVVlR",
 			"fillStyle": "solid",
@@ -10918,7 +10918,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676770,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10930,12 +10930,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 237,
-			"versionNonce": 535715448,
+			"version": 238,
+			"versionNonce": 60243855,
 			"isDeleted": false,
 			"id": "A6VN8U1r",
 			"fillStyle": "solid",
@@ -10957,7 +10957,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676771,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -10969,12 +10969,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "8",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 236,
-			"versionNonce": 1669784840,
+			"version": 237,
+			"versionNonce": 338265313,
 			"isDeleted": false,
 			"id": "DE5dRc6S",
 			"fillStyle": "solid",
@@ -10996,7 +10996,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676771,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11008,12 +11008,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "10",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 236,
-			"versionNonce": 680251256,
+			"version": 237,
+			"versionNonce": 1086748079,
 			"isDeleted": false,
 			"id": "1eZbAgmu",
 			"fillStyle": "solid",
@@ -11035,7 +11035,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676771,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11047,12 +11047,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "12",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 240,
-			"versionNonce": 1383400456,
+			"version": 241,
+			"versionNonce": 1833451713,
 			"isDeleted": false,
 			"id": "WTriv1Tk",
 			"fillStyle": "solid",
@@ -11074,7 +11074,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676771,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11086,12 +11086,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "16",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 203,
-			"versionNonce": 2119377016,
+			"version": 204,
+			"versionNonce": 451536847,
 			"isDeleted": false,
 			"id": "OBdimM66",
 			"fillStyle": "solid",
@@ -11113,7 +11113,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676771,
+			"updated": 1708260055212,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11125,7 +11125,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "18",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "ellipse",
@@ -11400,8 +11400,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 141,
-			"versionNonce": 554193272,
+			"version": 142,
+			"versionNonce": 1323597985,
 			"isDeleted": false,
 			"id": "hp7dP8N5",
 			"fillStyle": "solid",
@@ -11423,7 +11423,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676774,
+			"updated": 1708260055213,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11435,7 +11435,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y = 0.1462x - 0.8188",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "diamond",
@@ -11470,8 +11470,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 167,
-			"versionNonce": 259629576,
+			"version": 168,
+			"versionNonce": 1612322287,
 			"isDeleted": false,
 			"id": "JnMdqxs3",
 			"fillStyle": "solid",
@@ -11493,7 +11493,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676776,
+			"updated": 1708260055213,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11505,12 +11505,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "(74,10) CENTROID",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 195,
-			"versionNonce": 2012177016,
+			"version": 196,
+			"versionNonce": 1454228609,
 			"isDeleted": false,
 			"id": "4YSUBR8r",
 			"fillStyle": "solid",
@@ -11541,7 +11541,7 @@ Good Fit! ^xVWLhubj
 					"type": "arrow"
 				}
 			],
-			"updated": 1704129676779,
+			"updated": 1708260055214,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11553,12 +11553,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "y'i = 0.1462x - 0.8188",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
 			"type": "text",
-			"version": 217,
-			"versionNonce": 1637781624,
+			"version": 219,
+			"versionNonce": 1749256527,
 			"isDeleted": false,
 			"id": "AjH9DqAm",
 			"fillStyle": "solid",
@@ -11580,7 +11580,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704122440265,
+			"updated": 1708260065130,
 			"link": null,
 			"locked": false,
 			"fontSize": 28.66050091911783,
@@ -11631,7 +11631,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "For every $1 the bill amount(x) increases, we wold expect the tip\namount to increase by $0.1462 or about 15-cents.",
 			"lineHeight": 1.25,
-			"baseline": 52
+			"baseline": 53
 		},
 		{
 			"type": "rectangle",
@@ -11725,8 +11725,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 399,
-			"versionNonce": 1640780664,
+			"version": 400,
+			"versionNonce": 1080265825,
 			"isDeleted": false,
 			"id": "agipPV7j",
 			"fillStyle": "solid",
@@ -11748,7 +11748,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676789,
+			"updated": 1708260055219,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -11760,7 +11760,7 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "if the bill amount (x) is zero, then the expected / predicted tip \namount is $-0.8188 or negative 82-cents! Does this make snese\n? No. The intercept may or may not make sense in the \"real world\".",
 			"lineHeight": 1.25,
-			"baseline": 66
+			"baseline": 67
 		},
 		{
 			"type": "rectangle",
@@ -12319,8 +12319,8 @@ Good Fit! ^xVWLhubj
 		},
 		{
 			"type": "text",
-			"version": 514,
-			"versionNonce": 779010056,
+			"version": 515,
+			"versionNonce": 313697839,
 			"isDeleted": false,
 			"id": "fj6US580",
 			"fillStyle": "solid",
@@ -12342,7 +12342,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676793,
+			"updated": 1708260055220,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12354,12 +12354,12 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "The difference between the observed value of y and the\nstraight line (Bo + B1x) be an error e. It is convenient to think\nof e as a statistical error; that is, it is a random variable\nthat accounts for the failure of the model to fit the data\nexactly. The error may be made up of the effects of other\nvariables on delivery time, measurnment errors, and so forth",
 			"lineHeight": 1.25,
-			"baseline": 141
+			"baseline": 142
 		},
 		{
 			"type": "text",
-			"version": 41,
-			"versionNonce": 1155736696,
+			"version": 42,
+			"versionNonce": 601184321,
 			"isDeleted": false,
 			"id": "lvmP7Qhb",
 			"fillStyle": "solid",
@@ -12381,7 +12381,7 @@ Good Fit! ^xVWLhubj
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1704129676795,
+			"updated": 1708260055221,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -12393,143 +12393,143 @@ Good Fit! ^xVWLhubj
 			"containerId": null,
 			"originalText": "e = ",
 			"lineHeight": 1.25,
-			"baseline": 16
+			"baseline": 17
 		},
 		{
-			"id": "u0ae1u8u",
 			"type": "text",
+			"version": 37,
+			"versionNonce": 821823567,
+			"isDeleted": false,
+			"id": "u0ae1u8u",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 5006.021187883986,
 			"y": 1311.2391479421708,
-			"width": 118.90684000651078,
-			"height": 73.58103204902581,
-			"angle": 0,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"width": 118.89588928222656,
+			"height": 73.5810320490258,
+			"seed": 1480744200,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1480744200,
-			"version": 36,
-			"versionNonce": 14997256,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704292931953,
+			"boundElements": [],
+			"updated": 1708260055222,
 			"link": null,
 			"locked": false,
-			"text": "SST",
-			"rawText": "SST",
 			"fontSize": 58.86482563922063,
 			"fontFamily": 1,
+			"text": "SST",
+			"rawText": "SST",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 51.000000000000014,
 			"containerId": null,
 			"originalText": "SST",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 52
 		},
 		{
-			"id": "G2UE7Oo6",
 			"type": "text",
+			"version": 31,
+			"versionNonce": 1927456801,
+			"isDeleted": false,
+			"id": "G2UE7Oo6",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 4890.538851203891,
 			"y": 1542.5868423391437,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 37.87995910644531,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 307168632,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 307168632,
-			"version": 30,
-			"versionNonce": 1518944888,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704292968102,
+			"boundElements": [],
+			"updated": 1708260055222,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "SSR",
 			"rawText": "SSR",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "SSR",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "4MB2WzQW",
 			"type": "text",
-			"x": 5165.220654589308,
-			"y": 1534.1776219615392,
-			"width": 37.799957275390625,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 19,
+			"versionNonce": 538191471,
+			"isDeleted": false,
+			"id": "4MB2WzQW",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 5165.220654589308,
+			"y": 1534.1776219615392,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 37.799957275390625,
+			"height": 25,
+			"seed": 1526567800,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1526567800,
-			"version": 18,
-			"versionNonce": 430945912,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704292943653,
+			"boundElements": [],
+			"updated": 1708260055224,
 			"link": null,
 			"locked": false,
-			"text": "SSE",
-			"rawText": "SSE",
 			"fontSize": 20,
 			"fontFamily": 1,
+			"text": "SSE",
+			"rawText": "SSE",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "SSE",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "EVhyGRHqMoTQ2ea4OKZvW",
 			"type": "rectangle",
-			"x": 4870.770784797642,
-			"y": 1521.9001459687008,
-			"width": 74.85544840494731,
-			"height": 60.24953206380202,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 68,
+			"versionNonce": 689066504,
+			"isDeleted": false,
+			"id": "EVhyGRHqMoTQ2ea4OKZvW",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 4870.770784797642,
+			"y": 1521.9001459687008,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 74.85544840494731,
+			"height": 60.24953206380202,
+			"seed": 1506050168,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
-			"seed": 1506050168,
-			"version": 68,
-			"versionNonce": 689066504,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "ZOPeSR_NdM-yYD-7X14aC",
@@ -12541,29 +12541,29 @@ Good Fit! ^xVWLhubj
 			"locked": false
 		},
 		{
-			"id": "4mbW1qe_pQpZS2EdEdfKM",
 			"type": "rectangle",
-			"x": 5148.283602180454,
-			"y": 1512.7714736867997,
-			"width": 69.37815348307322,
-			"height": 60.2494812011721,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 84,
+			"versionNonce": 2023983224,
+			"isDeleted": false,
+			"id": "4mbW1qe_pQpZS2EdEdfKM",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 5148.283602180454,
+			"y": 1512.7714736867997,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 69.37815348307322,
+			"height": 60.2494812011721,
+			"seed": 96831240,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
-			"seed": 96831240,
-			"version": 84,
-			"versionNonce": 2023983224,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "5U4RdK8vBOGWk_bWmXNDW",
@@ -12575,29 +12575,29 @@ Good Fit! ^xVWLhubj
 			"locked": false
 		},
 		{
-			"id": "sncfnEHvnxVGp9hvvl_pO",
 			"type": "rectangle",
-			"x": 4960.232149543735,
-			"y": 1302.811121107047,
-			"width": 193.52864583333303,
-			"height": 78.50690205891942,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 27,
+			"versionNonce": 196658808,
+			"isDeleted": false,
+			"id": "sncfnEHvnxVGp9hvvl_pO",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 4960.232149543735,
+			"y": 1302.811121107047,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 193.52864583333303,
+			"height": 78.50690205891942,
+			"seed": 248175992,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 3
 			},
-			"seed": 248175992,
-			"version": 27,
-			"versionNonce": 196658808,
-			"isDeleted": false,
 			"boundElements": [
 				{
 					"id": "ZOPeSR_NdM-yYD-7X14aC",
@@ -12613,44 +12613,33 @@ Good Fit! ^xVWLhubj
 			"locked": false
 		},
 		{
-			"id": "ZOPeSR_NdM-yYD-7X14aC",
 			"type": "arrow",
-			"x": 4954.75495634712,
-			"y": 1368.5378463674638,
-			"width": 36.514892578125,
-			"height": 142.40786234537768,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
+			"version": 46,
+			"versionNonce": 53524088,
+			"isDeleted": false,
+			"id": "ZOPeSR_NdM-yYD-7X14aC",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "dashed",
 			"roughness": 1,
 			"opacity": 100,
+			"angle": 0,
+			"x": 4954.75495634712,
+			"y": 1368.5378463674638,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 36.514892578125,
+			"height": 142.40786234537768,
+			"seed": 1874017544,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": {
 				"type": 2
 			},
-			"seed": 1874017544,
-			"version": 46,
-			"versionNonce": 53524088,
-			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1704292988453,
 			"link": null,
 			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-36.514892578125,
-					142.40786234537768
-				]
-			],
-			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "sncfnEHvnxVGp9hvvl_pO",
 				"focus": 0.8935138916576613,
@@ -12661,48 +12650,48 @@ Good Fit! ^xVWLhubj
 				"focus": -0.010887448494195937,
 				"gap": 10.954437255859489
 			},
+			"lastCommittedPoint": null,
 			"startArrowhead": null,
-			"endArrowhead": "arrow"
-		},
-		{
-			"id": "5U4RdK8vBOGWk_bWmXNDW",
-			"type": "arrow",
-			"x": 5153.7607953770685,
-			"y": 1374.0150649953935,
-			"width": 32.86336263020803,
-			"height": 131.45339965820312,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 754920456,
-			"version": 16,
-			"versionNonce": 2127116152,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704292991946,
-			"link": null,
-			"locked": false,
+			"endArrowhead": "arrow",
 			"points": [
 				[
 					0,
 					0
 				],
 				[
-					32.86336263020803,
-					131.45339965820312
+					-36.514892578125,
+					142.40786234537768
 				]
-			],
-			"lastCommittedPoint": null,
+			]
+		},
+		{
+			"type": "arrow",
+			"version": 16,
+			"versionNonce": 2127116152,
+			"isDeleted": false,
+			"id": "5U4RdK8vBOGWk_bWmXNDW",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
+			"x": 5153.7607953770685,
+			"y": 1374.0150649953935,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 32.86336263020803,
+			"height": 131.45339965820312,
+			"seed": 754920456,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1704292991946,
+			"link": null,
+			"locked": false,
 			"startBinding": {
 				"elementId": "sncfnEHvnxVGp9hvvl_pO",
 				"focus": -0.8329763673046421,
@@ -12713,193 +12702,167 @@ Good Fit! ^xVWLhubj
 				"focus": 0.30810844446467145,
 				"gap": 7.303009033203011
 			},
+			"lastCommittedPoint": null,
 			"startArrowhead": null,
-			"endArrowhead": "arrow"
+			"endArrowhead": "arrow",
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					32.86336263020803,
+					131.45339965820312
+				]
+			]
 		},
 		{
-			"id": "KzC6HUz5",
 			"type": "text",
+			"version": 230,
+			"versionNonce": 930806785,
+			"isDeleted": false,
+			"id": "KzC6HUz5",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 4819.692802213008,
 			"y": 1642.9664301483883,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 703.69921875,
 			"height": 75,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 437631864,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 437631864,
-			"version": 229,
-			"versionNonce": 1136501112,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704293050757,
+			"boundElements": [],
+			"updated": 1708260055225,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "If SSR is large, it uses up more SST and therefore SSE is smaller\nrelative to SST. The coefficient of determination quantifies this ratio\nas a percentage.",
 			"rawText": "If SSR is large, it uses up more SST and therefore SSE is smaller\nrelative to SST. The coefficient of determination quantifies this ratio\nas a percentage.",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 66,
 			"containerId": null,
 			"originalText": "If SSR is large, it uses up more SST and therefore SSE is smaller\nrelative to SST. The coefficient of determination quantifies this ratio\nas a percentage.",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 67
 		},
 		{
-			"id": "LvqAerMC",
 			"type": "text",
+			"version": 71,
+			"versionNonce": 1321435279,
+			"isDeleted": false,
+			"id": "LvqAerMC",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 4855.524406216914,
 			"y": 1745.8297927785966,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 455.99951171875,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 1977250936,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1977250936,
-			"version": 70,
-			"versionNonce": 1253108600,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704293297079,
+			"boundElements": [],
+			"updated": 1708260055225,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "coefficient of determination r^2 = SSR / SST",
 			"rawText": "coefficient of determination r^2 = SSR / SST",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "coefficient of determination r^2 = SSR / SST",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		},
 		{
-			"id": "dZG5KMGI",
 			"type": "text",
+			"version": 273,
+			"versionNonce": 295556065,
+			"isDeleted": false,
+			"id": "dZG5KMGI",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 4881.327018521601,
 			"y": 1853.139973442659,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 894.6990966796875,
 			"height": 150,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 57361928,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 57361928,
-			"version": 272,
-			"versionNonce": 787578232,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704293390534,
+			"boundElements": [],
+			"updated": 1708260055227,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "r ^2 = 89.925 / 120\ncoefficient of determination = r^2 = 0.7493 or 74.93%\n\nWe can conclude that 74.93% of the total sum of squares can be explained by\nusing the estimated regression equation to predict the tip amount. The remainder is error\n",
 			"rawText": "r ^2 = 89.925 / 120\ncoefficient of determination = r^2 = 0.7493 or 74.93%\n\nWe can conclude that 74.93% of the total sum of squares can be explained by\nusing the estimated regression equation to predict the tip amount. The remainder is error\n",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 141,
 			"containerId": null,
 			"originalText": "r ^2 = 89.925 / 120\ncoefficient of determination = r^2 = 0.7493 or 74.93%\n\nWe can conclude that 74.93% of the total sum of squares can be explained by\nusing the estimated regression equation to predict the tip amount. The remainder is error\n",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 142
 		},
 		{
-			"id": "xVWLhubj",
 			"type": "text",
+			"version": 84,
+			"versionNonce": 1052939951,
+			"isDeleted": false,
+			"id": "xVWLhubj",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "dashed",
+			"roughness": 1,
+			"opacity": 100,
+			"angle": 0,
 			"x": 5187.266959927849,
 			"y": 2008.6786086965624,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"width": 92.39990234375,
 			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
+			"seed": 416010360,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 416010360,
-			"version": 83,
-			"versionNonce": 503325816,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1704293439156,
+			"boundElements": [],
+			"updated": 1708260055227,
 			"link": null,
 			"locked": false,
+			"fontSize": 20,
+			"fontFamily": 1,
 			"text": "Good Fit!",
 			"rawText": "Good Fit!",
-			"fontSize": 20,
-			"fontFamily": 1,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 16,
 			"containerId": null,
 			"originalText": "Good Fit!",
-			"lineHeight": 1.25
-		},
-		{
-			"id": "8HXJcuXv",
-			"type": "text",
-			"x": 5074.660351854933,
-			"y": 1584.8066401093258,
-			"width": 9.999984741210938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "dashed",
-			"roughness": 1,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 953512456,
-			"version": 2,
-			"versionNonce": 271549304,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1704292934789,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 20,
-			"fontFamily": 1,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 16,
-			"containerId": null,
-			"originalText": "",
-			"lineHeight": 1.25
+			"lineHeight": 1.25,
+			"baseline": 17
 		}
 	],
 	"appState": {
@@ -12917,10 +12880,10 @@ Good Fit! ^xVWLhubj
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": -4201.2965454482755,
-		"scrollY": -1718.195553581816,
+		"scrollX": 1266.4992381821767,
+		"scrollY": 266.6633904729867,
 		"zoom": {
-			"value": 0.6
+			"value": 0.5499999999999999
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

@@ -770,6 +770,24 @@ CONFUSION MATRIX
 
 AUC-ROC CURVE ^rhkkAnDm
 
+K-NEAREST NEIGHBORS ^PGrT3JmS
+
+The K-Nearest Neighbors is a popular ML algorithm used for classification
+and regression tasks. It relies on the idea that similar data points tend
+to have similar labels or values.
+
+During the training phase, the KNN algorithm stores the entire training data
+set as a reference. When making predictions, it calculates the distance
+between the input data point and all the training examples, using the
+chosen distance metric such as Euclidean distance.
+
+Next, the algorithm identifies the K nearest neighbors to the input data
+point based on their distances. In the case of classification, the algorithm
+assigns the most common class label among the K neighbors as the predicted
+label for the input data point. For regression, it calculates the average
+or weighted average of the target values of the K neighbors to predict 
+the values for the input data point. ^1QpyLoHB
+
 
 # Embedded files
 5ee5ad5540f8b80fee7665d1cc80f5b2b279bd4f: $$\frac{n(n-1)}{2}$$
@@ -817,7 +835,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MACHINE LEARNING TECHNIQUES",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -854,7 +872,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Supervised ",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -891,7 +909,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Unsupervised",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -928,7 +946,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Reinforcement learning",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -1269,7 +1287,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "In supervised learning, suppose the task is to predict\nhouse prices. And lets say we are given a specific data\nset. Within this data set, we have FEATURES",
 			"lineHeight": 1.25,
-			"baseline": 68
+			"baseline": 67
 		},
 		{
 			"type": "text",
@@ -1564,7 +1582,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "independent features or\ninput features",
 			"lineHeight": 1.25,
-			"baseline": 43
+			"baseline": 42
 		},
 		{
 			"type": "text",
@@ -1606,7 +1624,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "dependent feature or\noutput feature",
 			"lineHeight": 1.25,
-			"baseline": 43
+			"baseline": 42
 		},
 		{
 			"type": "arrow",
@@ -3274,7 +3292,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Salary",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3311,7 +3329,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Spending Score (1-10)",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3348,7 +3366,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "$20,000",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3385,7 +3403,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "9",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3422,12 +3440,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "$45,000",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
-			"version": 42,
-			"versionNonce": 1695222115,
+			"version": 44,
+			"versionNonce": 242836484,
 			"isDeleted": false,
 			"id": "p1rJ6mJB",
 			"fillStyle": "solid",
@@ -3447,7 +3465,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223338,
+			"updated": 1708768091375,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -3589,7 +3607,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Lets say you run an E-commerce Company and you want\nto send a mail to these people on your data set.",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "arrow",
@@ -3674,7 +3692,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "With the help of unsupervised learning, we create similar\nclusters and decide how we want to give discounts to\nindividuals who want to use our E-commerce app.",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "arrow",
@@ -3880,7 +3898,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "salary",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -3922,7 +3940,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Spending",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "diamond",
@@ -5085,7 +5103,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Huge salary and spending is medium",
 			"lineHeight": 1.25,
-			"baseline": 14
+			"baseline": 13
 		},
 		{
 			"type": "arrow",
@@ -5516,7 +5534,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Algorithms Used",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -5553,7 +5571,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "1.  Linear Regression.\n2. Ridge and lasso\n3. Elastic Net\n4. Logistic Regression\n5. Decision Trees\n6. Random Forest\n7. Ada Boost\n8. Ag Boost\n",
 			"lineHeight": 1.25,
-			"baseline": 217
+			"baseline": 218
 		},
 		{
 			"type": "arrow",
@@ -5678,7 +5696,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Both Classification\nand Regression Problem\nstatement",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "text",
@@ -5715,7 +5733,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Algorithms Used\n1.  K means\n2. DB Scan clustering\n3. Hierarchy mean",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "text",
@@ -5752,7 +5770,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "In Reinforcement Learning, the application will learn things it-self by learning form it's mistakes.\nAn example of this high school kids, when high school kids returns home with a good result, parents\nusually give rewards to reinforce study habits. The same applies to a model. When the model makes\na good or correct decision, the model is rewarded correctly and when a bad decision is made, the\nmodel might not be rewarded at all or even punished.",
 			"lineHeight": 1.25,
-			"baseline": 137
+			"baseline": 138
 		},
 		{
 			"type": "text",
@@ -5832,7 +5850,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Cost function measures the performance of a machine learning model for a data set. Cost functions quantifies the \nerror between predicted and expected values and presents that error in form of a single real number.",
 			"lineHeight": 1.25,
-			"baseline": 58
+			"baseline": 59
 		},
 		{
 			"type": "text",
@@ -5912,7 +5930,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MINIMIZED: The returned value is usually called COST, LOSS or ERROR. The goal is to find the values of model parameters for which the cost function return is as\nsmall a number as possible.",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "text",
@@ -5952,7 +5970,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MAXIMIZED: In this case, the value it yields is named a reward. The goal is to find values of model parrameters for which the returned number is as large as possible",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -6117,7 +6135,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Mean squared error is one of the most commonly used and earliest explained regression metrics. MSE represents the average\nsquared difference between the predictions and expected results. In other words, MSE is an alteration of MAE where, instead\nof taking the absolute value of differences, we square those differences.\n\nIn MAE, the partial error values were equal to the distances between points in the coordinate system. Regarding MSE, each\npartial error is equivalent to the area of the square created out of the geometric distance between the measured points.\n\nAll regional areas are summed up and averaged.",
 			"lineHeight": 1.25,
-			"baseline": 192
+			"baseline": 193
 		},
 		{
 			"type": "arrow",
@@ -6557,7 +6575,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "error area",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6596,7 +6614,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "predicted",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6635,7 +6653,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "expected",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6674,7 +6692,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "do",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6713,7 +6731,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d1",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6752,7 +6770,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d2",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -6791,7 +6809,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d3",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -7018,7 +7036,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "We can write this MSE formula as:\n",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "line",
@@ -7330,7 +7348,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(y' - y )",
 			"lineHeight": 1.25,
-			"baseline": 37
+			"baseline": 36
 		},
 		{
 			"type": "text",
@@ -7369,7 +7387,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(i)",
 			"lineHeight": 1.25,
-			"baseline": 21
+			"baseline": 20
 		},
 		{
 			"type": "text",
@@ -7412,8 +7430,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 364,
-			"versionNonce": 765497406,
+			"version": 366,
+			"versionNonce": 994168380,
 			"isDeleted": false,
 			"id": "qN7M4NKe",
 			"fillStyle": "solid",
@@ -7435,7 +7453,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1707774500860,
+			"updated": 1708768091406,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -7486,7 +7504,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(MEAN SQUARED ERROR)",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -7525,7 +7543,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "i  index of sample\ny' = predicted value\ny = expected value\nm = number of samples in the data set",
 			"lineHeight": 1.25,
-			"baseline": 106
+			"baseline": 105
 		},
 		{
 			"type": "text",
@@ -7564,7 +7582,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "So how do MAE and MSE treat the difference between points ? To check, let's calculate the cost for different weight values:\n\nW       -3.0   -2.0   -1.0    0.0   1.0  2.0   3.0  4.0   5.0   6.0   7.0\nMAE     7.5     6.0   4.5    3.0   1.5  0.0   1.5   3.0   4.5   6.0   7.5\nMSE    43.75  28.0   15.75  7.0  1.75  0.0  1.75   7.0  15.75   28.0 43.75",
 			"lineHeight": 1.25,
-			"baseline": 135
+			"baseline": 134
 		},
 		{
 			"type": "text",
@@ -7603,7 +7621,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "This table presents the errors of many models created with different weight parameters. I calculated the cost of each model with both MAE and MSE metrics.",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -7642,7 +7660,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Here's how it displays on graphs",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -7821,7 +7839,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MAE",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -7948,7 +7966,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MAE",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -8282,7 +8300,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Mean absolute error is a regression metric that measures the average magnitude of errors in a group of predictions,\nwithout considering their directions. In other words, it's a mean of absolute differences among predictions and expected\nresults where all individuals deviations have even importance.",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "line",
@@ -8600,7 +8618,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(|y' - y|)",
 			"lineHeight": 1.25,
-			"baseline": 37
+			"baseline": 36
 		},
 		{
 			"type": "text",
@@ -8640,7 +8658,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(i)",
 			"lineHeight": 1.25,
-			"baseline": 21
+			"baseline": 20
 		},
 		{
 			"type": "text",
@@ -8720,7 +8738,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "(MEAN ABSOLUTE ERROR)",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -8760,7 +8778,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MAE =",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -8800,7 +8818,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "i = index of sample\ny' = predicted value\ny = expected value\nm = number of samples in the data set",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "line",
@@ -8885,7 +8903,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HOW TO TAILOR A COST FUNCTION",
 			"lineHeight": 1.25,
-			"baseline": 46
+			"baseline": 45
 		},
 		{
 			"type": "text",
@@ -8925,7 +8943,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Let's start with a model using the formula:",
 			"lineHeight": 1.25,
-			"baseline": 26
+			"baseline": 25
 		},
 		{
 			"type": "text",
@@ -9005,7 +9023,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "y' = predicted value",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9045,7 +9063,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "x = vector of data used for prediction or traning",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9085,7 +9103,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "w = weight",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9125,7 +9143,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Let's try to find the value of the weight parameter, so for the following data samples:\n    xo = [0], x1 = [1], x2 = [2], x3 = [3]\n\nThe outputs of the model are as close as possible to:\n    yo = 0, y1 = 2, y2 = 4, y3 = 6",
 			"lineHeight": 1.25,
-			"baseline": 117
+			"baseline": 118
 		},
 		{
 			"type": "text",
@@ -9165,7 +9183,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Now it's time to assign a random value to the weight parameter and visualize the mode's result.\nLet's pick w = 0.5 for now.",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "text",
@@ -9205,7 +9223,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "y = wx  [w = 5.0]",
 			"lineHeight": 1.25,
-			"baseline": 37
+			"baseline": 36
 		},
 		{
 			"type": "arrow",
@@ -9862,7 +9880,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "distance",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9902,7 +9920,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "predicted",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9942,7 +9960,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "expected",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -9982,7 +10000,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "do",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -10022,7 +10040,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d1",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -10062,7 +10080,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d2",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -10102,7 +10120,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d3",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -10144,7 +10162,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "We can see that our model predictions are different from the expected values, but how can we express that mathematically ?\n\nThe most straightforward idea is to subtract both values from each other and see if the result of the operation equals zero.\nAny other number means that the values differ. The size of the received number provides information about how significant the error\nis. ",
 			"lineHeight": 1.25,
-			"baseline": 121
+			"baseline": 120
 		},
 		{
 			"type": "text",
@@ -10354,7 +10372,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "However, now imagine there are a million points instead of four. The accumulated errors will become a larger\nnumber for a model making a prediction on a larger data set than a small data set. Consequently, we can't\ncompare those models. That's why we have to scale in some way. The right idea is to divide the accumulated\nerrors by the number of points. Cost stated like that is MEAN OF ERRORS the model made for the given data\nset.",
 			"lineHeight": 1.25,
-			"baseline": 121
+			"baseline": 120
 		},
 		{
 			"type": "text",
@@ -10479,7 +10497,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Unfortunately, the formula isn't complete. We still have to consider all cases so let's try picking smaller weights and see if the created cost\nfunction works. We'll set weight to w = 0.5",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "arrow",
@@ -11153,7 +11171,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "distance",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11194,7 +11212,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "predicted",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11235,7 +11253,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "expected",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11276,7 +11294,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "do",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11317,7 +11335,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d1",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11358,7 +11376,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d2",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11399,7 +11417,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "d3",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11440,7 +11458,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "The predictions are off again. However, in comparison to the previous case, that predicted points are below expected points.\nNumerically, predictions are smaller. The cost formula is going to malfunction because calculated distances have negative values.",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "text",
@@ -11481,7 +11499,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "do  = 0 - 0 = 0\nd1   = 0.5 - 2 = -1.5\nd2  = 1 - 4 = -3\nd3  = 1.5 - 6 = -4.5",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "text",
@@ -11522,7 +11540,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "The cost value is also negative:",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11563,7 +11581,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "cost(0.5) = 1 / 4 ( 0 - 1.5 - 3 - 4.5) = -9/4 = -2.25",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11604,7 +11622,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Since distance can't have a negative value, we can attach a more substantial penalty to the predictions located above or below \nthe expected results, but the value shouldn't be negative because it will cancel out any positive errors. It will then be impossible\nto properly minimize or maximize the cost function.\n\nSo how about fixing the problem by using the absolute value of the distances ? After starting the distances as:",
 			"lineHeight": 1.25,
-			"baseline": 117
+			"baseline": 118
 		},
 		{
 			"type": "text",
@@ -11645,7 +11663,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "distance = | y' - y |",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11686,7 +11704,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "For costs for each value of weights are:\n\ncost(5) = 1 / 4 (|0| + |3| + |6| + |9|) = 18 / 4 = 4.5\n\ncost(0.5) = 1 / 4 (|0| + |-1.5| + |-3| + |-4.5|) = 9 / 4 = 2.25",
 			"lineHeight": 1.25,
-			"baseline": 117
+			"baseline": 118
 		},
 		{
 			"type": "text",
@@ -11727,7 +11745,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Now we've correctly calculated the costs for both weights w = 5.0 and w = 0.5. It is possible to compare the\nparameters. The model achieves better results for w = 0.5 as the cost value is smaller.\n\nThe function we created is MEAN ABSOLUTE ERROR.",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "line",
@@ -11858,7 +11876,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "DATA SET",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11897,7 +11915,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "WEIGHT(KG)",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11936,7 +11954,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HEIGHT(CM)",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -11975,7 +11993,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "74",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12014,7 +12032,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "170",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12053,7 +12071,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "80",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12092,7 +12110,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "180",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12131,7 +12149,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "75",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12170,7 +12188,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "175",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -12484,7 +12502,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12523,7 +12541,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "WEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -12562,7 +12580,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "INDEPENDENT FEATURE\n(INPUT FEATURE)",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "text",
@@ -12601,7 +12619,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "DEPENDENT FEATURE\n(OUTPUT FEATUER)",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "text",
@@ -13175,7 +13193,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "WEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -13219,7 +13237,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -13773,7 +13791,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Error",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -13912,7 +13930,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MINIMIZE THE ERROR",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -15255,7 +15273,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "intercept",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -15344,7 +15362,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "WEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -15388,7 +15406,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HEIGHT",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -15432,7 +15450,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "slope",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -15521,7 +15539,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Best fit line",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "diamond",
@@ -15683,7 +15701,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "h(x): predicted point or {y'}",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "ellipse",
@@ -15784,7 +15802,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "actual point or y",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -15946,7 +15964,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "ERROR(distance) = Y - Y'",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -16208,7 +16226,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "0",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -16247,7 +16265,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "1",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -16448,7 +16466,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "USE CASE",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -16487,7 +16505,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MODEL",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -16531,8 +16549,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 138,
-			"versionNonce": 816515779,
+			"version": 142,
+			"versionNonce": 412150076,
 			"isDeleted": false,
 			"id": "55vZhonX",
 			"fillStyle": "solid",
@@ -16554,7 +16572,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223348,
+			"updated": 1708768089896,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -16566,7 +16584,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": "mR61PincpszWC_Jqj9c6-",
 			"originalText": "REGRESSION",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -16645,7 +16663,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": "2BrclslHRx5prLDls-Z_r",
 			"originalText": "CLASSIFICATION",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -16703,8 +16721,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "arrow",
-			"version": 422,
-			"versionNonce": 804330096,
+			"version": 426,
+			"versionNonce": 2050017340,
 			"isDeleted": false,
 			"id": "QNeaYL4ILYG5fDBjBRg5b",
 			"fillStyle": "solid",
@@ -16728,7 +16746,7 @@ AUC-ROC CURVE ^rhkkAnDm
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1707908334517,
+			"updated": 1708768089893,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -16757,8 +16775,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "arrow",
-			"version": 419,
-			"versionNonce": 1717649008,
+			"version": 423,
+			"versionNonce": 1679608380,
 			"isDeleted": false,
 			"id": "Q8coj2jFUXY_jjtnxJ-HT",
 			"fillStyle": "solid",
@@ -16782,7 +16800,7 @@ AUC-ROC CURVE ^rhkkAnDm
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1707908334520,
+			"updated": 1708768089898,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -16846,7 +16864,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "This model will learn about the\nlearns about the data in various ways,\nthese are",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "rectangle",
@@ -16933,7 +16951,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": "vR_5oZjnEJIhdwkPWjs0Y",
 			"originalText": "INSTANCE BASED LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 42
+			"baseline": 43
 		},
 		{
 			"type": "rectangle",
@@ -17016,12 +17034,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MODEL BASED LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
-			"version": 428,
-			"versionNonce": 1377329776,
+			"version": 432,
+			"versionNonce": 1424255804,
 			"isDeleted": false,
 			"id": "VvPRDoknsMz_4and0L1dQ",
 			"fillStyle": "solid",
@@ -17045,7 +17063,7 @@ AUC-ROC CURVE ^rhkkAnDm
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1707908334525,
+			"updated": 1708768089901,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -17226,8 +17244,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "arrow",
-			"version": 419,
-			"versionNonce": 223774320,
+			"version": 423,
+			"versionNonce": 519556156,
 			"isDeleted": false,
 			"id": "klzxywBJeI14L7t7x4MWd",
 			"fillStyle": "solid",
@@ -17251,7 +17269,7 @@ AUC-ROC CURVE ^rhkkAnDm
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1707908334525,
+			"updated": 1708768089902,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -17381,7 +17399,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "if the model is completely dependent on\nthe training data, and every\nprediction will be dependent on the traning\ndata",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "rectangle",
@@ -17456,7 +17474,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Tries to find a pattern with the training data\nto create a GENERALIZATION to make future\npredictions for new data.",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "rectangle",
@@ -17496,8 +17514,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "arrow",
-			"version": 420,
-			"versionNonce": 576432752,
+			"version": 424,
+			"versionNonce": 845606204,
 			"isDeleted": false,
 			"id": "qbmQbCwFA5x8Oavay1haY",
 			"fillStyle": "solid",
@@ -17521,7 +17539,7 @@ AUC-ROC CURVE ^rhkkAnDm
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1707908334525,
+			"updated": 1708768089903,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -17604,8 +17622,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 477,
-			"versionNonce": 750126349,
+			"version": 479,
+			"versionNonce": 1832272772,
 			"isDeleted": false,
 			"id": "2aBvbhaf",
 			"fillStyle": "solid",
@@ -17627,7 +17645,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17639,12 +17657,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Classification",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 456,
-			"versionNonce": 627203651,
+			"version": 458,
+			"versionNonce": 1524934332,
 			"isDeleted": false,
 			"id": "y2iMDHNF",
 			"fillStyle": "solid",
@@ -17666,7 +17684,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17678,12 +17696,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "No of study hours",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 469,
-			"versionNonce": 522967917,
+			"version": 471,
+			"versionNonce": 808137476,
 			"isDeleted": false,
 			"id": "F7D96Gkg",
 			"fillStyle": "solid",
@@ -17705,7 +17723,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17717,12 +17735,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "No of play hours",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 478,
-			"versionNonce": 514039267,
+			"version": 480,
+			"versionNonce": 563638076,
 			"isDeleted": false,
 			"id": "2j8T0G7d",
 			"fillStyle": "solid",
@@ -17744,7 +17762,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.9733212710341,
@@ -17756,12 +17774,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Pass / Fail",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 426,
-			"versionNonce": 1163388365,
+			"version": 428,
+			"versionNonce": 903230084,
 			"isDeleted": false,
 			"id": "3WKBGMXV",
 			"fillStyle": "solid",
@@ -17783,7 +17801,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17795,12 +17813,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Pass",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 438,
-			"versionNonce": 1222371715,
+			"version": 440,
+			"versionNonce": 1606363068,
 			"isDeleted": false,
 			"id": "hmXFKD1e",
 			"fillStyle": "solid",
@@ -17822,7 +17840,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17834,12 +17852,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Fail",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 424,
-			"versionNonce": 844342317,
+			"version": 426,
+			"versionNonce": 1559577092,
 			"isDeleted": false,
 			"id": "FsmDUyPb",
 			"fillStyle": "solid",
@@ -17861,7 +17879,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.973321271034095,
@@ -17873,12 +17891,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "7",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 429,
-			"versionNonce": 155828515,
+			"version": 431,
+			"versionNonce": 159043644,
 			"isDeleted": false,
 			"id": "bS4dyPMT",
 			"fillStyle": "solid",
@@ -17900,7 +17918,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17912,12 +17930,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "3",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 426,
-			"versionNonce": 1510512269,
+			"version": 428,
+			"versionNonce": 2089181572,
 			"isDeleted": false,
 			"id": "XjJWuchX",
 			"fillStyle": "solid",
@@ -17939,7 +17957,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17951,12 +17969,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "2",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
-			"version": 438,
-			"versionNonce": 425436355,
+			"version": 440,
+			"versionNonce": 1051551932,
 			"isDeleted": false,
 			"id": "CIic71b7",
 			"fillStyle": "solid",
@@ -17978,7 +17996,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223349,
+			"updated": 1708768091466,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -17990,7 +18008,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "6",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "arrow",
@@ -19055,8 +19073,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 166,
-			"versionNonce": 155807331,
+			"version": 168,
+			"versionNonce": 1539805444,
 			"isDeleted": false,
 			"id": "3InBXztb",
 			"fillStyle": "solid",
@@ -19078,7 +19096,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223350,
+			"updated": 1708768091467,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -19094,8 +19112,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 171,
-			"versionNonce": 487939405,
+			"version": 173,
+			"versionNonce": 1392046396,
 			"isDeleted": false,
 			"id": "qi8IxnUx",
 			"fillStyle": "solid",
@@ -19117,7 +19135,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223350,
+			"updated": 1708768091467,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -19173,7 +19191,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "play hours",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -19217,12 +19235,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "study hours",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
-			"version": 454,
-			"versionNonce": 2014671267,
+			"version": 456,
+			"versionNonce": 708235396,
 			"isDeleted": false,
 			"id": "ARv78eWC",
 			"fillStyle": "solid",
@@ -19244,7 +19262,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223350,
+			"updated": 1708768091468,
 			"link": null,
 			"locked": false,
 			"fontSize": 24.97332127103409,
@@ -19256,7 +19274,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Fail",
 			"lineHeight": 1.25,
-			"baseline": 22
+			"baseline": 21
 		},
 		{
 			"type": "text",
@@ -19396,7 +19414,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "New query",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -19435,7 +19453,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "When the new query point comes in, in instance based learning,\nthe model will not be able to understand the pattern within this\ndata. It will only see the surrounding data. It will take a look on\nhow the surrounding data is performing. If more points within that \nsurrounding area are passing, it will take this new query as a pass\nand vise versal.",
 			"lineHeight": 1.25,
-			"baseline": 142
+			"baseline": 143
 		},
 		{
 			"type": "ellipse",
@@ -19470,8 +19488,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 316,
-			"versionNonce": 800091437,
+			"version": 318,
+			"versionNonce": 1438607804,
 			"isDeleted": false,
 			"id": "ja8A96a9",
 			"fillStyle": "solid",
@@ -19493,7 +19511,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735223350,
+			"updated": 1708768091471,
 			"link": null,
 			"locked": false,
 			"fontSize": 27.557648085841127,
@@ -19505,7 +19523,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MODEL BASED LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 24
+			"baseline": 25
 		},
 		{
 			"type": "text",
@@ -19544,7 +19562,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Taking the same problem statement, in model based learning, what\nwill happen is that our model will understand patterns in the data\nand is able to create a GENERALIZED MODEL, making it able to \nperform better than its instance based brother.",
 			"lineHeight": 1.25,
-			"baseline": 92
+			"baseline": 93
 		},
 		{
 			"type": "arrow",
@@ -21403,7 +21421,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Decision Boundary",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -21442,7 +21460,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Our model will try to create the above curve called a decision boundary",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -21680,7 +21698,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MEMORIZING",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -21728,7 +21746,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "GENERALIZATION",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -21772,7 +21790,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "INSTANCE BASED LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -21811,7 +21829,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MODEL BASED LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "arrow",
@@ -22418,7 +22436,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CONVERGENCE ALGORITHM",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "line",
@@ -22503,7 +22521,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "This algorithm is used to optimize the value of w (the weight).\n\nThis algorithm states:\n\nREPEAT UNTIL WE CONVERGE (MEET THE GLOBAL MINIMUM)",
 			"lineHeight": 1.25,
-			"baseline": 117
+			"baseline": 118
 		},
 		{
 			"type": "arrow",
@@ -22785,7 +22803,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "global minimum",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -22824,7 +22842,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "This global minimum can be found by using the derivative and moving in the opposite direction.\nWe multiply this derivative by what we call LEARNING RATE. This learning rate controls the\nrate at which we converge. As with big learning rates we jump around alot.",
 			"lineHeight": 1.25,
-			"baseline": 67
+			"baseline": 68
 		},
 		{
 			"type": "rectangle",
@@ -23073,8 +23091,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 101,
-			"versionNonce": 1124087811,
+			"version": 103,
+			"versionNonce": 2006065156,
 			"isDeleted": false,
 			"id": "lavpSXfP",
 			"fillStyle": "solid",
@@ -23087,14 +23105,14 @@ AUC-ROC CURVE ^rhkkAnDm
 			"y": -1256.9971060086125,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 124.54336983816938,
+			"width": 124.51080322265625,
 			"height": 23.502321663041247,
 			"seed": 1441956866,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735981933,
+			"updated": 1708768091484,
 			"link": null,
 			"locked": false,
 			"fontSize": 18.801857330433,
@@ -23143,7 +23161,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "LINEAR",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23180,7 +23198,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "POLYNOMIAL",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23222,7 +23240,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "DECISION TREES",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23259,7 +23277,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "RANDOM FOREST",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23301,7 +23319,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CLASSIFICATION",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23343,7 +23361,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CLUSTERING",
 			"lineHeight": 1.25,
-			"baseline": 21
+			"baseline": 20
 		},
 		{
 			"type": "text",
@@ -23380,7 +23398,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "SVD",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23417,7 +23435,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "PCA",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23454,7 +23472,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "K-MEANS",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23496,7 +23514,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "ASSOCIATION ANALYSIS",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23533,7 +23551,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "APRIORI",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23570,7 +23588,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "FP-GROWTH",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "text",
@@ -23607,7 +23625,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CONTINUOUS",
 			"lineHeight": 1.25,
-			"baseline": 24
+			"baseline": 23
 		},
 		{
 			"type": "text",
@@ -23644,7 +23662,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CATEGORICAL",
 			"lineHeight": 1.25,
-			"baseline": 26
+			"baseline": 25
 		},
 		{
 			"type": "rectangle",
@@ -23947,7 +23965,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "KNN\nTress\nLogistic Regression\nNaive-Bayes\nSVM",
 			"lineHeight": 1.25,
-			"baseline": 117
+			"baseline": 118
 		},
 		{
 			"type": "text",
@@ -23984,7 +24002,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "HIDDEN MARKEV MODEL",
 			"lineHeight": 1.25,
-			"baseline": 17
+			"baseline": 18
 		},
 		{
 			"type": "rectangle",
@@ -24790,7 +24808,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Supervised learning is the concerned with training a model using well\n\"labelled\" training data, and on basis of this training data, machines\npredict the output. The labelled data means some input data is \nalready tagged with the correct output.\n\nThe aim of supervised learning is to FIND A MAPPING FUNCTION TO\nMAP THE INPUT VARIABLE (X) WITH THE OUTPUT VARIABLE (Y)\n\nIn the real world, supervised learning can be used for RISK ASSESSMENT,\nIMAGE CLASSIFICATION, FRAUD DETECTION, SPAM FILTERING, e.t.c.",
 			"lineHeight": 1.25,
-			"baseline": 357
+			"baseline": 356
 		},
 		{
 			"type": "rectangle",
@@ -25116,7 +25134,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "MODEL TRAINING",
 			"lineHeight": 1.25,
-			"baseline": 27
+			"baseline": 28
 		},
 		{
 			"type": "arrow",
@@ -25293,7 +25311,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "TEST DATA",
 			"lineHeight": 1.25,
-			"baseline": 26
+			"baseline": 25
 		},
 		{
 			"type": "arrow",
@@ -25420,7 +25438,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "PREDICTION",
 			"lineHeight": 1.25,
-			"baseline": 20
+			"baseline": 19
 		},
 		{
 			"type": "arrow",
@@ -25746,8 +25764,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 122,
-			"versionNonce": 373390765,
+			"version": 124,
+			"versionNonce": 438489660,
 			"isDeleted": false,
 			"id": "vxhwzGyj",
 			"fillStyle": "solid",
@@ -25760,8 +25778,8 @@ AUC-ROC CURVE ^rhkkAnDm
 			"y": -56.99580984824752,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 209.02341720958577,
-			"height": 39.444376627604214,
+			"width": 208.96876006267905,
+			"height": 39.44437662760422,
 			"seed": 1509688350,
 			"groupIds": [],
 			"frameId": null,
@@ -25772,7 +25790,7 @@ AUC-ROC CURVE ^rhkkAnDm
 					"type": "arrow"
 				}
 			],
-			"updated": 1706735981972,
+			"updated": 1708768091508,
 			"link": null,
 			"locked": false,
 			"fontSize": 31.555501302083375,
@@ -25788,8 +25806,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 120,
-			"versionNonce": 1265334627,
+			"version": 122,
+			"versionNonce": 735543172,
 			"isDeleted": false,
 			"id": "UI8PloX9",
 			"fillStyle": "solid",
@@ -25814,7 +25832,7 @@ AUC-ROC CURVE ^rhkkAnDm
 					"type": "arrow"
 				}
 			],
-			"updated": 1706735227608,
+			"updated": 1708768091508,
 			"link": null,
 			"locked": false,
 			"fontSize": 29.333333333333403,
@@ -26012,7 +26030,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "Regression algorithms are used if there is a relationship between the input variable and the output variable. It is used for the \nprediction of continuous variables, such as weather forecasting, market trends, e.t.c. Examples of regression algorithms are:\n\n1.  Linear Regression\n2. Regression Trees\n3. Non-Linear Regression\n4. Bayesian Linear Regression\n5. Polynomial Regression\n\n\nClassification algorithms are used when the output variable is categorical, which means there are two classes such as Yes-No,\nMale-Female, True-False, e.t.c.\nExamples are:\n\n1. Random Forest\n2.Decision Trees\n3. Logistic Regression\nSupport Vector Machine",
 			"lineHeight": 1.25,
-			"baseline": 503
+			"baseline": 502
 		},
 		{
 			"type": "rectangle",
@@ -26141,7 +26159,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "CLASSIFICATION IN MACHINE LEARNING",
 			"lineHeight": 1.25,
-			"baseline": 18
+			"baseline": 19
 		},
 		{
 			"type": "line",
@@ -26226,7 +26244,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "In classification tasks, the model tries to predict the correct label of a given\ninput data. In classification, the model is fully trained using the training data,\nand then it is evaluated on test data before being used to perform prediction on\nnew unseen data.\n\nFor instance, an algorithm can learn to predict whether a given email is spam or not",
 			"lineHeight": 1.25,
-			"baseline": 127
+			"baseline": 126
 		},
 		{
 			"type": "arrow",
@@ -29418,12 +29436,12 @@ AUC-ROC CURVE ^rhkkAnDm
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -8321.28454438009,
-			"y": 2099.4757972298194,
+			"x": -8321.321111916814,
+			"y": 2099.494793824684,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
-			"width": 75,
-			"height": 39,
+			"width": 75.07313507344753,
+			"height": 38.96200681027024,
 			"seed": 99210,
 			"groupIds": [
 				"63vA_qfWWkccgXKFsg1Av",
@@ -29737,8 +29755,8 @@ AUC-ROC CURVE ^rhkkAnDm
 		},
 		{
 			"type": "text",
-			"version": 341,
-			"versionNonce": 1523772611,
+			"version": 343,
+			"versionNonce": 1057303228,
 			"isDeleted": false,
 			"id": "WExrFcwU",
 			"fillStyle": "solid",
@@ -29761,7 +29779,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1706735563212,
+			"updated": 1708768091530,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -29773,7 +29791,7 @@ AUC-ROC CURVE ^rhkkAnDm
 			"containerId": null,
 			"originalText": "PREDICTION",
 			"lineHeight": 1.25,
-			"baseline": 14
+			"baseline": 13
 		},
 		{
 			"type": "arrow",
@@ -30704,62 +30722,143 @@ AUC-ROC CURVE ^rhkkAnDm
 			"locked": false
 		},
 		{
-			"id": "7uz57kG7",
 			"type": "text",
-			"x": -9079.80895291684,
-			"y": -1729.6643872747113,
-			"width": 8.000015258789062,
-			"height": 20,
-			"angle": 0,
-			"strokeColor": "#6741d9",
-			"backgroundColor": "transparent",
+			"version": 22,
+			"versionNonce": 1720282152,
+			"isDeleted": false,
+			"id": "PGrT3JmS",
 			"fillStyle": "hachure",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 2,
 			"opacity": 100,
+			"angle": 0,
+			"x": -8475.66967622716,
+			"y": 3013.7483431483734,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 195.26441955566406,
+			"height": 20,
+			"seed": 844517976,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"seed": 1217789584,
-			"version": 2,
-			"versionNonce": 93529200,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1707909458685,
+			"boundElements": [],
+			"updated": 1708518794373,
 			"link": null,
 			"locked": false,
-			"text": "",
-			"rawText": "",
 			"fontSize": 16,
 			"fontFamily": 1,
+			"text": "K-NEAREST NEIGHBORS",
+			"rawText": "K-NEAREST NEIGHBORS",
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 14,
 			"containerId": null,
-			"originalText": "",
-			"lineHeight": 1.25
+			"originalText": "K-NEAREST NEIGHBORS",
+			"lineHeight": 1.25,
+			"baseline": 14
+		},
+		{
+			"type": "line",
+			"version": 75,
+			"versionNonce": 1473770024,
+			"isDeleted": false,
+			"id": "SbckKv95IEO6t0LxW_sf7",
+			"fillStyle": "hachure",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -8496.103598474614,
+			"y": 3031.955715466988,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 250.90911865234375,
+			"height": 0,
+			"seed": 1361411672,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"boundElements": [],
+			"updated": 1708518811303,
+			"link": null,
+			"locked": false,
+			"startBinding": null,
+			"endBinding": null,
+			"lastCommittedPoint": null,
+			"startArrowhead": null,
+			"endArrowhead": null,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					250.90911865234375,
+					0
+				]
+			]
+		},
+		{
+			"type": "text",
+			"version": 1060,
+			"versionNonce": 532430680,
+			"isDeleted": false,
+			"id": "1QpyLoHB",
+			"fillStyle": "hachure",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"angle": 0,
+			"x": -8644.830904493781,
+			"y": 3049.4102720188357,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"width": 608.865234375,
+			"height": 300,
+			"seed": 1836860200,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"boundElements": [],
+			"updated": 1708519475497,
+			"link": null,
+			"locked": false,
+			"fontSize": 16,
+			"fontFamily": 1,
+			"text": "The K-Nearest Neighbors is a popular ML algorithm used for classification\nand regression tasks. It relies on the idea that similar data points tend\nto have similar labels or values.\n\nDuring the training phase, the KNN algorithm stores the entire training data\nset as a reference. When making predictions, it calculates the distance\nbetween the input data point and all the training examples, using the\nchosen distance metric such as Euclidean distance.\n\nNext, the algorithm identifies the K nearest neighbors to the input data\npoint based on their distances. In the case of classification, the algorithm\nassigns the most common class label among the K neighbors as the predicted\nlabel for the input data point. For regression, it calculates the average\nor weighted average of the target values of the K neighbors to predict \nthe values for the input data point.",
+			"rawText": "The K-Nearest Neighbors is a popular ML algorithm used for classification\nand regression tasks. It relies on the idea that similar data points tend\nto have similar labels or values.\n\nDuring the training phase, the KNN algorithm stores the entire training data\nset as a reference. When making predictions, it calculates the distance\nbetween the input data point and all the training examples, using the\nchosen distance metric such as Euclidean distance.\n\nNext, the algorithm identifies the K nearest neighbors to the input data\npoint based on their distances. In the case of classification, the algorithm\nassigns the most common class label among the K neighbors as the predicted\nlabel for the input data point. For regression, it calculates the average\nor weighted average of the target values of the K neighbors to predict \nthe values for the input data point.",
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "The K-Nearest Neighbors is a popular ML algorithm used for classification\nand regression tasks. It relies on the idea that similar data points tend\nto have similar labels or values.\n\nDuring the training phase, the KNN algorithm stores the entire training data\nset as a reference. When making predictions, it calculates the distance\nbetween the input data point and all the training examples, using the\nchosen distance metric such as Euclidean distance.\n\nNext, the algorithm identifies the K nearest neighbors to the input data\npoint based on their distances. In the case of classification, the algorithm\nassigns the most common class label among the K neighbors as the predicted\nlabel for the input data point. For regression, it calculates the average\nor weighted average of the target values of the K neighbors to predict \nthe values for the input data point.",
+			"lineHeight": 1.25,
+			"baseline": 294
 		}
 	],
 	"appState": {
 		"theme": "dark",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#6741d9",
+		"currentItemStrokeColor": "#1e1e1e",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "hachure",
 		"currentItemStrokeWidth": 2,
 		"currentItemStrokeStyle": "solid",
-		"currentItemRoughness": 2,
+		"currentItemRoughness": 0,
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 1,
 		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 9739.838108103084,
-		"scrollY": 2126.264707273316,
+		"scrollX": 10718.4274725147,
+		"scrollY": 499.8245639815477,
 		"zoom": {
-			"value": 0.35
+			"value": 0.1
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
