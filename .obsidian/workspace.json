@@ -4,29 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "13a325eddea48189",
+        "id": "6d731d9cfb35f2d7",
         "type": "tabs",
         "children": [
           {
-            "id": "f6e658bafa5f1318",
+            "id": "a9141b9b257af91e",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Linear Regression graphical.md"
+                "file": "UnGrouped/Applications of Differential Equations.md",
+                "mode": "preview",
+                "source": false
               }
             }
-          },
-          {
-            "id": "be6dff833a3af585",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -39,16 +32,6 @@
         "id": "965f26b4534fb123",
         "type": "tabs",
         "children": [
-          {
-            "id": "8ea109d216306a9a",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
           {
             "id": "c5cd817cc8f16705",
             "type": "leaf",
@@ -71,12 +54,22 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "8ea109d216306a9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 304.5110321044922,
+    "width": 379.5,
     "collapsed": true
   },
   "right": {
@@ -93,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Linear Regression graphical.md",
+                "file": "UnGrouped/Applications of Differential Equations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Linear Regression graphical.md",
+                "file": "UnGrouped/Applications of Differential Equations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Linear Regression graphical.md"
+                "file": "UnGrouped/Applications of Differential Equations.md"
               }
             }
           },
@@ -163,7 +156,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Excalidraw/Linear Regression graphical.md"
+                "file": "UnGrouped/Applications of Differential Equations.md"
               }
             }
           }
@@ -190,50 +183,51 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "be6dff833a3af585",
+  "active": "8ea109d216306a9a",
   "lastOpenFiles": [
-    "Excalidraw/Linear Regression graphical.md",
-    "Excalidraw/Machine Learning.md",
-    "Excalidraw/Drawing 2024-02-11 12.16.35.excalidraw.md",
-    "Excalidraw/The transistor.md",
-    "Excalidraw/Signals and Systems.md",
-    "Excalidraw/Storage elements and Orders of Circuits.md",
-    "UnGrouped/Applications of Differential Equations.md",
-    "Excalidraw/Drawing 2024-01-17 17.07.38.excalidraw.md",
+    "UnGrouped/CMake.md",
+    "UnGrouped/Chess 101.md",
     "UnGrouped/Differential Equations.md",
-    "Files/Pasted Image 20240212013225_999.png",
-    "Files/Pasted Image 20240212013202_326.png",
-    "Files/Pasted Image 20240212013140_935.png",
-    "Excalidraw/Drawing 2024-01-01 18.27.50.excalidraw.md",
-    "Excalidraw/Drawing 2024-01-13 01.07.46.excalidraw.md",
-    "UnGrouped/Untitled.md",
-    "UnGrouped/Trading the Asian Session Till I Become a Millionaire.md",
-    "Files/Pasted image 20240201010854.png",
-    "Files/Pasted image 20240201010749.png",
-    "Excalidraw/Introduction to the derivative.md",
-    "Notes/Electrical Eng 101/01 Foundations/01 Algebraic Approximations.md",
-    "UnGrouped/show off.md",
-    "Notes/x86_64 Assembly/X86_64 Registers.md",
-    "Notes/x86_64 Assembly/X86_64 Assemble Commands.md",
-    "Notes/x86_64 Assembly/X86_64 Assembly Instructions.md",
-    "Notes/Electrical Eng 101/01 Foundations/03 Complex Numbers.md",
-    "Notes/Electrical Eng 101/Electrical Eng Materials/Introduction.md",
-    "Excalidraw/Drawing 2024-01-01 14.32.44.excalidraw.md",
+    "UnGrouped/COMPILER_DESIGN.md",
+    "UnGrouped/Cp notes.md",
+    "UnGrouped/Crafting Interpreters.md",
     "UnGrouped/Numerical Methods for Solving ODE's.md",
-    "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus/Integrals.md",
     "UnGrouped/Endianness.md",
+    "Excalidraw/The Operational Amplifier.md",
+    "UnGrouped/Tips for using ChatGPT.md",
+    "Excalidraw/Storage elements and Orders of Circuits.md",
+    "Excalidraw/The transistor.md",
+    "Excalidraw/Data Structures and Algorithms.md",
+    "Excalidraw/Drawing 2024-02-25 15.47.28.excalidraw.md",
+    "Excalidraw/Drawing 2024-01-17 17.07.38.excalidraw.md",
+    "Excalidraw/Scripts/Downloaded/Split Ellipse.svg",
+    "Excalidraw/Scripts/Downloaded/Split Ellipse.md",
+    "Excalidraw/Scripts/Downloaded/Reverse arrows.svg",
+    "Excalidraw/Scripts/Downloaded/Reverse arrows.md",
+    "Excalidraw/Scripts/Downloaded/Repeat Elements.svg",
+    "Excalidraw/Scripts/Downloaded/Repeat Elements.md",
+    "Excalidraw/Scripts/Downloaded/Organic Line.svg",
+    "Excalidraw/Scripts/Downloaded/Organic Line.md",
+    "Excalidraw/Scripts/Downloaded/Normalize Selected Arrows.svg",
+    "Excalidraw/Scripts/Downloaded/Normalize Selected Arrows.md",
+    "Excalidraw/Scripts/Downloaded/Mindmap format.svg",
+    "Excalidraw/Scripts/Downloaded/Boolean Operations.svg",
+    "Excalidraw/Scripts/Downloaded/Mindmap format.md",
+    "Excalidraw/Scripts/Downloaded/Boolean Operations.md",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.svg",
+    "Excalidraw/Scripts/Downloaded/Ellipse Selected Elements.md",
+    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.svg",
+    "Excalidraw/Scripts/Downloaded/Change shape of selected elements.md",
+    "Excalidraw/Power Amplifiers.md",
+    "Excalidraw/Linear Regression graphical.md",
+    "Files/Pasted Image 20240212013225_999.png",
     "Notes/Electrical Eng 101/Electrical Eng Materials",
     "Notes/Statistics and Probability/Regression",
-    "Files/X86_64 Registers.png",
-    "Files/Speed-Measurement-using-back-EMF-Technique.png",
-    "Files/Pasted image 20231225155440.png",
-    "Files/Screenshot_20231225-092944.jpg",
-    "Files/Pasted image 20231225151702.png",
     "my-obsidian-library.excalidrawlib",
     "Notes/Machine Learning 101/Untitled",
     "Notes/Engineering Mathematics 101/Calculus/PreCalc",
-    "Excalidraw/Scripts/Downloaded",
-    "Excalidraw/Scripts",
     "Notes/Engineering Mathematics 101/Calculus/Single Variable Calulus",
     "Notes/Engineering Mathematics 101/Calculus",
     "Notes/Engineering Mathematics 101",
